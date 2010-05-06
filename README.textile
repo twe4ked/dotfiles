@@ -1,6 +1,6 @@
 The files in here are manually loaded from: @~/.profile@
 
-<pre><code># Contents of @~/.profile
+<pre><code># Contents of ~/.profile
 if [ -e ~/.dotfiles ]; then
   . ~/.dotfiles/bashrc
 fi</code></pre>
