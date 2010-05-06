@@ -7,3 +7,6 @@ bind "set show-all-if-ambiguous On" # this allows you to automatically show comp
 
 alias et='mate .' # Open current folder with textmate
 alias eprof="mate ~/.dotfiles" # Edit these files
+
+# Make git colourful
+git config --global color.ui auto
