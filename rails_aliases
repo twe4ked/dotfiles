@@ -1,0 +1,12 @@
+# rails stuff
+alias log='tail -f -0 ./log/*.log'
+alias ss='ruby ./script/server'
+alias sc='ruby ./script/console'
+alias cdm='cap deploy deploy:migrate'
+alias model='script/generate model'
+alias controller='script/generate controller'
+alias migration='script/generate migration'
+alias migrate='rake db:migrate'
+alias rollback='rake db:rollback'
+alias r='rake'
+alias webshare='python -c "import SimpleHTTPServer;SimpleHTTPServer.test()"'

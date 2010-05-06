@@ -1,0 +1,3 @@
+The files in here are manually loaded using: @~/.profile@
+
+Based on work by "Bodaniel Jeanes":github.com/bjeanes/dot-files
