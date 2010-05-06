@@ -1,10 +1,6 @@
 The files in here are manually loaded from: @~/.profile@
 
-Contents of @~/.profile@
-<pre><code>
+<pre><code># Contents of @~/.profile
 if [ -e ~/.dotfiles ]; then
   . ~/.dotfiles/bashrc
-fi
-</code></pre>
-
-Based on work by "Bodaniel Jeanes":github.com/bjeanes/dot-files
+fi</code></pre>
