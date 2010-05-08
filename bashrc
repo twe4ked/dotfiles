@@ -40,3 +40,8 @@ export COLOR_BROWN='\e[0;33m'
 export COLOR_YELLOW='\e[1;33m'
 export COLOR_GRAY='\e[0;30m'
 export COLOR_LIGHT_GRAY='\e[0;37m'
+
+# Promt config
+# The __git_ps1 comes from the ~/.dotfiles/git_completion file
+# Default prompt (export PS1="\h:\W \u\$ ")
+export PS1='[\W$(__git_ps1 " \[${COLOR_LIGHT_CYAN}\](%s)\[${COLOR_NC}\]")]\$ '
