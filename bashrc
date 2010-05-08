@@ -18,3 +18,6 @@ export EDITOR='mate -w'  # -w is to wait for Textmate window to close
 
 # Make git colourful
 git config --global color.ui auto
+
+# sets title of window to be user@host
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
