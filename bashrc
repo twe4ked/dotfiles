@@ -26,4 +26,6 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -n
 # Promt config
 # The __git_ps1 comes from the ~/.dotfiles/git_completion file
 # Default prompt (export PS1="\h:\W \u\$ ")
-export PS1='[\W$(__git_ps1 " \[${COLOR_LIGHT_CYAN}\](%s)\[${COLOR_NC}\]")]\$ '
+export PS1='[\e[${COLOR_GREEN}\]\W\e[${COLOR_NC}\]$(__git_ps1 " \e[${COLOR_CYAN}\](%s)\e[${COLOR_NC}\]")] \$ '
+
+echo 'Custom config successfully loaded.'
