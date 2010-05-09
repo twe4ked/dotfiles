@@ -1,3 +1,39 @@
+h2. Basic features
+
+h3. bashrc
+
+This file loads the rest of the config and also acts as a place to put major items.
+
+* Ignore case in auto complete
+* Removes the bell
+* Automatically show completion without double tab-ing
+* Search /Sites folder on 'cd' command
+* Set textmate as default editor
+* Make git colourful
+* sets title of window to be user@host
+
+*Aliases*
+
+* 'et' = Open current folder with textmate
+* 'eprof' = Edit these files
+* 'pubkey' = Copy pub keys to clipboard
+
+*Prompt*
+
+@[~] $@
+
+h3. rails_aliases
+
+<pre><code>alias log='tail -f -0 ./log/*.log'
+alias ss='ruby ./script/server'
+alias sc='ruby ./script/console'
+alias model='script/generate model'
+alias controller='script/generate controller'
+alias migration='script/generate migration'
+alias migrate='rake db:migrate'
+alias rollback='rake db:rollback'
+alias r='rake'</code></pre>
+
 h2. Installation
 
 To install open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
