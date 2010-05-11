@@ -15,7 +15,7 @@ alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"' # Co
 export CDPATH='.:~:~/Sites'
 
 # Go to textmate bundles folder
-alias tmbundles="cd /Applications/TextMate.app/Contents/SharedSupport/Bundles/"
+alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
 
 # Set textmate as default editor
 export EDITOR='mate -w'  # -w is to wait for Textmate window to close
