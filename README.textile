@@ -17,6 +17,7 @@ This file loads the rest of the config and also acts as a place to put major ite
 * 'et' = Open current folder with textmate
 * 'eprof' = Edit these files
 * 'pubkey' = Copy pub keys to clipboard
+* 'gi' = Gem install with sudo at the front and without including ri and rdoc
 
 *Prompt*
 
@@ -24,7 +25,7 @@ This file loads the rest of the config and also acts as a place to put major ite
 
 h3. rails_aliases
 
-<pre><code>alias log='tail -f -0 ./log/*.log'
+<pre><code>alias logs='tail -f -0 ./log/*.log'
 alias ss='ruby ./script/server'
 alias sc='ruby ./script/console'
 alias model='script/generate model'
