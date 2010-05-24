@@ -1,5 +1,5 @@
 # rails stuff
-alias log='tail -f -0 ./log/*.log'
+alias logs='tail -f -0 ./log/*.log'
 alias ss='ruby ./script/server'
 alias sc='ruby ./script/console'
 alias model='script/generate model'
