@@ -11,6 +11,8 @@ alias et='mate .' # Open current folder with textmate
 alias eprof="mate ~/.dotfiles" # Edit these files
 alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"' # Copy pub keys to clipboard
 
+alias gi='sudo gem install --no-ri --no-rdoc'
+
 # Search /Sites folder on 'cd' command
 export CDPATH='.:~:~/Sites'
 
