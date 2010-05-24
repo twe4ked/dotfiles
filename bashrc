@@ -33,4 +33,7 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -n
 # Default prompt (export PS1="\h:\W \u\$ ")
 export PS1='[\e[${COLOR_GREEN}\]\W\e[${COLOR_NC}\]$(__git_ps1 " \e[${COLOR_CYAN}\](%s)\e[${COLOR_NC}\]")] \$ '
 
+# For mysql commands
+export PATH=$PATH:/usr/local/mysql/bin
+
 echo 'Custom config successfully loaded.'
