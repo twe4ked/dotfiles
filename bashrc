@@ -37,6 +37,10 @@ export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \
 # For mysql commands
 export PATH=$PATH:/usr/local/mysql/bin
 
+# Mac Helpers
+alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
+alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
+
 # MOTD
 uname -npsr
 uptime
