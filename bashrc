@@ -28,12 +28,14 @@ git config --global color.ui auto
 # sets title of window to be user@host
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
 
-# Promt config
+# Promt config [~(git_branch)] $
 # The __git_ps1 comes from the ~/.dotfiles/git_completion file
 # Default prompt (export PS1="\h:\W \u\$ ")
-export PS1='[\e[${COLOR_GREEN}\]\W\e[${COLOR_NC}\]$(__git_ps1 " \e[${COLOR_CYAN}\](%s)\e[${COLOR_NC}\]")] \$ '
+export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \$ '
+# [ GREEN current directory END_GREEN ( BLUE git branch END_BLUE ) ] $
 
 # For mysql commands
 export PATH=$PATH:/usr/local/mysql/bin
 
+uptime
 echo 'Custom config successfully loaded.'
