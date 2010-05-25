@@ -41,6 +41,12 @@ export PATH=$PATH:/usr/local/mysql/bin
 alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
 alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
 
+# Lookup in the Apple Dictionary
+# Source: http://hayne.net/MacDev/Bash/aliases.bash
+odict() {
+  open dict:///"$@";
+}
+
 # MOTD
 uname -npsr
 uptime
