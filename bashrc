@@ -37,5 +37,7 @@ export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \
 # For mysql commands
 export PATH=$PATH:/usr/local/mysql/bin
 
+# MOTD
+uname -npsr
 uptime
 echo 'Custom config successfully loaded.'
