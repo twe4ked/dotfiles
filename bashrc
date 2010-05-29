@@ -1,7 +1,6 @@
 source ~/.dotfiles/git_aliases
 source ~/.dotfiles/rails_aliases
 source ~/.dotfiles/git_completion
-source ~/.dotfiles/colours
 
 bind 'set completion-ignore-case on '
 bind 'set bell-style none' # No bell, because it's damn annoying
@@ -12,6 +11,7 @@ alias eprof="mate ~/.dotfiles" # Edit these files
 alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"' # Copy pub keys to clipboard
 alias ls='ls -GFp' # Compact view, show color
 alias gi='sudo gem install --no-ri --no-rdoc'
+alias o.='open .'
 
 # Search /Sites folder on 'cd' command
 export CDPATH='.:~:~/Sites'
