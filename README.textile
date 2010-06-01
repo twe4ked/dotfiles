@@ -44,6 +44,6 @@ if [ -e ~/.dotfiles ]; then
   . ~/.dotfiles/bashrc
 fi</code></pre>
 
-Setup symlinks for .irbrc @ln -s ~/.dotfiles/irbrc .irbrc # Setup .irbrc symlink@
+Setup symlinks for .irbrc @ln -s ~/.dotfiles/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
 
 _Based on work by "bjeanes":http://github.com/bjeanes/dot-files_
