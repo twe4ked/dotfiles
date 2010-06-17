@@ -20,14 +20,14 @@ This file loads the rest of the config and also acts as a place to put major ite
 * 'eprof' = Edit these files
 * 'pubkey' = Copy pub keys to clipboard
 * 'gi' = Gem install with sudo at the front and without including ri and rdoc
-
-h4. Mac Helpers
-
+* *Mac Helpers*
 * 'show_hidden' = Show hidden files in Finder
 * 'hide_hidden' = Hide hidden files in Finder
 * 'o.' = Open the current directory
 
 *Prompt*
+
+What you have to look at all day.
 
 @[~ (git-branch)] $@
 
@@ -45,7 +45,9 @@ alias r='rake'</code></pre>
 
 h2. Installation
 
-To install open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
+To install, in terminal navigate to your home folder and run @git clone git@github.com:twe4ked/dotfiles.git@ to pull down these files.
+
+Next, open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
 
 <pre><code># Contents of ~/.profile
 if [ -e ~/.dotfiles ]; then
