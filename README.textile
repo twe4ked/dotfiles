@@ -23,8 +23,9 @@ This file loads the rest of the config and also acts as a place to put major ite
 
 h4. Mac Helpers
 
-* 'show_hidden' = "Show hidden files in Finder"
-* 'hide_hidden' = "Hide hidden files in Finder"
+* 'show_hidden' = Show hidden files in Finder
+* 'hide_hidden' = Hide hidden files in Finder
+* 'o.' = Open the current directory
 
 *Prompt*
 
