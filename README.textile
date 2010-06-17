@@ -1,5 +1,7 @@
 h2. Basic features
 
+* "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
+
 h3. bashrc
 
 This file loads the rest of the config and also acts as a place to put major items.
@@ -19,9 +21,14 @@ This file loads the rest of the config and also acts as a place to put major ite
 * 'pubkey' = Copy pub keys to clipboard
 * 'gi' = Gem install with sudo at the front and without including ri and rdoc
 
+h4. Mac Helpers
+
+* 'show_hidden' = "Show hidden files in Finder"
+* 'hide_hidden' = "Hide hidden files in Finder"
+
 *Prompt*
 
-@[~] $@
+@[~ (git-branch)] $@
 
 h3. rails_aliases
 
