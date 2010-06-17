@@ -38,8 +38,8 @@ export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \
 export PATH=$PATH:/usr/local/mysql/bin
 
 # Mac Helpers
-alias show_hidden="defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder"
-alias hide_hidden="defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder"
+alias show_hidden='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder'
+alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
 
 # Lookup in the Apple Dictionary
 # Source: http://hayne.net/MacDev/Bash/aliases.bash
