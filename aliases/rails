@@ -1,4 +1,4 @@
-# rails stuff
+# Rails stuff
 alias logs='tail -f -0 ./log/*.log'
 alias ss='ruby ./script/server'
 alias sc='ruby ./script/console'

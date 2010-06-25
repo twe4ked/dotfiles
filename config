@@ -1,0 +1,31 @@
+# Aliases
+source ~/.dotfiles/aliases/git
+source ~/.dotfiles/aliases/rails
+source ~/.dotfiles/aliases/aliases # Misc aliases
+
+# Choose zsh or bash
+source ~/.dotfiles/zsh/zshrc
+# source ~/.dotfiles/bash/bashrc
+
+# Search /Sites folder on 'cd' command
+export CDPATH='.:~:~/Sites'
+
+# Set textmate as default editor
+export EDITOR='mate -w'  # -w is to wait for Textmate window to close
+
+# Make git colourful
+git config --global color.ui auto
+
+# For mysql commands
+export PATH=$PATH:/usr/local/mysql/bin
+
+# Lookup in the Apple Dictionary
+# Source: http://hayne.net/MacDev/Bash/aliases.bash
+odict() {
+  open dict:///"$@";
+}
+
+# MOTD
+uname -npsr
+uptime
+echo 'Custom config successfully loaded.'

@@ -2,9 +2,11 @@ h2. Basic features
 
 * "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
 
-h3. bashrc
+h3. Config
 
 This file loads the rest of the config and also acts as a place to put major items.
+
+* Select zsh or bash
 
 * Ignore case in auto complete
 * Removes the bell
@@ -55,5 +57,7 @@ if [ -e ~/.dotfiles ]; then
 fi</code></pre>
 
 Setup symlinks for .irbrc @ln -s ~/.dotfiles/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
+
+I'm also using "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh - A community-driven framework for managing your zsh configuration.
 
 _Based on work by "bjeanes":http://github.com/bjeanes/dot-files_

@@ -1,0 +1,1 @@
+/Users/twe4ked/.dotfiles/zsh/zshrc
