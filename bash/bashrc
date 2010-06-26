@@ -12,3 +12,6 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -n
 # Default prompt (export PS1="\h:\W \u\$ ")
 export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \$ '
 # [ GREEN current directory END_GREEN ( BLUE git branch END_BLUE ) ] $
+
+# Make git colourful
+git config --global color.ui auto
