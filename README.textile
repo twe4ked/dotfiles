@@ -1,22 +1,25 @@
 h2. Basic features
 
 * "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
+* "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
 h3. Config
 
 This file loads the rest of the config and also acts as a place to put major items.
 
-* Select zsh or bash
-
-* Ignore case in auto complete
-* Removes the bell
-* Automatically show completion without double tab-ing
 * Search /Sites folder on 'cd' command
 * Set textmate as default editor
 * Make git colourful
 * sets title of window to be user@host
 
-*Aliases*
+h3. Prompt
+
+What you have to look at all day.
+
+@[~/.dotfiles (git-branch)] $@ (bash)
+@computer-name :: [~/.dotfiles] »@ (zsh)
+
+h3. Aliases
 
 * 'et' = Open current folder with textmate
 * 'eprof' = Edit these files
@@ -26,13 +29,7 @@ This file loads the rest of the config and also acts as a place to put major ite
 * 'hide_hidden' = Hide hidden files in Finder
 * 'o.' = Open the current directory
 
-*Prompt*
-
-What you have to look at all day.
-
-@[~ (git-branch)] $@ (bash)
-
-h3. rails_aliases
+h3. Rails aliases
 
 <pre><code>alias logs='tail -f -0 ./log/*.log'
 alias ss='ruby ./script/server'
@@ -44,9 +41,42 @@ alias migrate='rake db:migrate'
 alias rollback='rake db:rollback'
 alias r='rake'</code></pre>
 
+h3. Git aliases
+
+<pre><code>alias gst='git status'
+alias gl='git pull --rebase'
+alias gp='git push'
+alias ga='git add'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch'
+alias gbc='git branch --color'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias gdc='git-svn dcommit'
+alias gk='gitk --all &'
+
+# Push to Heroku
+alias gph='gp heroku'
+
+# Show git config
+alias gitconfig='cat .git/config'
+# Edit git config
+alias egitconfig='mate .git/config'
+
+# Alias for opening GitX
+alias gitx="open -b nl.frim.GitX"</code></pre>
+
+
+h3. Bash specific
+
+* Ignore case in auto complete
+* Removes the bell
+* Automatically show completion without double tab-ing
+
 h2. Installation
 
-To install, in terminal navigate to your home folder and run @git clone git@github.com:twe4ked/dotfiles.git@ to pull down these files.
+To install, in terminal navigate to your home folder and run @git clone http://github.com/twe4ked/dotfiles.git@ to pull down these files.
 
 Next, open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
 
@@ -59,8 +89,10 @@ Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc sym
 
 *zsh specific*
 Install "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh @wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
+
 Setup symlinks for my.zsh-theme: 
 @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)@
+
 Remove @~/.zshrc@ and replace with a symlink to the custom version
 @ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
 
