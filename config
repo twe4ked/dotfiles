@@ -19,12 +19,6 @@ git config --global color.ui auto
 # For mysql commands
 export PATH=$PATH:/usr/local/mysql/bin
 
-# Lookup in the Apple Dictionary
-# Source: http://hayne.net/MacDev/Bash/aliases.bash
-odict() {
-  open dict:///"$@";
-}
-
 # MOTD
 uname -npsr
 uptime
