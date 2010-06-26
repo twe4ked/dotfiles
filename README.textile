@@ -56,7 +56,11 @@ if [ -e ~/.dotfiles ]; then
   . ~/.dotfiles/bashrc
 fi</code></pre>
 
-Setup symlinks for .irbrc @ln -s ~/.dotfiles/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
+Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
+
+*zsh specific*
+Setup symlinks for my.zsh-theme @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
+@ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
 
 I'm also using "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh - A community-driven framework for managing your zsh configuration.
 
