@@ -22,7 +22,6 @@ This file loads the rest of the config and also acts as a place to put major ite
 * 'eprof' = Edit these files
 * 'pubkey' = Copy pub keys to clipboard
 * 'gi' = Gem install with sudo at the front and without including ri and rdoc
-* *Mac Helpers*
 * 'show_hidden' = Show hidden files in Finder
 * 'hide_hidden' = Hide hidden files in Finder
 * 'o.' = Open the current directory
@@ -59,9 +58,12 @@ fi</code></pre>
 Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
 
 *zsh specific*
-Setup symlinks for my.zsh-theme @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
+Install "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh @wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
+Setup symlinks for my.zsh-theme: 
+@ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)@
+Remove @~/.zshrc@ and replace with a symlink to the custom version
 @ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
 
-I'm also using "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh - A community-driven framework for managing your zsh configuration.
+"oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
 _Based on work by "bjeanes":http://github.com/bjeanes/dot-files_
