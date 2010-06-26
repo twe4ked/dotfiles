@@ -31,7 +31,7 @@ This file loads the rest of the config and also acts as a place to put major ite
 
 What you have to look at all day.
 
-@[~ (git-branch)] $@
+@[~ (git-branch)] $@ (bash)
 
 h3. rails_aliases
 

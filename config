@@ -1,10 +1,9 @@
 # Aliases
-source ~/.dotfiles/aliases/git
-source ~/.dotfiles/aliases/rails
-source ~/.dotfiles/aliases/aliases # Misc aliases
+source ~/.dotfiles/aliases/git      # Git aliases
+source ~/.dotfiles/aliases/rails    # Rails aliases
+source ~/.dotfiles/aliases/aliases  # Misc aliases
 
-# Choose zsh or bash
-source ~/.dotfiles/zsh/zshrc
+# Load bash config
 # source ~/.dotfiles/bash/bashrc
 
 # Search /Sites folder on 'cd' command
