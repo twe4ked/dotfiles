@@ -1,14 +1,21 @@
 # @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
 
-# Based on evan's prompt
-# Shows the exit status of the last command if non-zero
-# Uses "#" instead of "»" when running with elevated privileges
+function prompt_color() { # From bjeans theme
+  if [ "$USER" = "root" ]; then 
+    echo "red"
+  else
+    if [ -n "$SSH_TTY" ]; then
+      echo "blue"
+    else
+      echo "cyan"
+    fi
+  fi
+}
 
-# PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~%(0?. . ${fg[red]}%? )%{${fg[cyan]}%}»%{${reset_color}%} "
-PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~ %{${fg[cyan]}%}»%{${reset_color}%} "
+# Uses "#" instead of "»" when running with elevated privileges
+PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~ %{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
 
 # Show git branch on the right hand side
-
 function git_branch {
   git branch >/dev/null 2>/dev/null && git_prompt_info && return
   echo '○' # Not in a repository
