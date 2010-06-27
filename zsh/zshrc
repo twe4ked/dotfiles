@@ -27,3 +27,4 @@ export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/lo
 
 # Source my dotfiles
 source ~/.dotfiles/config
+source ~/.dotfiles/zsh/config # zsh config
