@@ -12,9 +12,6 @@ export CDPATH='.:~:~/Sites'
 # Set textmate as default editor
 export EDITOR='mate -w'  # -w is to wait for Textmate window to close
 
-# Make git colourful
-git config --global color.ui auto
-
 # For mysql commands
 export PATH=$PATH:/usr/local/mysql/bin
 
