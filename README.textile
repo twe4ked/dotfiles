@@ -17,7 +17,7 @@ h3. Prompt
 What you have to look at all day.
 
 @[~/.dotfiles (git-branch)] $@ (bash)
-@computer-name :: [~/.dotfiles] »@ (zsh)
+@computer-name :: [~/.dotfiles] »@ (zsh) @git:(master*)@
 
 h3. Aliases
 

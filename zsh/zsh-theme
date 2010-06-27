@@ -3,4 +3,15 @@
 # Based on evan's prompt
 # Shows the exit status of the last command if non-zero
 # Uses "#" instead of "»" when running with elevated privileges
-PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~%(0?. . ${fg[red]}%? )%{${fg[cyan]}%}»%{${reset_color}%} "
+
+# PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~%(0?. . ${fg[red]}%? )%{${fg[cyan]}%}»%{${reset_color}%} "
+PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~ %{${fg[cyan]}%}»%{${reset_color}%} "
+
+# Show git branch on the right hand side
+
+function git_branch {
+  git branch >/dev/null 2>/dev/null && git_prompt_info && return
+  echo '○' # Not in a repository
+}
+
+RPROMPT='%{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}'
