@@ -28,6 +28,7 @@ h3. Aliases
 * 'show_hidden' = Show hidden files in Finder
 * 'hide_hidden' = Hide hidden files in Finder
 * 'o.' = Open the current directory
+* 'hints' = Show hints
 
 h3. Rails aliases
 

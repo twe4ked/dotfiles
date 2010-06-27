@@ -17,5 +17,10 @@ export PATH=$PATH:/usr/local/mysql/bin
 
 # MOTD
 uname -npsr
-uptime
-echo 'Custom config successfully loaded.'
+uptime # Length of time the machine has been running
+
+# Random hint
+fn=~/.dotfiles/lib/hints.txt
+sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
+
+echo $bg[green]'Custom config successfully loaded.'
