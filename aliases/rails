@@ -8,4 +8,4 @@ alias migration='script/generate migration'
 alias migrate='rake db:migrate'
 alias rollback='rake db:rollback'
 alias r='rake'
-alias rp='touch tmp/restart.txt'
+alias rp='touch tmp/restart.txt' # Restart passenger server
