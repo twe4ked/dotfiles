@@ -1,0 +1,10 @@
+# Hints
+function hint {
+  fn=~/.dotfiles/lib/hints.txt
+  sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
+}
+
+uname -npsr
+uptime # Length of time the machine has been running
+echo $'\e[\01;32mHint:' `hint` $'\e[0m' # Display a random hint
+echo 'Custom config successfully loaded.'
