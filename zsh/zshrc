@@ -26,5 +26,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin
 
 # Source my dotfiles
-source ~/.dotfiles/config
 source ~/.dotfiles/zsh/config # zsh config
