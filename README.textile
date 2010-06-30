@@ -17,7 +17,7 @@ h3. Prompt
 What you have to look at all day.
 
 @[~/.dotfiles (git-branch)] $@ (bash)
-@computer-name :: [~/.dotfiles] »@ (zsh) @git:(master*)@
+@[~/.dotfiles] »@ (zsh) @git:(master*) [19:30]@
 
 h3. Aliases
 
@@ -83,7 +83,7 @@ Next, open your @~/.profile@ in a text editor and add the following at the botto
 
 <pre><code># Contents of ~/.profile
 if [ -e ~/.dotfiles ]; then
-  . ~/.dotfiles/bashrc
+  . ~/.dotfiles/config
 fi</code></pre>
 
 Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)

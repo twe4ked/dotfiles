@@ -1,6 +1,6 @@
 # @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
 
-function prompt_color() { # From bjeans theme
+function prompt_color() { # From bjeanes theme
   if [ "$USER" = "root" ]; then 
     echo "red"
   else
@@ -12,13 +12,16 @@ function prompt_color() { # From bjeans theme
   fi
 }
 
-# Uses "#" instead of "»" when running with elevated privileges
-PROMPT="%m %{${fg_bold[white]}%}:: %{${fg[green]}%}%3~ %{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
-
-# Show git branch on the right hand side
 function git_branch {
   git branch >/dev/null 2>/dev/null && git_prompt_info && return
   echo '○' # Not in a repository
 }
 
-RPROMPT='%{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}'
+# Uses "#" instead of "»" when running with elevated privileges
+PROMPT="[%{${fg_bold[green]}%}%3~%{${reset_color}%}] %{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
+PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
+
+RPROMPT='%{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%} [%T]'
+RPROMPT2='[%_]' # %S makes background white
+
+# The escape codes are surrounded by %{ and %}. These are zsh prompt escapes that tell the shell to disregard the contained characters when determining the length of the prompt. This allows zsh to properly position the cursor.
