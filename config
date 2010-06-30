@@ -3,24 +3,24 @@ source ~/.dotfiles/aliases/git      # Git aliases
 source ~/.dotfiles/aliases/rails    # Rails aliases
 source ~/.dotfiles/aliases/aliases  # Misc aliases
 
+# Exports
+export CDPATH='.:~:~/Sites' # Search /Sites folder on 'cd' command
+export EDITOR='mate -w' # Set textmate as default editor (-w is to wait for Textmate window to close)
+export PATH=$PATH:/usr/local/mysql/bin # For mysql commands
+
 # Load bash config
-# source ~/.dotfiles/bash/bashrc
+if [ $SHELL = "/bin/bash" ]; then
+  source ~/.dotfiles/bash/bashrc
+  echo 'bashrc successfully loaded.'
+fi
 
-# Search /Sites folder on 'cd' command
-export CDPATH='.:~:~/Sites'
+# Hints
+function hint {
+  fn=~/.dotfiles/lib/hints.txt
+  sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
+}
 
-# Set textmate as default editor
-export EDITOR='mate -w'  # -w is to wait for Textmate window to close
-
-# For mysql commands
-export PATH=$PATH:/usr/local/mysql/bin
-
-# MOTD
 uname -npsr
 uptime # Length of time the machine has been running
-
-# Random hint
-fn=~/.dotfiles/lib/hints.txt
-sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
-
-echo $bg[green]'Custom config successfully loaded.'
+echo $'\e[\01;32mHint:' `hint` $'\e[0m' # Display a random hint
+echo 'Custom config successfully loaded.'
