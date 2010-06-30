@@ -3,7 +3,6 @@ alias eprof="mate ~/.dotfiles" # Edit these files
 alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"' # Copy pub keys to clipboard
 alias ls='ls -GFp' # Compact view, show color
 alias gi='sudo gem install --no-ri --no-rdoc' # Give root and force no documentation
-alias o.='open .' # Open current folder
 alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints
 
 # Go to textmate bundles folder
@@ -15,6 +14,15 @@ alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO && killa
 
 # Mocra specific
 alias mocra='cd ~/Sites/Mocra'
+function m { cd ~/Sites/Mocra/$1; } # Changing directory to Mocra project
 
-# Changing directory to Mocra project
-function m { cd ~/Sites/Mocra/$1; }
+# Open alias
+# Use 'o' instead of 'open' (o ~/Sites will open the sites folder)
+# If no arguments are supplied open the current folder
+function o {
+  if [ "$1" != "" ]; then
+    open $1
+  else
+    open .
+  fi
+}
