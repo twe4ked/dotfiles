@@ -1,17 +1,19 @@
+source ~/.dotfiles/config # Main config
+source ~/.dotfiles/lib/git_completion
+
+# Binds
 bind 'set completion-ignore-case on '
 bind 'set bell-style none' # No bell, because it's damn annoying
 bind 'set show-all-if-ambiguous On' # this allows you to automatically show completion without double tab-ing
 
-source ~/.dotfiles/lib/git_completion
-
 # sets title of window to be user@host
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
+
+# Make git colourful
+git config --global color.ui auto
 
 # Promt config [~(git_branch)] $
 # The __git_ps1 comes from the ~/.dotfiles/lib/git_completion file
 # Default prompt (export PS1="\h:\W \u\$ ")
 export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \$ '
 # [ GREEN current directory END_GREEN ( BLUE git branch END_BLUE ) ] $
-
-# Make git colourful
-git config --global color.ui auto
