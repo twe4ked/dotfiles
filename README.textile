@@ -68,6 +68,10 @@ alias egitconfig='mate .git/config'
 # Alias for opening GitX
 alias gitx="open -b nl.frim.GitX"</code></pre>
 
+h3. Hints
+
+There is a random hint taken from lib/hints.txt inserted into the motd each time it is run. You can show all hints by running the following alias:
+@alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints@
 
 h3. Bash specific
 
@@ -94,7 +98,7 @@ Install "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh @wget http://github
 Setup symlinks for my.zsh-theme: 
 @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)@
 
-Remove @~/.zshrc@ and replace with a symlink to the custom version
+Remove @~/.zshrc@ and replace with a symlink to the custom version:
 @ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
 
 "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.

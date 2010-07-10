@@ -4,3 +4,4 @@ Set audible alarm when an IP address comes online: ping -i 60 -a IP_address
 Serve current directory tree at http://localhost:8000/: python -m SimpleHTTPServer
 http://www.commandlinefu.com/
 http://rayninfo.co.uk/tips/zshtips.html
+Start typing a command and press 'up' to get a filtered history
