@@ -1,6 +1,7 @@
 h2. Basic features
 
 * "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
+* "Wirble":http://rubygems.org/gems/wirble - IRB syntax highlighting
 * "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
 h3. Config
@@ -10,7 +11,8 @@ This file loads the rest of the config and also acts as a place to put major ite
 * Search /Sites folder on 'cd' command
 * Set textmate as default editor
 * Make git colourful
-* sets title of window to be user@host
+* Sets title of window to be user@host
+* .irbrc to make irb awesome (view framework/syntax highlighting/tab-completions/pretty-print/auto tab indentation).
 
 h3. Prompt
 
