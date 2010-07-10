@@ -17,3 +17,5 @@ git config --global color.ui auto
 # Default prompt (export PS1="\h:\W \u\$ ")
 export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \$ '
 # [ GREEN current directory END_GREEN ( BLUE git branch END_BLUE ) ] $
+
+alias reload="source ~/.profile"

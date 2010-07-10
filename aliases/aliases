@@ -5,6 +5,8 @@ alias ls='ls -GFp' # Compact view, show color
 alias gi='sudo gem install --no-ri --no-rdoc' # Give root and force no documentation
 alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints
 
+alias sprof="reload"
+
 # Go to textmate bundles folder
 alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
 

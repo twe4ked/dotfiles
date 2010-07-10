@@ -2,3 +2,5 @@ source ~/.dotfiles/config # Main config
 
 setopt nobeep           # I hate beeps
 setopt printexitvalue   # Alert me if something's failed
+
+alias reload="source ~/.zshrc"
