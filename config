@@ -3,6 +3,8 @@ source ~/.dotfiles/aliases/git      # Git aliases
 source ~/.dotfiles/aliases/rails    # Rails aliases
 source ~/.dotfiles/aliases/aliases  # Misc aliases
 
+source ~/.dotfiles/lib/functions    # Misc functions
+
 # Exports
 export CDPATH=".:$HOME:$HOME/Sites:$HOME/Sites/Mocra" # Search /Sites and /Sites/Mocra folder on 'cd' command 
 export EDITOR='mate -w' # Set textmate as default editor (-w is to wait for Textmate window to close)
