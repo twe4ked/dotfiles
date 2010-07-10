@@ -4,7 +4,7 @@ source ~/.dotfiles/aliases/rails    # Rails aliases
 source ~/.dotfiles/aliases/aliases  # Misc aliases
 
 # Exports
-export CDPATH='.:~:~/Sites' # Search /Sites folder on 'cd' command
+export CDPATH=".:$HOME:$HOME/Sites:$HOME/Sites/Mocra" # Search /Sites and /Sites/Mocra folder on 'cd' command 
 export EDITOR='mate -w' # Set textmate as default editor (-w is to wait for Textmate window to close)
 export PATH=$PATH:/usr/local/mysql/bin # For mysql commands
 
