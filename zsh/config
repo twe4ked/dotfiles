@@ -1,6 +1,12 @@
 source ~/.dotfiles/config # Main config
+source ~/.dotfiles/zsh/completions # Completions
 
-setopt nobeep           # I hate beeps
-setopt printexitvalue   # Alert me if something's failed
+setopt nobeep                 # I hate beeps
+setopt printexitvalue         # Alert me if something's failed
+setopt interactivecomments    # Escape commands so i can use them later (allow comments after commands)
+
+# option + right/left
+bindkey "\e\e[C" vi-forward-word
+bindkey "\e\e[D" vi-backward-word
 
 alias reload="source ~/.zshrc"
