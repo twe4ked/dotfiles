@@ -17,17 +17,23 @@ function git_branch {
   echo '○' # Not in a repository
 }
 
+function battery_charge {
+  echo `~/.dotfiles/lib/battery.py` 2>/dev/null
+}
+
 # Uses "#" instead of "»" when running with elevated privileges
 PROMPT="[%{${fg_bold[green]}%}%3~%{${reset_color}%}] %{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
 PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
 
-RPROMPT='%{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%} [%T]'
+RPROMPT='%{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%} [%T] $(battery_charge)'
 RPROMPT2='[%_]' # %S makes background white
 
 # Git theming
-ZSH_THEME_GIT_PROMPT_PREFIX="(± "
+ZSH_THEME_GIT_PROMPT_PREFIX="± ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
+# ZSH_THEME_GIT_PROMPT_UNTRACKED="^" # Not implimented in the current oh-my-zsh version.
 
-# The escape codes are surrounded by %{ and %}. These are zsh prompt escapes that tell the shell to disregard the contained characters when determining the length of the prompt. This allows zsh to properly position the cursor.
+# The escape codes are surrounded by %{ and %}. These are zsh prompt escapes that tell the shell to disregard the contained characters when 
+# determining the length of the prompt. This allows zsh to properly position the cursor.
