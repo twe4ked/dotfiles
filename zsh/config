@@ -4,6 +4,7 @@ source ~/.dotfiles/zsh/git # Custom version of the oh-my-zsh git plugin
 
 setopt nobeep                 # I hate beeps
 setopt interactivecomments    # Escape commands so i can use them later (allow comments after commands)
+unsetopt auto_name_dirs       # See: http://www.neactar.com/shell/fix-for-wrong-prompt-dir-when-using-zsh-project-rvmrc-and-oh-my-zsh
 
 # option + right/left
 bindkey "\e\e[C" vi-forward-word
