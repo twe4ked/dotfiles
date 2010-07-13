@@ -19,7 +19,9 @@ h3. Prompt
 What you have to look at all day.
 
 @[~/.dotfiles (git-branch)] $@ (bash)
-@[~/.dotfiles] »@ (zsh) @± (master*) [19:30]@
+@[~/.dotfiles] »@ (zsh) @(rvm) ± (master*) [19:30] ⚡@
+
+The ⚡ symbol changes colour based on battery levels.
 
 h3. Aliases
 

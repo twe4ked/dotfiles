@@ -21,12 +21,37 @@ function battery_charge {
   echo `~/.dotfiles/lib/battery.py` 2>/dev/null
 }
 
-# Uses "#" instead of "»" when running with elevated privileges
-PROMPT="[%{${fg_bold[green]}%}%3~%{${reset_color}%}] %{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
-PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
+# Prompt PWD
+# http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
+if [ `uname -s` = "Darwin" ]; then
+  function prompt_pwd() {
+    if [ "$PWD" != "$HOME" ]; then
+      printf "%s" `echo $PWD|sed -e 's|/private||' -e "s|^$HOME|~|" -e 's-/\(\.\{0,1\}[^/]\)\([^/]*\)-/\1-g'`
+      echo $PWD|sed -e 's-.*/\.\{0,1\}[^/]\([^/]*$\)-\1-'
+    else
+      echo '~'
+    fi
+  }
+else # defined two for diff systems because Fish did (not entirely sure why)
+  function prompt_pwd() {
+    case "$PWD" in
+      $HOME)
+        echo '~'
+        ;;
+      *)
+        printf "%s" `echo $PWD|sed -e "s|^$HOME|~|" -e 's-/\(\.\{0,1\}[^/]\)\([^/]*\)-/\1-g'`
+        echo $PWD|sed -n -e 's-.*/\.\{0,1\}.\([^/]*\)-\1-p'
+        ;;
+    esac
+  }
+fi
 
-RPROMPT='%{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%} [%T] $(battery_charge)'
-RPROMPT2='[%_]' # %S makes background white
+# %3~ # Shows 3 directories deep
+PROMPT='[%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}] %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%} [%T] $(battery_charge)'
+
+PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
+RPROMPT2='[%_]'
 
 # Git theming
 ZSH_THEME_GIT_PROMPT_PREFIX="± ("
