@@ -3,7 +3,6 @@ source ~/.dotfiles/zsh/completions # Completions
 source ~/.dotfiles/zsh/git # Custom version of the oh-my-zsh git plugin
 
 setopt nobeep                 # I hate beeps
-setopt printexitvalue         # Alert me if something's failed
 setopt interactivecomments    # Escape commands so i can use them later (allow comments after commands)
 
 # option + right/left
