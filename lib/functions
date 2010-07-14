@@ -22,3 +22,9 @@ function hint {
   fn=~/.dotfiles/lib/hints.txt
   sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
 }
+
+# Restart passenger server
+function rp {
+  touch tmp/restart.txt
+  echo 'Restarting passenger server...'
+}

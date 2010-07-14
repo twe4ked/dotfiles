@@ -1,3 +1,4 @@
+# BASH specific
 source ~/.dotfiles/config # Main config
 source ~/.dotfiles/lib/git_completion
 
