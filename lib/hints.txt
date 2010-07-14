@@ -5,3 +5,6 @@ Serve current directory tree at http://localhost:8000/: python -m SimpleHTTPServ
 http://www.commandlinefu.com/
 http://rayninfo.co.uk/tips/zshtips.html
 Start typing a command and press 'up' to get a filtered history
+git stash save "your message here"
+Use: git stash list (to list your stashes)
+http://www.gitready.com/
