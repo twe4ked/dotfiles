@@ -21,6 +21,11 @@ function battery_charge {
   echo `~/.dotfiles/lib/battery.py` 2>/dev/null
 }
 
+# Show number of stashed items (BinaryMuse)
+git_stash() {
+  git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
+}
+
 # Prompt PWD
 # http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
 if [ `uname -s` = "Darwin" ]; then
@@ -48,7 +53,7 @@ fi
 
 # %3~ # Shows 3 directories deep
 PROMPT='[%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}] %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%} [%T] $(battery_charge)'
+RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) [%T] $(battery_charge)'
 
 PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
 RPROMPT2='[%_]'
