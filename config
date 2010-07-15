@@ -10,13 +10,13 @@ source $HOME/.rvm/scripts/rvm       # Load RVM
 # Load custom shell scripts
 if [ $SHELL = '/bin/bash' ]; then
   source $DOTFILES/bash/bashrc
-  echo 'Using '`echo $SHELL`' shell.'
+  export WHAT_SHELL='Using '`echo $SHELL`' shell.'
 else 
   if [ $SHELL = "/bin/zsh" ]; then    
     source $DOTFILES/zsh/config
-    echo 'Using '`echo $SHELL`' shell.'
+    export WHAT_SHELL='Using '`echo $SHELL`' shell.'
   else
-    echo `echo $SHELL`' does not have a custom config.'
+    export WHAT_SHELL=`echo $SHELL`' does not have a custom config.'
   fi
 fi
 
