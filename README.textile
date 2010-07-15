@@ -18,7 +18,7 @@ h3. Prompt
 
 What you have to look at all day.
 
-@[~/.dotfiles (git-branch)] $@ (bash)
+@[~/.dotfiles (git-branch)] »@ (bash)
 @[~/.dotfiles] »@ (zsh) @(rvm) ± (master*) 1+ [19:30] ⚡@
 
 The ⚡ symbol changes colour based on battery levels.
