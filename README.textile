@@ -25,6 +25,8 @@ The ⚡ symbol changes colour based on battery levels.
 
 1+ is the number of git stashes
 
+!http://cl.ly/9db02fdcb00e524524b7/content!
+
 h3. Aliases
 
 * 'et' = Open current folder with textmate
