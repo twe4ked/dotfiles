@@ -1,6 +1,5 @@
-source ~/.dotfiles/config # Main config
-source ~/.dotfiles/zsh/completions # Completions
-source ~/.dotfiles/zsh/git # Custom version of the oh-my-zsh git plugin
+source $DOTFILES/zsh/completions  # Completions
+source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
 
 setopt nobeep                 # I hate beeps
 setopt interactivecomments    # Escape commands so i can use them later (allow comments after commands)

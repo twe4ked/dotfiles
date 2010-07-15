@@ -1,6 +1,5 @@
 # BASH specific
-source ~/.dotfiles/config # Main config
-source ~/.dotfiles/lib/git_completion
+source $DOTFILES/lib/git_completion
 
 # Binds
 bind 'set completion-ignore-case on '
@@ -16,7 +15,7 @@ git config --global color.ui auto
 # Promt config [~(git_branch)] $
 # The __git_ps1 comes from the ~/.dotfiles/lib/git_completion file
 # Default prompt (export PS1="\h:\W \u\$ ")
-export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] \$ '
+export PS1='[\[\e[0;32m\]\W\[\e[0m\]$(__git_ps1 " \[\e[0;36m\](%s)\[\e[0m\]")] » '
 # [ GREEN current directory END_GREEN ( BLUE git branch END_BLUE ) ] $
 
 alias reload="source ~/.profile"

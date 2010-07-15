@@ -1,23 +1,24 @@
-# Aliases
-source ~/.dotfiles/aliases/git      # Git aliases
-source ~/.dotfiles/aliases/rails    # Rails aliases
-source ~/.dotfiles/aliases/aliases  # Misc aliases
+export DOTFILES=~/.dotfiles         # Find the this folder
 
-source ~/.dotfiles/lib/functions    # Misc functions
-source "$HOME/.rvm/scripts/rvm"     # Load RVM
+source $DOTFILES/aliases/git        # Git aliases
+source $DOTFILES/aliases/rails      # Rails aliases
+source $DOTFILES/aliases/aliases    # Misc aliases
+source $DOTFILES/shell/functions.sh # Misc functions
+source $DOTFILES/shell/save.sh      #
+source $DOTFILES/shell/exports.sh   # Load exports
+source $HOME/.rvm/scripts/rvm       # Load RVM
 
-# Exports
-export CDPATH=".:$HOME:$HOME/Sites:$HOME/Sites/Mocra" # Search /Sites and /Sites/Mocra folder on 'cd' command 
-export EDITOR='mate -w' # Set textmate as default editor (-w is to wait for Textmate window to close)
-export ARCHFLAGS='-arch x86_64'
-export PATH=$PATH:/usr/local/mysql/bin # For mysql commands
-export PATH="/Users/twe4ked/.homebrew/bin":$PATH # For homebrew
-export PATH=/Library/PostgreSQL8/bin:$PATH # For pg gem
-
-# Load bash config
-if [ $SHELL = "/bin/bash" ]; then
-  source ~/.dotfiles/bash/bashrc
-  echo 'bashrc successfully loaded.'
+# Load custom shell scripts
+if [ $SHELL = '/bin/bash' ]; then
+  source $DOTFILES/bash/bashrc
+  echo 'Using '`echo $SHELL`' shell.'
+else 
+  if [ $SHELL = "/bin/zsh" ]; then    
+    source $DOTFILES/zsh/config
+    echo 'Using '`echo $SHELL`' shell.'
+  else
+    echo `echo $SHELL`' does not have a custom config.'
+  fi
 fi
 
-source ~/.dotfiles/lib/motd # MOTD
+source $DOTFILES/lib/motd # MOTD

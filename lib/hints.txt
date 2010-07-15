@@ -8,3 +8,5 @@ Start typing a command and press 'up' to get a filtered history
 git stash save "your message here"
 Use: git stash list (to list your stashes)
 http://www.gitready.com/
+If you want to remove a file from the repository, but keep it in your working directory, simply use: git rm --cached <file>
+http://github.com/rupa/z

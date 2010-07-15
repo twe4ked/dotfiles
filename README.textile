@@ -19,9 +19,11 @@ h3. Prompt
 What you have to look at all day.
 
 @[~/.dotfiles (git-branch)] $@ (bash)
-@[~/.dotfiles] »@ (zsh) @(rvm) ± (master*) [19:30] ⚡@
+@[~/.dotfiles] »@ (zsh) @(rvm) ± (master*) 1+ [19:30] ⚡@
 
 The ⚡ symbol changes colour based on battery levels.
+
+1+ is the number of git stashes
 
 h3. Aliases
 
