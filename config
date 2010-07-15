@@ -4,7 +4,6 @@ source $DOTFILES/aliases/git        # Git aliases
 source $DOTFILES/aliases/rails      # Rails aliases
 source $DOTFILES/aliases/aliases    # Misc aliases
 source $DOTFILES/shell/functions.sh # Misc functions
-source $DOTFILES/shell/save.sh      #
 source $DOTFILES/shell/exports.sh   # Load exports
 source $HOME/.rvm/scripts/rvm       # Load RVM
 
