@@ -25,6 +25,17 @@ function hint {
 
 # Restart passenger server
 function rp {
-  touch tmp/restart.txt
-  echo 'Restarting passenger server...'
+  if [ -e tmp ]; then
+    touch tmp/restart.txt
+    echo 'Restarting passenger server...'
+  else
+    echo "You don't have a tmp directory, do you want to create one? (y/n)"
+    read answer
+      if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
+        mkdir tmp
+        echo 'Creating tmp directory...'
+        touch tmp/restart.txt
+        echo 'Restarting passenger server...'
+      fi
+  fi
 }
