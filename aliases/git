@@ -10,6 +10,7 @@ alias gba='git branch -a'
 alias gco='git checkout'
 alias gdc='git-svn dcommit'
 alias gk='gitk --all &'
+alias gitlog='git log --oneline --decorate'
 
 # Push to Heroku
 alias gph='gp heroku'
