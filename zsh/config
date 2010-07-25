@@ -13,5 +13,3 @@ bindkey "\e\e[D" vi-backward-word
 autoload -U tetris
 zle -N tetris
 bindkey '^T' tetris
-
-alias reload="source ~/.zshrc"
