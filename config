@@ -5,7 +5,12 @@ source $DOTFILES/aliases/rails      # Rails aliases
 source $DOTFILES/aliases/aliases    # Misc aliases
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
-source $HOME/.rvm/scripts/rvm       # Load RVM
+
+if [ -e $HOME/.rvm/scripts/rvm ]; then
+  source $HOME/.rvm/scripts/rvm     # Load RVM
+else
+  echo "You don't have RVM installed."
+fi
 
 # Load custom shell scripts
 if [ $SHELL = '/bin/bash' ]; then
