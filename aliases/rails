@@ -1,10 +1,13 @@
 # Rails stuff
 alias logs='tail -f -0 ./log/*.log'
-alias ss='ruby ./script/server'
-alias sc='ruby ./script/console'
-alias model='script/generate model'
-alias controller='script/generate controller'
-alias migration='script/generate migration'
 alias migrate='rake db:migrate'
 alias rollback='rake db:rollback'
 alias r='rake'
+
+# Rails 3 aliases with backwards compatibility
+alias ss="[ -z script/server ] && script/server || rails server"
+alias sc="[ -z script/console ] && script/console || rails console"
+# Generate aliases
+alias model="[ -z script/generate ] && script/generate model || rails generate model"
+alias controller="[ -z script/generate ] && script/generate controller || rails generate controller"
+alias migration="[ -z script/generate ] && script/generate migration || rails generate migration"
