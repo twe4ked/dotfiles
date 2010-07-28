@@ -18,12 +18,12 @@ h3. Prompt
 
 What you have to look at all day.
 
-@[~/.dotfiles (git-branch)] »@ (bash)
-@[~/.dotfiles] »@ (zsh) @(rvm) ± (master*) 1+ [19:30] ⚡@
+@[~/.dotfiles (git-branch)] » user@hostname@ (bash)
+@[~/.dotfiles] » user@hostname@ (zsh) @(rvm) ± (master*) 1+ [19:30] ⚡@
 
 The ⚡ symbol changes colour based on battery levels.
-
 1+ is the number of git stashes
+user@hostname only shows if hostname is not equal to twe4kbook
 
 !http://cl.ly/9db02fdcb00e524524b7/content!
 

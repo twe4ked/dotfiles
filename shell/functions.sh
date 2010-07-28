@@ -39,3 +39,22 @@ function rp {
       fi
   fi
 }
+
+# Only show user and hostname when not on my machine (twe4kbook)
+function user_hostname {
+  if [ `hostname` != "twe4kbook" ]; then
+    echo " "`whoami`@`hostname`
+  fi
+}
+
+function prompt_color() { # From bjeanes theme
+  if [ "$USER" = "root" ]; then
+    echo "red"
+  else
+    if [ -n "$SSH_TTY" ]; then
+      echo "blue"
+    else
+      echo "cyan"
+    fi
+  fi
+}
