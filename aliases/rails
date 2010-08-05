@@ -5,9 +5,9 @@ alias rollback='rake db:rollback'
 alias r='rake'
 
 # Rails 3 aliases with backwards compatibility
-alias ss="[ -z script/server ] && script/server || rails server"
-alias sc="[ -z script/console ] && script/console || rails console"
+alias ss="[ -e script/server ] && script/server || rails server"
+alias sc="[ -e script/console ] && script/console || rails console"
 # Generate aliases
-alias model="[ -z script/generate ] && script/generate model || rails generate model"
-alias controller="[ -z script/generate ] && script/generate controller || rails generate controller"
-alias migration="[ -z script/generate ] && script/generate migration || rails generate migration"
+alias model="[ -e script/generate ] && script/generate model || rails generate model"
+alias controller="[ -e script/generate ] && script/generate controller || rails generate controller"
+alias migration="[ -e script/generate ] && script/generate migration || rails generate migration"
