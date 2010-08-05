@@ -13,7 +13,13 @@ export CASE_SENSITIVE="true" # Set to this to use case-sensitive completion
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(osx)
 
-source $ZSH/oh-my-zsh.sh
+if [ -d "$ZSH" ]; then
+  source $ZSH/oh-my-zsh.sh
+else
+  echo "Cloning oh-my-zsh..."
+  /usr/bin/env git clone git://github.com/robbyrussell/oh-my-zsh.git "$ZSH"
+  source $ZSH/oh-my-zsh.sh
+fi
 
 # Customize to your needs...
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin
