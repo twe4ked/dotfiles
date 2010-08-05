@@ -1,4 +1,4 @@
-# @ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
+# ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
 
 function git_branch {
   git branch >/dev/null 2>/dev/null && git_prompt_info && return

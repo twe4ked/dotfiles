@@ -1,8 +1,9 @@
 # Colours
 function colour {
-  # Light colours
   local reset='\e[0m'
   local white='\e[1;37m'
+  
+  # Main colours
   local black='\e[0;30m'
   local blue='\e[0;34m'
   local green='\e[0;32m'

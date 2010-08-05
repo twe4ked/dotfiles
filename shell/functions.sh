@@ -42,7 +42,7 @@ function rp {
 
 # Only show user and hostname when not on my machine (twe4kbook)
 function user_hostname {
-  if [ `hostname` != "twe4kbook" ]; then
+  if [[ `hostname` != "twe4kbook" && `hostname` != "twe4kbook.local" ]]; then
     echo " "`whoami`@`hostname`
   fi
 }
