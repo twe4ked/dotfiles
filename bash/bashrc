@@ -13,3 +13,8 @@ export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -n
 
 # Make git colourful
 git config --global color.ui auto
+
+# Ensure that rvm is the last thing sourced in all of your shell profiles, 
+# especially PATH are set.
+# Otherwise, the values you set be trampled when you switch rubies.
+source $DOTFILES/shell/rvm.sh

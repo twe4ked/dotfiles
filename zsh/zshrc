@@ -23,3 +23,8 @@ fi
 
 # Customize to your needs...
 export PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin
+
+# Ensure that rvm is the last thing sourced in all of your shell profiles, 
+# especially PATH are set.
+# Otherwise, the values you set be trampled when you switch rubies.
+source ~/.dotfiles/shell/rvm.sh
