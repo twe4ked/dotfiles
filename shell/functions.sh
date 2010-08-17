@@ -40,14 +40,14 @@ function rp {
   fi
 }
 
-# Only show user and hostname when not on my machine (twe4kbook)
+# Only show user and hostname when connected as root user or via ssh
 function user_hostname {
-  if [[ `hostname` != "twe4kbook" && `hostname` != "twe4kbook.local" ]]; then
+  if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
     echo " "`whoami`@`hostname`
   fi
 }
 
-function prompt_color() { # From bjeanes theme
+function prompt_color() { # bjeanes
   if [ "$USER" = "root" ]; then
     echo "red"
   else
