@@ -5,6 +5,7 @@ source $DOTFILES/aliases/rails      # Rails aliases
 source $DOTFILES/aliases/aliases    # Misc aliases
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
+source $DOTFILES/shell/github.sh    # Adds a 'github' command
 
 # Load custom shell scripts
 if [ $SHELL = '/bin/bash' ]; then
