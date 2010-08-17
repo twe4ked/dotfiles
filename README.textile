@@ -1,8 +1,17 @@
 h2. Basic features
 
-* "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
-* "Wirble":http://rubygems.org/gems/wirble - IRB syntax highlighting
-* "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
+* Custom functions
+* Hints file
+* Bash and zsh compatible
+* Great looking and very helpful prompt
+** Git stashes
+** Git Branch
+** Git status
+** RVM info
+** Time
+** Custom current working directory shortener [bjeanes]
+** Only show user@hostname when needed
+** Battery level indicator
 
 h3. Config
 
@@ -13,6 +22,9 @@ This file loads the rest of the config and also acts as a place to put major ite
 * Make git colourful
 * Sets title of window to be user@host
 * .irbrc to make irb awesome (view framework/syntax highlighting/tab-completions/pretty-print/auto tab indentation).
+* Sources MOTD
+** Prints current shell
+** Shows random hint
 
 h3. Prompt
 
@@ -23,34 +35,48 @@ What you have to look at all day.
 
 The ⚡ symbol changes colour based on battery levels.
 1+ is the number of git stashes
-user@hostname only shows if hostname is not equal to twe4kbook
+user@hostname only displays when user = root or connected over ssh 
 
 !http://cl.ly/9db02fdcb00e524524b7/content!
 
-h3. Aliases
+h2. Aliases
+
+h3. Main
+
+dotfiles/aliases/aliases
 
 * 'et' = Open current folder with textmate
 * 'eprof' = Edit these files
+* 'reload'/'sprof' = Reload these files
 * 'pubkey' = Copy pub keys to clipboard
 * 'gi' = Gem install with sudo at the front and without including ri and rdoc
 * 'show_hidden' = Show hidden files in Finder
 * 'hide_hidden' = Hide hidden files in Finder
 * 'o.' = Open the current directory
 * 'hints' = Show hints
+* 'tmbundles' = Go to textmate bundles folder
 
 h3. Rails aliases
 
-<pre><code>alias logs='tail -f -0 ./log/*.log'
-alias ss='ruby ./script/server'
-alias sc='ruby ./script/console'
-alias model='script/generate model'
-alias controller='script/generate controller'
-alias migration='script/generate migration'
+dotfiles/aliases/rails
+
+<pre><code># Rails stuff
+alias logs='tail -f -0 ./log/*.log'
 alias migrate='rake db:migrate'
 alias rollback='rake db:rollback'
-alias r='rake'</code></pre>
+alias r='rake'
+
+# Rails 3 aliases with backwards compatibility
+alias ss="[ -e script/server ] && script/server || rails server"
+alias sc="[ -e script/console ] && script/console || rails console"
+# Generate aliases
+alias model="[ -e script/generate ] && script/generate model || rails generate model"
+alias controller="[ -e script/generate ] && script/generate controller || rails generate controller"
+alias migration="[ -e script/generate ] && script/generate migration || rails generate migration"</code></pre>
 
 h3. Git aliases
+
+dotfiles/aliases/git
 
 <pre><code>alias gst='git status'
 alias gl='git pull --rebase'
@@ -64,6 +90,7 @@ alias gba='git branch -a'
 alias gco='git checkout'
 alias gdc='git-svn dcommit'
 alias gk='gitk --all &'
+alias gitlog='git log --oneline --decorate --graph'
 
 # Push to Heroku
 alias gph='gp heroku'
@@ -76,6 +103,22 @@ alias egitconfig='mate .git/config'
 # Alias for opening GitX
 alias gitx="open -b nl.frim.GitX"</code></pre>
 
+h2. Other interesting things
+
+*m*
+If no arguments are supplied open the current folder with TextMate
+@m path/to/project@
+
+*o*
+Use 'o' instead of 'open' (o ~/Sites will open the sites folder)
+If no arguments are supplied open the current folder
+@o path/to/project@
+
+h3. Restart passenger server
+
+@rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one.
+Once it finds a tmp directory it touches tmp/restart.txt to tell passenger to restart.
+
 h3. Hints
 
 There is a random hint taken from lib/hints.txt inserted into the motd each time it is run. You can show all hints by running the following alias:
@@ -86,6 +129,20 @@ h3. Bash specific
 * Ignore case in auto complete
 * Removes the bell
 * Automatically show completion without double tab-ing
+
+h3. Github function
+
+To use supply a minumum of two arguments; username, repository name
+Supply a third argument to specify what folder you want to project to be cloned into
+git clone http://github.com/[argument 1]/[argument 2] [argument 3]
+
+@github twe4ked dotfiles .dotfiles@
+
+h3. Supported
+
+* "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
+* "Wirble":http://rubygems.org/gems/wirble - IRB syntax highlighting
+* "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
 h2. Installation
 
