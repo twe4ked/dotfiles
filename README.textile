@@ -1,3 +1,27 @@
+h2. Installation
+
+To install, in terminal navigate to your home folder and run @git clone http://github.com/twe4ked/dotfiles.git .dotfiles@ to pull down these files.
+
+Next, open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
+
+<pre><code># Contents of ~/.profile
+if [ -e ~/.dotfiles ]; then
+  . ~/.dotfiles/config
+fi</code></pre>
+
+Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
+
+*zsh specific*
+Install "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh @wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
+
+Setup symlinks for my.zsh-theme: 
+@ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)@
+
+Remove @~/.zshrc@ and replace with a symlink to the custom version:
+@ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
+
+"oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
+
 h2. Basic features
 
 * Custom functions
@@ -105,19 +129,15 @@ alias gitx="open -b nl.frim.GitX"</code></pre>
 
 h2. Other interesting things
 
-*m*
-If no arguments are supplied open the current folder with TextMate
 @m path/to/project@
+If no arguments are supplied open the current folder with TextMate
 
-*o*
-Use 'o' instead of 'open' (o ~/Sites will open the sites folder)
-If no arguments are supplied open the current folder
 @o path/to/project@
+Use 'o' instead of 'open' (o ~/Sites will open the sites folder), if no arguments are supplied open the current folder,
 
 h3. Restart passenger server
 
-@rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one.
-Once it finds a tmp directory it touches tmp/restart.txt to tell passenger to restart.
+@rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one, once it finds a tmp directory it touches tmp/restart.txt to tell passenger to restart.
 
 h3. Hints
 
@@ -144,28 +164,8 @@ h3. Supported
 * "Wirble":http://rubygems.org/gems/wirble - IRB syntax highlighting
 * "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
-h2. Installation
-
-To install, in terminal navigate to your home folder and run @git clone http://github.com/twe4ked/dotfiles.git@ to pull down these files.
-
-Next, open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
-
-<pre><code># Contents of ~/.profile
-if [ -e ~/.dotfiles ]; then
-  . ~/.dotfiles/config
-fi</code></pre>
-
-Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
-
-*zsh specific*
-Install "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh @wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
-
-Setup symlinks for my.zsh-theme: 
-@ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)@
-
-Remove @~/.zshrc@ and replace with a symlink to the custom version:
-@ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
-
-"oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
-
 _Based on work by "bjeanes":http://github.com/bjeanes/dot-files_
+
+h3. To Do
+
+* Only load battery.py on macbook
