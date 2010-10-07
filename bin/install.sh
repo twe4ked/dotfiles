@@ -2,14 +2,20 @@
 
 # A script to install twe4ked's dotfiles automatically.
 # 
+# Note:
+#   This file is a work in progress, it isn't well tested and doesn't have much 
+#   error handling. If you find any errors or have any ideas to make this script 
+#   better let me know or fork, fix and submit a pull request.
+# 
 # Usage:
-# bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/shell/install.sh )
+# bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )
 
 if [[ -d "$HOME/.dotfiles" ]]; then
   echo "The dotfiles are already "
 else
   echo "Cloning twe4ked's dotfiles repo to ~/.dotfiles"
-  git clone http://github.com/dotfiles/dotfiles.git .dotfiles
+  cd ~/
+  git clone http://github.com/twe4ked/dotfiles.git .dotfiles
   
   echo "Creating .irbrc symlink"
   cd ~/

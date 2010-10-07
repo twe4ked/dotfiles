@@ -1,5 +1,14 @@
 h2. Installation
 
+h3. Auto installtion
+
+The auto install file is a work in progress, it isn't well tested and doesn't have much error handling. If you find any errors or have any ideas to make this script better let me know or fork, fix and submit a pull request. 
+
+Usage:
+@bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )@
+
+h3. Manual install (Read comments carefully)
+
 To install, in terminal navigate to your home folder and run @git clone http://github.com/twe4ked/dotfiles.git .dotfiles@ to pull down these files.
 
 Next, open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
