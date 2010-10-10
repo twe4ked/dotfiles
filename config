@@ -1,5 +1,12 @@
-export DOTFILES=~/.dotfiles         # Find the this folder
+# Custom configuraion, change these!
+# There are more configuration options in ./shell/exports
+# I am in the process of moving all configuration here.
 
+export DOTFILES=~/.dotfiles         # Find the this folder
+export WORK=NetEngine               # Where I work (Sets up CDPATH)
+export MACBOOK=true                 # Shows battery in zsh prompt if true
+
+# Source the dotfiles
 source $DOTFILES/aliases/git        # Git aliases
 source $DOTFILES/aliases/rails      # Rails aliases
 source $DOTFILES/aliases/aliases    # Misc aliases
@@ -15,6 +22,7 @@ else
   if [ $SHELL = "/bin/zsh" ]; then    
     source $DOTFILES/zsh/config
     export WHAT_SHELL='Using '`echo $SHELL`' shell.'
+    
   else
     export WHAT_SHELL=`echo $SHELL`' does not have a custom config.'
   fi

@@ -177,6 +177,7 @@ _Based on work by "bjeanes":http://github.com/bjeanes/dot-files_
 
 h3. To Do
 
-* Only load battery.py on macbook
-* Create installer script
-* Create custom config file for things like work directories, archflags etc.
+* -Create installer script-
+* -Only load battery.py on macbook-
+* Create custom config file for things like work directories, archflags etc. (started)
+* Extend installer script

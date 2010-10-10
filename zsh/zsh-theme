@@ -6,7 +6,9 @@ function git_branch {
 }
 
 function battery_charge {
-  echo `~/.dotfiles/lib/battery.py` 2>/dev/null
+  if [ "$MACBOOK" = true ]; then
+    echo `~/.dotfiles/lib/battery.py` 2>/dev/null
+  fi
 }
 
 # Show number of stashed items (BinaryMuse)
