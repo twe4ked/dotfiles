@@ -14,7 +14,7 @@ cd ~/.dotfiles
 git pull origin master
 
 echo ""
-echo "twe4ked's dotfiles have been installed updated."
+echo "twe4ked's dotfiles have been updated or are already at the current version!"
 echo "Any new updates will be reflected when you start your next terminal session."
 
 cd $current_path
