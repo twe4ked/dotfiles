@@ -5,7 +5,7 @@
 # Note:
 #   This file is a work in progress, it isn't well tested and doesn't have much 
 #   error handling. If you find any errors or have any ideas to make this script 
-#   better let me know or fork, fix and submit a pull request.
+#   better, let me know or fork, fix and submit a pull request.
 # 
 # Usage:
 #   bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )
@@ -33,9 +33,9 @@ else
   echo "Creating .irbrc symlink"
   ln -s ~/.dotfiles/lib/irbrc .irbrc
   
-  echo "Do you want to install oh-my-zsh (recommended). (y/n)"
-  read answer
-    if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
+  # echo "Do you want to install oh-my-zsh (recommended). (y/n)"
+  # read answer
+    # if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
       
       # TODO: Add check for wget
       echo "Installing oh-my-zsh"
@@ -51,7 +51,7 @@ else
       cp .zshrc .zshrc.bak
       rm .zshrc
       ln -s ~/.dotfiles/zsh/zshrc .zshrc
-    fi
+    # fi
     
   source ~/.dotfiles/config
   
