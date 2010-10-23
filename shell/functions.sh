@@ -58,3 +58,8 @@ function prompt_color() { # bjeanes
     fi
   fi
 }
+
+# Update dotfiles
+function update_dotfiles() {
+  /bin/sh $DOTFILES/bin/update.sh
+}
