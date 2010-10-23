@@ -28,4 +28,13 @@ else
   fi
 fi
 
+# Host specific settings
+#
+# Usage:
+#   Create a file called [hostname].custom and add your custom config there.
+if [[ -e $DOTFILES/`hostname`.custom ]]; then
+  echo "Sourcing `hostname`.custom..."
+  source $DOTFILES/`hostname`.custom
+fi
+
 source $DOTFILES/lib/motd # MOTD
