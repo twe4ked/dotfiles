@@ -8,5 +8,5 @@ export ARCHFLAGS='-arch x86_64'             # Archflags
 
 # Path settings
 export PATH=$PATH:/usr/local/mysql/bin      # For mysql commands
-export PATH="$HOME/.homebrew/bin":$PATH     # For homebrew
+export PATH=$HOME/.homebrew/bin:$PATH       # For homebrew
 export PATH=/Library/PostgreSQL8/bin:$PATH  # For pg gem

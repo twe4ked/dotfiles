@@ -12,35 +12,50 @@
 
 if [[ -d "$HOME/.dotfiles" ]]; then
   echo "The dotfiles are already on your computer!"
+  echo "Would you like to check for updates?. (y/n)"
+  read answer
+    if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
+      cd ~/.dotfiles
+      git pull origin master
+    fi
 else
   echo "Cloning twe4ked's dotfiles repo to ~/.dotfiles"
   cd ~/
   git clone http://github.com/twe4ked/dotfiles.git .dotfiles
   
+  echo "Removing .profile and replacing with a symlink to a custom version."
+  echo "Note: this is only used when using bash."
+  echo "Old version will be renamed .profile.bak"
+  cp .profile .profile.bak
+  rm .profile
+  ln -s ~/.dotfiles/bash/profile .profile
+  
   echo "Creating .irbrc symlink"
-  cd ~/
-  ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink
+  ln -s ~/.dotfiles/lib/irbrc .irbrc
   
-  # wget $1 -O $tempfile
-  wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-  if [[ $? != 0 ]]; then
-    echo "Wget error or Wget not installed"
-    # rm $tempfile
-    exit
-  else
-    echo "Installing oh-my-zsh"
-    cd ~/
-  fi
+  echo "Do you want to install oh-my-zsh (recommended). (y/n)"
+  read answer
+    if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
+      
+      # TODO: Add check for wget
+      echo "Installing oh-my-zsh"
+      wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+      
+      echo "Creating symlink to custom oh-my-zsh theme"
+      cd ~/.oh-my-zsh/themes
+      ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme
+      
+      echo "Removing .zshrc and replacing with a symlink to a custom version."
+      echo "Old version will be renamed .zshrc.bak"
+      cd ~/
+      cp .zshrc .zshrc.bak
+      rm .zshrc
+      ln -s ~/.dotfiles/zsh/zshrc .zshrc
+    fi
+    
+  source ~/.dotfiles/config
   
-  echo "Creating symlink to custom oh-my-zsh theme"
-  cd ~/.oh-my-zsh/themes
-  ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)
-  
-  echo "Removing .zshrc and replacing with a symlink to a custom version"
-  echo "Old version will be renamed .zshrc.back"
-  cd ~/
-  cp .zshrc .zshrc.back
-  rm .zshrc
-  Remove @~/.zshrc@ and replace with a symlink to the custom version:
-  ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)
+  echo ""
+  echo "twe4ked's dotfiles have been installed successfully"
+  echo "I reccomend you check out the ~/.dotfiles/config file and make any required adjustments."
 fi
