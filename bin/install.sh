@@ -2,6 +2,8 @@
 
 # A script to install twe4ked's dotfiles automatically.
 # 
+# Version: 0.3
+#
 # Note:
 #   This file is a work in progress, it isn't well tested and doesn't have much 
 #   error handling. If you find any errors or have any ideas to make this script 
@@ -33,6 +35,8 @@ else
   echo "Creating .irbrc symlink"
   ln -s ~/.dotfiles/lib/irbrc .irbrc
   
+  # TODO: For some reason 'read' doesn't seem to work, not sure why.
+  #
   # echo "Do you want to install oh-my-zsh (recommended). (y/n)"
   # read answer
     # if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
@@ -53,7 +57,8 @@ else
       ln -s ~/.dotfiles/zsh/zshrc .zshrc
     # fi
     
-  source ~/.dotfiles/config
+  source ~/.profile # If using bash
+  source ~/.zshrc   # If using zsh
   
   echo ""
   echo "twe4ked's dotfiles have been installed successfully"
