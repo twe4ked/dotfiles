@@ -7,8 +7,6 @@ The auto install file is a work in progress, it isn't well tested and doesn't ha
 Usage:
 @bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )@
 
-Update with: @update_dotfiles@
-
 h3. Manual install (Read comments carefully)
 
 To install, in terminal navigate to your home folder and run @git clone http://github.com/twe4ked/dotfiles.git .dotfiles@ to pull down these files.
@@ -32,6 +30,11 @@ Remove @~/.zshrc@ and replace with a symlink to the custom version:
 @ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
 
 "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
+
+h2. Update
+
+Usage:
+@update_dotfiles@
 
 h2. Basic features
 
