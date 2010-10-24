@@ -25,14 +25,18 @@ else
   cd ~/
   git clone http://github.com/twe4ked/dotfiles.git .dotfiles
   
-  echo "Removing .profile and replacing with a symlink to a custom version."
+  export DOTFILES=~/.dotfiles
+  source $DOTFILES/shell/colours.sh
+  
+  
+  echo $(colour blue)"Removing .profile and replacing with a symlink to a custom version."
   echo "Note: this is only used when using bash."
-  echo "Old version will be renamed .profile.bak"
+  echo "Old version will be renamed .profile.bak"$(colour reset)
   cp .profile .profile.bak
   rm .profile
   ln -s ~/.dotfiles/bash/profile .profile
   
-  echo "Creating .irbrc symlink"
+  echo $(colour blue)"Creating .irbrc symlink"$(colour reset)
   ln -s ~/.dotfiles/lib/irbrc .irbrc
   
   # TODO: For some reason 'read' doesn't seem to work, not sure why.
@@ -42,15 +46,15 @@ else
     # if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
       
       # TODO: Add check for wget
-      echo "Installing oh-my-zsh"
+      echo $(colour blue)"Installing oh-my-zsh"$(colour reset)
       wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
       
-      echo "Creating symlink to custom oh-my-zsh theme"
+      echo $(colour blue)"Creating symlink to custom oh-my-zsh theme"$(colour reset)
       cd ~/.oh-my-zsh/themes
       ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme
       
-      echo "Removing .zshrc and replacing with a symlink to a custom version."
-      echo "Old version will be renamed .zshrc.bak"
+      echo $(colour blue)"Removing .zshrc and replacing with a symlink to a custom version."$(colour reset)
+      echo $(colour blue)"Old version will be renamed .zshrc.bak"$(colour reset)
       cd ~/
       cp .zshrc .zshrc.bak
       rm .zshrc
@@ -61,6 +65,6 @@ else
   source ~/.zshrc   # If using zsh
   
   echo ""
-  echo "twe4ked's dotfiles have been installed successfully"
-  echo "I reccomend you check out the ~/.dotfiles/config file and make any required adjustments."
+  echo $(colour green)"twe4ked's dotfiles have been installed successfully"
+  echo "I reccomend you check out the ~/.dotfiles/config file and make any required adjustments."$(colour reset)
 fi

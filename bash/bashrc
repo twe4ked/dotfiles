@@ -1,6 +1,5 @@
 # BASH specific
 source $DOTFILES/lib/git_completion
-source $DOTFILES/bash/colours
 source $DOTFILES/bash/prompt
 
 # Binds
