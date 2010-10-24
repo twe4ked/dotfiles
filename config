@@ -6,6 +6,10 @@ export DOTFILES=~/.dotfiles         # Find the this folder
 export WORK=NetEngine               # Where I work (Sets up CDPATH)
 export MACBOOK=true                 # Shows battery in zsh prompt if true
 
+# Oh-my-zsh plugins
+# Originally defined in zsh/zshrc, moved here to be with the other config.
+plugins=(osx brew)
+
 # Source the dotfiles
 source $DOTFILES/aliases/git        # Git aliases
 source $DOTFILES/aliases/rails      # Rails aliases

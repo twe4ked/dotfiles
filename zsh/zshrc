@@ -1,5 +1,3 @@
-# ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)
-
 # Source my dotfiles
 source ~/.dotfiles/config
 
@@ -11,7 +9,7 @@ export CASE_SENSITIVE="false" # Set to this to use case-sensitive completion
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx)
+# plugins=() # These are defined in ../config
 
 if [ -d "$ZSH" ]; then
   source $ZSH/oh-my-zsh.sh
