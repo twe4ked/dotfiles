@@ -20,16 +20,8 @@ fi</code></pre>
 
 Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
 
-*zsh specific*
-Install "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh @wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh@
-
-Setup symlinks for my.zsh-theme: 
-@ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink (command must be run from ~/.oh-my-zsh/themes)@
-
 Remove @~/.zshrc@ and replace with a symlink to the custom version:
 @ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
-
-"oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
 h2. Update
 
@@ -176,7 +168,6 @@ h3. Supported
 
 * "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
 * "Wirble":http://rubygems.org/gems/wirble - IRB syntax highlighting
-* "oh-my-zsh":http://github.com/robbyrussell/oh-my-zsh is a community-driven framework for managing your zsh configuration.
 
 _Based on work by "bjeanes":http://github.com/bjeanes/dot-files_
 
