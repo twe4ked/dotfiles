@@ -10,7 +10,7 @@
 current_path=`pwd`
 
 echo "Updating twe4ked's dotfiles"
-cd ~/.dotfiles
+cd $DOTFILES
 git pull origin master
 
 echo ""
