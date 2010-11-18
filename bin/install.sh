@@ -2,7 +2,7 @@
 
 # A script to install twe4ked's dotfiles automatically.
 # 
-# Version: 0.3
+# Version: 0.4
 #
 # Note:
 #   This file is a work in progress, it isn't well tested and doesn't have much 
@@ -28,38 +28,22 @@ else
   export DOTFILES=~/.dotfiles
   source $DOTFILES/shell/colours.sh
   
-  
   echo $(colour blue)"Removing .profile and replacing with a symlink to a custom version."
   echo "Note: this is only used when using bash."
   echo "Old version will be renamed .profile.bak"$(colour reset)
   cp .profile .profile.bak
   rm .profile
-  ln -s ~/.dotfiles/bash/profile .profile
+  ln -s $DOTFILES/bash/profile .profile
   
   echo $(colour blue)"Creating .irbrc symlink"$(colour reset)
-  ln -s ~/.dotfiles/lib/irbrc .irbrc
+  ln -s $DOTFILES/lib/irbrc .irbrc
   
-  # TODO: For some reason 'read' doesn't seem to work, not sure why.
-  #
-  # echo "Do you want to install oh-my-zsh (recommended). (y/n)"
-  # read answer
-    # if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
-      
-      # TODO: Add check for wget
-      echo $(colour blue)"Installing oh-my-zsh"$(colour reset)
-      wget http://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
-      
-      echo $(colour blue)"Creating symlink to custom oh-my-zsh theme"$(colour reset)
-      cd ~/.oh-my-zsh/themes
-      ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme
-      
-      echo $(colour blue)"Removing .zshrc and replacing with a symlink to a custom version."$(colour reset)
-      echo $(colour blue)"Old version will be renamed .zshrc.bak"$(colour reset)
-      cd ~/
-      cp .zshrc .zshrc.bak
-      rm .zshrc
-      ln -s ~/.dotfiles/zsh/zshrc .zshrc
-    # fi
+  echo $(colour blue)"Removing .zshrc and replacing with a symlink to a custom version."$(colour reset)
+  echo $(colour blue)"Old version will be renamed .zshrc.bak"$(colour reset)
+  cd ~/
+  cp .zshrc .zshrc.bak
+  rm .zshrc
+  ln -s $DOTFILES/zsh/zshrc .zshrc
     
   source ~/.profile # If using bash
   source ~/.zshrc   # If using zsh
