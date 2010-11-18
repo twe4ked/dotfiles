@@ -1,12 +1,15 @@
-source $DOTFILES/zsh/completions  # Completions
-source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
-
+setopt prompt_subst
 setopt nobeep                     # I hate beeps
 setopt interactivecomments        # Escape commands so i can use them later (allow comments after commands)
 setopt rmstarwait                 # if `rm *` wait 10 seconds before performing it!
 setopt autocd                     # change to dirs without cd
 setopt listtypes                  # show types in completion
 unsetopt auto_name_dirs           # See: http://www.neactar.com/shell/fix-for-wrong-prompt-dir-when-using-zsh-project-rvmrc-and-oh-my-zsh
+
+setopt auto_cd
+setopt multios
+setopt cdablevarS
+autoload colors; colors;
 
 # option + right/left
 bindkey "\e\e[C" vi-forward-word

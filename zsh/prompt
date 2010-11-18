@@ -1,4 +1,12 @@
-# ln -s ~/.dotfiles/zsh/zsh-theme my.zsh-theme # Setup my.zsh-theme symlink@ (command must be run from ~/.oh-my-zsh/themes)
+# get the name of the branch we are on
+function rvm_prompt_info() {
+  ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
+  if [[ "$ruby_version" !=  "" ]]; then
+    echo "($ruby_version)"
+  else
+    echo "(system)"
+  fi
+}
 
 function git_branch {
   git branch >/dev/null 2>/dev/null && git_prompt_info && return
@@ -41,19 +49,35 @@ else # defined two for diff systems because Fish did (not entirely sure why)
   }
 fi
 
-# %3~ # Shows 3 directories deep
-PROMPT='[%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}]%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) [%T] $(battery_charge)'
-
-PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
-RPROMPT2='[%_]'
-
 # Git theming
 ZSH_THEME_GIT_PROMPT_PREFIX="± ("
 ZSH_THEME_GIT_PROMPT_SUFFIX=")"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="*"
 # ZSH_THEME_GIT_PROMPT_UNTRACKED="^" # Not implimented in the current oh-my-zsh version.
+
+# %3~ # Shows 3 directories deep
+if [ $minimal_prompt != true ]; then
+  # full
+  PROMPT='[%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}]%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+  RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) [%T] $(battery_charge)'
+else
+  # minimal
+  function rvm_prompt_info_min() {
+    if [ "$rvm_prompt_info" != "(system)" ]; then
+      echo $rvm_prompt_info
+    fi
+  }
+  
+  ZSH_THEME_GIT_PROMPT_PREFIX="± "
+  ZSH_THEME_GIT_PROMPT_SUFFIX=""
+  
+  PROMPT='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+  RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info_min)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) $(battery_charge)'
+fi
+
+PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
+RPROMPT2='[%_]'
 
 # The escape codes are surrounded by %{ and %}. These are zsh prompt escapes that tell the shell to disregard the contained characters when 
 # determining the length of the prompt. This allows zsh to properly position the cursor.

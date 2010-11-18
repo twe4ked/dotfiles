@@ -5,10 +5,7 @@
 export DOTFILES=~/.dotfiles         # Find the this folder
 export WORK=NetEngine               # Where I work (Sets up CDPATH)
 export MACBOOK=true                 # Shows battery in zsh prompt if true
-
-# Oh-my-zsh plugins
-# Originally defined in zsh/zshrc, moved here to be with the other config.
-plugins=(osx brew)
+export minimal_prompt=true          # Minimal zsh prompt
 
 # Source the dotfiles
 source $DOTFILES/aliases/git        # Git aliases
@@ -26,8 +23,11 @@ if [ $SHELL = '/bin/bash' ]; then
 else 
   if [ $SHELL = "/bin/zsh" ]; then    
     source $DOTFILES/zsh/config
+    source $DOTFILES/zsh/completions  # Completions
+    source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
+    source $DOTFILES/zsh/spectrum     # 
+    source $DOTFILES/zsh/prompt       # 
     export WHAT_SHELL='Using '`echo $SHELL`' shell.'
-    
   else
     export WHAT_SHELL=`echo $SHELL`' does not have a custom config.'
   fi
