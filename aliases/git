@@ -12,6 +12,7 @@ alias gdc='git-svn dcommit'
 alias gk='gitk --all &'
 alias gitlog='git log --oneline --decorate --graph'
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias s='git status --short'
 
 # Push to Heroku
 alias gph='gp heroku'
