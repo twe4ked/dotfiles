@@ -22,5 +22,6 @@ alias gitconfig='cat .git/config'
 # Edit git config
 alias egitconfig='mate .git/config'
 
-# Alias for opening GitX
+# Alias for opening GitX OR Git Tower
 alias gitx="open -b nl.frim.GitX"
+alias tower='open -b com.fournova.Tower `pwd`'
