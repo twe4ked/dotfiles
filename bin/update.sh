@@ -5,7 +5,7 @@
 # Version: 0.1
 #
 # Usage:
-#   bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )
+#   bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/update.sh )
 
 current_path=`pwd`
 
