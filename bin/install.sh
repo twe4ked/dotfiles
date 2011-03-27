@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# A script to install twe4ked's dotfiles automatically.
+# A script to install (or update) twe4ked's dotfiles automatically.
 # 
 # Version: 0.4
 #
@@ -19,6 +19,10 @@ if [[ -d "$HOME/.dotfiles" ]]; then
     if [[ $answer = "y" || $answer = "Y" || $answer = "yes" ]]; then
       cd ~/.dotfiles
       git pull origin master
+      
+      echo ""
+      echo "twe4ked's dotfiles have been updated or are already at the current version!"
+      echo "Any new updates will be reflected when you start your next terminal session."
     fi
 else
   echo "Cloning twe4ked's dotfiles repo to ~/.dotfiles"

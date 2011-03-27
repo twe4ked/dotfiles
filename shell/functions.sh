@@ -61,5 +61,5 @@ function prompt_color() { # bjeanes
 
 # Update dotfiles
 function update_dotfiles() {
-  /bin/sh $DOTFILES/bin/update.sh
+  /bin/sh $DOTFILES/bin/install.sh
 }
