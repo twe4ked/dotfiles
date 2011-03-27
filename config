@@ -1,7 +1,6 @@
 # Custom configuraion, change these!
 # There are more configuration options in ./shell/exports
 # I am in the process of moving all configuration here.
-
 export DOTFILES=~/.dotfiles         # Find the this folder
 export WORK=NetEngine               # Where I work (Sets up CDPATH)
 export MACBOOK=true                 # Shows battery in zsh prompt if true
@@ -14,19 +13,15 @@ source $DOTFILES/aliases/aliases    # Misc aliases
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 source $DOTFILES/shell/github.sh    # Adds a 'github' command
-source $DOTFILES/shell/colours.sh
+source $DOTFILES/shell/colours.sh   # Colours
 
-# Load custom shell scripts
+# Load custom shell scripts (zsh or bash)
 if [ $SHELL = '/bin/bash' ]; then
-  source $DOTFILES/bash/bashrc
+  source $DOTFILES/bash/config
   export WHAT_SHELL='Using '`echo $SHELL`' shell.'
 else 
-  if [ $SHELL = "/bin/zsh" ]; then    
+  if [ $SHELL = "/bin/zsh" ]; then
     source $DOTFILES/zsh/config
-    source $DOTFILES/zsh/completions  # Completions
-    source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
-    source $DOTFILES/zsh/spectrum     # 
-    source $DOTFILES/zsh/prompt       # 
     export WHAT_SHELL='Using '`echo $SHELL`' shell.'
   else
     export WHAT_SHELL=`echo $SHELL`' does not have a custom config.'
@@ -43,3 +38,8 @@ if [[ -e $DOTFILES/`hostname`.custom ]]; then
 fi
 
 source $DOTFILES/lib/motd # MOTD
+
+# Ensure that rvm is the last thing sourced in all of your shell profiles, 
+# especially PATH are set.
+# Otherwise, the values you set be trampled when you switch rubies.
+source ~/.dotfiles/shell/rvm.sh
