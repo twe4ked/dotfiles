@@ -10,7 +10,7 @@
 #   better, let me know or fork, fix and submit a pull request.
 # 
 # Usage:
-#   bash < <( curl http://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )
+#   bash < <( curl https://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )
 
 if [[ -d "$HOME/.dotfiles" ]]; then
   echo "The dotfiles are already on your computer!"
