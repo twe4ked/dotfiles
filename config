@@ -14,6 +14,7 @@ source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 source $DOTFILES/shell/github.sh    # Adds a 'github' command
 source $DOTFILES/shell/colours.sh   # Colours
+source $DOTFILES/shell/gup.sh
 
 # Load custom shell scripts (zsh or bash)
 if [ $SHELL = '/bin/bash' ]; then
