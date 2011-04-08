@@ -23,11 +23,11 @@ function hint {
   sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
 }
 
-# Restart passenger server
+# Restart passenger or pow server
 function rp {
   if [ -e tmp ]; then
     touch tmp/restart.txt
-    echo 'Restarting passenger server...'
+    echo 'Restarting server...'
   else
     echo "You don't have a tmp directory, do you want to create one? (y/n)"
     read answer
@@ -35,7 +35,7 @@ function rp {
         mkdir tmp
         echo 'Creating tmp directory...'
         touch tmp/restart.txt
-        echo 'Restarting passenger server...'
+        echo 'Restarting server...'
       fi
   fi
 }
