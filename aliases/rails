@@ -4,9 +4,13 @@ alias migrate='rake db:migrate'
 alias rollback='rake db:rollback'
 alias r='rake'
 
-# Rails 3 aliases with backwards compatibility
-alias ss="[ -e script/server ] && script/server || [ -e script/rails ] && rails server || echo Not a Rails app"
-alias sc="[ -e script/console ] && script/console || [ -e script/rails ] && rails console || echo Not a Rails app"
+# Rails 2.x.x aliases
+alias ss="script/server"
+alias sc="script/console"
+
+# Rails 3.x.x aliases
+alias rs="rails s"
+alias rc="rails c"
 
 # Generate aliases
 alias model="[ -e script/generate ] && script/generate model || rails generate model"
