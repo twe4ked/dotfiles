@@ -8,10 +8,9 @@ alias gb='git branch'
 alias gbc='git branch --color'
 alias gba='git branch -a'
 alias gco='git checkout'
-alias gdc='git-svn dcommit'
-alias gk='gitk --all &'
-alias gitlog='git log --oneline --decorate --graph'
-alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
+# gitlog
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias s='git status --short'
 
 # Push to Heroku
