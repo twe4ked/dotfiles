@@ -11,8 +11,3 @@ alias sc="script/console"
 # Rails 3.x.x aliases
 alias rs="rails s"
 alias rc="rails c"
-
-# Generate aliases
-alias model="[ -e script/generate ] && script/generate model || rails generate model"
-alias controller="[ -e script/generate ] && script/generate controller || rails generate controller"
-alias migration="[ -e script/generate ] && script/generate migration || rails generate migration"
