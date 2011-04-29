@@ -11,3 +11,5 @@ alias sc="script/console"
 # Rails 3.x.x aliases
 alias rs="rails s"
 alias rc="rails c"
+
+alias b='bundle && say bundle complete'
