@@ -2,7 +2,7 @@
 # There are more configuration options in ./shell/exports
 # I am in the process of moving all configuration here.
 export DOTFILES=~/.dotfiles         # Find the this folder
-export WORK=NetEngine               # Where I work (Sets up CDPATH)
+export WORK=Ennova                  # Where I work (Sets up CDPATH)
 export MACBOOK=true                 # Shows battery in zsh prompt if true
 export minimal_prompt=true          # Minimal zsh prompt
 
