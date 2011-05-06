@@ -8,13 +8,14 @@ alias gb='git branch'
 alias gbc='git branch --color'
 alias gba='git branch -a'
 alias gco='git checkout'
+alias gds='git diff --staged'
 
 # gitlog
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias s='git status --short'
 
 # Push to Heroku
-alias gph='gp heroku'
+alias gph='gp heroku && say deployed on heroku'
 
 # Show git config
 alias gitconfig='cat .git/config'
