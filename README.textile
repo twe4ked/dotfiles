@@ -60,14 +60,21 @@ h3. Prompt
 
 What you have to look at all day.
 
+h4. Bash
+
 <code>[~/.dotfiles (git-branch)] » user@hostname</code> (bash)
+
+h4. Zsh
+
 <code>[~/.dotfiles] » user@hostname</code> (zsh) <code>(rvm) ± (master*) 1+ [19:30] ⚡</code>
+
+export minimal_prompt=true
+
+<code>~/.dotfiles » user@hostname</code> (zsh) <code>rvm ± master* 1+ ⚡</code>
 
 The ⚡ symbol changes colour based on battery levels.
 1+ is the number of git stashes
 user@hostname only displays when user = root or connected over ssh 
-
-!http://cl.ly/9db02fdcb00e524524b7/content!
 
 h2. Aliases
 
