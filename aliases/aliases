@@ -4,8 +4,11 @@ alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"' # Co
 alias ls='ls -laGF' # Compact view, show color
 alias gi='sudo gem install --no-ri --no-rdoc' # Give root and force no documentation
 alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints
+
+# Source dotfiles
 alias reload="source $DOTFILES/config"
 alias sprof='reload'
+alias sauce='reload'
 
 alias ..='cd ..'
 alias ...='cd ../..'
