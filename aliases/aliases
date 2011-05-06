@@ -21,3 +21,18 @@ alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO && killa
 
 # Cucumber
 alias cuke='cucumber --format pretty'
+
+# https://github.com/ltw/oh-my-zsh/commit/5ae46606d964619b987b4a51b68cc82ee7a9db1d#diff-0
+# Lucas Willett (@ltw_)
+alias sw='saywhen'
+
+function saywhen {
+  if "$@"
+  then
+    say "$1 $2 done."
+    return 0
+  else
+    say "$1 $2 error."
+    return 1
+  fi
+}
