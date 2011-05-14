@@ -12,7 +12,6 @@ zstyle ':completion::complete:cd:' tag-order local-directories path-directories
 # Don't auto-complete internal functions (ones prefixed with _)
 zstyle ':completion:*:functions' ignored-patterns '_*'
 
-
 # BELOW IS THE OH-MY-ZSH COMPLETION FILE
 # fixme - the load process here seems a bit bizarre
 
@@ -48,7 +47,6 @@ zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm 
 # disable named-directories autocompletion
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 # cdpath=(.)
-
 
 # Load known hosts file for auto-completion with ssh and scp commands
 if [ -f ~/.ssh/known_hosts ]; then
