@@ -82,16 +82,17 @@ h3. Main
 
 dotfiles/aliases/aliases
 
-* 'et' = Open current folder with textmate
-* 'eprof' = Edit these files
-* 'reload'/'sprof' = Reload these files
-* 'pubkey' = Copy pub keys to clipboard
-* 'gi' = Gem install with sudo at the front and without including ri and rdoc
-* 'show_hidden' = Show hidden files in Finder
-* 'hide_hidden' = Hide hidden files in Finder
-* 'o.' = Open the current directory
-* 'hints' = Show hints
-* 'tmbundles' = Go to textmate bundles folder
+* @et@ = Open current folder with textmate
+* @eprof@ = Edit these files
+* @reload@ or @sprof@ or @sauce@ = Reload these files
+* @pubkey@ = Copy pub keys to clipboard
+* @gi@ = Gem install with sudo at the front and without including ri and rdoc
+* @show_hidden@ = Show hidden files in Finder
+* @show_hidden@ = Show hidden files in Finder
+* @ql@ = Quick look
+* @o.@ = Open the current directory
+* @hints@ = Show hints
+* @tmbundles@ = Go to textmate bundles folder
 
 h3. Rails aliases
 
