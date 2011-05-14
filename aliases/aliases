@@ -21,6 +21,7 @@ alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
 # Mac Helpers
 alias show_hidden='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder'
 alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
+alias ql='qlmanage -p 2>/dev/null' # Quick Look
 
 # Cucumber
 alias cuke='cucumber --format pretty'
