@@ -1,6 +1,6 @@
 h2. Installation
 
-h3. Auto installtion
+h3. Auto installation
 
 The auto install file is a work in progress, it isn't well tested and doesn't have much error handling. If you find any errors or have any ideas to make this script better let me know or fork, fix and submit a pull request. 
 
@@ -34,12 +34,10 @@ h2. Basic features
 * Hints file
 * Bash and zsh compatible
 * Great looking and very helpful prompt
-** Git stashes
-** Git Branch
-** Git status
+** Git status/stashes/current branch
 ** RVM info
 ** Time
-** Custom current working directory shortener [bjeanes]
+** Custom current working directory shortener ["bjeanes":http://github.com/bjeanes/dot-files]
 ** Only show user@hostname when needed
 ** Battery level indicator
 
@@ -74,7 +72,7 @@ export minimal_prompt=true
 
 The ⚡ symbol changes colour based on battery levels.
 1+ is the number of git stashes
-user@hostname only displays when user = root or connected over ssh 
+user@hostname only displays when user = root or connected over ssh
 
 h2. Other interesting things
 
@@ -84,9 +82,11 @@ If no arguments are supplied open the current folder with TextMate
 @o path/to/project@
 Use 'o' instead of 'open' (o ~/Sites will open the sites folder), if no arguments are supplied open the current folder,
 
-h3. Restart passenger server
+If you added a @.notes@ file to any directory, the contents of that file will be output when you cd into the directory.
 
-@rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one, once it finds a tmp directory it touches tmp/restart.txt to tell passenger to restart.
+h3. Restart Passenger or Pow server
+
+@rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one, once it finds a tmp directory it touches tmp/restart.txt to tell passenger or pow to restart.
 
 h3. Hints
 
@@ -112,11 +112,10 @@ h3. Supported
 * "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
 * "Wirble":http://rubygems.org/gems/wirble - IRB syntax highlighting
 
-_Based on work by "bjeanes":http://github.com/bjeanes/dot-files_
-
 h3. To Do
 
 * -Create installer script-
 * -Only load battery.py on macbook-
+* Tidy the README
 * Create custom config file for things like work directories, archflags etc. (started)
 * Extend installer script
