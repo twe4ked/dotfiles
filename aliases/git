@@ -11,6 +11,8 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gds='gd --staged'
 
+alias gup='sw gup'
+
 # gitlog
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 alias s='git status --short'
