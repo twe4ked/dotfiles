@@ -4,7 +4,14 @@ source $DOTFILES/zsh/spectrum     #
 source $DOTFILES/zsh/prompt       #
 source $DOTFILES/lib/zsh-syntax-highlighting.zsh
 
-ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES+=(
+  unknown-token                 'bg=red,bold'
+  alias                         'fg=magenta,bold'
+  single-quoted-argument        'fg=green,bold'
+  double-quoted-argument        'fg=green,bold'
+  builtin                       'fg=yellow,bold'
+  function                      'fg=yellow,bold'
+)
 
 setopt prompt_subst
 setopt nobeep                     # I hate beeps
