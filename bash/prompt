@@ -12,5 +12,3 @@ export PS1="\
 \[$(colour light_yellow)\]\$(__git_ps1 \" (%s)\")\
 \[$(colour light_yellow)\]\[$(user_hostname)\]\[$(colour reset)\] \
 \[$(colour $(prompt_color))\]»\[$(colour reset)\] "
-
-# PROMPT_COMMAND=bash_prompt_command

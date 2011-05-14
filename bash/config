@@ -11,7 +11,9 @@ bind 'set show-all-if-ambiguous On' # this allows you to automatically show comp
 export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*} ${PWD}"; echo -ne "\007"'
 
 # Make git colourful
-git config --global color.ui auto# Ensure that rvm is the last thing sourced in all of your shell profiles, 
+git config --global color.ui auto
+
+# Ensure that rvm is the last thing sourced in all of your shell profiles, 
 # especially PATH are set.
 # Otherwise, the values you set be trampled when you switch rubies.
 source ~/.dotfiles/shell/rvm.sh
