@@ -23,10 +23,9 @@ Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc sym
 Remove @~/.zshrc@ and replace with a symlink to the custom version:
 @ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
 
-h2. Update
+h3. Update
 
-Usage:
-@update_dotfiles@
+Usage: @update_dotfiles@
 
 h2. Basic features
 
@@ -34,19 +33,13 @@ h2. Basic features
 * Hints file
 * Bash and zsh compatible
 * Great looking and very helpful prompt
-** Git status/stashes/current branch
-** RVM info
-** Time
-** Custom current working directory shortener ["bjeanes":http://github.com/bjeanes/dot-files]
-** Only show user@hostname when needed
-** Battery level indicator
 
 h3. Config
 
 This file loads the rest of the config and also acts as a place to put major items.
 
 * Search /Sites folder on 'cd' command
-* Set textmate as default editor
+* Set TextMate as default editor
 * Make git colourful
 * Sets title of window to be user@host
 * .irbrc to make irb awesome (view framework/syntax highlighting/tab-completions/pretty-print/auto tab indentation).
@@ -54,13 +47,18 @@ This file loads the rest of the config and also acts as a place to put major ite
 ** Prints current shell
 ** Shows random hint
 
-h3. Prompt
+h2. Prompt
 
 What you have to look at all day.
 
-h4. Bash
+h3. Features
 
-<code>[~/.dotfiles (git-branch)] » user@hostname</code> (bash)
+* Git status/stashes/current branch
+* RVM info
+* Time
+* Custom current working directory shortener ["bjeanes":http://github.com/bjeanes/dot-files]
+* Only show user@hostname when needed
+* Battery level indicator
 
 h4. Zsh
 
@@ -74,34 +72,36 @@ The ⚡ symbol changes colour based on battery levels.
 1+ is the number of git stashes
 user@hostname only displays when user = root or connected over ssh
 
+h4. Bash
+
+<code>[~/.dotfiles (git-branch)] » user@hostname</code> (bash)
+
 h2. Other interesting things
 
+h4. Common aliases (open/edit)
+
 @m path/to/project@
-If no arguments are supplied open the current folder with TextMate
+If no arguments are supplied open the current folder with TextMate.
 
 @o path/to/project@
-Use 'o' instead of 'open' (o ~/Sites will open the sites folder), if no arguments are supplied open the current folder,
+Use 'o' instead of 'open' (o ~/Sites will open the sites folder), if no arguments are supplied open the current folder.
 
-If you added a @.notes@ file to any directory, the contents of that file will be output when you cd into the directory.
-
-h3. Restart Passenger or Pow server
+h4. Restart Passenger or Pow server
 
 @rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one, once it finds a tmp directory it touches tmp/restart.txt to tell passenger or pow to restart.
 
-h3. Hints
+h4. Hints
 
 There is a random hint taken from lib/hints.txt inserted into the motd each time it is run. You can show all hints by running the following alias:
 @alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints@
 
-h3. Bash specific
+h4. Notes
 
-* Ignore case in auto complete
-* Removes the bell
-* Automatically show completion without double tab-ing
+If you add a @.notes@ file to any directory, the contents of that file will be output when you cd into the directory.
 
-h3. Github function
+h4. Github function
 
-To use supply a minumum of two arguments; username, repository name
+To use supply a minimum of two arguments; username, repository name
 Supply a third argument to specify what folder you want to project to be cloned into
 git clone http://github.com/[argument 1]/[argument 2] [argument 3]
 
@@ -116,6 +116,6 @@ h3. To Do
 
 * -Create installer script-
 * -Only load battery.py on macbook-
-* Tidy the README
+* -Tidy the README-
 * Create custom config file for things like work directories, archflags etc. (started)
 * Extend installer script
