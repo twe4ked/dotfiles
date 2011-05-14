@@ -4,6 +4,8 @@ source $DOTFILES/zsh/spectrum     #
 source $DOTFILES/zsh/prompt       #
 source $DOTFILES/lib/zsh-syntax-highlighting.zsh
 
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+
 setopt prompt_subst
 setopt nobeep                     # I hate beeps
 setopt interactivecomments        # Escape commands so i can use them later (allow comments after commands)
