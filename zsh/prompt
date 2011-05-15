@@ -1,7 +1,7 @@
 # get the name of the branch we are on
 function rvm_prompt_info() {
   ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
-  
+
   if [ $minimal_prompt != true ]; then
     if [[ "$ruby_version" !=  "" ]]; then
       echo "($ruby_version)"
@@ -78,7 +78,7 @@ else
   # minimal
   ZSH_THEME_GIT_PROMPT_PREFIX="± "
   ZSH_THEME_GIT_PROMPT_SUFFIX=""
-  
+
   PROMPT='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
   RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) $(battery_charge)'
 fi
