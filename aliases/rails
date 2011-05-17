@@ -1,15 +1,15 @@
 # Rails stuff
-alias logs='tail -f -0 ./log/*.log'
-alias migrate='rake db:migrate'
-alias rollback='rake db:rollback'
-alias r='rake'
+alias logs='tail -f -0 ./log/*.log'           # Tails all the Rails logs files
+alias migrate='rake db:migrate'               # Migrate the database
+alias rollback='rake db:rollback'             # Rollback the database
+alias r='rake'                                # Shortcut to rake
 
 # Rails 2.x.x aliases
-alias ss="script/server"
-alias sc="script/console"
+alias ss="script/server"                      # Start the Rails server
+alias sc="script/console"                     # Start the Rails console
 
 # Rails 3.x.x aliases
-alias rs="rails s"
-alias rc="rails c"
+alias rs="rails s"                            # Start the Rails server
+alias rc="rails c"                            # Start the Rails console# Start the Rails server
 
-alias b='bundle && say bundle complete'
+alias b='bundle && say bundle complete'       # Run bundle and say when it's done

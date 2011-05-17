@@ -1,17 +1,18 @@
-alias et='mate .' # Open current folder with textmate
-alias eprof="mate ~/.dotfiles" # Edit these files
-alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"' # Copy pub keys to clipboard
-alias ls='ls -laGF' # Compact view, show color
+alias et='mate .'                             # Open current folder with textmate
+alias eprof="mate ~/.dotfiles"                # Edit these files
+alias ls='ls -laGF'                           # Compact view, show color
 alias gi='sudo gem install --no-ri --no-rdoc' # Give root and force no documentation
-alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints
+alias hints='cat ~/.dotfiles/lib/hints.txt'   # Show hints
+alias ..='cd ..'                              # Up one directory
+alias ...='cd ../..'                          # Up two directories
+
+# Copy pub keys to clipboard
+alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"'
 
 # Source dotfiles
 alias reload="source $DOTFILES/config"
 alias sprof='reload'
 alias sauce='reload'
-
-alias ..='cd ..'
-alias ...='cd ../..'
 
 # Go to textmate bundles folder
 alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
@@ -19,10 +20,9 @@ alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
 # Mac Helpers
 alias show_hidden='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder'
 alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
-alias ql='qlmanage -p 2>/dev/null' # Quick Look
+alias ql='qlmanage -p 2>/dev/null'            # Quick Look
 
-# Cucumber
-alias cuke='cucumber --format pretty'
+alias cuke='cucumber --format pretty'         # Cucumber
 
 # https://github.com/ltw/oh-my-zsh/commit/5ae46606d964619b987b4a51b68cc82ee7a9db1d#diff-0
 # Lucas Willett (@ltw_)

@@ -1,29 +1,25 @@
-alias gst='git status'
-alias gl='git pull --rebase'
-alias gp='git push'
-alias ga='git add'
-alias gc='git commit -v'
-alias gca='git commit -v -a'
-alias gb='git branch'
-alias gbc='git branch --color'
-alias gba='git branch -a'
-alias gco='git checkout'
-alias gd='git diff'
-alias gds='gd --staged'
+alias gst='git status'                        # Show the status
+alias s='git status --short'                  # Short status
+alias gl='git pull --rebase'                  # Pull rebase
+alias gp='git push'                           # Push
+alias ga='git add'                            # Add
+alias gc='git commit -v'                      # Commit verbose
+alias gca='git commit -v -a'                  # Commit all verbose
+alias gb='git branch'                         # Git branch
+alias gba='git branch -a'                     # Show all branches
+alias gco='git checkout'                      # Checkout
+alias gd='git diff'                           # Diff
+alias gds='gd --staged'                       # Diff staged
+alias gup='sw gup'                            # Say when gup is complete
 
-alias gup='sw gup'
-
-# gitlog
+# Git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias s='git status --short'
 
-# Push to Heroku
+# Push to Heroku (and tell me when you're done)
 alias gph='gp heroku && say deployed on heroku'
 
-# Show git config
-alias gitconfig='cat .git/config'
-# Edit git config
-alias egitconfig='mate .git/config'
+alias gitconfig='cat .git/config'             # Show git config
+alias egitconfig='mate .git/config'           # Edit git config
 
 # Alias for opening GitX OR Git Tower
 alias gitx="open -b nl.frim.GitX"
