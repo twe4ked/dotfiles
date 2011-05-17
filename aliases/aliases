@@ -12,8 +12,6 @@ alias sauce='reload'
 
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
 
 # Go to textmate bundles folder
 alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
