@@ -1,3 +1,7 @@
 # Ignore custom files.
 *.custom
-/vim
+
+# Ignore vim related stuffs
+/vim-*
+/vim/bundle
+/vim/.netrwhist
