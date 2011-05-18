@@ -22,3 +22,6 @@ end
 require 'irb/completion' # Tab completions
 require 'pp' # Pretty print
 IRB.conf[:AUTO_INDENT]=true # Automattic tab indentation
+
+# Show ActiveRecord queries in the console
+ActiveRecord::Base.logger = Logger.new(STDOUT)
