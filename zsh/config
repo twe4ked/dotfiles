@@ -13,7 +13,7 @@ ZSH_HIGHLIGHT_STYLES+=(
   function                      'fg=yellow,bold'
 )
 
-setopt prompt_subst
+setopt prompt_subst               # Allows variable substitution in the prompt
 setopt nobeep                     # I hate beeps
 setopt interactivecomments        # Escape commands so i can use them later (allow comments after commands)
 setopt rmstarwait                 # if `rm *` wait 10 seconds before performing it!
@@ -21,9 +21,9 @@ setopt autocd                     # change to dirs without cd
 setopt listtypes                  # show types in completion
 unsetopt auto_name_dirs           # See: http://www.neactar.com/shell/fix-for-wrong-prompt-dir-when-using-zsh-project-rvmrc-and-oh-my-zsh
 
-setopt auto_cd
+setopt auto_cd                    # If a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory.
+setopt cdablevarS                 # With CDABLEVARS, if the argument to cd is the name of a parameter whose value is a valid directory, it will become the current directory.
 setopt multios
-setopt cdablevarS
 autoload colors; colors;
 
 # option + right/left

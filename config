@@ -14,7 +14,7 @@ source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 source $DOTFILES/shell/github.sh    # Adds a 'github' command
 source $DOTFILES/shell/colours.sh   # Colours
-source $DOTFILES/shell/gup.sh
+source $DOTFILES/shell/gup.sh       # Smart pull function by @jasoncodes
 
 # Load custom shell scripts (zsh or bash)
 if [ $SHELL = '/bin/bash' ]; then
@@ -38,7 +38,7 @@ if [[ -e $DOTFILES/`hostname`.custom ]]; then
   source $DOTFILES/`hostname`.custom
 fi
 
-source $DOTFILES/lib/motd # MOTD
+source $DOTFILES/lib/motd           # MOTD
 
 hitch() {
   command hitch "$@"
