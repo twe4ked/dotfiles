@@ -1,0 +1,45 @@
+set guioptions-=T " Hide the tool bar
+
+if has("gui_macvim")
+  " Cmd+T to open Command-T
+  macmenu &File.New\ Tab key=<nop>
+  nmap <D-t> :CommandT<CR>
+  imap <D-t> <Esc>:CommandT<CR>
+
+  " Cmd+R to flush Command-T cache
+  nmap <D-r> :CommandTFlush<CR>
+  imap <D-r> <Esc>:CommandTFlush<CR>
+
+  " Stop Cmd+W from closing window
+  macmenu &File.Close key=<nop>
+  nmap <D-w> :BD<CR>
+  imap <D-w> <Esc>:BD<CR>
+
+  menu File.Close\ Instance :qa<CR>
+  inoremenu File.Close\ Instance :qa<CR>
+
+  " Fullscreen
+  set lines=100
+  set columns=300
+
+  set guioptions=ce
+  "              ||
+  "              |+-- use simple dialogs rather than pop-ups
+  "              +--- use GUI tabs, not console style tabs
+endif
+
+" Auto-NERDTree if root.
+if argv(0) == '.'
+  au VimEnter * :NERDTreeToggle
+  au VimEnter * :wincmd p
+endif
+
+" Set column for features
+autocmd BufWinEnter *.feature set cc+=11
+autocmd BufWinLeave *.feature set cc-=11
+
+let g:indent_guides_color_change_percent = 3
+let g:indent_guides_enable_on_vim_startup = 1
+
+" NERDCommenter extra spaces
+let g:NERDSpaceDelims=1

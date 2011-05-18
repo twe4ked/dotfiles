@@ -1,0 +1,6 @@
+Bundle 'The-NERD-tree'
+Bundle 'Command-T'
+Bundle 'Indent-Guides'
+Bundle 'trailing-whitespace'
+Bundle 'bufexplorer.zip'
+Bundle 'vimwiki'

@@ -1,0 +1,85 @@
+" Set leader -------------------------------------------------------------------
+let mapleader = ","
+
+" Vundle -----------------------------------------------------------------------
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+source $DOTFILES/vim/vundle.vim
+
+" Color Scheme -----------------------------------------------------------------
+syntax enable
+set background=dark
+let g:solarized_termcolors=256
+colorscheme solarized
+
+" Toggle Solarized Background
+function! ToggleBackground()
+  if (g:solarized_style == 'dark')
+    let g:solarized_style = 'light'
+    colorscheme solarized
+  else
+    let g:solarized_style = 'dark'
+    colorscheme solarized
+  endif
+endfunction
+
+" Misc -------------------------------------------------------------------------
+set nowrap                                  " No line wrap
+set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
+set number                                  " Show line numbers
+set ruler                                   " Show ruler
+set hlsearch                                " Highlight seaches
+set listchars=trail:.,tab:>-,eol:¬          " Change the invisible characters
+set noswapfile                              " Don't create annoying *.swp files
+set scrolloff=3                             " Start scrolling the file 3 lines before the end of the window
+set cc=80                                   " Put at line @ column 80
+set cursorcolumn                            " highlight the current column
+set cursorline                              " highlight current line
+
+
+filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
+noremap <leader>i :set list!<CR>
+nmap <leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
+
+" Epic status line (https://github.com/robertmeta/vim-files/) ------------------
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+"              | | | | |  |   |      |  |     |    |
+"              | | | | |  |   |      |  |     |    + Current column
+"              | | | | |  |   |      |  |     +--- Current line
+"              | | | | |  |   |      |  +-- Current % into file
+"              | | | | |  |   |      +-- Current syntax in square brackets
+"              | | | | |  |   +-- Current fileformat
+"              | | | | |  +-- Number of lines
+"              | | | | +-- Preview flag in square brackets
+"              | | | +-- Help flag in square brackets
+"              | | +-- Readonly flag in square brackets
+"              | +-- Modified flag in square brackets
+"              +-- Full path to file in the buffer
+
+" Indentation ------------------------------------------------------------------
+set shiftwidth=2                            " Number of spaces to use in each autoindent step
+set tabstop=2                               " Two tab spaces
+set softtabstop=2                           " Number of spaces to skip or insert when <BS>ing or <Tab>ing
+set expandtab                               " Spaces instead of tabs for better cross-editor compatibility
+set autoindent                              " Keep the indent when creating a new line
+set smarttab                                " Use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
+set cindent                                 " Recommended seting for automatic C-style indentation
+set autoindent                              " Automatic indentation in non-C files
+
+" Window Navigation ------------------------------------------------------------
+" Use ctrl+(h|j|k|j) to move through open windows.
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" Plugins-----------------------------------------------------------------------
+" Plugin configuration.
+"
+" Command-T
+let g:CommandTMaxFiles  = 20000
+let g:CommandTMaxHeight = 10
+
+" NERDTree
+map <leader>n :NERDTreeToggle<CR>
