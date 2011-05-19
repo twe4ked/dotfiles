@@ -1,6 +1,6 @@
 source $DOTFILES/zsh/completion   # Completions
 source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
-source $DOTFILES/zsh/prompt       #
+source $DOTFILES/zsh/prompt       # Load my EPIC prompt
 source $DOTFILES/lib/zsh-syntax-highlighting.zsh
 
 ZSH_HIGHLIGHT_STYLES+=(
