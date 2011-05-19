@@ -13,17 +13,6 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
-" Toggle Solarized Background
-function! ToggleBackground()
-  if (g:solarized_style == 'dark')
-    let g:solarized_style = 'light'
-    colorscheme solarized
-  else
-    let g:solarized_style = 'dark'
-    colorscheme solarized
-  endif
-endfunction
-
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
 set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
