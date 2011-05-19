@@ -1,6 +1,5 @@
 source $DOTFILES/zsh/completion   # Completions
 source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
-source $DOTFILES/zsh/spectrum     # 
 source $DOTFILES/zsh/prompt       #
 source $DOTFILES/lib/zsh-syntax-highlighting.zsh
 
