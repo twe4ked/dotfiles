@@ -27,9 +27,9 @@ set vb t_vb=                                " Turn off bell
 
 " Searching --------------------------------------------------------------------
 set hlsearch                                " Highlight searches
-set incsearch                               " ??
+set incsearch                               " Highlight search results instantly
 set ignorecase                              " Ignore case
-set smartcase                               " ??
+set smartcase                               " Override 'ignorecase' option if the search contains upper case characters.
 
 filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
 noremap <leader>i :set list!<CR>
