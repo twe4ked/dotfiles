@@ -5,6 +5,7 @@ alias gi='sudo gem install --no-ri --no-rdoc' # Give root and force no documenta
 alias hints='cat ~/.dotfiles/lib/hints.txt'   # Show hints
 alias ..='cd ..'                              # Up one directory
 alias ...='cd ../..'                          # Up two directories
+alias wiki='vim -c VimwikiIndex'              # Open vimwiki
 
 # Copy pub keys to clipboard
 alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"'
