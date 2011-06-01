@@ -4,7 +4,6 @@
 export DOTFILES=~/.dotfiles         # Find the this folder
 export WORK=Ennova                  # Where I work (Sets up CDPATH)
 export MACBOOK=true                 # Shows battery in zsh prompt if true
-export minimal_prompt=true          # Minimal zsh prompt
 
 # Source the dotfiles
 source $DOTFILES/aliases/git        # Git aliases
