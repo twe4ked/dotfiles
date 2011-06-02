@@ -9,6 +9,15 @@ function rvm_prompt_info() {
   fi
 }
 
+# Formats prompt string for current git commit short SHA
+function git_sha() {
+  sha=$(git rev-parse --short HEAD 2>/dev/null)
+
+  if [[ "$sha" !=  "" ]]; then
+    echo ":"$sha
+  fi
+}
+
 function git_branch {
   git branch >/dev/null 2>/dev/null && git_prompt_info && return
   echo '○' # Not in a repository
@@ -62,7 +71,7 @@ ZSH_THEME_GIT_PROMPT_DELETED="!"
 ZSH_THEME_GIT_PROMPT_UNMERGED="="
 
 PROMPT='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) %T $(battery_charge)'
+RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) %T $(battery_charge)'
 
 PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
 RPROMPT2='[%_]'
