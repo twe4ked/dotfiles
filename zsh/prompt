@@ -61,7 +61,6 @@ ZSH_THEME_GIT_PROMPT_RENAMED=">"
 ZSH_THEME_GIT_PROMPT_DELETED="!"
 ZSH_THEME_GIT_PROMPT_UNMERGED="="
 
-# %3~ # Shows 3 directories deep
 PROMPT='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
 RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)%{${reset_color}%}$(git_stash) %T $(battery_charge)'
 
