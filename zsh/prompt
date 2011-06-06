@@ -1,4 +1,4 @@
-# get the name of the branch we are on
+# RVM info
 function rvm_prompt_info() {
   ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
 
@@ -18,11 +18,13 @@ function git_sha() {
   fi
 }
 
+# Get the name of the branch we are on
 function git_branch {
   git branch >/dev/null 2>/dev/null && git_prompt_info && return
   echo '○' # Not in a repository
 }
 
+# Battery
 function battery_charge {
   if [ "$MACBOOK" = true ]; then
     echo `~/.dotfiles/lib/battery.py` 2>/dev/null

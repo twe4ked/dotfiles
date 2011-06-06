@@ -3,13 +3,13 @@ source $DOTFILES/zsh/git          # Custom version of the oh-my-zsh git plugin
 source $DOTFILES/zsh/prompt       # Load my EPIC prompt
 source $DOTFILES/zsh/zsh-syntax-highlighting.zsh
 
-ZSH_HIGHLIGHT_STYLES+=(
-  unknown-token                 'bg=red,bold'
-  alias                         'fg=magenta,bold'
-  single-quoted-argument        'fg=green,bold'
-  double-quoted-argument        'fg=green,bold'
-  builtin                       'fg=yellow,bold'
-  function                      'fg=yellow,bold'
+ZSH_HIGHLIGHT_STYLES+=(           # zsh syntax highlighting styles.
+  unknown-token           'bg=red,bold'
+  alias                   'fg=magenta,bold'
+  single-quoted-argument  'fg=green,bold'
+  double-quoted-argument  'fg=green,bold'
+  builtin                 'fg=yellow,bold'
+  function                'fg=yellow,bold'
 )
 
 setopt prompt_subst               # Allows variable substitution in the prompt
