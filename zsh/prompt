@@ -81,7 +81,7 @@ function precmd {
   local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
   local rvm='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} '
   local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
-  local time='%T '
+  local time='%* '
   local batt='$(battery_charge)'
 
   PROMPT=$cwd$usr$char
