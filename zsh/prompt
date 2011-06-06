@@ -72,10 +72,18 @@ ZSH_THEME_GIT_PROMPT_RENAMED=">"
 ZSH_THEME_GIT_PROMPT_DELETED="!"
 ZSH_THEME_GIT_PROMPT_UNMERGED="="
 
-PROMPT='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}%{${fg[yellow]}%}$(user_hostname) %{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-RPROMPT='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} %{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) %T $(battery_charge)'
+local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
+local usr='%{${fg[yellow]}%}$(user_hostname) '
+local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+local rvm='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} '
+local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
+local time='%T '
+local batt='$(battery_charge)'
 
-PROMPT2="%{${fg[$(prompt_color)]}%}»%{${reset_color}%} "
+PROMPT=$cwd$usr$char
+RPROMPT=$rvm$git$time$batt
+
+PROMPT2=$char
 RPROMPT2='[%_]'
 
 # The escape codes are surrounded by %{ and %}. These are zsh prompt escapes that tell the shell to disregard the contained characters when 
