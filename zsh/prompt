@@ -38,28 +38,29 @@ git_stash() {
 
 # Prompt PWD
 # http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
-if [ `uname -s` = "Darwin" ]; then
-  function prompt_pwd() {
-    if [ "$PWD" != "$HOME" ]; then
-      printf "%s" `echo $PWD|sed -e 's|/private||' -e "s|^$HOME|~|" -e 's-/\(\.\{0,1\}[^/]\)\([^/]*\)-/\1-g'`
-      echo $PWD|sed -e 's-.*/\.\{0,1\}[^/]\([^/]*$\)-\1-'
+autoload vcs_info
+function prompt_pwd() {
+  local repo="$vcs_info_msg_1_"
+
+  parts=(${(s:/:)${${PWD}/#${HOME}/\~}})
+
+  i=0
+  while (( i++ < ${#parts} )); do
+    part="$parts[i]"
+    if [[ "$part" == "$repo" ]]; then
+      # if this part of the path represents the repo,
+      # underline it, and skip truncating the component
+      parts[i]="%U$part%u"
     else
-      echo '~'
+      # Shorten the path as long as it isn't the last piece
+      if [[ "$parts[${#parts}]" != "$part" ]]; then
+        parts[i]="$part[1,1]"
+      fi
     fi
-  }
-else # defined two for diff systems because Fish did (not entirely sure why)
-  function prompt_pwd() {
-    case "$PWD" in
-      $HOME)
-        echo '~'
-        ;;
-      *)
-        printf "%s" `echo $PWD|sed -e "s|^$HOME|~|" -e 's-/\(\.\{0,1\}[^/]\)\([^/]*\)-/\1-g'`
-        echo $PWD|sed -n -e 's-.*/\.\{0,1\}.\([^/]*\)-\1-p'
-        ;;
-    esac
-  }
-fi
+  done
+
+  echo "${(j:/:)parts}"
+}
 
 # Git theming
 ZSH_THEME_GIT_PROMPT_PREFIX="± "
@@ -72,19 +73,23 @@ ZSH_THEME_GIT_PROMPT_RENAMED=">"
 ZSH_THEME_GIT_PROMPT_DELETED="!"
 ZSH_THEME_GIT_PROMPT_UNMERGED="="
 
-local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
-local usr='%{${fg[yellow]}%}$(user_hostname) '
-local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-local rvm='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} '
-local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
-local time='%T '
-local batt='$(battery_charge)'
+function precmd {
+  vcs_info
 
-PROMPT=$cwd$usr$char
-RPROMPT=$rvm$git$time$batt
+  local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
+  local usr='%{${fg[yellow]}%}$(user_hostname) '
+  local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+  local rvm='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} '
+  local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
+  local time='%T '
+  local batt='$(battery_charge)'
 
-PROMPT2=$char
-RPROMPT2='[%_]'
+  PROMPT=$cwd$usr$char
+  RPROMPT=$rvm$git$time$batt
+
+  PROMPT2=$char
+  RPROMPT2='[%_]'
+}
 
 # The escape codes are surrounded by %{ and %}. These are zsh prompt escapes that tell the shell to disregard the contained characters when 
 # determining the length of the prompt. This allows zsh to properly position the cursor.
