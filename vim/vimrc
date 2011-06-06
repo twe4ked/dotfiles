@@ -21,8 +21,6 @@ set ruler                                   " Show ruler
 set listchars=trail:.,tab:>-,eol:¬          " Change the invisible characters
 set noswapfile                              " Don't create annoying *.swp files
 set scrolloff=3                             " Start scrolling the file 3 lines before the end of the window
-set cursorcolumn                            " highlight the current column
-set cursorline                              " highlight current line
 set vb t_vb=                                " Turn off bell
 
 " Searching --------------------------------------------------------------------
@@ -69,7 +67,7 @@ map <C-l> <C-w>l
 
 " Plugins-----------------------------------------------------------------------
 " Plugin configuration.
-"
+
 " Command-T
 let g:CommandTMaxFiles  = 20000
 let g:CommandTMaxHeight = 10
