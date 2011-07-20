@@ -13,3 +13,5 @@ alias rs="rails s"                            # Start the Rails server
 alias rc="rails c"                            # Start the Rails console# Start the Rails server
 
 alias b='bundle && say bundle complete'       # Run bundle and say when it's done
+
+alias rake='bundle exec rake'
