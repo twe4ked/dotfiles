@@ -4,6 +4,7 @@ alias gl='git pull --rebase'                  # Pull rebase
 alias gp='git push'                           # Push
 alias ga='git add'                            # Add
 alias gap='ga -p'                             # Add patch
+alias gai='ga -i'                             # Add interactive
 alias gc='git commit -v'                      # Commit verbose
 alias gca='git commit -v -a'                  # Commit all verbose
 alias gb='git branch'                         # Git branch
