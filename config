@@ -19,7 +19,7 @@ source $DOTFILES/shell/gup.sh       # Smart pull function by @jasoncodes
 if [ $SHELL = '/bin/bash' ]; then
   source $DOTFILES/bash/config
   export WHAT_SHELL='Using '`echo $SHELL`' shell.'
-else 
+else
   if [ $SHELL = "/bin/zsh" ]; then
     source $DOTFILES/zsh/config
     export WHAT_SHELL='Using '`echo $SHELL`' shell.'
@@ -47,7 +47,7 @@ alias unhitch='hitch -u'
 # Uncomment to persist pair info between terminal instances
 # hitch
 
-# Ensure that rvm is the last thing sourced in all of your shell profiles, 
+# Ensure that rvm is the last thing sourced in all of your shell profiles,
 # especially PATH are set.
 # Otherwise, the values you set be trampled when you switch rubies.
 source ~/.dotfiles/shell/rvm.sh
