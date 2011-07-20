@@ -8,10 +8,10 @@ if has("gui_macvim")
   nmap <D-r> :CommandTFlush<CR>
   imap <D-r> <Esc>:CommandTFlush<CR>
 
-  " Stop Cmd+W from closing window
+  " Cmd+W to close current buffer and close the window if no buffers are left
   macmenu &File.Close key=<nop>
-  nmap <D-w> :BD<CR>
-  imap <D-w> <Esc>:BD<CR>
+  nmap <D-w> :CommandW<CR>
+  imap <D-w> <Esc>:CommandW<CR>
 
   menu File.Close\ Instance :qa<CR>
   inoremenu File.Close\ Instance :qa<CR>

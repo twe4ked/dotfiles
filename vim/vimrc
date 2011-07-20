@@ -91,3 +91,5 @@ let g:vimwiki_list          = [
   \     'auto_export': 1
   \  }
   \]
+" Command W
+map <Leader>w :CommandW<CR>
