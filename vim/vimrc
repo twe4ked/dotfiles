@@ -80,6 +80,12 @@ let g:CommandTMaxHeight = 40
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
+let g:NERDTreeHijackNetrw = 0
+let g:loaded_netrw = 1 " Disable netrw
+let g:loaded_netrwPlugin = 1 " Disable netrw
+let g:NERDTreeShowLineNumbers = 0
+let g:NERDTreeMinimalUI = 1 " Disable help message
+let g:NERDTreeDirArrows = 1
 
 " vimwiki
 let g:vimwiki_menu          = 'Plugin.Vimwiki' " GUI menu of available wikies to select.
