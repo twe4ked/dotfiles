@@ -1,3 +1,7 @@
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+
+Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'nathanaelkane/vim-command-w'
 Bundle 'nathanaelkane/snipmate-snippets'
