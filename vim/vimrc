@@ -68,6 +68,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Clear search
+map <silent><Leader>/ :nohls<CR>
+
 " Plugins-----------------------------------------------------------------------
 " Plugin configuration.
 
