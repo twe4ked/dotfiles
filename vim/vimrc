@@ -112,3 +112,6 @@ vnoremap > >gv
 
 " Command W
 map <Leader>w :CommandW<CR>
+
+" tcomment
+let g:tcommentMapLeaderOp1 = '<Leader>c'
