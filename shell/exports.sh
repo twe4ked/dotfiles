@@ -10,7 +10,6 @@ export GREP_OPTIONS='--color=auto'          # Double rainbow!
 # Path settings
 export PATH=$PATH:/usr/local/mysql/bin      # For mysql commands
 export PATH=$HOME/.homebrew/bin:$PATH       # For homebrew
-export PATH=/Library/PostgreSQL8/bin:$PATH  # For pg gem
 export PATH=$PATH:$DOTFILES/bin             #
 export PATH=$PATH:/var/lib/gems/1.8/bin
 export PATH=$PATH:/Library/Ruby/Gems/1.8
