@@ -13,6 +13,8 @@ set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
 
+map <Leader>sd :FixWhitespace<CR>
+
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
 set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
