@@ -73,7 +73,7 @@ map <C-l> <C-w>l
 
 " Command-T
 let g:CommandTMaxFiles  = 20000
-let g:CommandTMaxHeight = 10
+let g:CommandTMaxHeight = 40
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
