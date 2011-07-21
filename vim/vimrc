@@ -23,6 +23,9 @@ set noswapfile                              " Don't create annoying *.swp files
 set scrolloff=3                             " Start scrolling the file 3 lines before the end of the window
 set vb t_vb=                                " Turn off bell
 
+" Save on FocusLost
+au FocusLost * :silent! wall
+
 " Searching --------------------------------------------------------------------
 set hlsearch                                " Highlight searches
 set incsearch                               " Highlight search results instantly
