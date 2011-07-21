@@ -1,30 +1,9 @@
 h2. Installation
 
-h3. Auto installation
-
-The auto install file is a work in progress, it isn't well tested and doesn't have much error handling. If you find any errors or have any ideas to make this script better let me know or fork, fix and submit a pull request. 
-
-Usage: @bash < <( curl https://github.com/twe4ked/dotfiles/raw/master/bin/install.sh )@
-
-h3. Manual install (Read comments carefully)
-
-To install, in terminal navigate to your home folder and run @git clone http://github.com/twe4ked/dotfiles.git .dotfiles@ to pull down these files.
-
-Next, open your @~/.profile@ in a text editor and add the following at the bottom. If you don't have a @~/.profile@ simply create one and it will automatically be run by terminal.app when each time you run it.
-
-<pre><code># Contents of ~/.profile
-if [ -e ~/.dotfiles ]; then
-  . ~/.dotfiles/config
-fi</code></pre>
-
-Setup symlinks for .irbrc @ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink@ (command must be run from your home folder)
-
-Remove @~/.zshrc@ and replace with a symlink to the custom version:
-@ln -s ~/.dotfiles/zsh/zshrc .zshrc # Setup .zshrc symlink (command must be run from ~/)@
-
-h3. Update
-
-Usage: @update_dotfiles@
+<code>cd ~/ # cd to your home directory
+git clone http://github.com/twe4ked/dotfiles.git .dotfiles # Clone the dotfiles.
+cd ~/.dofiles # cd to the .dotfile directory
+rake # Setup symlinks (do this from the .dotfiles directory)</code>
 
 h2. Basic features
 

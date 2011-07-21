@@ -2,7 +2,7 @@
 
 # A script to install (or update) twe4ked's dotfiles automatically.
 # 
-# Version: 0.4.1
+# Version: 0.4.2
 #
 # Note:
 #   This file is a work in progress, it isn't well tested and doesn't have much 
@@ -32,25 +32,10 @@ else
   export DOTFILES=~/.dotfiles
   source $DOTFILES/shell/colours.sh
 
-  # Symlink .bashrc
-  echo $(colour blue)"Removing .bashrc and replacing with a symlink to a custom version."
-  echo "Note: this is only used when using bash."
-  echo "Old version will be renamed .bashrc.bak"$(colour reset)
-  cp .bashrc .bashrc.bak
-  rm .bashrc
-  ln -s $DOTFILES/bash/bashrc .bashrc
+  cd $DOTFILES
 
-  # Symlink .zshrc
-  echo $(colour blue)"Removing .zshrc and replacing with a symlink to a custom version."$(colour reset)
-  echo $(colour blue)"Old version will be renamed .zshrc.bak"$(colour reset)
-  cd ~/
-  cp .zshrc .zshrc.bak
-  rm .zshrc
-  ln -s $DOTFILES/zsh/zshrc .zshrc
-
-  # Symlink .irbrc
-  echo $(colour blue)"Creating .irbrc symlink"$(colour reset)
-  ln -s $DOTFILES/lib/irbrc .irbrc
+  # Symlinks!
+  rake
 
   # Source the dotfiles
   source $DOTFILES/config
