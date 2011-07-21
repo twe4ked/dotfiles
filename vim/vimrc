@@ -94,5 +94,10 @@ let g:vimwiki_list          = [
   \     'auto_export': 1
   \  }
   \]
+
+" Reselect visual block after indent
+vnoremap < <gv
+vnoremap > >gv
+
 " Command W
 map <Leader>w :CommandW<CR>
