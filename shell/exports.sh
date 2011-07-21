@@ -16,7 +16,7 @@ export PATH=$PATH:/Library/Ruby/Gems/1.8
 export PATH=$PATH:/Users/twe4ked/.gem/ruby/1.8
 export PATH=$PATH:/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8
 export PATH=$PATH:$HOME/bin:/var/lib/gems/1.8/bin
-export PATH=$PATH/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:
+export PATH=/usr/local/bin:$PATH:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/X11/bin:/usr/local/mysql/bin:
 
 # Show time a command took if over 2 sec
 # https://github.com/bjeanes/dot-files/commit/1ae5bc72dac6d5f2cdfbf5a48fdf140c5d085986
