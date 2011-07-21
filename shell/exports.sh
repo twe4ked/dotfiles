@@ -3,7 +3,7 @@
 # The WORK variable is set in ~/.dotfiles/config
 #
 export CDPATH=".:$HOME:$HOME/Sites:$HOME/Sites/$WORK" # Search /Sites and /Sites/$WORK folder on 'cd' command 
-export EDITOR='mate -w' # Set textmate as default editor (-w is to wait for Textmate window to close)
+export EDITOR='vim'                         # Set vim as the default editor
 export ARCHFLAGS='-arch x86_64'             # Archflags
 export GREP_OPTIONS='--color=auto'          # Double rainbow!
 
