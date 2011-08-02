@@ -12,8 +12,7 @@ task :install do
                  lib/irbrc
                  vim
                  vim/gvimrc
-                 vim/vimrc
-                 bin/trash)
+                 vim/vimrc)
 
   files = Hash[files.zip(Array.new(files.size, "~/"))]
   # files['lib/global.gems'] = '~/.rvm/gemsets/'
