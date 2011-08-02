@@ -27,15 +27,6 @@ else
   fi
 fi
 
-# Host specific settings
-#
-# Usage:
-#   Create a file called [hostname].custom and add your custom config there.
-if [[ -e $DOTFILES/`hostname`.custom ]]; then
-  echo "Sourcing `hostname`.custom..."
-  source $DOTFILES/`hostname`.custom
-fi
-
 echo 'Custom config successfully loaded. '$WHAT_SHELL
 
 # Ensure that rvm is the last thing sourced in all of your shell profiles,
