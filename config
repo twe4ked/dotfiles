@@ -36,14 +36,6 @@ fi
 
 source $DOTFILES/lib/motd           # MOTD
 
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
-# Uncomment to persist pair info between terminal instances
-# hitch
-
 # Ensure that rvm is the last thing sourced in all of your shell profiles,
 # especially PATH are set.
 # Otherwise, the values you set be trampled when you switch rubies.
