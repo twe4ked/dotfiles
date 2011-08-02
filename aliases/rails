@@ -4,10 +4,6 @@ alias migrate='rake db:migrate && say migration complete' # Migrate the database
 alias rollback='rake db:rollback'             # Rollback the database
 alias r='rake'                                # Shortcut to rake
 
-# Rails 2.x.x aliases
-alias ss="script/server"                      # Start the Rails server
-alias sc="script/console"                     # Start the Rails console
-
 # Rails 3.x.x aliases
 alias rs="rails s"                            # Start the Rails server
 alias rc="rails c"                            # Start the Rails console# Start the Rails server
