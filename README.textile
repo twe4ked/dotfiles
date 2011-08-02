@@ -44,7 +44,7 @@ user@hostname only displays when user = root or connected over ssh
 
 h4. Bash
 
-<code>[~/.dotfiles (git-branch)] » user@hostname</code> (bash)
+<code>~/.dotfiles (git-branch) user@hostname »</code> (bash)
 
 h2. Other interesting things
 

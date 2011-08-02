@@ -8,7 +8,7 @@
 # http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/x783.html
 
 export PS1="\
-[\[$(colour green)\]\w\[$(colour reset)\]]\
+\[$(colour green)\]\w\[$(colour reset)\]\
 \[$(colour light_yellow)\]\$(__git_ps1 \" (%s)\")\
 \[$(colour light_yellow)\]\[$(user_hostname)\]\[$(colour reset)\] \
 \[$(colour $(prompt_color))\]»\[$(colour reset)\] "
