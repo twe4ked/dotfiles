@@ -1,4 +1,0 @@
-# uname -npsr
-# uptime # Length of time the machine has been running
-echo $(colour green)'Hint:' `hint` $(colour reset) # Display a random hint - (function located in the shell/functions.sh file)
-echo 'Custom config successfully loaded. '$WHAT_SHELL

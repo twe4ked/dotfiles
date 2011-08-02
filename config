@@ -34,7 +34,7 @@ if [[ -e $DOTFILES/`hostname`.custom ]]; then
   source $DOTFILES/`hostname`.custom
 fi
 
-source $DOTFILES/lib/motd           # MOTD
+echo 'Custom config successfully loaded. '$WHAT_SHELL
 
 # Ensure that rvm is the last thing sourced in all of your shell profiles,
 # especially PATH are set.

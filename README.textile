@@ -21,9 +21,7 @@ This file loads the rest of the config and also acts as a place to put major ite
 * Make git colourful
 * Sets title of window to be user@host
 * .irbrc to make irb awesome (view framework/syntax highlighting/tab-completions/pretty-print/auto tab indentation).
-* Sources MOTD
-** Prints current shell
-** Shows random hint
+* Prints current shell
 
 h2. Prompt
 
