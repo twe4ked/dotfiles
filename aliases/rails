@@ -1,7 +1,6 @@
 # Rails stuff
 alias logs='tail -f -0 ./log/*.log'           # Tails all the Rails logs files
 alias migrate='rake db:migrate && say migration complete' # Migrate the database
-alias rollback='rake db:rollback'             # Rollback the database
 alias r='rake'                                # Shortcut to rake
 
 # Rails 3.x.x aliases

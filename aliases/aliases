@@ -1,34 +1,18 @@
 alias et='mate .'                             # Open current folder with textmate
-alias eprof="mate ~/.dotfiles"                # Edit these files
+alias eprof='mate ~/.dotfiles'                # Edit these files
 alias ls='ls -laGF'                           # Compact view, show color
-alias gi='sudo gem install --no-ri --no-rdoc' # Give root and force no documentation
-alias hints='cat ~/.dotfiles/lib/hints.txt'   # Show hints
 alias ..='cd ..'                              # Up one directory
 alias ...='cd ../..'                          # Up two directories
 alias wiki='vim -c VimwikiIndex'              # Open vimwiki
+alias sw='saywhen'                            # Prepend to a command and it will say when complete
+alias reload="source $DOTFILES/config"        # Source dotfiles
+alias sauce='reload'                          # Meta alias!
 
 # Copy pub keys to clipboard
 alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"'
 
-# Source dotfiles
-alias reload="source $DOTFILES/config"
-alias sprof='reload'
-alias sauce='reload'
-
-# Go to textmate bundles folder
-alias tmbundles='cd ~/Library/Application\ Support/TextMate/Bundles'
-
-# Mac Helpers
-alias show_hidden='defaults write com.apple.Finder AppleShowAllFiles YES && killall Finder'
-alias hide_hidden='defaults write com.apple.Finder AppleShowAllFiles NO && killall Finder'
-alias ql='qlmanage -p 2>/dev/null'            # Quick Look
-
-alias cuke='cucumber --format pretty'         # Cucumber
-
 # https://github.com/ltw/oh-my-zsh/commit/5ae46606d964619b987b4a51b68cc82ee7a9db1d#diff-0
 # Lucas Willett (@ltw_)
-alias sw='saywhen'
-
 function saywhen {
   if "$@"
   then
@@ -39,3 +23,6 @@ function saywhen {
     return 1
   fi
 }
+source $DOTFILES/aliases/git                  # Git aliases
+source $DOTFILES/aliases/rails                # Rails aliases
+source $DOTFILES/aliases/testing              # Testing aliases

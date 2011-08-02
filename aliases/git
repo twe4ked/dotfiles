@@ -1,5 +1,4 @@
 alias gst='git status'                        # Show the status
-alias s='git status --short'                  # Short status
 alias gl='git pull --rebase'                  # Pull rebase
 alias gp='git push'                           # Push
 alias ga='git add'                            # Add
