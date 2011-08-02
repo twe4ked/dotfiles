@@ -5,6 +5,8 @@ export DOTFILES=~/.dotfiles         # Find the this folder
 export WORK=Ennova                  # Where I work (Sets up CDPATH)
 export MACBOOK=true                 # Shows battery in zsh prompt if true
 
+export CDPATH="$CDPATH:$HOME/Hub/Projects"
+
 # Source the dotfiles
 source $DOTFILES/aliases/aliases    # Load all the alias files
 source $DOTFILES/shell/functions.sh # Misc functions
