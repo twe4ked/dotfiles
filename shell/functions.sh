@@ -17,12 +17,6 @@ function m {
   fi
 }
 
-# Display a random hint
-function hint {
-  fn=~/.dotfiles/lib/hints.txt
-  sed -n $(awk "END{ print $RANDOM%NR+1}" $fn)p $fn
-}
-
 # Restart passenger or pow server
 function rp {
   if [ -e tmp ]; then

@@ -8,7 +8,6 @@ rake # Setup symlinks (do this from the .dotfiles directory)</code>
 h2. Basic features
 
 * Custom functions
-* Hints file
 * Bash and zsh compatible
 * Great looking and very helpful prompt
 
@@ -60,11 +59,6 @@ Use 'o' instead of 'open' (o ~/Sites will open the sites folder), if no argument
 h4. Restart Passenger or Pow server
 
 @rp@ looks for a tmp directory, if there is no tmp directory it prompts you to create one, once it finds a tmp directory it touches tmp/restart.txt to tell passenger or pow to restart.
-
-h4. Hints
-
-There is a random hint taken from lib/hints.txt inserted into the motd each time it is run. You can show all hints by running the following alias:
-@alias hints='cat ~/.dotfiles/lib/hints.txt' # Show hints@
 
 h4. Notes
 
