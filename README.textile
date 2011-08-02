@@ -40,11 +40,7 @@ h3. Features
 
 h4. Zsh
 
-<code>[~/.dotfiles] » user@hostname</code> (zsh) <code>(rvm) ± (master*) 1+ [19:30]</code>
-
-export minimal_prompt=true
-
-<code>~/.dotfiles » user@hostname</code> (zsh) <code>rvm ± master* 1+ ⚡</code>
+<code>~/.dotfiles » user@hostname</code> (zsh) <code>rvm ± master* 1+</code>
 
 1+ is the number of git stashes
 user@hostname only displays when user = root or connected over ssh
