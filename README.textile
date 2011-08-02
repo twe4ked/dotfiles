@@ -77,14 +77,6 @@ h4. Notes
 
 If you add a @.notes@ file to any directory, the contents of that file will be output when you cd into the directory.
 
-h4. Github function
-
-To use supply a minimum of two arguments; username, repository name
-Supply a third argument to specify what folder you want to project to be cloned into
-git clone http://github.com/[argument 1]/[argument 2] [argument 3]
-
-@github twe4ked dotfiles .dotfiles@
-
 h3. Supported
 
 * "HIRB":http://github.com/cldwalker/hirb - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
