@@ -1,5 +1,5 @@
-# Ignore custom files.
-*.custom
+# Ignore work related config
+work
 
 .notes
 
