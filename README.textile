@@ -1,9 +1,9 @@
 h2. Installation
 
-<code>cd ~/ # cd to your home directory
-git clone http://github.com/twe4ked/dotfiles.git .dotfiles # Clone the dotfiles.
-cd ~/.dofiles # cd to the .dotfile directory
-rake # Setup symlinks (do this from the .dotfiles directory)</code>
+<code>cd ~/ # cd to your home directory</code>
+<code>git clone http://github.com/twe4ked/dotfiles.git .dotfiles # Clone the dotfiles.</code>
+<code>cd ~/.dofiles # cd to the .dotfile directory</code>
+<code>rake # Setup symlinks (do this from the .dotfiles directory)</code>
 
 h2. Basic features
 
