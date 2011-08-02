@@ -24,13 +24,6 @@ function git_branch {
   echo '○' # Not in a repository
 }
 
-# Battery
-function battery_charge {
-  if [ "$MACBOOK" = true ]; then
-    echo `~/.dotfiles/lib/battery.py` 2>/dev/null
-  fi
-}
-
 # Show number of stashed items (BinaryMuse)
 git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
@@ -82,10 +75,9 @@ function precmd {
   local rvm='%{${fg_bold[cyan]}%}$(rvm_prompt_info)%{${reset_color}%} '
   local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
   local time='%* '
-  local batt='$(battery_charge)'
 
   PROMPT=$cwd$usr$char
-  RPROMPT=$rvm$git$time$batt
+  RPROMPT=$rvm$git$time
 
   PROMPT2=$char
   RPROMPT2='[%_]'
