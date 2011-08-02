@@ -34,25 +34,6 @@ function rp {
   fi
 }
 
-# Only show user and hostname when connected as root user or via ssh
-function user_hostname {
-  if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
-    echo " "`whoami`@`hostname`
-  fi
-}
-
-function prompt_color() { # bjeanes
-  if [ "$USER" = "root" ]; then
-    echo "red"
-  else
-    if [ -n "$SSH_TTY" ]; then
-      echo "blue"
-    else
-      echo "cyan"
-    fi
-  fi
-}
-
 # Lucas Willett (@ltw_)
 # https://github.com/ltw/oh-my-zsh/commit/5ae46606d964619b987b4a51b68cc82ee7a9db1d#diff-0
 function saywhen {
@@ -76,3 +57,23 @@ hitch() {
   if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
 alias unhitch='hitch -u'
+
+# -- Prompt --------------------------------------------------------------------
+# Only show user and hostname when connected as root user or via ssh
+function user_hostname {
+  if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
+    echo " "`whoami`@`hostname`
+  fi
+}
+
+function prompt_color() { # bjeanes
+  if [ "$USER" = "root" ]; then
+    echo "red"
+  else
+    if [ -n "$SSH_TTY" ]; then
+      echo "blue"
+    else
+      echo "cyan"
+    fi
+  fi
+}
