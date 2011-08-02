@@ -59,6 +59,19 @@ function prompt_color() { # bjeanes
   fi
 }
 
+# Lucas Willett (@ltw_)
+# https://github.com/ltw/oh-my-zsh/commit/5ae46606d964619b987b4a51b68cc82ee7a9db1d#diff-0
+function saywhen {
+  if "$@"
+  then
+    say "$1 $2 done."
+    return 0
+  else
+    say "$1 $2 error."
+    return 1
+  fi
+}
+
 # Update dotfiles
 function update_dotfiles() {
   /bin/sh $DOTFILES/bin/install.sh

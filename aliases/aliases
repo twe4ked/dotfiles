@@ -11,18 +11,6 @@ alias sauce='reload'                          # Meta alias!
 # Copy pub keys to clipboard
 alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"'
 
-# https://github.com/ltw/oh-my-zsh/commit/5ae46606d964619b987b4a51b68cc82ee7a9db1d#diff-0
-# Lucas Willett (@ltw_)
-function saywhen {
-  if "$@"
-  then
-    say "$1 $2 done."
-    return 0
-  else
-    say "$1 $2 error."
-    return 1
-  fi
-}
 source $DOTFILES/aliases/git                  # Git aliases
 source $DOTFILES/aliases/rails                # Rails aliases
 source $DOTFILES/aliases/testing              # Testing aliases
