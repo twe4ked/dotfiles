@@ -24,6 +24,7 @@ set listchars=trail:.,tab:>-,eol:¬          " Change the invisible characters
 set noswapfile                              " Don't create annoying *.swp files
 set scrolloff=3                             " Start scrolling the file 3 lines before the end of the window
 set vb t_vb=                                " Turn off bell
+set scrolloff=5
 
 " Save on FocusLost
 au FocusLost * :silent! wall
