@@ -31,6 +31,18 @@ else
   fi
 fi
 
+# Set Apple Terminal.app resume directory
+# http://superuser.com/questions/313650/resume-zsh-terminal-os-x-lion/315029#315029
+if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
+  function chpwd {
+    local SEARCH=' '
+    local REPLACE='%20'
+    local PWD_URL="file://$HOSTNAME${PWD//$SEARCH/$REPLACE}"
+    printf '\e]7;%s\a' $PWD_URL
+  }
+  chpwd
+}
+
 echo 'Custom config successfully loaded. '$WHAT_SHELL
 
 # Ensure that rvm is the last thing sourced in all of your shell profiles,
