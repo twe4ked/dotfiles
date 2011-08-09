@@ -122,3 +122,6 @@ map <Leader>w :CommandW<CR>
 
 " tcomment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
+
+" EasyMotion
+let g:EasyMotion_leader_key = '<Leader>e'
