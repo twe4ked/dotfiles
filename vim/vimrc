@@ -15,6 +15,12 @@ colorscheme solarized
 
 map <Leader>sd :FixWhitespace<CR>
 
+" Buffer navigation ------------------------------------------------------------
+map <Leader>, <C-^>
+map <Leader>t :CommandT<CR>
+map <Leader>T :call CommandTWithFlush()<CR>
+map <Leader>w :CommandW<CR>
+
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
 set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
