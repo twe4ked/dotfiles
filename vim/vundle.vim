@@ -9,6 +9,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'wincent/Command-T'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-rails'
+Bundle 'upAndDown'
 
 Bundle 'bufkill.vim'
 Bundle 'bufexplorer.zip'
