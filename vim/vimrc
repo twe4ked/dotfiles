@@ -1,25 +1,15 @@
 " Set leader -------------------------------------------------------------------
 let mapleader = ","
 
-" Vundle -----------------------------------------------------------------------
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-source $DOTFILES/vim/vundle.vim
+source $DOTFILES/vim/vundle
+source $DOTFILES/vim/key_bindings
+source $DOTFILES/vim/plugin_config
 
 " Color Scheme -----------------------------------------------------------------
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
-
-map <Leader>sd :FixWhitespace<CR>
-
-" Buffer navigation ------------------------------------------------------------
-map <Leader>, <C-^>
-map <Leader>t :CommandT<CR>
-map <Leader>T :call CommandTWithFlush()<CR>
-map <Leader>w :CommandW<CR>
 
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
@@ -28,12 +18,10 @@ set number                                  " Show line numbers
 set ruler                                   " Show ruler
 set listchars=trail:.,tab:>-,eol:¬          " Change the invisible characters
 set noswapfile                              " Don't create annoying *.swp files
-set scrolloff=3                             " Start scrolling the file 3 lines before the end of the window
+set scrolloff=5                             " Start scrolling the file 5 lines before the end of the window
 set vb t_vb=                                " Turn off bell
-set scrolloff=5
 
-" Save on FocusLost
-au FocusLost * :silent! wall
+au FocusLost * :silent! wall                " Save on FocusLost
 
 " Searching --------------------------------------------------------------------
 set hlsearch                                " Highlight searches
@@ -42,8 +30,6 @@ set ignorecase                              " Ignore case
 set smartcase                               " Override 'ignorecase' option if the search contains upper case characters.
 
 filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
-noremap <leader>i :set list!<CR>
-nmap <leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
 
 " Epic status line (https://github.com/robertmeta/vim-files/) ------------------
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
@@ -69,59 +55,3 @@ set autoindent                              " Keep the indent when creating a ne
 set smarttab                                " Use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
 set cindent                                 " Recommended seting for automatic C-style indentation
 set autoindent                              " Automatic indentation in non-C files
-
-" Window Navigation ------------------------------------------------------------
-" Use ctrl+(h|j|k|j) to move through open windows.
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" Clear search
-map <silent><Leader>/ :nohls<CR>
-
-" Plugins-----------------------------------------------------------------------
-" Plugin configuration.
-
-" Command-T
-let g:CommandTMaxFiles  = 20000
-let g:CommandTMaxHeight = 40
-
-" NERDTree
-map <leader>n :NERDTreeToggle<CR>
-let g:NERDTreeHijackNetrw = 0
-let g:loaded_netrw = 1 " Disable netrw
-let g:loaded_netrwPlugin = 1 " Disable netrw
-let g:NERDTreeShowLineNumbers = 0
-let g:NERDTreeMinimalUI = 1 " Disable help message
-let g:NERDTreeDirArrows = 1
-
-" vimwiki
-let g:vimwiki_menu          = 'Plugin.Vimwiki' " GUI menu of available wikies to select.
-let g:vimwiki_hl_cb_checked = 1             " Highlight checkboxes.
-let g:vimwiki_badsyms       = ' '           " Strip whitespace from filenames.
-let g:vimwiki_use_mouse     = 1             " Use mouse mappings.
-let g:vimwiki_dir_link      = 'index'       " Open directories and create index.wiki if neeeded.
-let g:vimwiki_list          = [
-  \  {
-  \     'path': '~/Hub/Dropbox/vimwiki/text',
-  \     'path_html': '~/Hub/Dropbox/vimwiki/html',
-  \     'nested_syntaxes': {
-  \       'ruby': 'ruby'
-  \     },
-  \     'auto_export': 1
-  \  }
-  \]
-
-" Reselect visual block after indent
-vnoremap < <gv
-vnoremap > >gv
-
-" Command W
-map <Leader>w :CommandW<CR>
-
-" tcomment
-let g:tcommentMapLeaderOp1 = '<Leader>c'
-
-" EasyMotion
-let g:EasyMotion_leader_key = '<Leader>e'

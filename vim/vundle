@@ -1,5 +1,5 @@
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
@@ -12,7 +12,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'upAndDown'
 
 Bundle 'bufkill.vim'
-Bundle 'bufexplorer.zip'
+" Bundle 'bufexplorer.zip'
 Bundle 'vimwiki'
 Bundle 'haml.zip'
 Bundle 'ack.vim'
