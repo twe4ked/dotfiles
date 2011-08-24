@@ -2,6 +2,7 @@
 let mapleader = ","
 
 source $DOTFILES/vim/vundle
+source $DOTFILES/vim/functions
 source $DOTFILES/vim/key_bindings
 source $DOTFILES/vim/plugin_config
 
