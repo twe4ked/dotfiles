@@ -10,17 +10,16 @@ task :install do
                  lib/ackrc
                  lib/gemrc
                  lib/irbrc
-                 vim
                  vim/gvimrc
                  vim/vimrc)
 
-  files = Hash[files.zip(Array.new(files.size, "~/"))]
-  # files['lib/global.gems'] = '~/.rvm/gemsets/'
+  files = Hash[files.zip(Array.new(files.size, "~/."))]
+  files['vim/colors/'] = '~/.vim/'
 
   files.each do |file, destination|
     file_name        = file.split(/\//).last
     source_file      = File.join(dotfiles, file)
-    destination_file = File.expand_path(File.join(destination, ".#{file_name}"))
+    destination_file = File.expand_path("#{destination}#{file_name}")
 
     def color(text, options = {})
       case options[:color]
