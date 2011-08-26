@@ -17,6 +17,10 @@ function m {
   fi
 }
 
+function h {
+  history | grep $1 | tail
+}
+
 # Restart passenger or pow server
 function rp {
   if [ -e tmp ]; then
