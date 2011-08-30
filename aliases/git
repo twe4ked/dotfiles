@@ -12,6 +12,7 @@ alias gco='git checkout'                      # Checkout
 alias gd='git diff'                           # Diff
 alias gds='gd --staged'                       # Diff staged
 alias gup='gup && say gup done'               # Say when gup is complete
+alias gcod='gco develop'                      # Back to the develop branch
 
 # Git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
