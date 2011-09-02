@@ -16,7 +16,10 @@ source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 source $DOTFILES/shell/colours.sh   # Colours
 source $DOTFILES/shell/gup.sh       # Smart pull function by @jasoncodes
-source $DOTFILES/work               # Work related aliases etc.
+
+if [ -f $DOTFILES/work ]; then
+  source $DOTFILES/work             # Work related aliases etc.
+fi
 
 # Load custom shell scripts (zsh or bash)
 if [ $SHELL = '/bin/bash' ]; then
