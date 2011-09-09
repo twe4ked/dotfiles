@@ -1,4 +1,5 @@
 require 'rubygems'
+# This files must be symlinked in ~/ (ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink)
 
 # IRB syntax highlighting
 # http://rubygems.org/gems/wirble
@@ -7,21 +8,20 @@ begin
   Wirble.init(:history_size => 10000)
   Wirble.colorize
 rescue LoadError
-  puts "please run: `sudo gem install wirble`"
+  puts "Missing gem `wirble`"
 end
 
-# This files must be symlinked in ~/ (ln -s ~/.dotfiles/lib/irbrc .irbrc # Setup .irbrc symlink)
 # http://github.com/cldwalker/hirb
 begin
   require 'hirb'
   Hirb.enable
 rescue LoadError
-  puts "please run: `sudo gem install cldwalker-hirb --source http://gems.github.com`"
+  puts "Missing gem `hirb`"
 end
 
-require 'irb/completion' # Tab completions
-require 'pp' # Pretty print
+require 'irb/completion'    # Tab completions
+require 'pp'                # Pretty print
 IRB.conf[:AUTO_INDENT]=true # Automattic tab indentation
 
 # Show ActiveRecord queries in the console
-ActiveRecord::Base.logger = Logger.new(STDOUT)
+# ActiveRecord::Base.logger = Logger.new(STDOUT)
