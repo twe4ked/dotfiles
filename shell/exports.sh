@@ -1,6 +1,7 @@
 # Exports
 export CDPATH=".:$HOME:$HOME/Sites:$HOME/Sites/$WORK" # Search /Sites and /Sites/$WORK folder on 'cd' command 
-export EDITOR='vim'                         # Set vim as the default editor
+export EDITOR='mvim'                        # Set mvim as the default editor
+export GIT_EDITOR='vim'                     # Use terminal Vim for git
 export ARCHFLAGS='-arch x86_64'             # Archflags
 export GREP_OPTIONS='--color=auto'          # Double rainbow!
 
