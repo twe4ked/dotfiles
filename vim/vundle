@@ -19,3 +19,5 @@ Bundle 'vimwiki'
 Bundle 'haml.zip'
 Bundle 'snipMate'
 Bundle 'EasyMotion'
+
+Bundle 'altercation/vim-colors-solarized'
