@@ -28,6 +28,7 @@ if has("gui_macvim")
   "              +--- use GUI tabs, not console style tabs
 
   set guifont=Monaco:h14
+  hi Normal guibg=#222222
 endif
 
 " Auto-NERDTree if root.
