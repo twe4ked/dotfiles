@@ -14,7 +14,7 @@ Bundle 'AndrewRadev/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 
 Bundle 'bufkill.vim'
-" Bundle 'bufexplorer.zip'
+Bundle 'bufexplorer.zip'
 Bundle 'vimwiki'
 Bundle 'haml.zip'
 Bundle 'snipMate'
