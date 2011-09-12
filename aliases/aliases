@@ -1,5 +1,3 @@
-alias et='mate .'                             # Open current folder with textmate
-alias eprof='mate ~/.dotfiles'                # Edit these files
 alias ls='ls -laGF'                           # Compact view, show color
 alias ..='cd ..'                              # Up one directory
 alias ...='cd ../..'                          # Up two directories
