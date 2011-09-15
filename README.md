@@ -70,10 +70,3 @@ If you add a `.notes` file to any directory, the contents of that file will be o
 
 * [HIRB](http://github.com/cldwalker/hirb) - A mini view framework for console/irb. Console goodies include a no-wrap table, auto-pager, tree and menu.
 * [Wirble](http://rubygems.org/gems/wirble) - IRB syntax highlighting
-
-### To Do
-
-* -Create installer script-
-* -Tidy the README-
-* Create custom config file for things like work directories, archflags etc. (started)
-* Extend installer script
