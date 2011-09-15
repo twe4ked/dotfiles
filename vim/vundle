@@ -13,6 +13,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'vim-scripts/upAndDown'
 Bundle 'AndrewRadev/ack.vim'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'twe4ked/vim-peepopen'
 
 Bundle 'bufkill.vim'
 Bundle 'bufexplorer.zip'
