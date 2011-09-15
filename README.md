@@ -56,7 +56,7 @@ If no arguments are supplied open the current folder with TextMate.
 
 `o path/to/project`
 
-Use `o` instead of `open` (o ~/Sites will open the sites folder), if no arguments are supplied open the current folder.
+Use `o` instead of `open` (`o ~/Sites` will open the sites folder), if no arguments are supplied; open the current folder.
 
 #### Restart Passenger or Pow server
 
