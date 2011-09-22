@@ -30,6 +30,10 @@ autoload colors; colors;
 bindkey "\e\e[C" vi-forward-word
 bindkey "\e\e[D" vi-backward-word
 
+# make search up and down work, so partially type and hit up/down to find relevant stuff
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
+
 # Start tetris on ctrl+t (http://twitter.com/Lenary/status/18590249264)
 autoload -U tetris
 zle -N tetris
