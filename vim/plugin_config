@@ -3,9 +3,9 @@
 
 " Command-T
 let g:CommandTMaxFiles  = 20000
-let g:CommandTMaxHeight = 40
-let g:CommandTMinHeight = 40
-let g:CommandTMatchWindowReverse = 1
+let g:CommandTMaxHeight = 20
+let g:CommandTMinHeight = 20
+let g:CommandTMatchWindowAtTop = 0
 
 " NERDTree
 let g:loaded_netrw = 1                      " Disable netrw
