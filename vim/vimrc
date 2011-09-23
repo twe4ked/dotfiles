@@ -22,6 +22,9 @@ set noswapfile                              " Don't create annoying *.swp files
 set scrolloff=5                             " Start scrolling the file 5 lines before the end of the window
 set vb t_vb=                                " Turn off bell
 
+" Generate .git/tags (ctags) automatically on save
+autocmd BufWritePost * call UpdateTags()
+
 au FocusLost * :silent! wall                " Save on FocusLost
 
 " Searching --------------------------------------------------------------------
