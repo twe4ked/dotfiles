@@ -20,3 +20,6 @@ map <C-l> <C-w>l
 map <silent><Leader>/ :nohls<CR>            " Clear search
 map <leader>n :NERDTreeToggle<CR>           " NERDTree
 map <Leader>w :CommandW<CR>                 " Command W
+
+" Ack with <leader>f
+map <Leader>f :Ack!<Space>
