@@ -16,10 +16,6 @@ if has("gui_macvim")
   menu File.Close\ Instance :qa<CR>
   inoremenu File.Close\ Instance :qa<CR>
 
-  " Fullscreen
-  set lines=100
-  set columns=300
-
   set cc=80                                  " Put at line @ column 80
   set guioptions-=T                          " Hide the tool bar
   set guioptions=ce
