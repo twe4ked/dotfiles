@@ -24,3 +24,4 @@ Bundle 'snipMate'
 Bundle 'EasyMotion'
 
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'nanotech/jellybeans.vim'
