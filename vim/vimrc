@@ -23,6 +23,8 @@ set scrolloff=5                             " Start scrolling the file 5 lines b
 set vb t_vb=                                " Turn off bell
 set spelllang=en_au                         " Set default spelling language to English (Australia)
 set hidden                                  " Allow hiding buffers with unsaved changes
+set wildmenu                                " Make tab completion act more like bash
+set wildmode=list:longest                   " Tab complete to longest common string, like bash
 
 autocmd FileType gitcommit set spell
 
