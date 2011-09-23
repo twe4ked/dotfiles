@@ -23,3 +23,6 @@ map <Leader>w :CommandW<CR>                 " Command W
 
 " Ack with <leader>f
 map <Leader>f :Ack!<Space>
+
+" Highlight word at cursor without changing position
+nnoremap <leader>h *<C-O>
