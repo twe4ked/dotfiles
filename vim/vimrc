@@ -22,6 +22,7 @@ set noswapfile                              " Don't create annoying *.swp files
 set scrolloff=5                             " Start scrolling the file 5 lines before the end of the window
 set vb t_vb=                                " Turn off bell
 set spelllang=en_au                         " Set default spelling language to English (Australia)
+set hidden                                  " Allow hiding buffers with unsaved changes
 
 autocmd FileType gitcommit set spell
 
