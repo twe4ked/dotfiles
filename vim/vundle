@@ -12,7 +12,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/upAndDown'
-Bundle 'AndrewRadev/ack.vim'
+Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'twe4ked/vim-peepopen'
 
