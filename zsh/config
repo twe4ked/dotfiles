@@ -12,6 +12,8 @@ ZSH_HIGHLIGHT_STYLES+=(           # zsh syntax highlighting styles.
   builtin                 'fg=yellow,bold'
   function                'fg=yellow,bold'
 )
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=red,bold,bg=white')
 
 setopt prompt_subst               # Allows variable substitution in the prompt
 setopt nobeep                     # I hate beeps
