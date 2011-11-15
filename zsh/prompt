@@ -81,6 +81,9 @@ function precmd {
 
   PROMPT2=$char
   RPROMPT2='[%_]'
+
+  # https://github.com/rupa/z
+	_z --add "$(pwd -P)"
 }
 
 # The escape codes are surrounded by %{ and %}. These are zsh prompt escapes
