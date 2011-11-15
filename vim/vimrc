@@ -9,8 +9,7 @@ source $DOTFILES/vim/plugin_config
 " Color Scheme -----------------------------------------------------------------
 syntax enable
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme jellybeans
 
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
