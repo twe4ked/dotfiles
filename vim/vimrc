@@ -9,7 +9,7 @@ source $DOTFILES/vim/plugin_config
 " Color Scheme -----------------------------------------------------------------
 syntax enable
 set background=dark
-colorscheme jellybeans
+colorscheme jellybeans_custom
 
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
