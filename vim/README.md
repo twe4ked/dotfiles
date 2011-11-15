@@ -1,3 +1,7 @@
+# Vim
+
+Vimfiles from a Vim noob, read with caution.
+
 ## Colorscheme
 
 Currently using [jellybeanes][jellybeans-github] (on Vim.org: [vimscript #2555][jellybeans-vimscript]).
