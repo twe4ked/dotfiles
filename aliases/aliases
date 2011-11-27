@@ -10,9 +10,6 @@ alias psg='ps aux | grep -v grep | grep $1'   # See what's running
 alias d="cd $HOME/Dev"                        # Go to the Dev folder
 alias shh='ssh'                               # Always type this wrong...
 
-# Copy pub keys to clipboard
-alias pubkey='cat ~/.ssh/*.pub | pbcopy && echo "Keys copied to clipboard"'
-
 source $DOTFILES/aliases/git                  # Git aliases
 source $DOTFILES/aliases/rails                # Rails aliases
 source $DOTFILES/aliases/testing              # Testing aliases

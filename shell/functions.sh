@@ -8,6 +8,17 @@ function o {
   fi
 }
 
+# Copy pub keys to clipboard
+function pubkey {
+  if [ "$1" != "" ]; then
+    cat ~/.ssh/$1.pub | pbcopy
+  else
+    cat ~/.ssh/*.pub | pbcopy
+  fi
+
+  echo 'Keys copied to clipboard'
+}
+
 # If no arguments are supplied open the current folder with TextMate
 function m {
   if [ "$1" != "" ]; then
