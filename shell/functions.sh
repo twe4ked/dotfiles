@@ -19,15 +19,6 @@ function pubkey {
   echo 'Keys copied to clipboard'
 }
 
-# If no arguments are supplied open the current folder with TextMate
-function m {
-  if [ "$1" != "" ]; then
-    mate $1
-  else
-    et
-  fi
-}
-
 function h {
   history | grep $1 | tail
 }

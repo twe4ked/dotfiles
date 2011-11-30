@@ -50,10 +50,6 @@ user@hostname only displays when user = root or connected over ssh
 
 #### Common aliases (open/edit)
 
-`m path/to/project`
-
-If no arguments are supplied open the current folder with TextMate.
-
 `o path/to/project`
 
 Use `o` instead of `open` (`o ~/Sites` will open the sites folder), if no arguments are supplied; open the current folder.
