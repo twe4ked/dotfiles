@@ -1,11 +1,7 @@
 # Use 'o' instead of 'open' (o ~/Sites will open the sites folder)
 # If no arguments are supplied open the current folder
 function o {
-  if [ "$1" != "" ]; then
-    open $1
-  else
-    open .
-  fi
+  open "${1:-.}"
 }
 
 # Copy pub keys to clipboard
