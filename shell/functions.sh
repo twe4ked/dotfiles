@@ -6,12 +6,7 @@ function o {
 
 # Copy pub keys to clipboard
 function pubkey {
-  if [ "$1" != "" ]; then
-    cat ~/.ssh/$1.pub | pbcopy
-  else
-    cat ~/.ssh/*.pub | pbcopy
-  fi
-
+  cat "~/.ssh/${1:-id_rsa}.pub" | pbcopy
   echo 'Keys copied to clipboard'
 }
 
