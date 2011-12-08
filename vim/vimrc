@@ -8,7 +8,7 @@ source $DOTFILES/vim/functions
 source $DOTFILES/vim/key_bindings
 source $DOTFILES/vim/plugin_config
 
-" Color Scheme -----------------------------------------------------------------
+" Colorscheme -----------------------------------------------------------------
 syntax enable
 set background=dark
 colorscheme jellybeans_custom
