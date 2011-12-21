@@ -15,6 +15,7 @@ alias gup='gup && say gup done'               # Say when gup is complete
 alias gcod='gco develop'                      # Back to the develop branch
 alias gf='git fetch'                          # Fetch
 alias gsw='git show'                          # Show
+alias garm='git ls-files -dz | xargs -0 git rm' # Stage deleted files
 
 # Git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
