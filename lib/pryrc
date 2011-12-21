@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding:utf-8 vim:ft=ruby
 
 Pry.config.pager = true
 Pry.config.color = true
