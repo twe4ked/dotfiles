@@ -10,6 +10,7 @@ task :install do
                  lib/ackrc
                  lib/gemrc
                  lib/irbrc
+                 lib/pryrc
                  vim/gvimrc
                  vim/vimrc)
 
