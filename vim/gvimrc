@@ -24,15 +24,11 @@ if has("gui_macvim")
   "              +--- use GUI tabs, not console style tabs
 
   set guifont=Monaco:h14
-  hi Normal guibg=#222222
 endif
 
 " Set column for features
 autocmd BufWinEnter *.feature set cc+=11
 autocmd BufWinLeave *.feature set cc-=11
-
-let g:indent_guides_color_change_percent = 3
-let g:indent_guides_enable_on_vim_startup = 1
 
 " NERDCommenter extra spaces
 let g:NERDSpaceDelims=1
