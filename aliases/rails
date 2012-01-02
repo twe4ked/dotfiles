@@ -10,4 +10,5 @@ alias prc="pry -r ./config/environment"
 
 alias b='bundle && say bundle complete, mate' # Run bundle and say when it's done
 
-alias rake='bundle exec rake'
+alias be='bundle exec'
+alias rake='be rake'
