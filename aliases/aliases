@@ -10,9 +10,12 @@ alias psg='ps aux | grep -v grep | grep $1'   # See what's running
 alias d="cd $HOME/Dev"                        # Go to the Dev folder
 alias shh='ssh'                               # Always type this wrong...
 
-if ! type free > /dev/null 2>&1 && [[ "$(uname -s)" == 'Darwin' ]]; then
+if [[ "$(uname -s)" == 'Darwin' ]]; then
   # Add a poor facsimile for Linux's `free` if we're on Mac OS
   alias free="top -s 0 -l 1 -pid 0 -stats pid | grep '^PhysMem: ' | cut -d : -f 2- | tr ',' '\n'"
+
+  # Mac system information.
+  alias macinfo='system_profiler SPHardwareDataType'
 fi
 
 source $DOTFILES/aliases/git                  # Git aliases
