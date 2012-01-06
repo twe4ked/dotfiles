@@ -8,7 +8,7 @@ alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
 alias psg='ps aux | grep -v grep | grep $1'   # See what's running
 alias d="cd $HOME/Dev"                        # Go to the Dev folder
-alias shh='ssh'                               # Always type this wrong...
+alias shh='echo nope.'                        # Always type this wrong...
 
 if [[ "$(uname -s)" == 'Darwin' ]]; then
   # Add a poor facsimile for Linux's `free` if we're on Mac OS
