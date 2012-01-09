@@ -24,6 +24,7 @@ set wildmenu                                " Make tab completion act more like 
 set wildmode=list:longest                   " Tab complete to longest common string, like bash
 set showcmd                                 " Display an incomplete command in the lower right corner
 set showmode                                " Show current mode down the bottom
+set cmdheight=2                             " Make the command line a little taller
 
 autocmd FileType gitcommit set spell
 
