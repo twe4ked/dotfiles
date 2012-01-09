@@ -87,7 +87,7 @@ function precmd {
 
   if [[ "$TERM" =~ ^xterm ]] then
     print -Pn "\e]2;%n@%M: %~\a"  # display "user@hostname: dir" in the window title
-    print -Pn "\e]1;%~\a"         # display "dir" in the terminal tabs
+    print -Pn "\e]1;%1~\a"        # display "dir" in the terminal tabs
   fi
 }
 
