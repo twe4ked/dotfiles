@@ -9,11 +9,6 @@ source $DOTFILES/vim/functions
 source $DOTFILES/vim/key_bindings
 source $DOTFILES/vim/plugin_config
 
-" Colorscheme -----------------------------------------------------------------
-syntax enable
-set background=dark
-colorscheme jellybeans_custom
-
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap
 set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
@@ -68,3 +63,8 @@ set autoindent                              " Keep the indent when creating a ne
 set smarttab                                " Use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
 set cindent                                 " Recommended seting for automatic C-style indentation
 set autoindent                              " Automatic indentation in non-C files
+
+" Colorscheme ------------------------------------------------------------------
+syntax enable
+set background=dark
+colorscheme jellybeans_custom
