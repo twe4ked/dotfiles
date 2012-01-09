@@ -18,6 +18,6 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
   alias macinfo='system_profiler SPHardwareDataType'
 fi
 
-source $DOTFILES/aliases/git                  # Git aliases
-source $DOTFILES/aliases/rails                # Rails aliases
-source $DOTFILES/aliases/testing              # Testing aliases
+source $DOTFILES/aliases/git.sh               # Git aliases
+source $DOTFILES/aliases/rails.sh             # Rails aliases
+source $DOTFILES/aliases/testing.sh           # Testing aliases

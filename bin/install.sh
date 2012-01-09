@@ -38,7 +38,7 @@ else
   rake
 
   # Source the dotfiles
-  source $DOTFILES/config
+  source $DOTFILES/config.sh
 
   echo ""
   echo $(colour green)"twe4ked's dotfiles have been installed successfully"

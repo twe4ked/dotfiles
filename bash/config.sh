@@ -1,6 +1,6 @@
 # BASH specific
-source $DOTFILES/shell/git_completion # Load git completion
-source $DOTFILES/bash/prompt          # Load the prompt
+source $DOTFILES/bash/git_completion.sh # Load git completion
+source $DOTFILES/bash/prompt.sh         # Load the prompt
 
 # Binds
 bind 'set completion-ignore-case on ' # Completion ignores case

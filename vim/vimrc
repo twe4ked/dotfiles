@@ -4,10 +4,10 @@ let $DOTFILES = "$HOME/.dotfiles"
 let mapleader = ","
 
 " Source -----------------------------------------------------------------------
-source $DOTFILES/vim/vundle
-source $DOTFILES/vim/functions
-source $DOTFILES/vim/key_bindings
-source $DOTFILES/vim/plugin_config
+source $DOTFILES/vim/vundle.vim
+source $DOTFILES/vim/functions.vim
+source $DOTFILES/vim/key_bindings.vim
+source $DOTFILES/vim/plugin_config.vim
 
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " No line wrap

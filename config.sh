@@ -11,23 +11,23 @@ export MACBOOK=true                 # Shows battery in zsh prompt if true
 export CDPATH="$CDPATH:$HOME/Hub/Projects"
 
 # Source the dotfiles
-source $DOTFILES/aliases/aliases    # Load all the alias files
+source $DOTFILES/aliases/aliases.sh # Load all the alias files
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 source $DOTFILES/shell/colours.sh   # Colours
 source $DOTFILES/shell/gup.sh       # Smart pull function by @jasoncodes
 
-if [ -f $DOTFILES/work ]; then
-  source $DOTFILES/work             # Work related aliases etc.
+if [ -f $DOTFILES/work.sh ]; then
+  source $DOTFILES/work.sh          # Work related aliases etc.
 fi
 
 # Load custom shell scripts (zsh or bash)
 if [ $SHELL = '/bin/bash' ]; then
-  source $DOTFILES/bash/config
+  source $DOTFILES/bash/config.sh
   export WHAT_SHELL='Using '`echo $SHELL`' shell.'
 else
   if [ $SHELL = "/bin/zsh" ]; then
-    source $DOTFILES/zsh/config
+    source $DOTFILES/zsh/config.sh
     export WHAT_SHELL='Using '`echo $SHELL`' shell.'
   else
     export WHAT_SHELL=`echo $SHELL`' does not have a custom config.'
