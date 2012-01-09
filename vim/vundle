@@ -6,6 +6,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'
 Bundle 'nathanaelkane/snipmate-snippets'
 Bundle 'nathanaelkane/vim-indent-guides'
