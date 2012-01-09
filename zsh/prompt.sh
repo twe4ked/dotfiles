@@ -84,6 +84,11 @@ function precmd {
 
   # https://github.com/rupa/z
 	_z --add "$(pwd -P)"
+
+  if [[ "$TERM" =~ ^xterm ]] then
+    print -Pn "\e]2;%n@%M: %~\a"  # display "user@hostname: dir" in the window title
+    print -Pn "\e]1;%~\a"         # display "dir" in the terminal tabs
+  fi
 }
 
 # The escape codes are surrounded by %{ and %}. These are zsh prompt escapes
