@@ -42,21 +42,6 @@ set smartcase                               " Override 'ignorecase' option if th
 
 filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
 
-" Epic status line (https://github.com/robertmeta/vim-files/) ------------------
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-"              | | | | |  |   |      |  |     |    |
-"              | | | | |  |   |      |  |     |    + Current column
-"              | | | | |  |   |      |  |     +--- Current line
-"              | | | | |  |   |      |  +-- Current % into file
-"              | | | | |  |   |      +-- Current syntax in square brackets
-"              | | | | |  |   +-- Current fileformat
-"              | | | | |  +-- Number of lines
-"              | | | | +-- Preview flag in square brackets
-"              | | | +-- Help flag in square brackets
-"              | | +-- Readonly flag in square brackets
-"              | +-- Modified flag in square brackets
-"              +-- Full path to file in the buffer
-
 " Indentation ------------------------------------------------------------------
 set shiftwidth=2                            " Number of spaces to use in each autoindent step
 set tabstop=2                               " Two tab spaces

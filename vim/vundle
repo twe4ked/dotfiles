@@ -16,6 +16,7 @@ Bundle 'vim-scripts/upAndDown'
 Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'twe4ked/vim-peepopen'
+Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'bufkill.vim'
 Bundle 'bufexplorer.zip'
