@@ -16,6 +16,8 @@ Bundle 'vim-scripts/upAndDown'
 Bundle 'mileszs/ack.vim'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'twe4ked/vim-peepopen'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'Lokaltog/vim-powerline'
 
 Bundle 'bufkill.vim'
