@@ -52,3 +52,6 @@ let g:colorizer_nomap = 1                   " No mappings
 " Prevent vim-surround's `ds` from conflicting with bufexplorer
 autocmd BufWinEnter \[BufExplorer\] unmap ds
 autocmd BufWinLeave \[BufExplorer\] nmap ds <Plug>Dsurround
+
+" Syntastic
+let g:syntastic_disabled_filetypes = ['sass']
