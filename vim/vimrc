@@ -3,6 +3,7 @@ let $DOTFILES = "$HOME/.dotfiles"
 " Set leader -------------------------------------------------------------------
 let mapleader = ","
 
+" Source -----------------------------------------------------------------------
 source $DOTFILES/vim/vundle
 source $DOTFILES/vim/functions
 source $DOTFILES/vim/key_bindings
