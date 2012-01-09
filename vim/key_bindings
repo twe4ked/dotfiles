@@ -28,3 +28,7 @@ map <Leader>f :Ack!<Space>
 nnoremap <leader>h *<C-O>
 
 map <Leader>F :AckFromSearch<CR>
+
+" Use ,d (or ,dd or ,dj or 20,dd) to delete a line without yanking
+nmap <silent> <leader>d "_d
+vmap <silent> <leader>d "_d
