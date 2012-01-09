@@ -25,6 +25,7 @@ set wildmode=list:longest                   " Tab complete to longest common str
 set showcmd                                 " Display an incomplete command in the lower right corner
 set showmode                                " Show current mode down the bottom
 set cmdheight=2                             " Make the command line a little taller
+set laststatus=2                            " Always show the status line
 
 autocmd FileType gitcommit set spell
 
