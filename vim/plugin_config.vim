@@ -55,3 +55,6 @@ autocmd BufWinLeave \[BufExplorer\] nmap ds <Plug>Dsurround
 
 " Syntastic
 let g:syntastic_disabled_filetypes = ['sass']
+
+" NERDCommenter
+let g:NERDSpaceDelims=1                     " extra spaces
