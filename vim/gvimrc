@@ -24,6 +24,8 @@ if has("gui_macvim")
   "              +--- use GUI tabs, not console style tabs
 
   set guifont=Monaco:h14
+
+  set guicursor+=i:ver25-iCursor             " Allow colour to be set on insert cursor
 endif
 
 " Set column for features
