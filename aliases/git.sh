@@ -19,7 +19,7 @@ alias garm='git ls-files -dz | xargs -0 git rm' # Stage deleted files
 
 # Git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
-alias gl='glg --all'
+alias gl='glg HEAD $(cd "$(git rev-parse --git-dir)" && find refs/{heads,remotes,tags} -type f)'
 
 # Push to Heroku (and tell me when you're done)
 alias gph='gp heroku && say deployed on heroku'
