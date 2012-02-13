@@ -19,6 +19,9 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
   alias macinfo='system_profiler SPHardwareDataType'
 fi
 
+# Open untracked/modified files in MacVim
+alias modified='mvim $(git ls-files -m -o --exclude-standard)'
+
 source $DOTFILES/aliases/git.sh               # Git aliases
 source $DOTFILES/aliases/rails.sh             # Rails aliases
 source $DOTFILES/aliases/testing.sh           # Testing aliases
