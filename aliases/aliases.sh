@@ -3,6 +3,7 @@ alias ..='cd ..'                              # Up one directory
 alias ...='cd ../..'                          # Up two directories
 alias wiki='vim -c VimwikiIndex'              # Open vimwiki
 alias sw='saywhen'                            # Prepend to a command and it will say when complete
+alias dotfiles="$EDITOR $DOTFILES"            # Edit dotfiles
 alias reload="source $DOTFILES/config.sh"     # Source dotfiles
 alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
