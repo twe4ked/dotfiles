@@ -11,9 +11,9 @@ export MACBOOK=true                 # Shows battery in zsh prompt if true
 export CDPATH="$CDPATH:$HOME/Hub/Projects"
 
 # Source the dotfiles
-source $DOTFILES/aliases/aliases.sh # Load all the alias files
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
+source $DOTFILES/aliases/aliases.sh # Load all the alias files
 source $DOTFILES/shell/colours.sh   # Colours
 source $DOTFILES/shell/gup.sh       # Smart pull function by @jasoncodes
 
