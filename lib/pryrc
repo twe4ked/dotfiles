@@ -4,11 +4,23 @@ Pry.config.pager = true
 Pry.config.color = true
 Pry.config.history.should_save = true
 
-Pry.config.prompt = proc do |obj, nest_level, pry|
-  prompt  = Pry::Helpers::Text.bright_black Pry.view_clip(obj)
-  prompt += ":#{nest_level}" if nest_level > 0
-  prompt += Pry::Helpers::Text.cyan ' » '
-end, proc { Pry::Helpers::Text.cyan ' » '}
+# wrap ANSI codes so Readline knows where the prompt ends
+def colour(name, text)
+  if Pry.color
+    "\001#{Pry::Helpers::Text.send name, '{text}'}\002".sub '{text}', "\002#{text}\001"
+  else
+    text
+  end
+end
+
+# pretty prompt
+Pry.config.prompt = [
+  proc do |object, nest_level, pry|
+    prompt  = colour :bright_black, Pry.view_clip(object)
+    prompt += ":#{nest_level}" if nest_level > 0
+    prompt += colour :cyan, ' » '
+  end, proc { |object, nest_level, pry| colour :cyan, '» ' }
+]
 
 original_print = Pry.config.print
 Pry.config.print = proc do |output, value|
