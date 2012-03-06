@@ -30,12 +30,13 @@ old_winch = trap 'WINCH' do
   old_winch.call unless old_winch.nil?
 end
 
+# use awesome print for output if available
 original_print = Pry.config.print
 Pry.config.print = proc do |output, value|
-  begin
-    require 'awesome_print'
-    output.puts value.ai
-  rescue LoadError => err
-    original_print.call(output, value)
-  end
+  begin
+    require 'awesome_print'
+    output.puts value.ai
+  rescue LoadError => err
+    original_print.call(output, value)
+  end
 end
