@@ -40,3 +40,30 @@ Pry.config.print = proc do |output, value|
     original_print.call(output, value)
   end
 end
+
+# startup hooks
+Pry.hooks.add_hook :before_session, :rails do |output, target, pry|
+  # show ActiveRecord SQL queries in the console
+  if defined? ActiveRecord
+    ActiveRecord::Base.logger = Logger.new STDOUT
+  end
+
+  if defined?(Rails) && Rails.env
+    # output all other log info such as deprecation warnings to the console
+    if Rails.respond_to? :logger=
+      Rails.logger = Logger.new STDOUT
+    end
+
+    # load Rails console commands
+    if Rails::VERSION::MAJOR >= 3
+      require 'rails/console/app'
+      require 'rails/console/helpers'
+      if Rails.const_defined? :ConsoleMethods
+        extend Rails::ConsoleMethods
+      end
+    else
+      require 'console_app'
+      require 'console_with_helpers'
+    end
+  end
+end
