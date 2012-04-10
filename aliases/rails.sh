@@ -1,3 +1,4 @@
+alias be='bundle exec'
 alias b='bundle && say bundle complete, mate' # Run bundle and say when it's done
 
 # Rails stuff
@@ -10,6 +11,5 @@ alias rs="rails s"                            # Start the Rails server
 alias rc="rails c"                            # Start the Rails console# Start the Rails server
 alias prc="pry -r ./config/environment"
 
-alias be='bundle exec'
 alias cap='be cap'
 alias rake='be rake'
