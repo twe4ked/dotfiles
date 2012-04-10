@@ -1,4 +1,2 @@
-if [ -e $HOME/.rvm/scripts/rvm ]; then
-  source $HOME/.rvm/scripts/rvm # Load RVM
-  cd .
-fi
+eval "$(rbenv init - | grep -v \^rbenv\ rehash)"
+gem() { rbenv exec gem "$@" && rbenv rehash && hash -r; }
