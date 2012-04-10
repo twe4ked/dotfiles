@@ -74,3 +74,19 @@ function prompt_color() { # bjeanes
     fi
   fi
 }
+
+function __database_yml {
+  if [[ -f config/database.yml ]]; then
+    ruby -ryaml -rerb -e "puts YAML::load(ERB.new(IO.read('config/database.yml')).result)['${RAILS_ENV:-development}']['$1']"
+  fi
+}
+
+function psql
+{
+  if [[ "$(__database_yml adapter)" == 'postgresql' ]]; then
+    PGDATABASE="$(__database_yml database)" "$(/usr/bin/which psql)" "$@"
+    return $?
+  fi
+  "$(/usr/bin/which psql)" "$@"
+}
+export PSQL_EDITOR='vim +"set syntax=sql"'
