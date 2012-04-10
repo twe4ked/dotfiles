@@ -16,6 +16,7 @@ alias gcod='gco develop'                      # Back to the develop branch
 alias gcom='gco master'                       # Back to the master branch
 alias gf='git fetch'                          # Fetch
 alias gsw='git show'                          # Show
+alias prune='git remote prune origin'         # Prune
 alias garm='git ls-files -dz | xargs -0 git rm' # Stage deleted files
 
 # Git log
