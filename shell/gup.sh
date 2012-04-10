@@ -7,6 +7,8 @@ function gup {
     if type git-up > /dev/null 2>&1
     then
       exec git-up
+    else
+      echo 'Not using git-up gem.'
     fi
 
     # fetch upstream changes
