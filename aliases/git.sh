@@ -13,6 +13,7 @@ alias gd='git diff'                           # Diff
 alias gds='gd --staged'                       # Diff staged
 alias gup='gup && say gup done'               # Say when gup is complete
 alias gcod='gco develop'                      # Back to the develop branch
+alias gcom='gco master'                       # Back to the master branch
 alias gf='git fetch'                          # Fetch
 alias gsw='git show'                          # Show
 alias garm='git ls-files -dz | xargs -0 git rm' # Stage deleted files
