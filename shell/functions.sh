@@ -90,3 +90,15 @@ function psql
   "$(/usr/bin/which psql)" "$@"
 }
 export PSQL_EDITOR='vim +"set syntax=sql"'
+
+# git log search
+function gls()
+{
+  local phrase="$1"
+  shift
+  if [[ $# == 0 ]]
+  then
+    local default_range=HEAD
+  fi
+  git log --patch --pickaxe-all -S"$phrase" "$@" $default_range
+}
