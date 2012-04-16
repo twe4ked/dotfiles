@@ -4,15 +4,16 @@ task :default => :install
 
 desc "Install the dotfiles into user's home directory"
 task :install do
-  dotfiles  = File.dirname(__FILE__)
-  files     = %w(zsh/zshrc
-                 bash/bashrc
-                 lib/ackrc
-                 lib/gemrc
-                 lib/irbrc
-                 lib/pryrc
-                 vim/gvimrc
-                 vim/vimrc)
+  replace_all = false
+  dotfiles    = File.dirname(__FILE__)
+  files       = %w[zsh/zshrc
+                   bash/bashrc
+                   lib/ackrc
+                   lib/gemrc
+                   lib/irbrc
+                   lib/pryrc
+                   vim/gvimrc
+                   vim/vimrc]
 
   files = Hash[files.zip(Array.new(files.size, "~/."))]
   files['vim/colors/'] = '~/.vim/'
@@ -35,20 +36,34 @@ task :install do
     end
 
     if File.exist?(destination_file) || File.symlink?(destination_file)
-      if File.exist?("#{destination_file}.bak") || File.symlink?("#{destination_file}.bak")
-        puts color('Backup files already exist. Aborting.', :color => :red)
-        exit 1
+      if replace_all
+        replace_file(destination_file, source_file)
       else
-        puts color("The file .#{file_name} exists. Moving to .#{file_name}.bak", :color => :blue)
-        system %Q{mv "#{destination_file}" "#{destination_file}.bak"}
+        print color('overwrite ', :color => :red) + "#{destination_file}? [ynaq] "
+        case $stdin.gets.chomp.downcase
+        when 'a'
+          replace_all = true
+          replace_file(destination_file, source_file)
+        when 'y'
+          replace_file(destination_file, source_file)
+        when 'q'
+          exit
+        else
+          puts color('skipping ', :color => :blue) + destination_file
+        end
       end
+    else
+      link_file(destination_file, source_file)
     end
-
-    link_file(destination_file, source_file)
   end
 end
 
+def replace_file(old_file, new_file)
+  system %Q{rm "#{old_file}"}
+  link_file(old_file, new_file)
+end
+
 def link_file(old_file, new_file)
-  puts "Linked from " + color("#{new_file}", :color => :green) + " -> " + color("#{old_file}", :color => :green)
+  puts color('linking ', :color => :green) + new_file + ' -> ' + old_file
   system %Q{ln -fs "#{new_file}" "#{old_file}"}
 end
