@@ -3,34 +3,43 @@ filetype off
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 Bundle 'gmarik/vundle'
-Bundle 'scrooloose/nerdtree'
+
+" Misc.
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'nathanaelkane/Command-T'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/upAndDown'
 Bundle 'mileszs/ack.vim'
-Bundle 'tomtom/tcomment_vim'
 Bundle 'twe4ked/vim-peepopen'
+Bundle 'sickill/vim-pasta'
+Bundle 'vimwiki'
+Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'sickill/vim-pasta'
-
-Bundle 'bufkill.vim'
-Bundle 'bufexplorer.zip'
-Bundle 'vimwiki'
-Bundle 'haml.zip'
 Bundle 'snipMate'
 Bundle 'EasyMotion'
 
+" Visual
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'nathanaelkane/vim-indent-guides'
+
+" Editing
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-surround'
+Bundle 'bronson/vim-trailing-whitespace'
+
+" Navigation
+Bundle 'scrooloose/nerdtree'
+Bundle 'bufexplorer.zip'
+
+" Language
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-cucumber'
+Bundle 'haml.zip'
+
+" Colours
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
