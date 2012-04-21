@@ -37,6 +37,7 @@ autocmd BufWinEnter *.feature set cc+=11
 autocmd BufWinLeave *.feature set cc-=11
 
 au FocusLost * :silent! wall                 " Save on FocusLost
+au FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
 
 " Searching --------------------------------------------------------------------
 set hlsearch                                " Highlight searches
