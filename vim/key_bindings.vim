@@ -33,6 +33,14 @@ map <Leader>F :AckFromSearch<CR>
 nmap <silent> <leader>d "_d
 vmap <silent> <leader>d "_d
 
+" Use option-J/K to bubble lines up and down
+nmap <silent> ˚ <Plug>upAndDownUp
+nmap <silent> ∆ <Plug>upAndDownDown
+vmap <silent> ˚ <Plug>upAndDownVisualUp
+vmap <silent> ∆ <Plug>upAndDownVisualDown
+imap <silent> ˚ <Plug>upAndDownInsertUp
+imap <silent> ∆ <Plug>upAndDownInsertDown
+
 " Align Maps (mapping overrides)
 map <Leader>At| <Plug>AM_t|
 map <Leader>At#   <Plug>AM_t#
