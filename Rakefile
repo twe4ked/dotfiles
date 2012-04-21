@@ -12,6 +12,7 @@ task :install do
                    lib/gemrc
                    lib/irbrc
                    lib/pryrc
+                   lib/inputrc
                    vim/gvimrc
                    vim/vimrc]
 
