@@ -38,6 +38,8 @@ Bundle 'bufexplorer.zip'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-cucumber'
 Bundle 'haml.zip'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'kchmck/vim-coffee-script'
 
 " Colours
 Bundle 'altercation/vim-colors-solarized'
