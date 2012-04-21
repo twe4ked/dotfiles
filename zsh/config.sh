@@ -53,6 +53,8 @@ autoload -U tetris
 zle -N tetris
 bindkey '^T' tetris
 
+WORDCHARS=''
+
 # Command history configuration (from oh my zsh)
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
