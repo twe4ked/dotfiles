@@ -51,6 +51,57 @@ function prompt_pwd() {
   echo "${(j:/:)parts}"
 }
 
+# Colors vary depending on time lapsed.
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg_bold[cyan]%}"
+ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg_bold[yellow]%}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg_bold[red]%}"
+ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg_bold[yellow]%}"
+# Determine the time since last commit. If branch is clean,
+# use a neutral color, otherwise colors will vary according to time.
+function git_time_since_commit() {
+  if git rev-parse --git-dir > /dev/null 2>&1; then
+    # Only proceed if there is actually a commit.
+    if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
+      # Get the last commit.
+      last_commit=`git log --pretty=format:'%at' -1 2> /dev/null`
+      now=`date +%s`
+      seconds_since_last_commit=$((now-last_commit))
+
+      # Totals
+      MINUTES=$((seconds_since_last_commit / 60))
+      HOURS=$((seconds_since_last_commit/3600))
+
+      # Sub-hours and sub-minutes
+      DAYS=$((seconds_since_last_commit / 86400))
+      SUB_HOURS=$((HOURS % 24))
+      SUB_MINUTES=$((MINUTES % 60))
+
+      if [[ -n $(git status -s 2> /dev/null) ]]; then
+          if [ "$MINUTES" -gt 30 ]; then
+              COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG"
+          elif [ "$MINUTES" -gt 10 ]; then
+              COLOR="$ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM"
+          else
+              COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT"
+          fi
+      else
+          COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL"
+      fi
+
+      if [ "$HOURS" -gt 24 ]; then
+          echo "$COLOR${DAYS}d"
+      elif [ "$MINUTES" -gt 60 ]; then
+          echo "$COLOR${HOURS}h${SUB_MINUTES}m"
+      else
+          echo "$COLOR${MINUTES}m"
+      fi
+    else
+      COLOR="$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL"
+      echo "$COLOR"
+    fi
+  fi
+}
+
 # Git theming
 ZSH_THEME_GIT_PROMPT_PREFIX="± "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
@@ -66,14 +117,15 @@ function precmd {
   vcs_info
 
   local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
-  local usr='%{${fg[yellow]}%}$(user_hostname) '
+  local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
+  local gittime='$(git_time_since_commit) '
   local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
   local rbenv='%{${fg_bold[cyan]}%}$(rbenv_prompt_info)%{${reset_color}%} '
   local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
   local time='%* '
 
   PROMPT=$cwd$usr$char
-  RPROMPT=$rbenv$git$time
+  RPROMPT=$gittime$rbenv$git$time
 
   PROMPT2=$char
   RPROMPT2='[%_]'
