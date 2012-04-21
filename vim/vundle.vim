@@ -24,6 +24,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 
 " Editing
 Bundle 'tapichu/Align'
+Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'bronson/vim-trailing-whitespace'
