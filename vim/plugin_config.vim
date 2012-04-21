@@ -61,3 +61,8 @@ let g:syntastic_enable_signs=0
 
 " NERDCommenter
 let g:NERDSpaceDelims=1                     " extra spaces
+
+" Bookmarking
+noremap <C-Space> :ToggleBookmark<CR>
+noremap <C-Up>    :PreviousBookmark<CR>
+noremap <C-Down>  :NextBookmark<CR>

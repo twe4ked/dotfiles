@@ -20,6 +20,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'snipMate'
 
 " Visual
+Bundle 'dterei/VimBookmarking'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
 
