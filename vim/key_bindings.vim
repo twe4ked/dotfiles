@@ -2,8 +2,6 @@ map <Leader>sd :FixWhitespace<CR>
 
 " Buffer navigation ------------------------------------------------------------
 map <Leader>, <C-^>
-map <Leader>t :CommandT<CR>
-map <Leader>T :call CommandTWithFlush()<CR>
 map <Leader>w :CommandW<CR>
 map <Leader>l :CommandTBuffer<CR>
 
@@ -32,3 +30,27 @@ map <Leader>F :AckFromSearch<CR>
 " Use ,d (or ,dd or ,dj or 20,dd) to delete a line without yanking
 nmap <silent> <leader>d "_d
 vmap <silent> <leader>d "_d
+
+" Align Maps (mapping overrides)
+map <Leader>At| <Plug>AM_t|
+map <Leader>At#   <Plug>AM_t#
+map <Leader>At,   <Plug>AM_t,
+map <Leader>At:   <Plug>AM_t:
+map <Leader>At;   <Plug>AM_t;
+map <Leader>At<   <Plug>AM_t<
+map <Leader>At=   <Plug>AM_t=
+map <Leader>Ats,  <Plug>AM_ts,
+map <Leader>Ats:  <Plug>AM_ts:
+map <Leader>Ats;  <Plug>AM_ts;
+map <Leader>Ats<  <Plug>AM_ts<
+map <Leader>Ats=  <Plug>AM_ts=
+map <Leader>Aw=   <Plug>AM_w=
+map <Leader>At?   <Plug>AM_t?
+map <Leader>At~   <Plug>AM_t~
+map <Leader>At@   <Plug>AM_t@
+map <Leader>Am=   <Plug>AM_m=
+map <Leader>Atab  <Plug>AM_tab
+map <Leader>Atml  <Plug>AM_tml
+map <Leader>Atsp  <Plug>AM_tsp
+map <Leader>Atsq  <Plug>AM_tsq
+map <Leader>Att   <Plug>AM_tt

@@ -8,12 +8,10 @@ Bundle 'gmarik/vundle'
 " Misc.
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'
-Bundle 'nathanaelkane/Command-T'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'vim-scripts/upAndDown'
 Bundle 'mileszs/ack.vim'
-Bundle 'twe4ked/vim-peepopen'
 Bundle 'sickill/vim-pasta'
 Bundle 'vimwiki'
 Bundle 'bufkill.vim'
@@ -34,6 +32,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 
 " Navigation
 Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
 Bundle 'bufexplorer.zip'
 
 " Language

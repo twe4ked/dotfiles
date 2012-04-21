@@ -1,13 +1,4 @@
-if has("gui_macvim")
-  " Cmd+T to open Command-T
-  macmenu &File.New\ Tab key=<nop>
-  nmap <D-t> :CommandT<CR>
-  imap <D-t> <Esc>:CommandT<CR>
-
-  " Cmd+R to flush Command-T cache
-  nmap <D-r> :CommandTFlush<CR>
-  imap <D-r> <Esc>:CommandTFlush<CR>
-
+if has('gui_macvim')
   " Cmd+W to close current buffer and close the window if no buffers are left
   macmenu &File.Close key=<nop>
   nmap <D-w> :CommandW<CR>
