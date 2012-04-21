@@ -31,7 +31,11 @@ autocmd FileType gitcommit set spell
 " Generate .git/tags (ctags) automatically on save
 autocmd BufWritePost * call UpdateTags()
 
-au FocusLost * :silent! wall                " Save on FocusLost
+" Set column for features
+autocmd BufWinEnter *.feature set cc+=11
+autocmd BufWinLeave *.feature set cc-=11
+
+au FocusLost * :silent! wall                 " Save on FocusLost
 
 " Searching --------------------------------------------------------------------
 set hlsearch                                " Highlight searches

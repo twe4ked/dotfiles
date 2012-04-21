@@ -8,17 +8,11 @@ if has('gui_macvim')
   inoremenu File.Close\ Instance :qa<CR>
 
   set cc=80                                  " Put at line @ column 80
+  set guifont=Monaco:h14                     " Monaco!
+  set guicursor+=i:ver25-iCursor             " Allow colour to be set on insert cursor
   set guioptions-=T                          " Hide the tool bar
   set guioptions=ce
   "              ||
   "              |+-- use simple dialogs rather than pop-ups
   "              +--- use GUI tabs, not console style tabs
-
-  set guifont=Monaco:h14
-
-  set guicursor+=i:ver25-iCursor             " Allow colour to be set on insert cursor
 endif
-
-" Set column for features
-autocmd BufWinEnter *.feature set cc+=11
-autocmd BufWinLeave *.feature set cc-=11
