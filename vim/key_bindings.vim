@@ -33,6 +33,9 @@ map <Leader>F :AckFromSearch<CR>
 nmap <silent> <leader>d "_d
 vmap <silent> <leader>d "_d
 
+" Yank from the cursor to the end of the line, to be consistent with C and D
+nnoremap Y y$
+
 " Use option-J/K to bubble lines up and down
 nmap <silent> ˚ <Plug>upAndDownUp
 nmap <silent> ∆ <Plug>upAndDownDown
