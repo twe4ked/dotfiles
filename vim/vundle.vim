@@ -18,7 +18,6 @@ Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'snipMate'
-Bundle 'EasyMotion'
 
 " Visual
 Bundle 'Lokaltog/vim-powerline'

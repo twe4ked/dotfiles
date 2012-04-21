@@ -45,9 +45,6 @@ vnoremap > >gv
 " tcomment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
-" EasyMotion
-let g:EasyMotion_leader_key = '<Leader>e'
-
 " Indent Guides
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
