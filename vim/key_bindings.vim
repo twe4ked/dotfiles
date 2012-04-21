@@ -33,6 +33,16 @@ map <Leader>F :AckFromSearch<CR>
 nmap <silent> <leader>d "_d
 vmap <silent> <leader>d "_d
 
+" Disable up/down cursor keys
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Up> <Nop>
+inoremap <M-Down> <Nop>
+noremap <Up> <Esc>
+noremap <Down> <Esc>
+vmap <Up> <Esc><Esc>gv
+vmap <Down> <Esc><Esc>gv
+
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
