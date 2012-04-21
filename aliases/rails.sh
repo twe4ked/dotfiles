@@ -9,7 +9,7 @@ alias r='rake'                                # Shortcut to rake
 # Rails 3.x.x aliases
 alias rs="rails s"                            # Start the Rails server
 alias rc="rails c"                            # Start the Rails console# Start the Rails server
-alias prc="pry -r ./config/environment"
+alias prc="be pry -r ./config/environment"
 
 alias cap='be cap'
 alias rake='be rake'
