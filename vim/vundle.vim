@@ -16,7 +16,6 @@ Bundle 'vimwiki'
 Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'snipMate'
 
 " Visual
 Bundle 'dterei/VimBookmarking'
