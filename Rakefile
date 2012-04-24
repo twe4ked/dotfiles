@@ -13,6 +13,7 @@ task :install do
                    lib/irbrc
                    lib/pryrc
                    lib/inputrc
+                   lib/tmux.conf
                    vim/gvimrc
                    vim/vimrc]
 
