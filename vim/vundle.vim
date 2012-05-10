@@ -23,7 +23,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
 
 " Editing
-Bundle 'tapichu/Align'
+Bundle 'godlygeek/tabular'
 Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'

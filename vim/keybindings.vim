@@ -62,26 +62,3 @@ vmap <silent> ∆ <Plug>upAndDownVisualDown
 imap <silent> ˚ <Plug>upAndDownInsertUp
 imap <silent> ∆ <Plug>upAndDownInsertDown
 
-" Align Maps (mapping overrides)
-map <Leader>At| <Plug>AM_t|
-map <Leader>At#   <Plug>AM_t#
-map <Leader>At,   <Plug>AM_t,
-map <Leader>At:   <Plug>AM_t:
-map <Leader>At;   <Plug>AM_t;
-map <Leader>At<   <Plug>AM_t<
-map <Leader>At=   <Plug>AM_t=
-map <Leader>Ats,  <Plug>AM_ts,
-map <Leader>Ats:  <Plug>AM_ts:
-map <Leader>Ats;  <Plug>AM_ts;
-map <Leader>Ats<  <Plug>AM_ts<
-map <Leader>Ats=  <Plug>AM_ts=
-map <Leader>Aw=   <Plug>AM_w=
-map <Leader>At?   <Plug>AM_t?
-map <Leader>At~   <Plug>AM_t~
-map <Leader>At@   <Plug>AM_t@
-map <Leader>Am=   <Plug>AM_m=
-map <Leader>Atab  <Plug>AM_tab
-map <Leader>Atml  <Plug>AM_tml
-map <Leader>Atsp  <Plug>AM_tsp
-map <Leader>Atsq  <Plug>AM_tsq
-map <Leader>Att   <Plug>AM_tt
