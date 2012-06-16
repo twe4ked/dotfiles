@@ -66,3 +66,5 @@ let g:NERDSpaceDelims=1                     " extra spaces
 noremap <C-Space> :ToggleBookmark<CR>
 noremap <C-Up>    :PreviousBookmark<CR>
 noremap <C-Down>  :NextBookmark<CR>
+
+autocmd VimEnter * :silent! SetColors bclear_custom solarized_custom jellybeans_custom

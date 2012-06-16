@@ -42,6 +42,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'kchmck/vim-coffee-script'
 
 " Colours
+Bundle 'twe4ked/vim-colorscheme-switcher'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bclear'
