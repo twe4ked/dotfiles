@@ -9,8 +9,6 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'
 Bundle 'tpope/vim-fugitive'
-Bundle 'vim-scripts/upAndDown'
-Bundle 'mileszs/ack.vim'
 Bundle 'sickill/vim-pasta'
 Bundle 'vimwiki'
 Bundle 'bufkill.vim'
@@ -28,11 +26,13 @@ Bundle 'twe4ked/vim-diff-toggle'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'vim-scripts/upAndDown'
 
 " Navigation
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bufexplorer.zip'
+Bundle 'mileszs/ack.vim'
 
 " Language
 Bundle 'tpope/vim-rails'
