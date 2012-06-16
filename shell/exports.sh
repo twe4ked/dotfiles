@@ -1,5 +1,3 @@
-# Exports
-
 # CDPATH
 export CDPATH="$HOME:$HOME/Dev"
 export CDPATH="$CDPATH:$HOME/Dev/personal"
