@@ -69,6 +69,9 @@ imap <silent> ∆ <Plug>upAndDownInsertDown
 map <Leader>l :CtrlPBuffer<CR>
 map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
+" I never intentionally lookup keywords (with `man`)
+nmap K <Esc>
+
 " I don't like <c-r>
 map U :redo<CR>
 
