@@ -44,3 +44,4 @@ Bundle 'kchmck/vim-coffee-script'
 " Colours
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
+Bundle 'bclear'
