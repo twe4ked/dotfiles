@@ -68,3 +68,6 @@ imap <silent> ∆ <Plug>upAndDownInsertDown
 " CtrlP
 map <Leader>l :CtrlPBuffer<CR>
 map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
+
+" I don't like <c-r>
+map U :redo<CR>
