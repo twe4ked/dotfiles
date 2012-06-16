@@ -14,6 +14,7 @@ Bundle 'vimwiki'
 Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'sjl/vitality.vim'
 
 " Visual
 Bundle 'dterei/VimBookmarking'
