@@ -35,6 +35,12 @@ autocmd BufWinLeave *.feature set cc-=11    " ...and unset
 autocmd FocusLost * :silent! wall                 " Save on FocusLost
 autocmd FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
 
+" Jump to last cursor position unless it's invalid or in an event handler
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal g`\"" |
+  \ endif
+
 " Searching --------------------------------------------------------------------
 set hlsearch                                " Highlight searches
 set incsearch                               " Highlight search results instantly
