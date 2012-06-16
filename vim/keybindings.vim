@@ -65,3 +65,6 @@ vmap <silent> ∆ <Plug>upAndDownVisualDown
 imap <silent> ˚ <Plug>upAndDownInsertUp
 imap <silent> ∆ <Plug>upAndDownInsertDown
 
+" CtrlP
+map <Leader>l :CtrlPBuffer<CR>
+map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
