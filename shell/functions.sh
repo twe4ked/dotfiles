@@ -102,3 +102,10 @@ function gls()
   fi
   git log --patch --pickaxe-all -S"$phrase" "$@" $default_range
 }
+
+# checkout a GitHub pull request as a local branch
+function gpr()
+{
+  local NUM="${1?Specify pull request number}"
+  git fetch origin "pull/$NUM/head:pull/$NUM" && git checkout "pull/$NUM"
+}
