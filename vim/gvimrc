@@ -24,8 +24,5 @@ if has('gui_macvim')
   set guifont=Monaco:h14                     " Monaco!
   set guicursor+=i:ver25-iCursor             " Allow colour to be set on insert cursor
   set guioptions-=T                          " Hide the tool bar
-  set guioptions=ce
-  "              ||
-  "              |+-- use simple dialogs rather than pop-ups
-  "              +--- use GUI tabs, not console style tabs
+  set guioptions=c                           " Use simple dialogs rather than pop-ups
 endif
