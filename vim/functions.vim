@@ -15,3 +15,12 @@ endfunction
 
 " Set colorcolumn to the current textwidth or fallback to 80
 autocmd BufWinEnter * call ColorColumnAtTextWidth(80)
+
+" Promote variable to RSpec let
+function! PromoteToLet()
+  :normal! dd
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()

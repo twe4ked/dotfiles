@@ -71,3 +71,5 @@ map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
 " I don't like <c-r>
 map U :redo<CR>
+
+map <leader>p :PromoteToLet<cr>
