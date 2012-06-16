@@ -16,8 +16,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 map <silent><Leader>/ :nohls<CR>            " Clear search
-map <leader>n :NERDTreeToggle<CR>           " NERDTree
 map <Leader>w :CommandW<CR>                 " Command W
+
+" NERDTree
+map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>
 
 " Ack with <leader>f
 map <Leader>f :Ack!<Space>
