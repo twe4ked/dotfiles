@@ -20,10 +20,10 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
 fi
 
 # Open untracked/modified files in MacVim
-alias modified='mvim $(git ls-files -m -o --exclude-standard)'
+alias modified='mvim $(git ls-files -m -o --exclude-standard) .'
 
 # Open last commit in MacVim
-alias lastcommit='mvim $(git show --pretty="format:" --name-only)'
+alias lastcommit='mvim $(git show --pretty="format:" --name-only) .'
 
 source $DOTFILES/aliases/git.sh               # Git aliases
 source $DOTFILES/aliases/rails.sh             # Rails aliases
