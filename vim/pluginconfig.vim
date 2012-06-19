@@ -21,23 +21,6 @@ let g:NERDTreeShowLineNumbers = 0           " Disable line numbers
 let g:NERDTreeMinimalUI = 1                 " Disable help message
 let g:NERDTreeDirArrows = 1                 " Enable directory arrows
 
-" vimwiki
-let g:vimwiki_menu          = 'Plugin.Vimwiki' " GUI menu of available wikies to select.
-let g:vimwiki_hl_cb_checked = 1             " Highlight checkboxes.
-let g:vimwiki_badsyms       = ' '           " Strip whitespace from filenames.
-let g:vimwiki_use_mouse     = 1             " Use mouse mappings.
-let g:vimwiki_dir_link      = 'index'       " Open directories and create index.wiki if neeeded.
-let g:vimwiki_list          = [
-  \  {
-  \     'path': '~/Hub/Dropbox/vimwiki/text',
-  \     'path_html': '~/Hub/Dropbox/vimwiki/html',
-  \     'nested_syntaxes': {
-  \       'ruby': 'ruby'
-  \     },
-  \     'auto_export': 1
-  \  }
-  \]
-
 " Reselect visual block after indent
 vnoremap < <gv
 vnoremap > >gv
