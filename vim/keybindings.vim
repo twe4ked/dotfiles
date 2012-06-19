@@ -80,3 +80,7 @@ nmap <Leader>ru :silent !open dash://ruby:<cword><CR>
 nmap <Leader>ra :silent !open dash://rails:<cword><CR>
 
 map <leader>p :PromoteToLet<cr>
+
+" Marked (markdown preview)
+command! Marked silent !open -a "Marked.app" "%:p"
+nmap <C-p> :Marked<CR>
