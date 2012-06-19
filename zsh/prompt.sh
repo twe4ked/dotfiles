@@ -51,14 +51,15 @@ function prompt_pwd() {
   echo "${(j:/:)parts}"
 }
 
-# Colors vary depending on time lapsed.
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg_bold[cyan]%}"
-ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg_bold[yellow]%}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg_bold[red]%}"
-ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg_bold[yellow]%}"
 # Determine the time since last commit. If branch is clean,
 # use a neutral color, otherwise colors will vary according to time.
 function git_time_since_commit() {
+  # Colors vary depending on time lapsed.
+  local ZSH_THEME_GIT_TIME_SINCE_COMMIT_SHORT="%{$fg_bold[cyan]%}"
+  local ZSH_THEME_GIT_TIME_SHORT_COMMIT_MEDIUM="%{$fg_bold[yellow]%}"
+  local ZSH_THEME_GIT_TIME_SINCE_COMMIT_LONG="%{$fg_bold[red]%}"
+  local ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL="%{$fg_bold[yellow]%}"
+
   if git rev-parse --git-dir > /dev/null 2>&1; then
     # Only proceed if there is actually a commit.
     if [[ $(git log 2>&1 > /dev/null | grep -c "^fatal: bad default revision") == 0 ]]; then
