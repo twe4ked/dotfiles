@@ -7,7 +7,6 @@ alias reload="source $DOTFILES/config.sh"     # Source dotfiles
 alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
 alias psg='ps aux | grep -v grep | grep $1'   # See what's running
-alias d="cd $HOME/Dev"                        # Go to the Dev folder
 alias shh='echo nope.'                        # Always type this wrong...
 
 if [[ "$(uname -s)" == 'Darwin' ]]; then
@@ -27,3 +26,7 @@ alias lastcommit='mvim $(git show --pretty="format:" --name-only) .'
 source $DOTFILES/aliases/git.sh               # Git aliases
 source $DOTFILES/aliases/rails.sh             # Rails aliases
 source $DOTFILES/aliases/testing.sh           # Testing aliases
+
+alias d="cd $HOME/Dev"                        # Go to the Dev directory
+alias vimdir="cd $HOME/.dotfiles/vim"         # Go to the Vim directory
+alias dotdir="cd $HOME/.dotfiles"             # Go to the Dotfiles directory
