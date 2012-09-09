@@ -7,7 +7,7 @@ alias reload="source $DOTFILES/config.sh"     # Source dotfiles
 alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
 alias psg='ps aux | grep -v grep | grep $1'   # See what's running
-alias shh='echo nope.'                        # Always type this wrong...
+alias shh='echo nope.>&2; false'              # Always type this wrong...
 
 if [[ "$(uname -s)" == 'Darwin' ]]; then
   # Add a poor facsimile for Linux's `free` if we're on Mac OS
