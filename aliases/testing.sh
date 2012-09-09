@@ -1,12 +1,10 @@
 # Cucumber
-alias bec='bundle exec cucumber'
-alias becs='bundle exec cucumber --drb'
+alias bec='bundle exec cucumber --drb'
 
 # RSpec
-alias ber='bundle exec rspec'
-alias bers='bundle exec rspec --drb'
-alias berd='bundle exec rspec -f doc'
-alias berds='bundle exec rspec --drb -f doc'
+alias ber='bundle exec rspec --drb'
+alias berd='ber --format=doc'
+alias berf='ber --format=Fuubar'
 
 # Spork
 alias spork='bundle exec spork'
