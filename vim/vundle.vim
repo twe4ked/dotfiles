@@ -22,6 +22,7 @@ Bundle 'jpalardy/vim-slime'
 Bundle 'dterei/VimBookmarking'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tomtom/quickfixsigns_vim'
 
 " Editing
 Bundle 'godlygeek/tabular'
