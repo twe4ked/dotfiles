@@ -1,5 +1,5 @@
 # CDPATH
-export CDPATH="$HOME:$HOME/Dev"
+export CDPATH=".:$HOME:$HOME/Dev"
 export CDPATH="$CDPATH:$HOME/Dev/personal"
 export CDPATH="$CDPATH:$HOME/Dev/$WORK"
 export CDPATH="$CDPATH:$HOME/Dev/$WORK/internal"
