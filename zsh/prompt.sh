@@ -125,8 +125,10 @@ function precmd {
   local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
   local time='%* '
 
+  local vi_mode='$(vi_mode_prompt_info) '
+
   PROMPT=$cwd$usr$char
-  RPROMPT=$gittime$rbenv$git$time
+  RPROMPT=$vi_mode$gittime$rbenv$git$time
 
   PROMPT2=$char
   RPROMPT2='[%_]'

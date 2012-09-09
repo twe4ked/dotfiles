@@ -7,6 +7,8 @@ source $DOTFILES/zsh/vendor/syntax_highlighting.zsh
 source $DOTFILES/zsh/vendor/git_flow_completion.zsh
 source $DOTFILES/zsh/vendor/substring_search.zsh
 source $DOTFILES/zsh/vendor/z.sh
+source $DOTFILES/zsh/vendor/zsh-vim-mode.plugin.zsh
+
 source $DOTFILES/zsh/vendor/rake_completion.zsh
 
 ZSH_HIGHLIGHT_STYLES+=(           # zsh syntax highlighting styles.
