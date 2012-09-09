@@ -15,6 +15,9 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'sjl/vitality.vim'
 
+" tmux
+Bundle 'jpalardy/vim-slime'
+
 " Visual
 Bundle 'dterei/VimBookmarking'
 Bundle 'Lokaltog/vim-powerline'

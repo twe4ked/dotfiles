@@ -48,3 +48,6 @@ noremap <C-Up>    :PreviousBookmark<CR>
 noremap <C-Down>  :NextBookmark<CR>
 
 autocmd VimEnter * :silent! SetColors bclear_custom solarized_custom jellybeans_custom
+
+let g:slime_paste_file = '$HOME/.slime_paste' " default
+let g:slime_target = 'tmux'                   " default: 'screen'
