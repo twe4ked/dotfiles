@@ -19,6 +19,8 @@ alias gsw='git show --format=fuller'          # Show
 alias gswp='git show -p'
 alias prune='git remote prune origin'         # Prune
 alias garm='git ls-files -dz | xargs -0 git rm' # Stage deleted files
+alias grc='git rebase --continue'
+alias gri='git rebase -i'
 
 # Git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
