@@ -15,8 +15,11 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-map <silent><Leader>/ :nohls<CR>            " Clear search
-map <Leader>w :CommandW<CR>                 " Command W
+" Clear search
+map <silent><Leader>/ :nohls<CR>
+
+" Command W
+map <Leader>w :CommandW<CR>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
