@@ -15,6 +15,7 @@ task :install do
                    lib/pryrc
                    lib/inputrc
                    lib/tmux.conf
+                   lib/freshrc
                    vim/gvimrc
                    vim/vimrc]
 

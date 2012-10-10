@@ -1,3 +1,5 @@
+source ~/.fresh/build/shell.sh
+
 # Custom configuraion, change these!
 # There are more configuration options in ./shell/exports
 # I am in the process of moving all configuration here.
