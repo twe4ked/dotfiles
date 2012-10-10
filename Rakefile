@@ -7,7 +7,6 @@ task :install do
   replace_all = false
   dotfiles    = File.dirname(__FILE__)
   files       = %w[zsh/zshrc
-                   zsh/comp.d/ZLE
                    bash/bashrc
                    lib/ackrc
                    lib/gemrc
