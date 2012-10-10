@@ -1,6 +1,4 @@
 alias ls='ls -laGF'                           # Compact view, show color
-alias ..='cd ..'                              # Up one directory
-alias ...='cd ../..'                          # Up two directories
 alias sw='saywhen'                            # Prepend to a command and it will say when complete
 alias dotfiles="$EDITOR $DOTFILES"            # Edit dotfiles
 alias reload="source $DOTFILES/config.sh"     # Source dotfiles
