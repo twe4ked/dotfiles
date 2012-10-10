@@ -24,13 +24,9 @@ fi
 # Load custom shell scripts (zsh or bash)
 if [ $SHELL = '/bin/bash' ]; then
   source $DOTFILES/bash/config.sh
-  export WHAT_SHELL='Using '`echo $SHELL`' shell.'
 else
   if [ $SHELL = "/bin/zsh" ]; then
     source $DOTFILES/zsh/config.sh
-    export WHAT_SHELL='Using '`echo $SHELL`' shell.'
-  else
-    export WHAT_SHELL=`echo $SHELL`' does not have a custom config.'
   fi
 fi
 
@@ -45,8 +41,6 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
   }
   chpwd
 }
-
-echo 'Custom config successfully loaded. '$WHAT_SHELL
 
 # Ensure that rvm is the last thing sourced in all of your shell profiles,
 # especially PATH are set.  Otherwise, the values you set be trampled when you
