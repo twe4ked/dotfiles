@@ -20,6 +20,8 @@ alias prune='git remote prune origin'         # Prune
 alias garm='git ls-files -dz | xargs -0 git rm' # Stage deleted files
 alias grc='git rebase --continue'
 alias gri='git rebase -i'
+alias gst='git stash --include-untracked'
+alias gstp='git stash pop'
 
 # Git log
 alias glg="git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %C(black bold)- %an %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
