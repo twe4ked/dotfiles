@@ -38,7 +38,7 @@ autocmd FileType gitcommit set spell
 autocmd BufWritePost * call UpdateTags()    " Generate .git/tags (ctags) automatically on save
 autocmd BufWinEnter *.feature set cc+=11    " Set column for features
 autocmd BufWinLeave *.feature set cc-=11    " ...and unset
-autocmd FocusLost * :silent! wall                 " Save on FocusLost
+autocmd FocusLost * nested :silent! wall    " Save on FocusLost
 autocmd FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
 
 " Jump to last cursor position unless it's invalid or in an event handler
