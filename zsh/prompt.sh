@@ -133,9 +133,6 @@ function precmd {
   PROMPT2=$char
   RPROMPT2='[%_]'
 
-  # https://github.com/rupa/z
-	_z --add "$(pwd -P)"
-
   if [[ "$TERM" =~ ^xterm ]] then
     print -Pn "\e]2;%n@%M: %~\a"  # display "user@hostname: dir" in the window title
     print -Pn "\e]1;%1~\a"        # display "dir" in the terminal tabs
