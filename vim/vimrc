@@ -27,6 +27,12 @@ set showmode                                " Show current mode down the bottom
 set laststatus=2                            " Always show the status line
 set mouse=a
 
+" Persistent Undo
+set undodir=$HOME/.vim/.undo
+set undofile
+set undolevels=1000
+set undoreload=10000
+
 " Auto commands ----------------------------------------------------------------
 autocmd FileType gitcommit set spell
 autocmd BufWritePost * call UpdateTags()    " Generate .git/tags (ctags) automatically on save
