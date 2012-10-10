@@ -4,3 +4,4 @@ fresh jasoncodes/dotfiles inputrc --file
 fresh jasoncodes/dotfiles tmux.conf --file
 
 fresh rupa/z z.sh
+fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
