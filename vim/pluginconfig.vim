@@ -56,3 +56,6 @@ let g:quickfixsigns_classes = ['vcsdiff']
 
 let g:slime_paste_file = '$HOME/.slime_paste' " default
 let g:slime_target = 'tmux'                   " default: 'screen'
+
+" powerline
+call Pl#Theme#InsertSegment('ws_marker',  'after', 'lineinfo')
