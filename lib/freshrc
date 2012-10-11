@@ -1,3 +1,4 @@
 fresh jasoncodes/fresh bin/fresh --bin
 
 fresh jasoncodes/dotfiles inputrc --file
+fresh jasoncodes/dotfiles tmux.conf --file
