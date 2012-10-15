@@ -87,3 +87,7 @@ map <leader>p :PromoteToLet<cr>
 " Marked (markdown preview)
 command! Marked silent !open -a "Marked.app" "%:p"
 nmap <C-p> :Marked<CR>
+
+" Jump to start and end of line using the home row keys
+noremap H ^
+noremap L $
