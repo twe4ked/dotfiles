@@ -47,4 +47,5 @@ if [[ $TERM_PROGRAM == "Apple_Terminal" ]] && [[ -z "$INSIDE_EMACS" ]] {
 # Ensure that rvm is the last thing sourced in all of your shell profiles,
 # especially PATH are set.  Otherwise, the values you set be trampled when you
 # switch rubies.
-source ~/.dotfiles/shell/rvm.sh
+eval "$(rbenv init - | grep -v \^rbenv\ rehash)"
+gem() { rbenv exec gem "$@" && rbenv rehash && hash -r; }
