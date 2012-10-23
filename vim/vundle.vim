@@ -36,6 +36,7 @@ Bundle 'Shougo/neocomplcache'
 " Navigation
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
+Bundle 'jasoncodes/ctrlp-modified.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'mileszs/ack.vim'
 
