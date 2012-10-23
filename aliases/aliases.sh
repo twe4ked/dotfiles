@@ -21,9 +21,9 @@ alias modified='mvim $(git ls-files -m -o --exclude-standard) .'
 # Open last commit in MacVim
 alias lastcommit='mvim $(git show --pretty="format:" --name-only) .'
 
+alias b='bundle && say bundle complete, mate' # Run bundle and say when it's done
+
 source $DOTFILES/aliases/git.sh               # Git aliases
-source $DOTFILES/aliases/rails.sh             # Rails aliases
-source $DOTFILES/aliases/testing.sh           # Testing aliases
 
 alias d="cd $HOME/Dev"                        # Go to the Dev directory
 alias vimdir="cd $HOME/.dotfiles/vim"         # Go to the Vim directory
