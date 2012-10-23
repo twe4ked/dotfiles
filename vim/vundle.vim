@@ -31,6 +31,7 @@ Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-surround'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'vim-scripts/upAndDown'
+Bundle 'Shougo/neocomplcache'
 
 " Navigation
 Bundle 'scrooloose/nerdtree'
