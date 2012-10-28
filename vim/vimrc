@@ -26,6 +26,7 @@ set showcmd                                 " Display an incomplete command in t
 set showmode                                " Show current mode down the bottom
 set laststatus=2                            " Always show the status line
 set mouse=a
+set history=1000
 
 " Persistent Undo
 set undodir=$HOME/.vim/.undo
