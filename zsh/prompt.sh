@@ -86,10 +86,6 @@ function precmd {
   fi
 }
 
-# The escape codes are surrounded by %{ and %}. These are zsh prompt escapes
-# that tell the shell to disregard the contained characters when determining
-# the length of the prompt. This allows zsh to properly position the cursor.
-
 # Stolen from Lucas Willet
 # https://github.com/ltw/oh-my-zsh/blob/4dd3b04d355c62940ac30b2634b169b9338baa7b/themes/odin.zsh-theme
 function note_prompt {
