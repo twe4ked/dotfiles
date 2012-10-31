@@ -86,20 +86,6 @@ function precmd {
   fi
 }
 
-# Stolen from Lucas Willet
-# https://github.com/ltw/oh-my-zsh/blob/4dd3b04d355c62940ac30b2634b169b9338baa7b/themes/odin.zsh-theme
-function note_prompt {
-  if [[ -f .notes ]]
-  then
-    echo
-    sed "s/^/${fg_bold[red]}!${reset_color} /" .notes
-  fi
-}
-
-chpwd() {
-  note_prompt
-}
-
 # Appears at the beginning of (and during) of command execution
 function termsupport_preexec {
   emulate -L zsh
