@@ -1,10 +1,3 @@
-# rbenv info
-function rbenv_prompt_info() {
-  local ruby_version
-  ruby_version=$(rbenv version 2> /dev/null) || return
-  echo "$ruby_version" | sed 's/[ \t].*$//'
-}
-
 # Formats prompt string for current git commit short SHA
 function git_sha() {
   sha=$(git rev-parse --short HEAD 2>/dev/null)
@@ -68,14 +61,13 @@ function precmd {
   local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
   local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
   local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-  local rbenv='%{${fg_bold[cyan]}%}$(rbenv_prompt_info)%{${reset_color}%} '
   local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
   local time='%* '
 
   local vi_mode='$(vi_mode_prompt_info) '
 
   PROMPT=$cwd$usr$char
-  RPROMPT=$vi_mode$rbenv$git$time
+  RPROMPT=$vi_mode$git$time
 
   PROMPT2=$char
   RPROMPT2='[%_]'
