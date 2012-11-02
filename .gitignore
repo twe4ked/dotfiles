@@ -1,5 +1,0 @@
-.notes
-
-# Ignore vim related stuffs
-/vim/bundle
-/vim/.netrwhist
