@@ -5,7 +5,6 @@ export DOTFILES=~/.dotfiles         # Find the this folder
 # Source the dotfiles
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
-source $DOTFILES/shell/colours.sh   # Colours
 
 if [ $SHELL = "/bin/zsh" ]; then
   source $DOTFILES/zsh/config.sh
