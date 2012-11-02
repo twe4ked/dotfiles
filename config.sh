@@ -1,11 +1,6 @@
 source ~/.fresh/build/shell.sh
 
-# Custom configuraion, change these!
-# There are more configuration options in ./shell/exports
-# I am in the process of moving all configuration here.
 export DOTFILES=~/.dotfiles         # Find the this folder
-export WORK=Ennova                  # Where I work (Sets up CDPATH)
-export MACBOOK=true                 # Shows battery in zsh prompt if true
 
 # The search path for the cd command.
 # This is a colon-separated list of directories in which the shell looks for

@@ -1,9 +1,6 @@
 # CDPATH
 export CDPATH=".:$HOME:$HOME/Dev"
 export CDPATH="$CDPATH:$HOME/Dev/personal"
-export CDPATH="$CDPATH:$HOME/Dev/$WORK"
-export CDPATH="$CDPATH:$HOME/Dev/$WORK/internal"
-export CDPATH="$CDPATH:$HOME/Dev/$WORK/clients"
 
 export EDITOR='mvim'                        # Set mvim as the default editor
 export GIT_EDITOR='vim'                     # Use terminal Vim for git
