@@ -2,11 +2,6 @@ source ~/.fresh/build/shell.sh
 
 export DOTFILES=~/.dotfiles         # Find the this folder
 
-# The search path for the cd command.
-# This is a colon-separated list of directories in which the shell looks for
-# destination directories specified by the cd command.
-export CDPATH="$CDPATH:$HOME/Hub/Projects"
-
 # Source the dotfiles
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
