@@ -1,6 +1,3 @@
-# Ignore work related config
-work.sh
-
 .notes
 
 # Ignore vim related stuffs

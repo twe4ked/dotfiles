@@ -7,10 +7,6 @@ source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 source $DOTFILES/shell/colours.sh   # Colours
 
-if [ -f $DOTFILES/work.sh ]; then
-  source $DOTFILES/work.sh          # Work related aliases etc.
-fi
-
 if [ $SHELL = "/bin/zsh" ]; then
   source $DOTFILES/zsh/config.sh
 fi
