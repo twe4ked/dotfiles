@@ -8,10 +8,6 @@ task :install do
   dotfiles    = File.dirname(__FILE__)
   files       = %w[zsh/zshrc
                    bash/bashrc
-                   lib/ackrc
-                   lib/gemrc
-                   lib/irbrc
-                   lib/pryrc
                    lib/freshrc
                    vim/gvimrc
                    vim/vimrc]

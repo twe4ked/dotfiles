@@ -1,3 +1,8 @@
+fresh lib/ackrc --file
+fresh lib/gemrc --file
+fresh lib/irbrc --file
+fresh lib/pryrc --file
+
 fresh jasoncodes/fresh bin/fresh --bin
 fresh jasoncodes/dotfiles inputrc --file
 fresh jasoncodes/dotfiles tmux.conf --file
