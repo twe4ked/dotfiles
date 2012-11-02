@@ -1,15 +1,3 @@
-# Edited from the oh-my-zsh git plugin
-# Will return the current branch name
-# Usage example: git pull origin $(current_branch)
-function current_branch() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo ${ref#refs/heads/}
-}
-
-# These aliases take advangate of the previous function
-alias glc='gl origin $(current_branch)'
-alias gpc='gp origin $(current_branch)'
-
 # get the name of the branch we are on
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
