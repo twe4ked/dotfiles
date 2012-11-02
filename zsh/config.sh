@@ -67,9 +67,3 @@ setopt hist_ignore_space
 setopt extended_history
 setopt append_history
 setopt inc_append_history
-
-# ..../ => ../../../
-fpath=($fpath $DOTFILES/zsh/vendor/fpath)
-autoload rationalize-dots
-zle -N rationalize-dots
-bindkey . rationalize-dots
