@@ -36,11 +36,6 @@ autoload colors; colors;
 bindkey "\e\e[C" vi-forward-word
 bindkey "\e\e[D" vi-backward-word
 
-# Make search up and down work, so partially type and hit up/down to find relevant stuff
-# This is replaced by substring search
-# bindkey '^[[A' up-line-or-search
-# bindkey '^[[B' down-line-or-search
-
 # Make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
 bindkey '^?' backward-delete-char
 bindkey "^[[3~" delete-char
