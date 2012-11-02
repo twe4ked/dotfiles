@@ -50,26 +50,6 @@ hitch() {
 }
 alias unhitch='hitch -u'
 
-# -- Prompt --------------------------------------------------------------------
-# Only show user and hostname when connected as root user or via ssh
-function user_hostname {
-  if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
-    echo " "`whoami`@`hostname`
-  fi
-}
-
-function prompt_color() { # bjeanes
-  if [ "$USER" = "root" ]; then
-    echo "red"
-  else
-    if [ -n "$SSH_TTY" ]; then
-      echo "blue"
-    else
-      echo "cyan"
-    fi
-  fi
-}
-
 function __database_yml {
   if [[ -f config/database.yml ]]; then
     ruby -ryaml -rerb -e "puts YAML::load(ERB.new(IO.read('config/database.yml')).result)['${RAILS_ENV:-development}']['$1']"

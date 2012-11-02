@@ -1,3 +1,22 @@
+# Only show user and hostname when connected as root user or via ssh
+function user_hostname {
+  if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
+    echo " "`whoami`@`hostname`
+  fi
+}
+
+function prompt_color() { # bjeanes
+  if [ "$USER" = "root" ]; then
+    echo "red"
+  else
+    if [ -n "$SSH_TTY" ]; then
+      echo "blue"
+    else
+      echo "cyan"
+    fi
+  fi
+}
+
 # Formats prompt string for current git commit short SHA
 function git_sha() {
   sha=$(git rev-parse --short HEAD 2>/dev/null)
