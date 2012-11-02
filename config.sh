@@ -12,13 +12,8 @@ if [ -f $DOTFILES/work.sh ]; then
   source $DOTFILES/work.sh          # Work related aliases etc.
 fi
 
-# Load custom shell scripts (zsh or bash)
-if [ $SHELL = '/bin/bash' ]; then
-  source $DOTFILES/bash/config.sh
-else
-  if [ $SHELL = "/bin/zsh" ]; then
-    source $DOTFILES/zsh/config.sh
-  fi
+if [ $SHELL = "/bin/zsh" ]; then
+  source $DOTFILES/zsh/config.sh
 fi
 
 # Set Apple Terminal.app resume directory

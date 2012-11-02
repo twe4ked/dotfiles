@@ -1,3 +1,0 @@
-if [ -e ~/.dotfiles ]; then
-  source ~/.dotfiles/config.sh
-fi
