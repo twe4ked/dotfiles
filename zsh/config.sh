@@ -19,6 +19,11 @@ ZSH_HIGHLIGHT_STYLES+=(           # zsh syntax highlighting styles.
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf' 'fg=red,bold,bg=white')
 
+# Show time a command took if over 4 sec
+# https://github.com/bjeanes/dot-files/commit/1ae5bc72dac6d5f2cdfbf5a48fdf140c5d085986
+export REPORTTIME=4
+export TIMEFMT="%*Es total, %U user, %S system, %P cpu"
+
 setopt prompt_subst               # Allows variable substitution in the prompt
 setopt nobeep                     # I hate beeps
 setopt interactivecomments        # Escape commands so i can use them later (allow comments after commands)
