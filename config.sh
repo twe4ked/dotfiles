@@ -1,7 +1,6 @@
 export DOTFILES=~/.dotfiles         # Find the this folder
 
 # Source the dotfiles
-source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
 
 source ~/.fresh/build/shell.sh
