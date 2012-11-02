@@ -5,7 +5,6 @@ export DOTFILES=~/.dotfiles         # Find the this folder
 # Source the dotfiles
 source $DOTFILES/shell/functions.sh # Misc functions
 source $DOTFILES/shell/exports.sh   # Load exports
-source $DOTFILES/aliases/aliases.sh # Load all the alias files
 source $DOTFILES/shell/colours.sh   # Colours
 
 if [ -f $DOTFILES/work.sh ]; then

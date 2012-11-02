@@ -2,6 +2,7 @@ fresh lib/ackrc --file
 fresh lib/gemrc --file
 fresh lib/irbrc --file
 fresh lib/pryrc --file
+fresh 'aliases/*'
 
 fresh jasoncodes/fresh bin/fresh --bin
 fresh jasoncodes/dotfiles inputrc --file
