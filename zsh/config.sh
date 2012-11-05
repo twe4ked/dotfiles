@@ -6,7 +6,6 @@ source $DOTFILES/zsh/prompt.sh      # load my EPIC prompt
 source $DOTFILES/zsh/vendor/syntax_highlighting.zsh
 source $DOTFILES/zsh/vendor/git_flow_completion.zsh
 source $DOTFILES/zsh/vendor/substring_search.zsh
-source $DOTFILES/zsh/vendor/rake_completion.zsh
 
 setopt prompt_subst                 # allows variable substitution in the prompt
 setopt nobeep                       # i hate beeps
