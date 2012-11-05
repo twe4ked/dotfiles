@@ -28,9 +28,6 @@ function create_link()
 mkdir -p ~/.vim
 
 create_link ~/.dotfiles/lib/freshrc ~/.freshrc
-create_link ~/.dotfiles/vim/gvimrc  ~/.gvimrc
-create_link ~/.dotfiles/vim/vimrc   ~/.vimrc
-create_link ~/.dotfiles/vim/colors/ ~/.vim/colors
 
 if [ -e ~/.fresh/build/shell.sh ]; then
   source ~/.fresh/build/shell.sh
