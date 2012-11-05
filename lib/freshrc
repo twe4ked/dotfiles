@@ -1,3 +1,5 @@
+# vim: set ft=sh:
+
 fresh lib/ackrc --file
 fresh lib/gemrc --file
 fresh lib/irbrc --file
