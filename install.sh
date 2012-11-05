@@ -27,7 +27,6 @@ function create_link()
 
 mkdir -p ~/.vim
 
-create_link ~/.dotfiles/zsh/zshrc   ~/.zshrc
 create_link ~/.dotfiles/lib/freshrc ~/.freshrc
 create_link ~/.dotfiles/vim/gvimrc  ~/.gvimrc
 create_link ~/.dotfiles/vim/vimrc   ~/.vimrc
