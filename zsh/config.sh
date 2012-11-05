@@ -1,5 +1,4 @@
 source $DOTFILES/zsh/completion.sh  # completions
-source $DOTFILES/zsh/git.sh         # custom version of the oh-my-zsh git plugin
 source $DOTFILES/zsh/prompt.sh      # load my EPIC prompt
 
 # vendor
