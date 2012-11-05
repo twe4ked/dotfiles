@@ -1,3 +1,5 @@
+autoload colors; colors;
+
 # Only show user and hostname when connected as root user or via ssh
 function user_hostname {
   if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then

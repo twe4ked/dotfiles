@@ -26,8 +26,6 @@ setopt extended_history
 setopt append_history
 setopt inc_append_history
 
-autoload colors; colors;
-
 # option + right/left
 bindkey "\e\e[C" vi-forward-word
 bindkey "\e\e[D" vi-backward-word
