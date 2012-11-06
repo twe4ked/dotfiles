@@ -1,9 +1,9 @@
 # vim: set ft=sh:
 
-fresh lib/ackrc --file
-fresh lib/gemrc --file
-fresh lib/irbrc --file
-fresh lib/pryrc --file
+fresh config/ackrc --file
+fresh config/gemrc --file
+fresh config/irbrc --file
+fresh config/pryrc --file
 fresh zsh/zshrc --file
 
 fresh vim/gvimrc  --file
