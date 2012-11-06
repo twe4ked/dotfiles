@@ -14,6 +14,7 @@ Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'sjl/vitality.vim'
+Bundle 'tpope/vim-eunuch'
 
 " tmux
 Bundle 'jpalardy/vim-slime'
