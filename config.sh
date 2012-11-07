@@ -4,7 +4,7 @@ source $DOTFILES/shell/exports.sh
 
 source ~/.fresh/build/shell.sh
 
-if [ $SHELL = "/bin/zsh" ]; then
+if [[ "$SHELL" =~ zsh$ ]]; then
   source $DOTFILES/zsh/config.sh
 fi
 
