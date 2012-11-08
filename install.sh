@@ -1,7 +1,16 @@
 #!/bin/bash -e
 
-cd
-[ -d .dotfiles ] || git clone git://github.com/twe4ked/dotfiles.git .dotfiles
+if [ -d ~/.dotfiles ]
+then
+  if type -t git-up > /dev/null
+  then
+    (cd ~/.dotfiles && git-up)
+  else
+    (cd ~/.dotfiles && git pull --rebase)
+  fi
+else
+  git clone git://github.com/twe4ked/dotfiles.git ~/.dotfiles
+fi
 
 [ -e ~/.freshrc ] || ln -sv ~/.dotfiles/config/freshrc ~/.freshrc
 
