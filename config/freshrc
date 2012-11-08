@@ -1,5 +1,7 @@
 # vim: set ft=sh:
 
+fresh freshshell/fresh bin/fresh --bin
+
 fresh config/ackrc --file
 fresh config/gemrc --file
 fresh config/irbrc --file
@@ -15,7 +17,6 @@ fresh vim/colors/solarized_custom.vim   --file=~/.vim/colors/solarized_custom.vi
 fresh 'aliases/*'
 fresh shell/functions.sh
 
-fresh jasoncodes/fresh bin/fresh --bin
 fresh jasoncodes/dotfiles inputrc --file
 fresh jasoncodes/dotfiles tmux.conf --file
 fresh jasoncodes/dotfiles 'aliases/*'
