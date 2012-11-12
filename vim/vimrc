@@ -1,14 +1,3 @@
-let $DOTFILES = "$HOME/.dotfiles"
-
-" Set leader -------------------------------------------------------------------
-let mapleader = ","
-
-" Source -----------------------------------------------------------------------
-source $DOTFILES/vim/vundle.vim
-source $DOTFILES/vim/functions.vim
-source $DOTFILES/vim/keybindings.vim
-source $DOTFILES/vim/pluginconfig.vim
-
 " Misc -------------------------------------------------------------------------
 set nowrap                                  " I don't always wrap lines...
 set linebreak                               " ...but when I do, I wrap whole words.

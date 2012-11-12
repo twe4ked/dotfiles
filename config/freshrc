@@ -9,8 +9,14 @@ fresh config/pryrc --file
 fresh config/tmux.conf --file
 fresh zsh/zshrc --file
 
-fresh vim/gvimrc  --file
-fresh vim/vimrc   --file
+fresh vim/leader.vim --file=~/.vimrc
+fresh vim/vundle.vim --file=~/.vimrc
+fresh vim/functions.vim --file=~/.vimrc
+fresh vim/keybindings.vim --file=~/.vimrc
+fresh vim/pluginconfig.vim --file=~/.vimrc
+fresh vim/gvimrc --file
+fresh vim/vimrc --file
+
 fresh vim/colors/bclear_custom.vim      --file=~/.vim/colors/bclear_custom.vim
 fresh vim/colors/jellybeans_custom.vim  --file=~/.vim/colors/jellybeans_custom.vim
 fresh vim/colors/solarized_custom.vim   --file=~/.vim/colors/solarized_custom.vim
