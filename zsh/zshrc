@@ -1,3 +1,10 @@
-if [ -e ~/.dotfiles ]; then
-  source ~/.dotfiles/config.sh
-fi
+export DOTFILES=~/.dotfiles
+
+source $DOTFILES/shell/exports.sh
+
+source ~/.fresh/build/shell.sh
+
+source $DOTFILES/zsh/config.sh
+
+eval "$(rbenv init - | grep -v \^rbenv\ rehash)"
+gem() { rbenv exec gem "$@" && rbenv rehash && hash -r; }
