@@ -4,8 +4,8 @@ source $DOTFILES/shell/exports.sh
 
 source ~/.fresh/build/shell.sh
 
-source $DOTFILES/zsh/completion.sh  # completions
-source $DOTFILES/zsh/prompt.sh      # load my EPIC prompt
+source $DOTFILES/zsh/completion.zsh # completions
+source $DOTFILES/zsh/prompt.zsh     # load my EPIC prompt
 
 # vendor
 source $DOTFILES/zsh/vendor/syntax_highlighting.zsh
