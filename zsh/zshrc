@@ -1,13 +1,6 @@
 export DOTFILES=~/.dotfiles
 
-source $DOTFILES/shell/exports.sh
-
 source ~/.fresh/build/shell.sh
-
-source $DOTFILES/zsh/completion.zsh # completions
-source $DOTFILES/zsh/prompt.zsh     # load my EPIC prompt
-
-# vendor
 source $DOTFILES/zsh/vendor/syntax_highlighting.zsh
 
 setopt prompt_subst                 # allows variable substitution in the prompt

@@ -7,6 +7,10 @@ fresh config/gemrc --file
 fresh config/irbrc --file
 fresh config/pryrc --file
 fresh config/tmux.conf --file
+
+fresh shell/exports.sh --file=~/.zshrc
+fresh zsh/completion.zsh --file=~/.zshrc
+fresh zsh/prompt.zsh --file=~/.zshrc
 fresh zsh/zshrc --file
 
 fresh vim/leader.vim --file=~/.vimrc
