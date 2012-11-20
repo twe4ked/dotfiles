@@ -33,12 +33,6 @@ autocmd FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on Foc
 " Treat dasherised words as whole words in stylesheets
 autocmd Filetype css,scss,sass setlocal iskeyword+=-
 
-" Jump to last cursor position unless it's invalid or in an event handler
-autocmd BufReadPost *
-  \ if line("'\"") > 0 && line("'\"") <= line("$") |
-  \   exe "normal g`\"" |
-  \ endif
-
 function! WhatTheSize()
   execute ":!identify % | cut -d' ' -f 3"
 endfunction
