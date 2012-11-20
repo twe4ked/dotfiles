@@ -14,7 +14,6 @@ set wildmode=list:longest                   " Tab complete to longest common str
 set showcmd                                 " Display an incomplete command in the lower right corner
 set showmode                                " Show current mode down the bottom
 set laststatus=2                            " Always show the status line
-set mouse=a
 set history=1000
 
 " Persistent Undo
