@@ -1,6 +1,6 @@
 alias ls='ls -laGF'                           # Compact view, show color
 alias dotfiles="$EDITOR $DOTFILES"            # Edit dotfiles
-alias reload="source $DOTFILES/config.sh"     # Source dotfiles
+alias reload="source $HOME/.zshrc"            # Source dotfiles
 alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
 alias psg='ps aux | grep -v grep | grep $1'   # See what's running
