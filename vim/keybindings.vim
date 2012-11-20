@@ -79,10 +79,6 @@ nmap K <Esc>
 " I don't like <c-r>
 map U :redo<CR>
 
-" Open word under cursor in Dash
-nmap <Leader>ru :silent !open dash://ruby:<cword><CR>
-nmap <Leader>ra :silent !open dash://rails:<cword><CR>
-
 map <leader>p :PromoteToLet<cr>
 
 " Marked (markdown preview)
