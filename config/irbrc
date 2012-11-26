@@ -1,4 +1,0 @@
-require 'rubygems'
-
-# Show ActiveRecord queries in the console
-ActiveRecord::Base.logger = Logger.new(STDOUT)
