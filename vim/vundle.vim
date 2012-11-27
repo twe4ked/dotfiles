@@ -17,6 +17,7 @@ Bundle 'tpope/vim-eunuch'
 
 " tmux
 Bundle 'jpalardy/vim-slime'
+Bundle 'benmills/vimux'
 
 " Visual
 Bundle 'dterei/VimBookmarking'
