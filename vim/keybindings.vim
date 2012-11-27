@@ -1,4 +1,4 @@
-map <Leader>sd :FixWhitespace<CR>
+map <Leader>sd :FixWhitespace<CR>:wall<CR>
 
 " Buffer navigation ------------------------------------------------------------
 map <Leader>, <C-^>
