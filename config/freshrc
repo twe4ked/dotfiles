@@ -6,6 +6,7 @@ fresh config/ackrc --file
 fresh config/gemrc --file
 fresh config/pryrc --file
 fresh config/tmux.conf --file
+fresh config/irb/encoding.rb --file=~/.irbrc
 
 fresh shell/exports.sh --file=~/.zshrc
 fresh zsh/completion.zsh --file=~/.zshrc
@@ -36,3 +37,4 @@ fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh
 
 fresh 'aliases/*'
 fresh shell/functions.sh
+fresh config/irb/prompt.rb --file=~/.irbrc
