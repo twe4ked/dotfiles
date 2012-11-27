@@ -29,6 +29,7 @@ fresh jasoncodes/dotfiles tmux.conf --file
 fresh jasoncodes/dotfiles irbrc --file
 fresh jasoncodes/dotfiles 'aliases/*'
 fresh jasoncodes/dotfiles shell/editor.sh
+fresh jasoncodes/scripts adduser --bin
 fresh rupa/z z.sh
 fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
 fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
