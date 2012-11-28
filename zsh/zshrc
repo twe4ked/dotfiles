@@ -9,7 +9,6 @@ setopt rm_star_wait                 # if `rm *` wait 10 seconds before performin
 setopt list_types                   # show types in completion
 setopt auto_cd                      # if a command is not in the hash table, and there exists an executable directory by that name, perform the cd command to that directory.
 setopt cd_able_vars                 # if the argument to cd is the name of a parameter whose value is a valid directory, it will become the current directory.
-setopt share_history                # share command history data
 setopt no_auto_name_dirs            # see: http://www.neactar.com/shell/fix-for-wrong-prompt-dir-when-using-zsh-project-rvmrc-and-oh-my-zsh
 setopt hist_ignore_dups             # ignore duplication command history list
 setopt hist_verify
