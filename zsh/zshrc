@@ -1,7 +1,6 @@
 # freshshell.com
 source ~/.fresh/build/shell.sh
-
-source $DOTFILES/zsh/vendor/syntax_highlighting.zsh
+source ~/.fresh/build/vendor/zsh-syntax-highlighting.zsh
 
 setopt prompt_subst                 # allows variable substitution in the prompt
 setopt no_beep                      # i hate beeps

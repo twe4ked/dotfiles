@@ -20,6 +20,10 @@ fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
 fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
 fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh
 
+fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
+fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
+fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
+
 # Vim
 fresh vim/leader.vim --file=~/.vimrc
 fresh vim/vundle.vim --file=~/.vimrc
