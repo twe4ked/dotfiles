@@ -37,8 +37,8 @@ fresh vim/colors/jellybeans_custom.vim --file=~/.vim/colors/jellybeans_custom.vi
 fresh vim/colors/solarized_custom.vim --file=~/.vim/colors/solarized_custom.vim
 
 # Shell
-fresh jasoncodes/dotfiles inputrc --file
-fresh jasoncodes/dotfiles tmux.conf --file
+fresh jasoncodes/dotfiles config/inputrc --file
+fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles 'aliases/*'
 fresh jasoncodes/dotfiles shell/editor.sh
 
@@ -47,7 +47,7 @@ fresh shell/functions.sh
 
 # irb
 fresh config/irb/encoding.rb --file=~/.irbrc
-fresh jasoncodes/dotfiles irbrc --file
+fresh jasoncodes/dotfiles config/irbrc --file
 fresh config/irb/prompt.rb --file=~/.irbrc
 
 # bin
