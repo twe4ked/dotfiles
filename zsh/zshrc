@@ -18,11 +18,11 @@ setopt extended_history             # save beginning time and elapsed time befor
 setopt append_history               # append to the end of the history file
 setopt inc_append_history           # always be saving history (not just when the shell exits)
 setopt magic_equal_subst            # all unquoted arguments of the form identifier=expression appearing after the command name have file expansion
-setopt no_flowcontrol
 setopt menu_complete                # autoselect the first completion entry
 setopt auto_menu                    # show completion menu on succesive tab press
 setopt complete_in_word
 setopt always_to_end
+setopt no_flowcontrol
 
 # option + right/left
 bindkey "\e\e[C" vi-forward-word
