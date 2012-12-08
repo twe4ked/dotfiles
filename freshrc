@@ -13,6 +13,7 @@ fresh shell/exports.sh --file=~/.zshrc
 fresh zsh/completion.zsh --file=~/.zshrc
 fresh zsh/prompt.zsh --file=~/.zshrc
 fresh zsh/zshrc --file
+fresh zsh/keybindings.zsh --file=~/.zshrc
 
 fresh rupa/z z.sh
 fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh

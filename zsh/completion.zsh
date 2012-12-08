@@ -32,5 +32,3 @@ fi
 
 compinit -i
 zmodload -i zsh/complist
-
-bindkey -M menuselect '^o' accept-and-infer-next-history                        # Should this be in keybindings?
