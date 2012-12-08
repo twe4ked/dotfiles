@@ -30,12 +30,6 @@ else
   zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 fi
 
-unsetopt flowcontrol
-unsetopt menu_complete                                                          # Do not autoselect the first completion entry
-setopt auto_menu                                                                # Show completion menu on succesive tab press
-setopt complete_in_word
-setopt always_to_end
-
 compinit -i
 zmodload -i zsh/complist
 
