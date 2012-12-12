@@ -15,6 +15,7 @@ fresh zsh/prompt.zsh --file=~/.zshrc
 fresh zsh/zshrc --file
 fresh zsh/keybindings.zsh --file=~/.zshrc
 
+fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 fresh rupa/z z.sh
 fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
 fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c

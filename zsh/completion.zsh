@@ -1,3 +1,5 @@
+fpath=(~/.fresh/build/completion $fpath)
+
 autoload -U compinit; compinit
 
 # group matches and describe groups
