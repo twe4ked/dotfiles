@@ -1,0 +1,1 @@
+alias -g G='| grep'
