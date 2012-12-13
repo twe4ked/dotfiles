@@ -26,3 +26,11 @@ alias b='bundle && say bundle complete, mate' # Run bundle and say when it's don
 alias dev="cd $HOME/Dev"                      # Go to the Dev directory
 alias vimdir="cd $HOME/.dotfiles/vim"         # Go to the Vim directory
 alias dotdir="cd $HOME/.dotfiles"             # Go to the Dotfiles directory
+
+d() {
+  if [[ -n "$1" ]]; then
+    cd "+$1"
+  else
+    dirs -v
+  fi
+}
