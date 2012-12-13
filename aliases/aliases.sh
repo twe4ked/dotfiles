@@ -23,6 +23,6 @@ alias lastcommit='$EDITOR $(git show --pretty="format:" --name-only) .'
 
 alias b='bundle && say bundle complete, mate' # Run bundle and say when it's done
 
-alias d="cd $HOME/Dev"                        # Go to the Dev directory
+alias dev="cd $HOME/Dev"                      # Go to the Dev directory
 alias vimdir="cd $HOME/.dotfiles/vim"         # Go to the Vim directory
 alias dotdir="cd $HOME/.dotfiles"             # Go to the Dotfiles directory
