@@ -54,3 +54,4 @@ fresh config/irb/prompt.rb --file=~/.irbrc
 
 # bin
 fresh jasoncodes/scripts adduser --bin
+fresh pengwynn/dotfiles bin/gxpr --bin
