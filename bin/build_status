@@ -16,5 +16,5 @@ status = {
 }
 
 JSON.parse(response.body)['jobs'].each do |job|
-  puts "#{status[job['color']] || '?'} #{job['name']}"
+  puts "#{status[job['color']] || '?'} #{job['name']} - <#{job['url']}lastBuild>"
 end
