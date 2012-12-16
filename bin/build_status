@@ -16,9 +16,9 @@ response = HTTParty.get(config['url'], :basic_auth => {:username => config['user
 
 status = {
   'blue' => '.',
-  'blue-anim' => 'B',
+  'blue_anime' => 'B',
   'red' => 'F',
-  'red-anim' => 'B',
+  'red_anime' => 'B',
   'aborted' => 'A',
 }
 
