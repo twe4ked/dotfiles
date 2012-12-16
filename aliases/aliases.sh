@@ -6,14 +6,6 @@ alias history='fc -l 1'                       # I want to see more the 16 histor
 alias psg='ps aux | grep -v grep | grep $1'   # See what's running
 alias z="_z -r 2>&1"                          # Highest rated results first
 
-if [[ "$(uname -s)" == 'Darwin' ]]; then
-  # Add a poor facsimile for Linux's `free` if we're on Mac OS
-  alias free="top -s 0 -l 1 -pid 0 -stats pid | grep '^PhysMem: ' | cut -d : -f 2- | tr ',' '\n'"
-
-  # Mac system information.
-  alias macinfo='system_profiler SPHardwareDataType'
-fi
-
 # Open untracked/modified files in MacVim
 alias modified='$EDITOR $(git ls-files -m -o --exclude-standard) .'
 
