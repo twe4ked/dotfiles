@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'httparty'
+require 'json'
+require 'yaml'
+
+config = YAML.load_file(File.expand_path('~/.build_status'))
+response = HTTParty.get(config['url'], :basic_auth => {:username => config['username'], :password => config['password']})
+
+status = {
+  'blue' => '.',
+  'blue-anim' => 'B',
+  'red' => 'F',
+  'red-anim' => 'B',
+  'aborted' => 'A',
+}
+
+JSON.parse(response.body)['jobs'].each do |job|
+  puts "#{status[job['color']] || '?'} #{job['name']}"
+end
