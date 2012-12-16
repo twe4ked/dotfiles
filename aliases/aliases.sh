@@ -4,7 +4,6 @@ alias reload="source $HOME/.zshrc"            # Source dotfiles
 alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
 alias psg='ps aux | grep -v grep | grep $1'   # See what's running
-alias shh='echo nope.>&2; false'              # Always type this wrong...
 alias z="_z -r 2>&1"                          # Highest rated results first
 
 if [[ "$(uname -s)" == 'Darwin' ]]; then
