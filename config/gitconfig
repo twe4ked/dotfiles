@@ -1,0 +1,14 @@
+[include]
+  path = .gitconfig.local
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore
+[git-up "bundler"]
+  check = true
+[rebase]
+  autosquash = true
+[color "diff"]
+  commit = yellow reverse
+[push]
+  default = tracking

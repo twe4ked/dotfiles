@@ -7,6 +7,7 @@ fresh config/ackrc --file
 fresh config/gemrc --file
 fresh config/pryrc --file
 fresh config/tmux.conf --file
+fresh config/gitconfig --file
 
 # Zsh
 fresh shell/exports.sh --file=~/.zshrc
