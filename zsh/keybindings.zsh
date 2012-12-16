@@ -14,3 +14,6 @@ zle -N tetris
 bindkey '^T' tetris
 
 bindkey -M menuselect '^o' accept-and-infer-next-history
+
+# handy for renaming files
+bindkey "^[m" copy-prev-shell-word
