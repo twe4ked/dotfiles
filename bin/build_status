@@ -1,4 +1,11 @@
 #!/usr/bin/env ruby
+#
+# Create a `.build_status` file in your home directory
+# with the following information:
+#
+#   url: http://<jenkins_domain>/view/<view_name>/api/json
+#   username: <username>
+#   password: <password/token>
 
 require 'httparty'
 require 'json'
