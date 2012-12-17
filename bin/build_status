@@ -29,14 +29,19 @@ rescue JSON::ParserError
   abort "Invalid response, is your username/password correct in your config file? \`cat #{__FILE__}\` for more info."
 end
 
-status = {
-  'blue'       => '.',
-  'blue_anime' => 'B',
-  'red'        => 'F',
-  'red_anime'  => 'B',
-  'aborted'    => 'A',
-}
+def status(state)
+  case state
+  when 'blue'
+    '.'
+  when 'red'
+    'F'
+  when /anime/
+    'B'
+  when 'aborted'
+    'A'
+  end
+end
 
 json.each do |job|
-  puts "#{status[job['color']] || '?'} #{job['name']} - <#{job['url']}lastBuild>"
+  puts "#{status(job['color']) || '?'} #{job['name']} - <#{job['url']}lastBuild>"
 end
