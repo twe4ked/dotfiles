@@ -11,8 +11,17 @@ require 'httparty'
 require 'json'
 require 'yaml'
 
-config = YAML.load_file(File.expand_path('~/.build_status'))
-response = HTTParty.get(config['url'], :basic_auth => {:username => config['username'], :password => config['password']})
+begin
+  config = YAML.load_file(File.expand_path('~/.build_status'))
+rescue Errno::ENOENT
+  abort "Missing config file, \`cat #{__FILE__}\` for more info."
+end
+
+begin
+  response = HTTParty.get(config['url'], :basic_auth => {:username => config['username'], :password => config['password']})
+rescue URI::InvalidURIError
+  abort "Invalid url specified in config file, \`cat #{__FILE__}\` for more info."
+end
 
 status = {
   'blue' => '.',
@@ -22,6 +31,12 @@ status = {
   'aborted' => 'A',
 }
 
-JSON.parse(response.body)['jobs'].each do |job|
+begin
+  json = JSON.parse(response.body)['jobs']
+rescue JSON::ParserError
+  abort "Invalid response, is your username/password correct in your config file? \`cat #{__FILE__}\` for more info."
+end
+
+json.each do |job|
   puts "#{status[job['color']] || '?'} #{job['name']} - <#{job['url']}lastBuild>"
 end
