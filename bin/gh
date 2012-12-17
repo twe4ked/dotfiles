@@ -15,6 +15,20 @@ function gh() {
     w|wiki|-w|--wiki)
       URL="$URL/wiki"
       ;;
+    *)
+      cat <<EOF
+usage: gh [<command>] [<number>]
+
+The following commands are performed on the current project.
+
+Available commands:
+
+    -i --issues [<number>] Open issues, optionally pass a number to open a specific issue
+    -p --pulls [<number>]  Open pull requests, optionally pass a number to open a specific pull request
+    -w --wiki              Open wiki
+EOF
+      exit 1
+      ;;
   esac
 
   open "$URL"
