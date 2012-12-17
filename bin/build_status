@@ -30,11 +30,11 @@ rescue JSON::ParserError
 end
 
 status = {
-  'blue' => '.',
+  'blue'       => '.',
   'blue_anime' => 'B',
-  'red' => 'F',
-  'red_anime' => 'B',
-  'aborted' => 'A',
+  'red'        => 'F',
+  'red_anime'  => 'B',
+  'aborted'    => 'A',
 }
 
 json.each do |job|
