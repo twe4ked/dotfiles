@@ -23,6 +23,12 @@ rescue URI::InvalidURIError
   abort "Invalid url specified in config file, \`cat #{__FILE__}\` for more info."
 end
 
+begin
+  json = JSON.parse(response.body)['jobs']
+rescue JSON::ParserError
+  abort "Invalid response, is your username/password correct in your config file? \`cat #{__FILE__}\` for more info."
+end
+
 status = {
   'blue' => '.',
   'blue_anime' => 'B',
@@ -30,12 +36,6 @@ status = {
   'red_anime' => 'B',
   'aborted' => 'A',
 }
-
-begin
-  json = JSON.parse(response.body)['jobs']
-rescue JSON::ParserError
-  abort "Invalid response, is your username/password correct in your config file? \`cat #{__FILE__}\` for more info."
-end
 
 json.each do |job|
   puts "#{status[job['color']] || '?'} #{job['name']} - <#{job['url']}lastBuild>"
