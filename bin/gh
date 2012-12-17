@@ -6,9 +6,11 @@ function gh() {
   case "$1" in
     i|issues|-i|--issues)
       URL="$URL/issues"
+      _append_id "$@"
       ;;
     p|pulls|-p|--pulls)
       URL="$URL/pulls"
+      _append_id "$@"
       ;;
     w|wiki|-w|--wiki)
       URL="$URL/wiki"
@@ -16,6 +18,12 @@ function gh() {
   esac
 
   open "$URL"
+}
+
+_append_id() {
+  if [[ -n $2 ]]; then
+    URL="$URL/$2"
+  fi
 }
 
 gh "$@"
