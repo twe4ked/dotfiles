@@ -43,5 +43,6 @@ def status(state)
 end
 
 json.each do |job|
+  next if ARGV.map { |arg| !!(job['name'] =~ /#{arg}/) }.include? false
   puts "#{status(job['color']) || '?'} #{job['name']} - <#{job['url']}lastBuild>"
 end
