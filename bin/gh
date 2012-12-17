@@ -1,3 +1,5 @@
+#!/bin/bash -e
+
 function gh() {
   local PROJECT="https://$(git config remote.origin.url | sed 's/\.git//' | sed 's/https:\/\///' | sed 's/git:\/\///' | sed 's/git@//' | tr ':' '/')"
   case "$1" in
@@ -15,3 +17,5 @@ function gh() {
       ;;
   esac
 }
+
+gh "$@"
