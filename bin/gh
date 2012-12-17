@@ -4,6 +4,9 @@ function gh() {
   local URL="https://$(git config remote.origin.url | sed 's/\.git//' | sed 's/https:\/\///' | sed 's/git:\/\///' | sed 's/git@//' | tr ':' '/')"
 
   case "$1" in
+    "")
+      URL="$URL"
+      ;;
     i|issues|-i|--issues)
       URL="$URL/issues"
       _append_id "$@"
@@ -26,6 +29,8 @@ Available commands:
     -i --issues [<number>] Open issues, optionally pass a number to open a specific issue
     -p --pulls [<number>]  Open pull requests, optionally pass a number to open a specific pull request
     -w --wiki              Open wiki
+
+When no argument is supplied the main project page will be opened.
 EOF
       exit 1
       ;;
