@@ -68,7 +68,6 @@ local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
 local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
 local git='${vcs_info_msg_0_}$(git_stash) '
 local timestamp='%* '
-
 local vi_mode='$(vi_mode_prompt_info) '
 
 PROMPT=$cwd$usr$char
