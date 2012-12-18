@@ -1,4 +1,5 @@
 autoload colors; colors;
+autoload vcs_info
 
 # Only show user and hostname when connected as root user or via ssh
 function user_hostname {
@@ -19,54 +20,6 @@ function prompt_color() { # bjeanes
   fi
 }
 
-# get the name of the branch we are on
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$(git_prompt_status)$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
-
-# Get the status of the working tree
-git_prompt_status() {
-  INDEX=$(git status --porcelain 2> /dev/null)
-  STATUS=""
-  if $(echo "$INDEX" | grep '^?? ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_UNTRACKED$STATUS"
-  fi
-  if $(echo "$INDEX" | grep '^A  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
-  elif $(echo "$INDEX" | grep '^M  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_ADDED$STATUS"
-  fi
-  if $(echo "$INDEX" | grep '^ M ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_MODIFIED$STATUS"
-  fi
-  if $(echo "$INDEX" | grep '^R  ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_RENAMED$STATUS"
-  fi
-  if $(echo "$INDEX" | grep '^ D ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_DELETED$STATUS"
-  fi
-  if $(echo "$INDEX" | grep '^UU ' &> /dev/null); then
-    STATUS="$ZSH_THEME_GIT_PROMPT_UNMERGED$STATUS"
-  fi
-  echo $STATUS
-}
-
-# Formats prompt string for current git commit short SHA
-function git_sha() {
-  sha=$(git rev-parse --short HEAD 2>/dev/null)
-
-  if [[ "$sha" !=  "" ]]; then
-    echo ":"$sha
-  fi
-}
-
-# Get the name of the branch we are on
-function git_branch {
-  git branch >/dev/null 2>/dev/null && git_prompt_info && return
-  echo '○' # Not in a repository
-}
-
 # Show number of stashed items (BinaryMuse)
 git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
@@ -74,7 +27,6 @@ git_stash() {
 
 # Prompt PWD
 # http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
-autoload vcs_info
 function prompt_pwd() {
   local repo="$vcs_info_msg_1_"
 
@@ -98,16 +50,14 @@ function prompt_pwd() {
   echo "${(j:/:)parts}"
 }
 
-# Git theming
-ZSH_THEME_GIT_PROMPT_PREFIX="± "
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
-
-ZSH_THEME_GIT_PROMPT_UNTRACKED="^"
-ZSH_THEME_GIT_PROMPT_ADDED="+"
-ZSH_THEME_GIT_PROMPT_MODIFIED="*"
-ZSH_THEME_GIT_PROMPT_RENAMED=">"
-ZSH_THEME_GIT_PROMPT_DELETED="!"
-ZSH_THEME_GIT_PROMPT_UNMERGED="="
+local git_formats="%{${fg_bold[yellow]}%}± %b%c%u:%.7i%{${reset_color}%}"
+zstyle ':vcs_info:git*' enable git
+zstyle ':vcs_info:git*' check-for-changes true
+zstyle ':vcs_info:git*' get-revision true
+zstyle ':vcs_info:git*' stagedstr "+"
+zstyle ':vcs_info:git*' unstagedstr "*"
+zstyle ':vcs_info:git*' formats "$git_formats"
+zstyle ':vcs_info:git*' actionformats "%a $git_formats"
 
 function precmd {
   vcs_info
@@ -115,7 +65,7 @@ function precmd {
   local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
   local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
   local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-  local git='%{${fg_bold[yellow]}%}$(git_branch)$(git_sha)%{${reset_color}%}$(git_stash) '
+  local git='${vcs_info_msg_0_}$(git_stash) '
   local timestamp='%* '
 
   local vi_mode='$(vi_mode_prompt_info) '
