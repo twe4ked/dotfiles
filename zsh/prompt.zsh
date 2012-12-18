@@ -2,13 +2,13 @@ autoload colors; colors;
 autoload vcs_info
 
 # Only show user and hostname when connected as root user or via ssh
-function user_hostname {
+user_hostname() {
   if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
     echo " "`whoami`@`hostname`
   fi
 }
 
-function prompt_color() { # bjeanes
+prompt_color() { # bjeanes
   if [ "$USER" = "root" ]; then
     echo "red"
   else
@@ -27,7 +27,7 @@ git_stash() {
 
 # Prompt PWD
 # http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
-function prompt_pwd() {
+prompt_pwd() {
   local repo="$vcs_info_msg_1_"
 
   parts=(${(s:/:)${${PWD}/#${HOME}/\~}})
@@ -59,7 +59,7 @@ zstyle ':vcs_info:git*' unstagedstr "*"
 zstyle ':vcs_info:git*' formats "$git_formats"
 zstyle ':vcs_info:git*' actionformats "%a $git_formats"
 
-function precmd {
+precmd() {
   vcs_info
 }
 
@@ -82,7 +82,7 @@ if [[ "$TERM" =~ ^xterm ]] then
 fi
 
 # Appears at the beginning of (and during) of command execution
-function termsupport_preexec {
+termsupport_preexec() {
   emulate -L zsh
   setopt extended_glob
   local CMD=${1[(wr)^(*=*|sudo|ssh|-*)]}  # cmd name only, or if this is sudo or ssh, the next cmd
