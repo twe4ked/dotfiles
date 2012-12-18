@@ -61,26 +61,26 @@ zstyle ':vcs_info:git*' actionformats "%a $git_formats"
 
 function precmd {
   vcs_info
-
-  local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
-  local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
-  local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
-  local git='${vcs_info_msg_0_}$(git_stash) '
-  local timestamp='%* '
-
-  local vi_mode='$(vi_mode_prompt_info) '
-
-  PROMPT=$cwd$usr$char
-  RPROMPT=$vi_mode$git$timestamp
-
-  PROMPT2=$char
-  RPROMPT2='[%_]'
-
-  if [[ "$TERM" =~ ^xterm ]] then
-    print -Pn "\e]2;%n@%M: %~\a"  # display "user@hostname: dir" in the window title
-    print -Pn "\e]1;%1~\a"        # display "dir" in the terminal tabs
-  fi
 }
+
+local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
+local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
+local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+local git='${vcs_info_msg_0_}$(git_stash) '
+local timestamp='%* '
+
+local vi_mode='$(vi_mode_prompt_info) '
+
+PROMPT=$cwd$usr$char
+RPROMPT=$vi_mode$git$timestamp
+
+PROMPT2=$char
+RPROMPT2='[%_]'
+
+if [[ "$TERM" =~ ^xterm ]] then
+  print -Pn "\e]2;%n@%M: %~\a"  # display "user@hostname: dir" in the window title
+  print -Pn "\e]1;%1~\a"        # display "dir" in the terminal tabs
+fi
 
 # Appears at the beginning of (and during) of command execution
 function termsupport_preexec {
