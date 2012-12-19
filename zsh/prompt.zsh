@@ -20,6 +20,10 @@ prompt_color() {
   fi
 }
 
+prompt_bg_job() {
+  jobs | grep '+' | awk '{print $4}'
+}
+
 # show number of stashed items
 git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
@@ -68,9 +72,10 @@ local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
 local git='${vcs_info_msg_0_}$(git_stash) '
 local timestamp='%* '
 local vi_mode='$(vi_mode_prompt_info) '
+local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%} '
 
 PROMPT=$cwd$usr$char
-RPROMPT=$vi_mode$git$timestamp
+RPROMPT=$vi_mode$bg_job$git$timestamp
 
 PROMPT2=$char
 RPROMPT2='[%_]'
