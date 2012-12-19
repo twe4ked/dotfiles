@@ -1,14 +1,14 @@
 autoload colors; colors;
 autoload vcs_info
 
-# Only show user and hostname when connected as root user or via ssh
+# only show user and hostname when connected as root user or via ssh
 user_hostname() {
   if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
     echo " "`whoami`@`hostname`
   fi
 }
 
-prompt_color() { # bjeanes
+prompt_color() {
   if [ "$USER" = "root" ]; then
     echo "red"
   else
@@ -20,12 +20,11 @@ prompt_color() { # bjeanes
   fi
 }
 
-# Show number of stashed items (BinaryMuse)
+# show number of stashed items
 git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
 }
 
-# Prompt PWD
 # http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
 prompt_pwd() {
   local repo="$vcs_info_msg_1_"
@@ -40,7 +39,7 @@ prompt_pwd() {
       # underline it, and skip truncating the component
       parts[i]="%U$part%u"
     else
-      # Shorten the path as long as it isn't the last piece
+      # shorten the path as long as it isn't the last piece
       if [[ "$parts[${#parts}]" != "$part" ]]; then
         parts[i]="$part[1,1]"
       fi
