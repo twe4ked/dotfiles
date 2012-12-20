@@ -17,8 +17,8 @@ if [ -z "$TMUX" ]; then
     fi
 
     # When Tmux exits, we exit. Unless we want to keep the shell
-    if [[ -f "/tmp/keep-shell" ]]; then
-      rm "/tmp/keep-shell"
+    if [[ -f "/tmp/keep-shell-$USER" ]]; then
+      rm "/tmp/keep-shell-$USER"
     else
       exit
     fi
