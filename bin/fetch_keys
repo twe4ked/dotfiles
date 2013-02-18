@@ -1,16 +1,12 @@
 #!/bin/bash -e
 
-fetch_keys() {
-  if [[ -n "$1" ]]; then
-    if ! curl -s -f "https://github.com/$1.keys" >> ~/.ssh/authorized_keys; then
-      echo an error occured, was the github username typed correctly?
-    else
-      echo >> ~/.ssh/authorized_keys
-      echo "keys successfully added to ~/.ssh/authorized_keys"
-    fi
+if [[ -n "$1" ]]; then
+  if ! curl -s -f "https://github.com/$1.keys" >> ~/.ssh/authorized_keys; then
+    echo an error occured, was the github username typed correctly?
   else
-    echo "usage: fetch_keys [github username]"
+    echo >> ~/.ssh/authorized_keys
+    echo "keys successfully added to ~/.ssh/authorized_keys"
   fi
-}
-
-fetch_keys "$@"
+else
+  echo "usage: fetch_keys [github username]"
+fi
