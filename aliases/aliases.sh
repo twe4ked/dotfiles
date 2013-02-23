@@ -2,7 +2,6 @@ alias ls='ls -laGF'                           # Compact view, show color
 alias reload="source $HOME/.zshrc"            # Source dotfiles
 alias sauce='reload'                          # Meta alias!
 alias history='fc -l 1'                       # I want to see more the 16 history items
-alias psg='ps aux | grep -v grep | grep $1'   # See what's running
 alias z="_z -r 2>&1"                          # Highest rated results first
 alias internet\?='ping 8.8.8.8'               # Google?
 
