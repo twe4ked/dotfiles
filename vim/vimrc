@@ -23,8 +23,9 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 
-" Auto commands
-autocmd FileType gitcommit set spell
+autocmd FileType gitcommit set spell        " Turn on spell check in Git commits.
+
+" FocusLost
 autocmd FocusLost * nested :silent! wall    " Save on FocusLost
 autocmd FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
 
