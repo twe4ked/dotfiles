@@ -61,11 +61,6 @@ vmap <Right> <Esc><Esc>gv
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
-" CtrlP
-map <Leader>l :CtrlPBuffer<CR>
-map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
-map <Leader>m :CtrlPModified<CR>
-
 " I never intentionally lookup keywords (with `man`)
 nmap K <Esc>
 
