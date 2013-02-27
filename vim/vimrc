@@ -25,7 +25,6 @@ set undoreload=10000
 
 " Auto commands
 autocmd FileType gitcommit set spell
-autocmd BufWritePost * call UpdateTags()    " Generate .git/tags (ctags) automatically on save
 autocmd FocusLost * nested :silent! wall    " Save on FocusLost
 autocmd FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
 

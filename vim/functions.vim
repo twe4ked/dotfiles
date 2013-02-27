@@ -4,6 +4,9 @@ function! UpdateTags()
   endif
 endfunction
 
+" Generate .git/tags (ctags) automatically on save
+autocmd BufWritePost * call UpdateTags()
+
 " Set colorcolumn to the current textwidth or fallback to the specified column.
 function! ColorColumnAtTextWidth(column)
   if &textwidth > 0
