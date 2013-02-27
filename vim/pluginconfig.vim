@@ -1,11 +1,8 @@
-" Plugins-----------------------------------------------------------------------
-" Plugin configuration.
-
 " CtrlP
 let g:ctrlp_map                   = '<Leader>t'
 let g:ctrlp_clear_cache_on_exit   = 1
-let g:ctrlp_working_path_mode     = 0 " Handle working path manually
-let g:ctrlp_dotfiles              = 0 " Ignore all dot/hidden files
+let g:ctrlp_working_path_mode     = 0       " Handle working path manually
+let g:ctrlp_dotfiles              = 0       " Ignore all dot/hidden files
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore         = {
   \ 'dir':  '\.git$\|\.hg$\|\.svn$\|backups$\|logs$\|tmp$',
@@ -47,6 +44,7 @@ autocmd VimEnter * :QuickfixsignsDisable
 map <Leader>q :QuickfixsignsToggle<CR>
 let g:quickfixsigns_classes = ['vcsdiff']
 
+" vim slime
 let g:slime_paste_file = '$HOME/.slime_paste' " default
 let g:slime_target = 'tmux'                   " default: 'screen'
 

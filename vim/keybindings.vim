@@ -1,7 +1,7 @@
 map <Leader>sd :FixWhitespace<CR>:wall<CR>
 map <Leader>r :checktime<CR>:wall<CR>
 
-" Buffer navigation ------------------------------------------------------------
+" Buffer navigation
 map <Leader>, <C-^>
 map <Leader>w :CommandW<CR>
 map <Leader>l :CommandTBuffer<CR>
@@ -9,7 +9,7 @@ map <Leader>l :CommandTBuffer<CR>
 noremap <leader>i :set list!<CR>
 nmap <leader>ss :source $HOME/.vimrc<CR>
 
-" Window Navigation ------------------------------------------------------------
+" Window Navigation
 " Use ctrl+(h|j|k|j) to move through open windows.
 map <C-h> <C-w>h
 map <C-j> <C-w>j

@@ -1,4 +1,4 @@
-" Misc -------------------------------------------------------------------------
+" Misc
 set nowrap                                  " I don't always wrap lines...
 set linebreak                               " ...but when I do, I wrap whole words.
 set t_Co=256                                " Support for xterm with 256 colors (gets overriden in .gvimrc)
@@ -23,7 +23,7 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 
-" Auto commands ----------------------------------------------------------------
+" Auto commands
 autocmd FileType gitcommit set spell
 autocmd BufWritePost * call UpdateTags()    " Generate .git/tags (ctags) automatically on save
 autocmd BufWinEnter *.feature set cc+=11    " Set column for features
@@ -39,7 +39,7 @@ function! WhatTheSize()
 endfunction
 autocmd BufEnter *.jpg,*.png call WhatTheSize()
 
-" Searching --------------------------------------------------------------------
+" Searching
 set hlsearch                                " Highlight searches
 set incsearch                               " Highlight search results instantly
 set ignorecase                              " Ignore case
@@ -47,7 +47,7 @@ set smartcase                               " Override 'ignorecase' option if th
 
 filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
 
-" Indentation ------------------------------------------------------------------
+" Indentation
 set shiftwidth=2                            " Number of spaces to use in each autoindent step
 set tabstop=2                               " Two tab spaces
 set softtabstop=2                           " Number of spaces to skip or insert when <BS>ing or <Tab>ing
@@ -57,7 +57,7 @@ set smarttab                                " Use shiftwidth and softtabstop to 
 set cindent                                 " Recommended seting for automatic C-style indentation
 set autoindent                              " Automatic indentation in non-C files
 
-" Colorscheme ------------------------------------------------------------------
+" Colorscheme
 syntax enable
 set background=dark
 colorscheme jellybeans_custom
