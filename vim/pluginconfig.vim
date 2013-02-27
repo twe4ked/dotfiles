@@ -21,10 +21,6 @@ let g:NERDTreeShowLineNumbers = 0           " Disable line numbers
 let g:NERDTreeMinimalUI = 1                 " Disable help message
 let g:NERDTreeDirArrows = 1                 " Enable directory arrows
 
-" Reselect visual block after indent
-vnoremap < <gv
-vnoremap > >gv
-
 " tcomment
 let g:tcommentMapLeaderOp1 = '<Leader>c'
 
