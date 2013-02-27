@@ -7,7 +7,7 @@ map <Leader>w :CommandW<CR>
 map <Leader>l :CommandTBuffer<CR>
 
 noremap <leader>i :set list!<CR>
-nmap <leader>ss :source $HOME/.vimrc<Bar>:source $HOME/.gvimrc<CR>
+nmap <leader>ss :source $HOME/.vimrc<CR>
 
 " Window Navigation ------------------------------------------------------------
 " Use ctrl+(h|j|k|j) to move through open windows.
