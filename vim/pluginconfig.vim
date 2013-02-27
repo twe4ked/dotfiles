@@ -28,9 +28,6 @@ let g:tcommentMapLeaderOp1 = '<Leader>c'
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 
-" Colorizer
-let g:colorizer_nomap = 1                   " No mappings
-
 " Prevent vim-surround's `ds` from conflicting with bufexplorer
 autocmd BufWinEnter \[BufExplorer\] unmap ds
 autocmd BufWinLeave \[BufExplorer\] nmap ds <Plug>Dsurround
