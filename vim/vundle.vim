@@ -24,7 +24,6 @@ Bundle 'dterei/VimBookmarking'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'tomtom/quickfixsigns_vim'
-Bundle 'skammer/vim-css-color'
 
 " Editing
 Bundle 'godlygeek/tabular'
