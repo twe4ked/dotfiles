@@ -67,3 +67,12 @@ let g:neocomplcache_enable_smart_case = 1            " Use smartcase
 let g:neocomplcache_enable_camel_case_completion = 1 " Use camel case completion
 let g:neocomplcache_enable_underbar_completion = 1   " Use underbar completion
 let g:neocomplcache_auto_completion_start_length = 3
+
+" UpAndDown
+" Use option-J/K to bubble lines up and down
+nmap <silent> ˚ <Plug>upAndDownUp
+nmap <silent> ∆ <Plug>upAndDownDown
+vmap <silent> ˚ <Plug>upAndDownVisualUp
+vmap <silent> ∆ <Plug>upAndDownVisualDown
+imap <silent> ˚ <Plug>upAndDownInsertUp
+imap <silent> ∆ <Plug>upAndDownInsertDown

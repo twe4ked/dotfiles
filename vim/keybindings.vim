@@ -61,14 +61,6 @@ vmap <Right> <Esc><Esc>gv
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
-" Use option-J/K to bubble lines up and down
-nmap <silent> ˚ <Plug>upAndDownUp
-nmap <silent> ∆ <Plug>upAndDownDown
-vmap <silent> ˚ <Plug>upAndDownVisualUp
-vmap <silent> ∆ <Plug>upAndDownVisualDown
-imap <silent> ˚ <Plug>upAndDownInsertUp
-imap <silent> ∆ <Plug>upAndDownInsertDown
-
 " CtrlP
 map <Leader>l :CtrlPBuffer<CR>
 map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
