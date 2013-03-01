@@ -34,7 +34,7 @@ fresh vim/leader.vim --file=~/.vimrc
 fresh vim/vundle.vim --file=~/.vimrc
 fresh vim/functions.vim --file=~/.vimrc
 fresh vim/keybindings.vim --file=~/.vimrc
-fresh vim/pluginconfig.vim --file=~/.vimrc
+fresh 'vim/plugin_config/*' --file=~/.vimrc --marker='"'
 fresh vim/gvimrc --file
 fresh vim/vimrc --file
 fresh vim/colors/bclear_custom.vim --file=~/.vim/colors/bclear_custom.vim
