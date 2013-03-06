@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+while read LINE; do
+  echo "$LINE"
+  echo "$LINE" |
+  perl -pe 's/\e\[?.*?[\@-~]//g' |
+  tr "<>\"'" '\n\n\n\n' |
+  egrep -oi 'https?://[^ ]+' |
+  xargs --no-run-if-empty open
+done
