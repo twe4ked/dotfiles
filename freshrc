@@ -38,7 +38,7 @@ fresh 'vim/plugin_config/*' --file=~/.vimrc --marker='"'
 fresh vim/gvimrc --file
 fresh vim/vimrc --file
 fresh vim/colors --file=~/.vim/colors/
-fresh hackling/dotfiles config/keypad.vim --file=~/.vimrc
+fresh hackling/dotfiles vim/plugins/keypad.vim --file=~/.vimrc
 
 # Shell
 fresh jasoncodes/dotfiles config/inputrc --file
