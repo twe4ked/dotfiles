@@ -48,7 +48,7 @@ fresh jasoncodes/dotfiles shell/editor.sh
 fresh shell/tmux.sh
 
 fresh 'aliases/*'
-fresh 'shell/functions'
+fresh 'shell/functions*'
 
 # irb
 fresh config/irb/encoding.rb --file=~/.irbrc
