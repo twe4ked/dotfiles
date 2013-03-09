@@ -1,3 +1,6 @@
+# allows variable substitution in the prompt
+setopt prompt_subst
+
 autoload colors; colors;
 autoload vcs_info
 

@@ -1,4 +1,3 @@
-setopt prompt_subst                 # allows variable substitution in the prompt
 setopt no_beep                      # i hate beeps
 setopt interactive_comments         # escape commands so i can use them later (allow comments after commands)
 setopt rm_star_wait                 # if `rm *` wait 10 seconds before performing it!
