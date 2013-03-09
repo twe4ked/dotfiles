@@ -36,7 +36,7 @@ fresh vim/leader.vim --file=~/.vimrc
 fresh vim/vundle.vim --file=~/.vimrc
 fresh vim/functions.vim --file=~/.vimrc
 fresh vim/keybindings.vim --file=~/.vimrc
-fresh 'vim/plugin_config/*' --file=~/.vimrc --marker='"'
+fresh vim/plugin_config/\* --file=~/.vimrc --marker='"'
 fresh vim/gvimrc --file
 fresh vim/vimrc --file
 fresh vim/colors --file=~/.vim/colors/
@@ -45,11 +45,11 @@ fresh hackling/dotfiles vim/plugins/keypad.vim --file=~/.vimrc
 # Shell
 fresh jasoncodes/dotfiles config/inputrc --file
 fresh jasoncodes/dotfiles config/tmux.conf --file
-fresh jasoncodes/dotfiles 'aliases/*'
+fresh jasoncodes/dotfiles aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
 
-fresh 'aliases/*'
-fresh 'shell/functions/*'
+fresh aliases/\*
+fresh shell/functions/\*
 
 # irb
 fresh config/irb/encoding.rb --file=~/.irbrc
@@ -57,7 +57,7 @@ fresh jasoncodes/dotfiles config/irbrc --file
 fresh config/irb/prompt.rb --file=~/.irbrc
 
 # bin
-fresh 'bin/*' --bin
-fresh jasoncodes/scripts '*' --bin
+fresh bin/\* --bin
+fresh jasoncodes/dotfiles bin/\* --bin
 fresh pengwynn/dotfiles bin/gxpr --bin
 fresh defunkt/repl bin/repl --bin
