@@ -10,6 +10,7 @@ fresh config/tmux.conf --file
 fresh config/gitconfig --file
 
 # Zsh
+fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 fresh shell/exports.sh --file=~/.zshrc
 fresh zsh/completion.zsh --file=~/.zshrc
 fresh zsh/prompt.zsh --file=~/.zshrc
