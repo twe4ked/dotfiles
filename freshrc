@@ -47,7 +47,6 @@ fresh jasoncodes/dotfiles config/inputrc --file
 fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles 'aliases/*'
 fresh jasoncodes/dotfiles shell/editor.sh
-fresh shell/tmux.sh
 
 fresh 'aliases/*'
 fresh 'shell/functions*'
