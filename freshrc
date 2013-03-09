@@ -10,6 +10,7 @@ fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 fresh zsh/completion.zsh --file=~/.zshrc
 fresh zsh/prompt.zsh --file=~/.zshrc
 fresh zsh/title.zsh --file=~/.zshrc
+fresh zsh/aliases.zsh --file=~/.zshrc
 fresh zsh/zshrc --file
 fresh zsh/keybindings.zsh --file=~/.zshrc
 fresh zsh-users/zsh-completions src --file=completion/
@@ -43,8 +44,8 @@ fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
 
-fresh aliases/\*
 fresh shell/exports.sh
+fresh shell/aliases/\*
 fresh shell/functions/\*
 
 # irb
