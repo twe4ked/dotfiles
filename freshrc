@@ -56,5 +56,6 @@ fresh config/irb/prompt.rb --file=~/.irbrc
 # bin
 fresh bin/\* --bin
 fresh jasoncodes/dotfiles bin/\* --bin
+fresh jasoncodes/dotfiles bin/wemux/\* --bin
 fresh pengwynn/dotfiles bin/gxpr --bin
 fresh defunkt/repl bin/repl --bin
