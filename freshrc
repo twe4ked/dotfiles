@@ -3,11 +3,7 @@
 fresh freshshell/fresh bin/fresh --bin
 
 # Config
-fresh config/ackrc --file
-fresh config/gemrc --file
-fresh config/pryrc --file
-fresh config/tmux.conf --file
-fresh config/gitconfig --file
+fresh config/\* --file
 
 # Zsh
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
