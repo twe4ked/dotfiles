@@ -2,7 +2,6 @@
 
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
-fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 # Config
 fresh config/\* --file
@@ -14,6 +13,10 @@ fresh zsh/title.zsh --file=~/.zshrc
 fresh zsh/aliases.zsh --file=~/.zshrc
 fresh zsh/zshrc --file
 fresh zsh/keybindings.zsh --file=~/.zshrc
+
+# this loads the shell files and needs to be at the bottom of the zshrc for
+# compdef be availiable
+fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
 fresh zsh-users/zsh-completions src --file=completion/
 fresh rupa/z z.sh
