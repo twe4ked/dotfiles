@@ -18,7 +18,7 @@ fresh zsh/keybindings.zsh --file=~/.zshrc
 # compdef be availiable
 fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
 
-fresh zsh-users/zsh-completions src --file=completion/
+fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
 fresh rupa/z z.sh
 fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
 fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
