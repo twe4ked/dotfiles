@@ -1,4 +1,4 @@
-if run_bundle_install == 0
+if run_bundle_install == 1
   echo "Installing bundles..."
   echo ""
   :BundleInstall
