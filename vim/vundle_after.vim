@@ -1,7 +1,7 @@
 if run_bundle_install == 1
-  echo "Installing bundles..."
-  echo ""
   :BundleInstall
-  echo "Restart vim"
+
+  silent !echo ""
+  silent !echo "Vim is now ready."
   :cq
 endif
