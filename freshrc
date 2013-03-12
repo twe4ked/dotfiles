@@ -32,7 +32,9 @@ fresh zsh/zsh-syntax-highlighting.zsh
 
 # Vim
 fresh vim/leader.vim --file=~/.vimrc
+fresh vim/vundle_before.vim --file=~/.vimrc
 fresh vim/vundle.vim --file=~/.vimrc
+fresh vim/vundle_after.vim --file=~/.vimrc
 fresh vim/functions.vim --file=~/.vimrc
 fresh vim/keybindings.vim --file=~/.vimrc
 fresh vim/plugin_config/\* --file=~/.vimrc --marker='"'

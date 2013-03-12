@@ -1,0 +1,14 @@
+let run_bundle_install = 1
+
+if !isdirectory(expand("~/.vim/bundle/vundle/"))
+  echo "Installing Vundle..."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let run_bundle_install = 0
+endif
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle "gmarik/vundle"

@@ -1,10 +1,6 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
 " Misc.
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'
