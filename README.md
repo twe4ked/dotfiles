@@ -2,8 +2,7 @@ Installation
 ============
 
 ``` sh
-git clone git://github.com/twe4ked/dotfiles.git ~/.dotfiles
-bash -c "`curl -sL get.freshshell.com`"
+FRESH_LOCAL_SOURCE=twe4ked/dotfiles bash -c "`curl -sL get.freshshell.com`"
 ```
 
 My dotfiles are managed by [fresh].
