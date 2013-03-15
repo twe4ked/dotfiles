@@ -43,6 +43,7 @@ fresh vim/plugin_config/\* --file=~/.vimrc --marker='"'
 fresh vim/gvimrc --file
 fresh vim/vimrc --file
 fresh vim/colors --file=~/.vim/colors/
+fresh jasoncodes/dotfiles vim/mappings/indent.vim --file=~/.vimrc
 fresh hackling/dotfiles vim/keybindings/numpad.vim --file=~/.vimrc
 
 # Shell
