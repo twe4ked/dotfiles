@@ -2,6 +2,7 @@
 
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
+fresh freshshell/fresh-open bin/fresh-open --bin
 
 # Config
 fresh config/\* --file
