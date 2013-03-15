@@ -6,6 +6,7 @@ fresh freshshell/fresh-open bin/fresh-open --bin
 
 # Config
 fresh config/\* --file
+fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 
 # Zsh
 fresh zsh/completion.zsh --file=~/.zshrc
