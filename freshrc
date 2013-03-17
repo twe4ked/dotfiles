@@ -9,12 +9,14 @@ fresh config/\* --file
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 
 # Zsh
-fresh zsh/completion.zsh --file=~/.zshrc
-fresh zsh/prompt.zsh --file=~/.zshrc
-fresh zsh/title.zsh --file=~/.zshrc
-fresh zsh/aliases.zsh --file=~/.zshrc
-fresh zsh/zshrc --file
-fresh zsh/keybindings.zsh --file=~/.zshrc
+fresh-options --file=~/.zshrc --marker
+  fresh zsh/completion.zsh
+  fresh zsh/prompt.zsh
+  fresh zsh/title.zsh
+  fresh zsh/aliases.zsh
+  fresh zsh/zshrc
+  fresh zsh/keybindings.zsh
+fresh-options
 
 # this loads the shell files and needs to be at the bottom of the zshrc for
 # compdef be availiable
@@ -33,18 +35,20 @@ fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlight
 fresh zsh/zsh-syntax-highlighting.zsh
 
 # Vim
-fresh vim/leader.vim --file=~/.vimrc
-fresh vim/vundle_before.vim --file=~/.vimrc
-fresh vim/vundle.vim --file=~/.vimrc
-fresh vim/vundle_after.vim --file=~/.vimrc
-fresh vim/functions.vim --file=~/.vimrc
-fresh vim/keybindings.vim --file=~/.vimrc
-fresh vim/plugin_config/\* --file=~/.vimrc --marker='"'
+fresh-options --file=~/.vimrc --marker=\"
+  fresh vim/leader.vim
+  fresh vim/vundle_before.vim
+  fresh vim/vundle.vim
+  fresh vim/vundle_after.vim
+  fresh vim/functions.vim
+  fresh vim/keybindings.vim
+  fresh vim/plugin_config/\*
+  fresh vim/vimrc
+  fresh jasoncodes/dotfiles vim/mappings/indent.vim
+  fresh hackling/dotfiles vim/keybindings/numpad.vim
+fresh-options
 fresh vim/gvimrc --file
-fresh vim/vimrc --file
 fresh vim/colors --file=~/.vim/colors/
-fresh jasoncodes/dotfiles vim/mappings/indent.vim --file=~/.vimrc
-fresh hackling/dotfiles vim/keybindings/numpad.vim --file=~/.vimrc
 
 # Shell
 fresh jasoncodes/dotfiles config/inputrc --file
@@ -57,13 +61,17 @@ fresh shell/aliases/\*
 fresh shell/functions/\*
 
 # irb
-fresh config/irb/encoding.rb --file=~/.irbrc
-fresh jasoncodes/dotfiles config/irbrc --file
-fresh config/irb/prompt.rb --file=~/.irbrc
+fresh-options --file=~/.irbrc --marker
+  fresh config/irb/encoding.rb
+  fresh jasoncodes/dotfiles config/irbrc
+  fresh config/irb/prompt.rb
+fresh-options
 
 # bin
-fresh bin/\* --bin
-fresh jasoncodes/dotfiles bin/\* --bin
-fresh jasoncodes/dotfiles bin/wemux/\* --bin
-fresh pengwynn/dotfiles bin/gxpr --bin
-fresh defunkt/repl bin/repl --bin
+fresh-options --bin
+  fresh bin/\*
+  fresh jasoncodes/dotfiles bin/\*
+  fresh jasoncodes/dotfiles bin/wemux/\*
+  fresh pengwynn/dotfiles bin/gxpr
+  fresh defunkt/repl bin/repl
+fresh-options
