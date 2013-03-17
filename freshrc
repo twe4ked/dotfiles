@@ -49,7 +49,7 @@ fresh hackling/dotfiles vim/keybindings/numpad.vim --file=~/.vimrc
 # Shell
 fresh jasoncodes/dotfiles config/inputrc --file
 fresh jasoncodes/dotfiles config/tmux.conf --file
-fresh jasoncodes/dotfiles aliases/\*
+fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
 
 fresh shell/exports.sh
