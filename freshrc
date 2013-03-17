@@ -5,7 +5,11 @@ fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion
 fresh freshshell/fresh-open bin/fresh-open --bin
 
 # Config
-fresh config/\* --file
+fresh-options --file
+  fresh config/\*
+  fresh jasoncodes/dotfiles config/inputrc
+  fresh jasoncodes/dotfiles config/tmux.conf
+fresh-options
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 
 # Zsh
@@ -16,11 +20,11 @@ fresh-options --file=~/.zshrc --marker
   fresh zsh/aliases.zsh
   fresh zsh/zshrc
   fresh zsh/keybindings.zsh
-fresh-options
 
-# this loads the shell files and needs to be at the bottom of the zshrc for
-# compdef be availiable
-fresh freshshell/fresh contrib/source-build.sh --file=~/.zshrc
+  # this loads the shell files and needs to be at the bottom of the zshrc for
+  # compdef be availiable
+  fresh freshshell/fresh contrib/source-build.sh
+fresh-options
 
 fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
 fresh rupa/z z.sh
@@ -51,8 +55,6 @@ fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
 
 # Shell
-fresh jasoncodes/dotfiles config/inputrc --file
-fresh jasoncodes/dotfiles config/tmux.conf --file
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
 
