@@ -1,6 +1,3 @@
-set nocompatible
-filetype off
-
 " Misc.
 Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'

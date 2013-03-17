@@ -7,6 +7,9 @@ if !isdirectory(expand("~/.vim/bundle/vundle/"))
   let run_bundle_install = 1
 endif
 
+set nocompatible
+filetype off
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
