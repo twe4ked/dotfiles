@@ -15,6 +15,7 @@ setopt inc_append_history           # always be saving history (not just when th
 setopt magic_equal_subst            # all unquoted arguments of the form identifier=expression appearing after the command name have file expansion
 setopt auto_menu                    # show completion menu on succesive tab press
 setopt auto_pushd                   # make cd push the old directory onto the directory stack
+setopt glob_complete                # complete globs instead of expanding
 setopt complete_in_word
 setopt always_to_end
 setopt no_flowcontrol
