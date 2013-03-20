@@ -29,17 +29,3 @@ SAVEHIST=10000
 # show time a command took if over 4 sec
 export REPORTTIME=4
 export TIMEFMT="%*Es total, %U user, %S system, %P cpu"
-
-ZSH_HIGHLIGHT_STYLES+=(
-  unknown-token           'bg=red,bold'
-  alias                   'fg=magenta,bold'
-  single-quoted-argument  'fg=green,bold'
-  double-quoted-argument  'fg=green,bold'
-  builtin                 'fg=yellow,bold'
-  function                'fg=yellow,bold'
-)
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-# rbenv
-eval "$(rbenv init - | grep -v \^rbenv\ rehash)"
-gem() { rbenv exec gem "$@" && rbenv rehash && hash -r; }
