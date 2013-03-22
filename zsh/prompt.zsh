@@ -32,30 +32,6 @@ git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
 }
 
-# http://github.com/bjeanes/dot-files/blob/master/shell/prompt.sh
-prompt_pwd() {
-  local repo="$vcs_info_msg_1_"
-
-  parts=(${(s:/:)${${PWD}/#${HOME}/\~}})
-
-  i=0
-  while (( i++ < ${#parts} )); do
-    part="$parts[i]"
-    if [[ "$part" == "$repo" ]]; then
-      # if this part of the path represents the repo,
-      # underline it, and skip truncating the component
-      parts[i]="%U$part%u"
-    else
-      # shorten the path as long as it isn't the last piece
-      if [[ "$parts[${#parts}]" != "$part" ]]; then
-        parts[i]="$part[1,1]"
-      fi
-    fi
-  done
-
-  echo "${(j:/:)parts}"
-}
-
 local git_formats="%{${fg_bold[yellow]}%}± %b%c%u:%.7i%{${reset_color}%}"
 zstyle ':vcs_info:git*' enable git
 zstyle ':vcs_info:git*' check-for-changes true
