@@ -65,6 +65,8 @@ fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
 
+fresh jasoncodes/dotfiles shell/config/rbenv.sh
+
 # irb
 fresh-options --file=~/.irbrc
   fresh config/irb/encoding.rb
