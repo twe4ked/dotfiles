@@ -38,7 +38,7 @@ fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
-fresh zsh/zsh-syntax-highlighting.zsh
+fresh zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc
 
 # Vim
 fresh-options --file=~/.vimrc --marker=\"
