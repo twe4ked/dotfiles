@@ -1,6 +1,5 @@
 alias gb='git branch'
 alias gba='git branch -a'
-alias gup='gup && say gup done'
 alias gcod='gco develop'
 alias gcom='gco master'
 alias gf='git fetch'
