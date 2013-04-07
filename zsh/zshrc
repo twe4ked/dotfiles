@@ -24,8 +24,8 @@ WORDCHARS=''
 
 # history
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 # show time a command took if over 4 sec
 export REPORTTIME=4
