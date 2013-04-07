@@ -1,0 +1,20 @@
+#!/bin/bash -e
+#
+# example usage:
+#
+#   fresh convert https://github.com/twe4ked/dotfiles/blob/master/bin/fresh-convert --bin
+
+if [[ -z "$1" ]]; then
+  echo "usage: fresh convert [GitHub URL] [fresh options]" >&2
+  exit 1
+fi
+
+fresh_line="$(echo "$1" | sed -e 's#^https://github.com/#fresh #' -e 's#/blob/master/# #')"
+
+shift
+
+for arg in "$@"; do
+  fresh_line="$fresh_line $arg"
+done
+
+echo "$fresh_line"
