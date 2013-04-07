@@ -67,7 +67,7 @@ nmap K <Esc>
 " I don't like <c-r>
 map U :redo<CR>
 
-map <leader>p :PromoteToLet<cr>
+map <leader>L :PromoteToLet<cr>
 
 " Marked (markdown preview)
 command! Marked silent !open -a "Marked.app" "%:p"
