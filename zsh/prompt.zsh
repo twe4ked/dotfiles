@@ -32,6 +32,35 @@ git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
 }
 
+function prompt_pwd() {
+  if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
+    local repo="$(basename "$(git rev-parse --show-toplevel)")"
+  fi
+
+  parts=(${(s:/:)${${PWD}/#${HOME}/\~}})
+
+  i=0
+  while (( i++ < ${#parts} )); do
+    part="$parts[i]"
+    if [[ "$part" == "$repo" ]]; then
+      # if this part of the path represents the repo,
+      # underline it, and skip truncating the component
+      parts[i]="%U$part%u"
+    else
+      # shorten the path as long as it isn't the last piece
+      if [[ "$parts[${#parts}]" != "$part" ]]; then
+        parts[i]="$part[1,1]"
+      fi
+    fi
+  done
+
+  local prompt_path="${(j:/:)parts}"
+  if [ "$parts[1]" != "~" ]; then
+    prompt_path="/$prompt_path"
+  fi
+  echo "$prompt_path"
+}
+
 local git_formats="%{${fg_bold[yellow]}%}± %b%c%u:%.7i%{${reset_color}%}"
 zstyle ':vcs_info:git*' enable git
 zstyle ':vcs_info:git*' check-for-changes true
