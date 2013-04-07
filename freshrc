@@ -14,12 +14,12 @@ fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 
 # Zsh
 fresh-options --file=~/.zshrc --marker
-  fresh zsh/completion.zsh
-  fresh zsh/prompt.zsh
-  fresh zsh/title.zsh
-  fresh zsh/aliases.zsh
-  fresh zsh/zshrc
-  fresh zsh/keybindings.zsh
+  fresh shell/zsh/completion.zsh
+  fresh shell/zsh/prompt.zsh
+  fresh shell/zsh/title.zsh
+  fresh shell/zsh/aliases.zsh
+  fresh shell/zsh/zshrc
+  fresh shell/zsh/keybindings.zsh
 
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
@@ -38,7 +38,7 @@ fresh zsh-users/zsh-completions src/_heroku --file=completion/_heroku
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
-fresh zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc
+fresh shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc
 
 # Vim
 fresh-options --file=~/.vimrc --marker=\"
