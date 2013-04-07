@@ -1,5 +1,6 @@
 " Misc.
 Bundle 'nathanaelkane/vim-command-w'
+Bundle 'Soares/butane.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sickill/vim-pasta'
 Bundle 'bufkill.vim'

@@ -3,7 +3,7 @@ map <Leader>r :checktime<CR>:wall<CR>:redraw!<CR>
 
 " Buffer navigation
 map <Leader>, <C-^>
-map <Leader>w :CommandW<CR>
+map <Leader>w :Bclose<CR>
 map <Leader>l :CommandTBuffer<CR>
 
 noremap <leader>i :set list!<CR>
@@ -18,9 +18,6 @@ map <C-l> <C-w>l
 
 " Clear search
 map <silent><Leader>/ :nohls<CR>
-
-" Command W
-map <Leader>w :CommandW<CR>
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
