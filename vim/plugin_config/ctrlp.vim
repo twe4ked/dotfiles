@@ -13,3 +13,4 @@ map <Leader>l :CtrlPBuffer<CR>
 map <Leader>T :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
 map <Leader>m :CtrlPModified<CR>
+map <Leader>M :CtrlPBranch<CR>
