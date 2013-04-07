@@ -1,5 +1,4 @@
 " Misc.
-Bundle 'scrooloose/syntastic'
 Bundle 'nathanaelkane/vim-command-w'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sickill/vim-pasta'
