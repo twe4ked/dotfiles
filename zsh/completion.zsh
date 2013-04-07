@@ -3,6 +3,7 @@ fpath=(~/.fresh/build/completion $fpath)
 autoload -U compinit; compinit
 
 # group matches and describe groups
+zstyle ':completion:*' special-dirs true
 zstyle ':completion:*:matches' group 'yes'
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format $'\e[01;33m-- %d --\e[0m'            # group group description format
