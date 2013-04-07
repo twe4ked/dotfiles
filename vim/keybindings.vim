@@ -1,5 +1,5 @@
 map <Leader>sd :FixWhitespace<CR>:wall<CR>
-map <Leader>r :checktime<CR>:wall<CR>
+map <Leader>r :checktime<CR>:wall<CR>:redraw!<CR>
 
 " Buffer navigation
 map <Leader>, <C-^>
