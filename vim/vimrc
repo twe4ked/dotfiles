@@ -17,12 +17,6 @@ set laststatus=2                            " Always show the status line
 set history=1000
 set autoread
 
-" Persistent Undo
-set undodir=$HOME/.vim/.undo
-set undofile
-set undolevels=1000
-set undoreload=10000
-
 autocmd FileType gitcommit set spell        " Turn on spell check in Git commits.
 
 " FocusLost

@@ -51,6 +51,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/plugin_config/\*
   fresh vim/vimrc
   fresh jasoncodes/dotfiles vim/mappings/indent.vim
+  fresh jasoncodes/dotfiles vim/config/undo.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
 fresh vim/gvimrc --file
