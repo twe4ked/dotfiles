@@ -2,7 +2,7 @@
 #
 # example usage:
 #
-#   fresh convert https://github.com/twe4ked/dotfiles/blob/master/bin/fresh-convert --bin
+#   fresh-convert https://github.com/twe4ked/dotfiles/blob/master/bin/fresh-convert --bin
 
 if [[ -z "$1" ]]; then
   echo "usage: fresh convert [GitHub URL] [fresh options]" >&2
