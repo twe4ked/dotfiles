@@ -89,3 +89,20 @@ vnoremap <silent> # :<C-U>
   \gvy?<C-R><C-R>=substitute(
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR>
+
+" select all
+map <Leader>a ggVG
+
+" Toggle word wrap
+map <Leader>W :set wrap!<CR>
+
+" Toggle spell checking
+map <Leader>S :set spell!<CR>
+
+" Movement & wrapped long lines
+" This solves the problem that pressing down jumps your cursor 'over' the
+" current line to the next line
+nnoremap j gj
+nnoremap k gk
+
+nnoremap = v=
