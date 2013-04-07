@@ -17,4 +17,4 @@ for arg in "$@"; do
   fresh_line="$fresh_line $arg"
 done
 
-echo "$fresh_line"
+$fresh_line
