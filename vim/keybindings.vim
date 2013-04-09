@@ -3,7 +3,7 @@ map <Leader>r :checktime<CR>:wall<CR>:redraw!<CR>
 
 " Buffer navigation
 map <Leader>, <C-^>
-map <Leader>w :Bclose<CR>
+map <silent><Leader>w :Bclose<CR>
 map <Leader>l :CommandTBuffer<CR>
 
 noremap <leader>i :set list!<CR>
