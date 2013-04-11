@@ -38,7 +38,6 @@ Bundle 'mileszs/ack.vim'
 
 " Language
 Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'kchmck/vim-coffee-script'
