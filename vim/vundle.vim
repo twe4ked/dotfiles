@@ -7,10 +7,6 @@ Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-eunuch'
-
-" tmux
-Bundle 'jpalardy/vim-slime'
-Bundle 'benmills/vimux'
 Bundle 'tpope/vim-dispatch'
 
 " Visual
