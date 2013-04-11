@@ -5,12 +5,6 @@ alias history='fc -l 1'                       # I want to see more the 16 histor
 alias z="_z -r 2>&1"                          # Highest rated results first
 alias internet\?='ping 8.8.8.8'               # Google?
 
-# Open untracked/modified files in MacVim
-alias modified='$EDITOR $(git ls-files -m -o --exclude-standard) .'
-
-# Open last commit in MacVim
-alias lastcommit='$EDITOR $(git show --pretty="format:" --name-only) .'
-
 alias b='bundle'                              # Run bundle
 
 alias dev="cd $HOME/Dev"                      # Go to the Dev directory
