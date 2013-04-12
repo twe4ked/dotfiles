@@ -1,13 +1,15 @@
 " Misc.
-Bundle 'nathanaelkane/vim-command-w'
-Bundle 'Soares/butane.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'sickill/vim-pasta'
-Bundle 'bufkill.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-dispatch'
+
+" Buffers
+Bundle 'nathanaelkane/vim-command-w'
+Bundle 'Soares/butane.vim'
+Bundle 'bufkill.vim'
 
 " Visual
 Bundle 'dterei/VimBookmarking'
