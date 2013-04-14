@@ -1,5 +1,4 @@
 " Misc.
-Bundle 'tpope/vim-fugitive'
 Bundle 'sickill/vim-pasta'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
@@ -39,6 +38,9 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'kchmck/vim-coffee-script'
+
+" Git
+Bundle 'tpope/vim-fugitive'
 
 " Colours
 Bundle 'twe4ked/vim-colorscheme-switcher'
