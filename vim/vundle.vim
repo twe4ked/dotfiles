@@ -41,6 +41,7 @@ Bundle 'kchmck/vim-coffee-script'
 
 " Git
 Bundle 'tpope/vim-fugitive'
+Bundle 'kablamo/vim-git-log'
 
 " Colours
 Bundle 'twe4ked/vim-colorscheme-switcher'
