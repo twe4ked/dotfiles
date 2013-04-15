@@ -1,5 +1,61 @@
-#!/bin/bash -e
+#!/usr/bin/env ruby
 
-DATABASE="$(find ~/Library/Application\ Support/Skype -name 'main.db' | head -n 1)"
+gem 'sqlite3', '~> 1.3.0'
+gem 'nokogiri', '~> 1.5.0'
 
-sqlite3 "$DATABASE" "select body_xml from Messages where body_xml LIKE '%$(echo "$@" | sed "s/'/''/g")%';"
+require 'sqlite3'
+require 'nokogiri'
+
+class Message
+  attr_reader :body, :username, :conversation_id
+
+  def initialize(message)
+    @body = strip_html message[0]
+    @username = message[1]
+    @conversation_id = message[2]
+  end
+
+  private
+
+  def strip_html(string)
+    Nokogiri::HTML.fragment(string).text
+  end
+end
+
+def word_wrap(text, *args)
+  line_width = 70
+  text.split("\n").collect do |line|
+    line.length > line_width ? line.gsub(/(.{1,#{line_width}})(\s+|$)/, "\\1\n").strip : line
+  end * "\n"
+end
+
+abort 'usage: skype-search <query>' unless ARGV[0]
+
+database_files = Dir["#{Dir.home}/Library/Application\ Support/Skype/*/main.db"]
+
+if database_files.count > 1
+  abort 'Multiple database files found'
+else
+  database = SQLite3::Database.new database_files.first
+end
+
+results = database.execute "SELECT body_xml, from_dispname, convo_id FROM Messages WHERE body_xml LIKE '%#{SQLite3::Database.quote ARGV[0]}%';"
+results = results[0..999]
+
+results.each_with_index do |result, index|
+  message = Message.new(result)
+  thread_name = database.execute("SELECT displayname FROM Conversations WHERE id = #{message.conversation_id}").flatten.first
+
+  green_start = "\e[1;32m"
+  grey_start = "\e[1;30m"
+  color_end = "\e[0m"
+
+  lines = []
+  lines << green_start + message.username + color_end + grey_start + ' (' + thread_name + ')' + color_end
+  lines << word_wrap(message.body)
+  lines << "" unless (results.count - 1) == index
+
+  lines.each do |line|
+    puts line
+  end
+end
