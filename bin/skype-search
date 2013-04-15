@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+DATABASE="$(find ~/Library/Application\ Support/Skype -name 'main.db' | head -n 1)"
+
+sqlite3 "$DATABASE" "select body_xml from Messages where body_xml LIKE '%$(echo "$@" | sed "s/'/''/g")%';"
