@@ -18,20 +18,6 @@ set history=1000
 set autoread
 set virtualedit=onemore                     " Let cursor move past the last char
 
-autocmd FileType gitcommit set spell        " Turn on spell check in Git commits.
-
-" FocusLost
-autocmd FocusLost * nested :silent! wall    " Save on FocusLost
-autocmd FocusLost * call feedkeys("\<C-\>\<C-n>") " Return to normal mode on FocustLost
-
-" Treat dasherised words as whole words in stylesheets
-autocmd Filetype css,scss,sass setlocal iskeyword+=-
-
-function! WhatTheSize()
-  execute ":!identify % | cut -d' ' -f 3"
-endfunction
-autocmd BufEnter *.jpg,*.png call WhatTheSize()
-
 " Searching
 set hlsearch                                " Highlight searches
 set incsearch                               " Highlight search results instantly
