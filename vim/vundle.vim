@@ -4,6 +4,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-dispatch'
+Bundle 'itspriddle/vim-marked'
 
 " Buffers
 Bundle 'nathanaelkane/vim-command-w'

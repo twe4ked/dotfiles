@@ -66,10 +66,6 @@ map U :redo<CR>
 
 map <leader>L :PromoteToLet<cr>
 
-" Marked (markdown preview)
-command! Marked silent !open -a "Marked.app" "%:p"
-nmap <C-m> :Marked<CR>
-
 " Jump to start and end of line using the home row keys
 noremap H ^
 noremap L $
