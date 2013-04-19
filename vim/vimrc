@@ -24,8 +24,6 @@ set incsearch                               " Highlight search results instantly
 set ignorecase                              " Ignore case
 set smartcase                               " Override 'ignorecase' option if the search contains upper case characters.
 
-filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
-
 " Indentation
 set shiftwidth=2                            " Number of spaces to use in each autoindent step
 set tabstop=2                               " Two tab spaces
@@ -35,6 +33,8 @@ set autoindent                              " Keep the indent when creating a ne
 set smarttab                                " Use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
 set cindent                                 " Recommended seting for automatic C-style indentation
 set autoindent                              " Automatic indentation in non-C files
+
+filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
 
 " Colorscheme
 syntax enable
