@@ -26,6 +26,14 @@ vim() {
   _trigger_tmux_rename
 }
 
+man() {
+  if [[ -n "$TMUX" ]]; then
+    tmux rename-window "man: $1"
+  fi
+  command man "$@"
+  _trigger_tmux_rename
+}
+
 _trigger_tmux_rename() {
   RETURN_VALUE=$?
   if [[ -n "$TMUX" ]]; then
