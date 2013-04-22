@@ -1,3 +1,23 @@
+unalias zs 2> /dev/null
+zs() {
+  if [[ -n "$TMUX" ]]; then
+    tmux send-keys -R
+    tmux clear-history
+    tmux rename-window "$(_tmux_window_name zeus)"
+  fi
+  zeus start
+  _trigger_tmux_rename
+}
+
+unalias rs 2> /dev/null
+rs() {
+  if [[ -n "$TMUX" ]]; then
+    tmux rename-window "$(_tmux_window_name server)"
+  fi
+  rails server "$@"
+  _trigger_tmux_rename
+}
+
 vim() {
   if [[ -n "$TMUX" ]]; then
     tmux rename-window "$(_tmux_window_name vim)"
