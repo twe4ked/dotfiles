@@ -6,7 +6,7 @@ zs() {
     tmux rename-window "$(_tmux_window_name zeus)"
   fi
   zeus start
-  _trigger_tmux_rename
+  _tmux_automatic_rename_on
 }
 
 unalias rs 2> /dev/null
@@ -15,7 +15,7 @@ rs() {
     tmux rename-window "$(_tmux_window_name server)"
   fi
   rails server "$@"
-  _trigger_tmux_rename
+  _tmux_automatic_rename_on
 }
 
 vim() {
@@ -23,7 +23,7 @@ vim() {
     tmux rename-window "$(_tmux_window_name vim)"
   fi
   command vim "$@"
-  _trigger_tmux_rename
+  _tmux_automatic_rename_on
 }
 
 man() {
@@ -31,10 +31,10 @@ man() {
     tmux rename-window "man: $1"
   fi
   command man "$@"
-  _trigger_tmux_rename
+  _tmux_automatic_rename_on
 }
 
-_trigger_tmux_rename() {
+_tmux_automatic_rename_on() {
   RETURN_VALUE=$?
   if [[ -n "$TMUX" ]]; then
     tmux set automatic-rename on &> /dev/null
