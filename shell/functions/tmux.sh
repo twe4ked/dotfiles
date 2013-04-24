@@ -1,39 +1,3 @@
-unalias zs 2> /dev/null
-zs() {
-  if [[ -n "$TMUX" ]]; then
-    tmux send-keys -R
-    tmux clear-history
-    tmux rename-window "$(_tmux_window_name zeus)"
-  fi
-  zeus start
-  _tmux_automatic_rename_on
-}
-
-unalias rs 2> /dev/null
-rs() {
-  if [[ -n "$TMUX" ]]; then
-    tmux rename-window "$(_tmux_window_name server)"
-  fi
-  rails server "$@"
-  _tmux_automatic_rename_on
-}
-
-vim() {
-  if [[ -n "$TMUX" ]]; then
-    tmux rename-window "$(_tmux_window_name vim)"
-  fi
-  command vim "$@"
-  _tmux_automatic_rename_on
-}
-
-man() {
-  if [[ -n "$TMUX" ]]; then
-    tmux rename-window "man: $1"
-  fi
-  command man "$@"
-  _tmux_automatic_rename_on
-}
-
 _tmux_automatic_rename_on() {
   RETURN_VALUE=$?
   if [[ -n "$TMUX" ]]; then
@@ -42,9 +6,50 @@ _tmux_automatic_rename_on() {
   return $RETURN_VALUE
 }
 
-_tmux_window_name() {
+_tmux_window_dir() {
   if [[ -n "$(tmux list-windows -F "#{window_name}" | grep -i "$1")" ]]; then
     local DIR="$(basename "$(pwd)"): "
   fi
   echo "$DIR$1"
 }
+
+_tmux_rename_window() {
+  if [[ -n "$TMUX" ]]; then
+    tmux rename-window "$1"
+    AUTO_RENAME=1
+  fi
+}
+
+_tmux_preexec() {
+  case "$1" in
+    man*)
+      _tmux_rename_window "${1/ /: }"
+      ;;
+    vim*)
+      _tmux_rename_window "$(_tmux_window_dir vim)"
+      ;;
+    rs*)
+      _tmux_rename_window "$(_tmux_window_dir server)"
+      ;;
+    zs)
+      if [[ -n "$TMUX" ]]; then
+        tmux send-keys -R
+        tmux clear-history
+      fi
+      _tmux_rename_window "$(_tmux_window_dir zeus)"
+      ;;
+  esac
+}
+
+_tmux_precmd() {
+  if [[ $AUTO_RENAME == 1 ]]; then
+    _tmux_automatic_rename_on
+  fi
+  unset AUTO_RENAME
+}
+
+[[ -z \$precmd_functions ]] && precmd_functions=()
+precmd_functions=(\$precmd_functions _tmux_precmd)
+
+[[ -z \$preexec_functions ]] && preexec_functions=()
+preexec_functions=(\$preexec_functions _tmux_preexec)
