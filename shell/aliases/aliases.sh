@@ -6,8 +6,6 @@ alias internet\?="ping 8.8.8.8"               # google?
 alias b="bundle"                              # run bundle
 
 alias dev="cd $HOME/Dev"                      # go to the dev directory
-alias vimdir="cd $HOME/.dotfiles/vim"         # go to the vim directory
-alias dotdir="cd $HOME/.dotfiles"             # go to the dotfiles directory
 
 d() {
   if [[ -n "$1" ]]; then
