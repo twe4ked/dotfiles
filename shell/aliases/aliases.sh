@@ -1,5 +1,4 @@
 alias ls="ls -laGF"                           # compact view, show color
-alias reload="source $HOME/.zshrc"            # source dotfiles
 alias history="fc -l 1"                       # show more the 16 history items
 alias z="_z -r 2>&1"                          # highest rated results first
 alias internet\?="ping 8.8.8.8"               # google?
@@ -16,4 +15,10 @@ d() {
   else
     dirs -v
   fi
+}
+
+# source dotfiles
+reload() {
+  source $HOME/.zshrc &&
+  echo "Your dot files are now \033[1;32msourced\033[0m."
 }
