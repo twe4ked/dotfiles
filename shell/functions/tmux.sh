@@ -7,10 +7,12 @@ _tmux_automatic_rename_on() {
 }
 
 _tmux_window_dir() {
-  if [[ -n "$(tmux list-windows -F "#{window_name}" | grep -i "$1")" ]]; then
-    local DIR="$(basename "$(pwd)"): "
+  if [[ -n "$TMUX" ]]; then
+    if [[ -n "$(tmux list-windows -F "#{window_name}" | grep -i "$1")" ]]; then
+      local DIR="$(basename "$(pwd)"): "
+    fi
+    echo "$DIR$1"
   fi
-  echo "$DIR$1"
 }
 
 _tmux_rename_window() {
