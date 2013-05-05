@@ -3,5 +3,5 @@
 if [ -n "$(git status --porcelain)" ]; then
   echo "There are local changes, \`git stash\` first."
 else
-  GIT_SEQUENCE_EDITOR='vim -c "normal ddp" -c "wq"' git rebase -i HEAD~2
+  GIT_SEQUENCE_EDITOR='vim -c "normal ddp" -c "wqa"' git rebase -i HEAD~2
 fi
