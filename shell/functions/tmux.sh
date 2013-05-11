@@ -27,6 +27,9 @@ _tmux_preexec() {
     man*)
       _tmux_rename_window "${1/ /: }"
       ;;
+    bundle\ open*)
+      _tmux_rename_window "${1/bundle open/gem:}"
+      ;;
     vim*)
       _tmux_rename_window "$(_tmux_window_dir vim)"
       ;;
