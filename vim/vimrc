@@ -16,7 +16,6 @@ set showmode                                " Show current mode down the bottom
 set laststatus=2                            " Always show the status line
 set history=1000
 set autoread
-set virtualedit=onemore                     " Let cursor move past the last char
 
 " Searching
 set hlsearch                                " Highlight searches
