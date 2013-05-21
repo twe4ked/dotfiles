@@ -12,3 +12,5 @@
   commit = yellow reverse
 [push]
   default = tracking
+[init]
+  templatedir = ~/.git_template
