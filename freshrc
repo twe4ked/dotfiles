@@ -87,6 +87,7 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/gxpr
   fresh pengwynn/dotfiles bin/git-go
   fresh defunkt/repl bin/repl
+  fresh hackling/morse bin/morse
 fresh-options
 
 # git hooks
