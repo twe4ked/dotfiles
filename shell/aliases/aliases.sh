@@ -7,6 +7,8 @@ alias b="bundle"                              # run bundle
 
 alias dev="cd $HOME/Dev"                      # go to the dev directory
 
+alias serve="python -m SimpleHTTPServer"
+
 d() {
   if [[ -n "$1" ]]; then
     cd "+$1"
