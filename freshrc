@@ -65,6 +65,7 @@ fresh vim/colors --file=~/.vim/colors/
 # Shell
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
+fresh jasoncodes/dotfiles shell/config/filters.sh
 
 fresh shell/exports.sh
 fresh shell/aliases/\*
