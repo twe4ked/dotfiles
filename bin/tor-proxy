@@ -1,5 +1,23 @@
 #!/bin/bash
-INTERFACE=Wi-Fi
+
+if [[ "$1" == --help ]]; then
+  cat >&2 <<EOF
+usage: tor-proxy [interface]
+
+list all availiable interfaces:
+
+  networksetup -listallnetworkservices
+EOF
+  exit 1
+fi
+
+if [[ -z "$1" ]]; then
+  INTERFACE=Wi-Fi
+else
+  INTERFACE="$1"
+fi
+echo "using $INTERFACE"
+
 sudo networksetup -setsocksfirewallproxy $INTERFACE 127.0.0.1 9050 off
 sudo networksetup -setsocksfirewallproxystate $INTERFACE on
 tor
