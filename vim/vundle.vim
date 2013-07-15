@@ -25,6 +25,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'vim-scripts/upAndDown'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'Shougo/neocomplcache'
+Bundle 'bkad/CamelCaseMotion'
 
 " Navigation
 Bundle 'scrooloose/nerdtree'

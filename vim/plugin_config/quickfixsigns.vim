@@ -1,5 +1,3 @@
-map <Leader>q :QuickfixsignsToggle<CR>
-
 let g:quickfixsigns_classes = ['vcsdiff']
 
 autocmd BufRead * call QuickfixsignsUpdate()

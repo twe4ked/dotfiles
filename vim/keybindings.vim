@@ -3,7 +3,7 @@ map <Leader>r :checktime<CR>:wall<CR>:redraw!<CR>
 
 " Buffer navigation
 map <Leader>, <C-^>
-map <silent><Leader>w :Bclose<CR>
+map <silent><Leader>q :Bclose<CR>
 
 noremap <leader>i :set list!<CR>
 nmap <leader>ss :source $HOME/.vimrc<CR>
