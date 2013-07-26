@@ -24,19 +24,19 @@ _tmux_rename_window() {
 
 _tmux_preexec() {
   case "$1" in
-    man*)
+    man\ *)
       _tmux_rename_window "${1/ /: }"
       ;;
     bundle\ open*)
       _tmux_rename_window "${1/bundle open/gem:}"
       ;;
-    vim*)
+    vim|vim\ *)
       _tmux_rename_window "$(_tmux_window_dir vim)"
       ;;
-    rs*)
+    rs|rs\ *)
       _tmux_rename_window "$(_tmux_window_dir server)"
       ;;
-    zs)
+    zs|zs\ *)
       if [[ -n "$TMUX" ]]; then
         tmux send-keys -R
         tmux clear-history
