@@ -49,7 +49,13 @@ function prompt_pwd() {
       parts[i]="%U$part%u"
     elif [[ $i != ${#parts} ]]; then
       # shorten the path as long as it isn't the last piece
-      parts[i]="$part[1,1]"
+      if [[ $part[1,1] == "." ]]; then
+        # if this part of the path starts with a dot, then keep
+        # the 2nd letter aswell
+        parts[i]="$part[1,2]"
+      else
+        parts[i]="$part[1,1]"
+      fi
     fi
   done
 
