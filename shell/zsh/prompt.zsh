@@ -34,7 +34,8 @@ git_stash() {
 
 function prompt_pwd() {
   if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
-    local repo="$(basename "$(git rev-parse --show-toplevel)")"
+    local homerepo=${$(git rev-parse --show-toplevel)/#${HOME}/\~}
+    local repopartslen=${#${(s:/:)${homerepo}}}
   fi
 
   parts=(${(s:/:)${${PWD}/#${HOME}/\~}})
@@ -42,15 +43,13 @@ function prompt_pwd() {
   i=0
   while (( i++ < ${#parts} )); do
     part="$parts[i]"
-    if [[ "$part" == "$repo" ]]; then
+    if [[ $i == ${repopartslen} ]]; then
       # if this part of the path represents the repo,
       # underline it, and skip truncating the component
       parts[i]="%U$part%u"
-    else
+    elif [[ $i != ${#parts} ]]; then
       # shorten the path as long as it isn't the last piece
-      if [[ "$parts[${#parts}]" != "$part" ]]; then
-        parts[i]="$part[1,1]"
-      fi
+      parts[i]="$part[1,1]"
     fi
   done
 
