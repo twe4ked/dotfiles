@@ -23,12 +23,6 @@ map <leader>N :NERDTreeFind<CR>
 
 " Ack with <leader>f
 map <Leader>f :Ack!<Space>
-
-" Highlight word at cursor without changing position
-nnoremap <leader>h *<C-O>
-" Highlight word at cursor and then Ack it.
-nnoremap <leader>H *<C-O>:AckFromSearch!<CR>
-
 map <Leader>F :AckFromSearch<CR>
 
 " Use ,d (or ,dd or ,dj or 20,dd) to delete a line without yanking
