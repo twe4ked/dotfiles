@@ -2,6 +2,11 @@
 #
 # See what's running
 
+if [[ $# -ne 1 ]] || [[ -z "$1" ]]; then
+  echo "usage: $(basename "$0") [pattern]" >&2
+  exit 1
+fi
+
 ps aux |
 grep -v grep |
 grep -v psg |
