@@ -1,13 +1,14 @@
 alias ls="ls -laGFh"
-alias history="fc -l 1"                       # show more the 16 history items
-alias z="_z -r 2>&1"                          # highest rated results first
-alias internet\?="ping 8.8.8.8"               # google?
-
-alias b="bundle"                              # run bundle
-
-alias dev="cd $HOME/Dev"                      # go to the dev directory
-
+alias history="fc -l 1"
+alias internet\?="ping 8.8.8.8"
+alias b="bundle"
+alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
+
+# highest rated results first
+alias z="_z -r 2>&1"
+
+
 
 d() {
   if [[ -n "$1" ]]; then
