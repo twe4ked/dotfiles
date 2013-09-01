@@ -59,6 +59,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/marked.vim
   fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
   fresh jasoncodes/dotfiles vim/config/search.vim
+  fresh jasoncodes/dotfiles vim/config/cursor.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
