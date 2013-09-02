@@ -59,6 +59,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/vimrc
   fresh jasoncodes/dotfiles vim/mappings/indent.vim
   fresh jasoncodes/dotfiles vim/mappings/pasteboard.vim
+  fresh jasoncodes/dotfiles vim/mappings/whitespace.vim
   fresh jasoncodes/dotfiles vim/config/undo.vim
   fresh jasoncodes/dotfiles vim/config/tags.vim
   fresh jasoncodes/dotfiles vim/config/marked.vim
@@ -66,6 +67,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/config/cursor.vim
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
+  fresh jasoncodes/dotfiles vim/functions.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   # Ruby autocommands
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter='sed -n 11,13p' --ref=da7d4a8
