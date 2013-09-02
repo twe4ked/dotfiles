@@ -30,6 +30,9 @@ fresh-options --file=~/.zshrc --marker
   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
   fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh --ref=3bd84be
+
+  # de-duplicate PATH
+  fresh akatov/dotfiles zshrc/dedup-path --ref=55e80fe
 fresh-options
 
 fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
