@@ -9,6 +9,7 @@ fresh-options --file
   fresh config/\*
   fresh jasoncodes/dotfiles config/inputrc
   fresh jasoncodes/dotfiles config/tmux.conf
+  fresh jasoncodes/dotfiles config/psqlrc
 fresh-options
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 
