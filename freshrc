@@ -62,6 +62,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/cursor.vim
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
+  fresh jasoncodes/dotfiles vim/plugins/surround.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
 fresh vim/gvimrc --file
