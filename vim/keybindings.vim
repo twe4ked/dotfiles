@@ -35,9 +35,6 @@ nnoremap Y y$
 " I never intentionally lookup keywords (with `man`)
 nmap K <Esc>
 
-" I don't like <c-r>
-map U :redo<CR>
-
 map <leader>L :PromoteToLet<cr>
 
 " Jump to start and end of line using the home row keys
