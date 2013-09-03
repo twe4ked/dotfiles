@@ -14,3 +14,9 @@
   default = tracking
 [init]
   templatedir = ~/.git_template
+[merge]
+  log = true
+  conflictstyle = diff3
+  tool = vimdiff
+[mergetool]
+  prompt = false
