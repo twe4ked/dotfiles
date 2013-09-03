@@ -21,7 +21,7 @@ map <silent><Leader>/ :nohls<CR>
 map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>
 
-" Ack with <leader>f
+" Ack
 map <Leader>f :Ack!<Space>
 map <Leader>F :AckFromSearch<CR>
 
