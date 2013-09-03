@@ -5,6 +5,8 @@ alias b="bundle"
 alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
 
+alias cah="pygmentize -g"
+
 # highest rated results first
 alias z="_z -r 2>&1"
 
