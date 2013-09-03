@@ -24,6 +24,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'Shougo/neocomplcache'
+Bundle 'rking/vim-ruby-refactoring'
 Bundle 'bkad/CamelCaseMotion'
 
 " Navigation
