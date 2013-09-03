@@ -107,6 +107,7 @@ fresh-options --bin
   fresh defunkt/repl bin/repl
   fresh hackling/morse bin/morse
 fresh-options
+fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
 
 # git hooks
 fresh https://gist.github.com/5431107.git pre-commit --bin=~/bin/_git-pre-commit-hook
