@@ -8,11 +8,6 @@ bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 bindkey "\e[3~" delete-char
 
-# start tetris on ctrl+t
-autoload -U tetris
-zle -N tetris
-bindkey '^T' tetris
-
 bindkey -M menuselect '^o' accept-and-infer-next-history
 
 # handy for renaming files
