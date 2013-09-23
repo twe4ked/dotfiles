@@ -8,5 +8,5 @@ if [[ -n "$1" ]]; then
     echo "keys successfully added to ~/.ssh/authorized_keys"
   fi
 else
-  echo "usage: fetch_keys [github username]"
+  echo "usage: $(basename "$0") [github username]" >&2
 fi
