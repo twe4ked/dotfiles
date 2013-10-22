@@ -35,8 +35,6 @@ nnoremap Y y$
 " I never intentionally lookup keywords (with `man`)
 nmap K <Esc>
 
-map <leader>L :RExtractLet<cr>
-
 " Jump to start and end of line using the home row keys
 noremap H ^
 noremap L $
