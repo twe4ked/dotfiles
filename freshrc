@@ -72,7 +72,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
   # Ruby autocommands
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter='sed -n 11,13p' --ref=da7d4a8
-  fresh jasoncodes/dotfiles vim/plugins/surround.vim
   fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
