@@ -1,11 +1,16 @@
 #!/bin/bash -e
 
 if [[ -n "$1" ]]; then
-  if ! curl -s -f "https://github.com/$1.keys" >> ~/.ssh/authorized_keys; then
+  TMP_FILE=/tmp/add-keys.$$
+  if ! curl -s -f "https://github.com/$1.keys" > "$TMP_FILE"; then
     echo an error occured, was the github username typed correctly? >&2
+    rm -f "$TMP_FILE"
     exit 1
   else
-    echo >> ~/.ssh/authorized_keys
+    echo >> "$TMP_FILE"
+    mkdir -p ~/.ssh
+    sed "s/$/ $1/" < "$TMP_FILE" >> ~/.ssh/authorized_keys
+    rm -f "$TMP_FILE"
     echo "keys successfully added to ~/.ssh/authorized_keys"
   fi
 else
