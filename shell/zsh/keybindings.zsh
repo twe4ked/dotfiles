@@ -1,3 +1,5 @@
+bindkey -v
+
 # option + right/left
 bindkey "\e\e[C" vi-forward-word
 bindkey "\e\e[D" vi-backward-word
@@ -12,3 +14,6 @@ bindkey -M menuselect '^o' accept-and-infer-next-history
 
 # handy for renaming files
 bindkey "^[m" copy-prev-shell-word
+
+bindkey -M viins '^a' beginning-of-line
+bindkey -M viins '^e' end-of-line

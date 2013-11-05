@@ -28,7 +28,6 @@ fresh-options --file=~/.zshrc --marker
   fresh freshshell/fresh contrib/source-build.sh
 
   fresh rupa/z z.sh
-  fresh sharat87/zsh-vim-mode zsh-vim-mode.plugin.zsh
   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
   fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh --ref=3bd84be

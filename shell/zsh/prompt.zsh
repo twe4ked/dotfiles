@@ -79,6 +79,14 @@ precmd() {
   vcs_info
 }
 
+zle-keymap-select() { zle reset-prompt; }
+zle -N zle-keymap-select
+
+VI_MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
+vi_mode_prompt_info() {
+  echo "${${KEYMAP/vicmd/$VI_MODE_INDICATOR}/(main|viins)/}"
+}
+
 local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
 local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
