@@ -30,7 +30,6 @@ fresh-options --file=~/.zshrc --marker
   fresh rupa/z z.sh
   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
-  fresh zsh-users/zsh-history-substring-search zsh-history-substring-search.zsh --ref=3bd84be
   fresh bjeanes/dot-files shells/zsh/lib/completion-waiting-dots.zsh
 
   # de-duplicate PATH

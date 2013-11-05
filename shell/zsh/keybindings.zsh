@@ -1,8 +1,12 @@
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 # option + right/left
 bindkey "\e\e[C" vi-forward-word
 bindkey "\e\e[D" vi-backward-word
+
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
 
 # make the delete key (or Fn + Delete on the Mac) work instead of outputting a ~
 bindkey '^?' backward-delete-char
