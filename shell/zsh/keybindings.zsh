@@ -1,4 +1,5 @@
 bindkey -v
+
 bindkey '^R' history-incremental-search-backward
 
 # option + right/left
