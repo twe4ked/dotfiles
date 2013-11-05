@@ -14,10 +14,5 @@ bindkey "^[[3~" delete-char
 bindkey "^[3;5~" delete-char
 bindkey "\e[3~" delete-char
 
-bindkey -M menuselect '^o' accept-and-infer-next-history
-
-# handy for renaming files
-bindkey "^[m" copy-prev-shell-word
-
 bindkey -M viins '^a' beginning-of-line
 bindkey -M viins '^e' end-of-line
