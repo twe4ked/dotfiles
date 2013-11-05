@@ -18,3 +18,6 @@ bindkey '\e[3~' delete-char
 
 bindkey -M viins '^a' beginning-of-line
 bindkey -M viins '^e' end-of-line
+
+# clear the current line then bring it back after the next command
+bindkey -M vicmd 'q' push-line
