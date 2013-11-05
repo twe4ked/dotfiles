@@ -6,6 +6,7 @@ bindkey '^R' history-incremental-search-backward
 bindkey '\e\e[C' vi-forward-word
 bindkey '\e\e[D' vi-backward-word
 
+# search history using up/down arrows
 bindkey '^[[A' history-beginning-search-backward
 bindkey '^[[B' history-beginning-search-forward
 
