@@ -16,6 +16,7 @@ set showmode                                " Show current mode down the bottom
 set laststatus=2                            " Always show the status line
 set history=1000
 set autoread
+set cursorline
 
 " Searching
 set hlsearch                                " Highlight searches
