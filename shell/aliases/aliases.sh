@@ -6,6 +6,7 @@ alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
 alias ip='curl curlmyip.com'
 
+# cat with highlight
 alias cah="pygmentize -g"
 
 # highest rated results first
