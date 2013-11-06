@@ -4,13 +4,18 @@ alias internet\?="ping 8.8.8.8"
 alias b="bundle"
 alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
+alias ip='curl curlmyip.com'
 
 alias cah="pygmentize -g"
 
 # highest rated results first
 alias z="_z -r 2>&1"
 
+# strips formatting from pasteboard
+alias scrub='pbpaste | pbcopy'
 
+# copy with a progress bar.
+alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 
 d() {
   if [[ -n "$1" ]]; then
