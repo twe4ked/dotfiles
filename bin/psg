@@ -1,10 +1,27 @@
 #!/bin/bash -e
 #
-# See what's running
+# See what's running or kill it.
 
-if [[ $# -ne 1 ]] || [[ -z "$1" ]]; then
-  echo "usage: $(basename "$0") [pattern]" >&2
+if [[ -z "$1" ]]; then
+  echo "usage: $(basename "$0") [pattern] [-k|--kill]" >&2
   exit 1
 fi
 
-pgrep -fl "$@"
+_kill=false
+index=0
+parms=("$@")
+for arg in "$@"; do
+  if [[ "$arg" == "-k" || "$arg" == "--kill" ]]; then
+    unset parms[$index]
+    set -- "${parms[@]}"
+    _kill=true
+  fi
+  let "index+=1"
+done
+
+
+if $_kill; then
+  pkill -fl "$@"
+else
+  pgrep -fl "$@"
+fi
