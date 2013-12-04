@@ -80,6 +80,7 @@ fresh vim/colors --file=~/.vim/colors/
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
 fresh jasoncodes/dotfiles shell/config/filters.sh
+fresh jasoncodes/dotfiles shell/config/heroku.sh
 fresh jasoncodes/dotfiles shell/config/rbenv.sh
 
 fresh shell/exports.sh
