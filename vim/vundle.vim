@@ -14,7 +14,7 @@ Bundle 'bufkill.vim'
 Bundle 'dterei/VimBookmarking'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'tomtom/quickfixsigns_vim'
+Bundle 'airblade/vim-gitgutter'
 
 " Editing
 Bundle 'godlygeek/tabular'
