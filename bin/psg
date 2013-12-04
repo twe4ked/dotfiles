@@ -7,7 +7,4 @@ if [[ $# -ne 1 ]] || [[ -z "$1" ]]; then
   exit 1
 fi
 
-ps aux |
-grep -v grep |
-grep -v psg |
-grep -i $1
+pgrep -fl "$@"
