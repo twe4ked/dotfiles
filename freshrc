@@ -80,12 +80,11 @@ fresh vim/colors --file=~/.vim/colors/
 fresh jasoncodes/dotfiles shell/aliases/\*
 fresh jasoncodes/dotfiles shell/editor.sh
 fresh jasoncodes/dotfiles shell/config/filters.sh
+fresh jasoncodes/dotfiles shell/config/rbenv.sh
 
 fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
-
-fresh jasoncodes/dotfiles shell/config/rbenv.sh
 
 # irb
 fresh-options --file=~/.irbrc
