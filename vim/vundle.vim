@@ -31,6 +31,7 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jasoncodes/ctrlp-modified.vim'
+Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'mileszs/ack.vim'
 
 " Language
