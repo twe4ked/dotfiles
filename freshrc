@@ -114,5 +114,7 @@ mkdir -p ~/.git_template/hooks/
 ln -sf ~/bin/_git-pre-commit-hook ~/.git_template/hooks/pre-commit
 
 fresh_after_build() {
-  chflags hidden ~/bin
+  if which chflags &> /dev/null; then
+    chflags hidden ~/bin
+  fi
 }
