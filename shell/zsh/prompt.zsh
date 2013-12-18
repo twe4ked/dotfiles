@@ -7,7 +7,7 @@ autoload vcs_info
 # only show user and hostname when connected as root user or via ssh
 user_hostname() {
   if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
-    echo " "`whoami`@`hostname`
+    echo " "`whoami`@`hostname -s`
   fi
 }
 
