@@ -29,7 +29,7 @@ prompt_bg_job() {
 
 # show number of stashed items
 git_stash() {
-  git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ \+0//"
+  git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ +0//"
 }
 
 function prompt_pwd() {
