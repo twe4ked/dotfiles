@@ -83,6 +83,7 @@ fresh jasoncodes/dotfiles shell/config/filters.sh
 fresh jasoncodes/dotfiles shell/config/pager.sh
 fresh jasoncodes/dotfiles shell/config/heroku.sh
 fresh jasoncodes/dotfiles shell/config/rbenv.sh
+fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 
 fresh shell/exports.sh
