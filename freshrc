@@ -14,6 +14,7 @@ fresh-options --file
 fresh-options
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
+fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
 
 # Zsh
 fresh-options --file=~/.zshrc --marker
