@@ -17,3 +17,7 @@ path_add() {
 path_add "/usr/local/sbin"
 path_add "/usr/local/share/python/"
 path_add "/usr/local/share/npm/bin"
+
+# used by `dvcs` alias
+export GH_BASE=~/Dev/git
+export GH_USER="$GH_LOGIN"

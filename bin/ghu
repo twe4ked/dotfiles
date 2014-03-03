@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-function gh() {
+function ghu() {
   local URL="https://$(git config remote.origin.url | sed 's/\.git//' | sed 's/https:\/\///' | sed 's/git:\/\///' | sed 's/git@//' | tr ':' '/')"
 
   case "$1" in
@@ -20,7 +20,7 @@ function gh() {
       ;;
     *)
       cat <<EOF
-usage: gh [<command>] [<number>]
+usage: ghu [<command>] [<number>]
 
 The following commands are performed on the current project.
 
@@ -45,4 +45,4 @@ _append_id() {
   fi
 }
 
-gh "$@"
+ghu "$@"

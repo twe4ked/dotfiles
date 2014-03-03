@@ -1,0 +1,8 @@
+#compdef gh
+
+if [[ $CURRENT = 2 ]]; then
+  _values 'repositories' $(
+    cd "$GH_BASE"
+    find * -mindepth 1 -maxdepth 1 -type d
+  )
+fi
