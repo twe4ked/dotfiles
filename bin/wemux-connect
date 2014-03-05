@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+if [[ $# -ne 1 ]] || [[ -z "$1" ]]; then
+  echo "usage: $(basename "$0") <address>" >&2
+  exit 1
+fi
+
+ssh "wemux@$1"
