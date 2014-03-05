@@ -1,0 +1,6 @@
+#!/bin/bash -e
+#
+# Move all images from the desktop to funny folder
+
+find ~/Desktop \( -name '*.jpg' -o -name '*.jpeg' -o -name '*.gif' \) -print0 |
+  xargs -0 -J % mv -i % ~/Pictures/Funny/
