@@ -3,4 +3,4 @@
 HOST="$(echo "$1" | sed "s/http:\/\///" | sed "s/https:\/\///")"
 shift
 
-/sbin/ping "$HOST" "$@"
+ping "$HOST" "$@"
