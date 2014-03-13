@@ -11,18 +11,6 @@ user_hostname() {
   fi
 }
 
-prompt_color() {
-  if [ "$USER" = "root" ]; then
-    echo "red"
-  else
-    if [ -n "$SSH_TTY" ]; then
-      echo "blue"
-    else
-      echo "cyan"
-    fi
-  fi
-}
-
 prompt_bg_job() {
   jobs | grep '+' | awk '{print $4}'
 }
@@ -89,7 +77,7 @@ vi_mode_prompt_info() {
 
 local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
-local char='%{${fg[$(prompt_color)]}%}»%{${reset_color}%} '
+local char='%(?,%F{cyan}»,%F{red}»)%f '
 local git='${vcs_info_msg_0_}$(git_stash) '
 local timestamp='%* '
 local vi_mode='$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info) '
