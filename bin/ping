@@ -1,6 +1,10 @@
 #!/bin/bash -e
 
-HOST="$(echo "$1" | sed "s/http:\/\///" | sed "s/https:\/\///")"
+# strip $HOME/bin dir out of PATH
+PATH=$(echo $PATH | sed -e 's;:\?'$HOME/bin';;' -e 's;'$HOME/bin':\?;;')
+
+# Pull domain name from url
+HOST="$(echo "$1" | sed -r "s/http(s)?:\/\/([^\/]*)(\/.*)?/\2/")"
 shift
 
-/sbin/ping "$HOST" "$@"
+ping "$HOST" "$@"
