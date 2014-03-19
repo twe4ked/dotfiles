@@ -11,7 +11,6 @@ path_add() {
 }
 
 path_add "/usr/local/sbin"
-path_add "/usr/local/share/python/"
 path_add "/usr/local/share/npm/bin"
 
 if type go >/dev/null 2>&1; then
