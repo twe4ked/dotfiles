@@ -79,12 +79,11 @@ local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
 local char='%(?,%F{cyan}»,%F{red}»)%f '
 local git='${vcs_info_msg_0_}$(git_stash) '
-local timestamp='%* '
 local vi_mode='$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info) '
 local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%} '
 
 PROMPT=$cwd$usr$char
-RPROMPT=$vi_mode$bg_job$git$timestamp
+RPROMPT=$vi_mode$bg_job$git
 
 PROMPT2=$char
 RPROMPT2='[%_]'
