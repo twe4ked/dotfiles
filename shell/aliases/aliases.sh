@@ -1,7 +1,7 @@
 alias ls="ls -lGFh"
 alias history="fc -l 1"
 alias internet\?="ping 8.8.8.8"
-alias b="bundle check || bundle || bundle update"
+alias b="bundle check || bundle"
 alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
 alias ip='curl curlmyip.com'
