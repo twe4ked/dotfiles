@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'gems'
+rescue LoadError
+  abort <<-EOF
+The "gems" gem is missing and must be installed.
+
+    gem install gems
+  EOF
+end
+
+abort "usage: ruby #{File.basename($0)} [gem name]" if ARGV.size != 1
+
+info = Gems.info(ARGV[0])
+
+abort info unless info.is_a?(Hash)
+
+urls = info.select { |key,value| key =~ /_uri/ && value =~ %r{^https?://github.com/[^/]+/[^/]+$} }.values
+
+abort 'No GitHub URLs were found.' if urls.empty?
+
+urls.uniq.each do |url|
+  puts url
+end
