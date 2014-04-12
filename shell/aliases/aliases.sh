@@ -1,11 +1,10 @@
 alias ls="ls -lGFh"
 alias history="fc -l 1"
 alias internet\?="ping 8.8.8.8"
-alias b="bundle check || bundle"
+alias b="bundle check || bundle || bundle update"
 alias dev="cd $HOME/Dev"
-alias serve="ruby -run -e httpd . -p 5000"
+alias serve="python -m SimpleHTTPServer"
 alias ip='curl curlmyip.com'
-alias :e='vim'
 
 # cat with highlight
 alias cah="pygmentize -g"
