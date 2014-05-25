@@ -17,6 +17,7 @@ set laststatus=2                            " Always show the status line
 set history=1000
 set autoread
 set cursorline
+set backspace=indent,eol,start              " Make backspace behave rationally
 
 " Searching
 set hlsearch                                " Highlight searches
