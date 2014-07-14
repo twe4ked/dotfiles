@@ -1,0 +1,3 @@
+#!/bin/bash -e
+
+DEVELOPER_DIR=/Applications/Xcode6-Beta.app/Contents/Developer/ xcrun swift
