@@ -70,6 +70,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/config/bubbling.vim
   fresh jasoncodes/dotfiles vim/functions.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim
+  fresh jasoncodes/dotfiles vim/plugins/markdown.vim
   # Ruby autocommands
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter='sed -n 11,13p' --ref=da7d4a8
   fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
