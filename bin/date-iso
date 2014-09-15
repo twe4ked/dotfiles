@@ -1,0 +1,26 @@
+#!/bin/bash -e
+
+_help() {
+  echo "usage: $(basename "$0") [--touch-markdown]" >&2
+}
+
+_date_iso() {
+  date "+%Y-%m-%d"
+}
+
+
+if [[ $# -gt 1 ]]; then
+  _help
+  exit 1
+fi
+
+if [[ "$1" == *-h* ]]; then
+  _help
+  exit 0
+fi
+
+if [[ "$1" == "--touch-markdown" ]]; then
+  bash -cx "touch "$(set +x; _date_iso).markdown""
+else
+  _date_iso
+fi
