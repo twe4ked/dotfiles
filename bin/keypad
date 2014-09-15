@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+input = ARGV[0]
+
+help = "usage: #$0 [input]"
+
+unless input
+  abort help
+end
+
+if %w[--help -h].include? input
+  puts help
+  exit
+end
+
+output = []
+
+input.chars.each do |char|
+  output << case char
+  when /[abc]/i
+    2
+  when /[def]/i
+    3
+  when /[ghi]/i
+    4
+  when /[jkl]/i
+    5
+  when /[mno]/i
+    6
+  when /[pqrs]/i
+    7
+  when /[tuv]/i
+    8
+  when /[wxyz]/i
+    9
+  else
+    char
+  end
+end
+
+puts output.join
