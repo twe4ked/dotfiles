@@ -18,6 +18,8 @@ if type go >/dev/null 2>&1; then
   path_add "$GOPATH/bin"
 fi
 
+export PROJECTS=~/Dev/git
+
 # used by `dvcs` alias
-export GH_BASE=~/Dev/git
+export GH_BASE="$PROJECTS"
 export GH_USER="$GH_LOGIN"
