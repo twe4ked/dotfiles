@@ -1,0 +1,22 @@
+{
+  "iTerm": {
+    "path": "/Applications/iTerm.app",
+    "shortcut": "t"
+  },
+  "Chrome Incognito": {
+    "path": "~/bin/incognito",
+    "shortcut": "i"
+  },
+  "Safari": {
+    "path": "/Applications/Safari.app",
+    "shortcut": "s"
+  },
+  "Xcode": {
+    "path": "Xcode",
+    "shortcut": "x"
+  },
+  "Bounce Wi-Fi": {
+    "path": "~/bin/airport-bounce",
+    "shortcut": "b"
+  },
+}
