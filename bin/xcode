@@ -1,6 +1,8 @@
 #!/bin/bash -e
 
-if [ -e *.xcodeproj ]; then
+if [ -e *.xcworkspace ]; then
+  open *.xcworkspace
+elif [ -e *.xcodeproj ]; then
   open *.xcodeproj
 else
   echo No Xcode project found
