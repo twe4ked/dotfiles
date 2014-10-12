@@ -1,0 +1,25 @@
+#!/bin/bash -e
+#
+# displays the git author
+# returns 1 if different from the one set in the git config
+
+_git_author_environment_variables() {
+  if [[ -n "$GIT_AUTHOR_NAME" && -n "$GIT_AUTHOR_EMAIL" ]]; then
+    echo "$GIT_AUTHOR_NAME <$GIT_AUTHOR_EMAIL>"
+  fi
+}
+
+_git_author_config_file() {
+  echo "$(git config --get user.name) <$(git config --get user.email)>"
+}
+
+_git_author() {
+  if [[ -n "$(_git_author_environment_variables)" ]]; then
+    _git_author_environment_variables
+  else
+    _git_author_config_file
+  fi
+}
+
+_git_author
+[[ "$(_git_author)" == "$(_git_author_config_file)" ]]
