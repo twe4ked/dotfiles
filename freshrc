@@ -23,6 +23,7 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/aliases.zsh
   fresh shell/zsh/zshrc
   fresh shell/zsh/keybindings.zsh
+  fresh shell/zsh/selecta.zsh
 
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
@@ -111,6 +112,7 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/+x
   fresh defunkt/repl bin/repl
   fresh hackling/morse bin/morse
+  fresh garybernhardt/selecta selecta
 fresh-options
 fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
 
