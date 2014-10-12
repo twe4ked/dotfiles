@@ -1,0 +1,33 @@
+#! /usr/bin/env ruby
+#
+# Shorten a URL at on.odin.bz
+#
+# USAGE:
+#
+#   $ shorten http://google.com
+#   # => http://on.odin.bz/afno21r
+#
+#   $ shorten http://google.com google
+#   # => http://on.odin.bz/google
+#
+# AUTHOR:
+#
+#   Parker Moore (@parkr)
+
+ARGV.empty? && abort('Provide the URL at least. Gosh.')
+
+HOST = ENV['SHORTEN_HOST'] || 'http://on.odin.bz'
+
+args = ['url', 'code'].zip(ARGV)
+args.reject! { |_, v| v.nil? || v.empty? }
+curl_args = args.map { |pair| %Q{-F "#{pair.join('=')}"} }.join(' ')
+
+response = `curl #{HOST} -si #{curl_args}`
+match_data = /^Location:\s+(.+)$/.match(response)
+
+if match_data && match_data[1]
+  puts match_data[1].strip
+else
+  puts response
+  abort 'WHOA I GOT NOTHING'
+end
