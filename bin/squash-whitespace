@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Squashes extra whitespace between columns.
+#
+# If you `grep` a large amount of columned text you will often end up with extra
+# unwanted space between the columns. Add this to your pipeline to squash space.
+
+cat | sed -E 's/[[:space:]]+/‽/g' | column -t -s ‽
