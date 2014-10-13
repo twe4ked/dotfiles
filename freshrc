@@ -105,6 +105,7 @@ fresh-options
 # bin
 fresh-options --bin
   fresh bin/\*
+  fresh twe4ked/catacomb bin/catacomb
   fresh jasoncodes/dotfiles bin/\*
   fresh jasoncodes/dotfiles bin/wemux/\*
   fresh pengwynn/dotfiles bin/gxpr
