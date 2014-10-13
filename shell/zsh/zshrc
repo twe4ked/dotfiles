@@ -18,6 +18,9 @@ setopt auto_pushd                   # make cd push the old directory onto the di
 setopt glob_complete                # complete globs instead of expanding
 setopt complete_in_word
 setopt always_to_end
+
+# By default, ^S freezes terminal output and ^Q resumes it. Disable that so
+# that those keys can be used for other things.
 setopt no_flowcontrol
 
 WORDCHARS=''
