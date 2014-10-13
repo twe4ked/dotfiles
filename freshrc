@@ -117,6 +117,8 @@ fresh-options --bin
   fresh garybernhardt/selecta selecta
   fresh garybernhardt/dotfiles bin/field
   fresh garybernhardt/dotfiles bin/run-command-on-git-revisions
+  fresh pengwynn/dotfiles bin/git-pr
+  fresh pengwynn/dotfiles bin/mx
 fresh-options
 fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
 
