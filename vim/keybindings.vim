@@ -19,8 +19,8 @@ map <Leader>f :Ack!<Space>
 map <Leader>F :AckFromSearch<CR>
 
 " Use ,d (or ,dd or ,dj or 20,dd) to delete a line without yanking
-nmap <silent> <leader>d "_d
-vmap <silent> <leader>d "_d
+nmap <silent> <leader>gd "_d
+vmap <silent> <leader>gd "_d
 
 " Yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
