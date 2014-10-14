@@ -7,13 +7,6 @@ map <silent><Leader>q :Bclose<CR>
 noremap <leader>i :set list!<CR>
 nmap <leader>ss :source $HOME/.vimrc<CR>
 
-" Window Navigation
-" Use ctrl+(h|j|k|j) to move through open windows.
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
 " Clear search
 map <silent><Leader>/ :nohls<CR>
 
