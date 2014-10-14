@@ -48,3 +48,6 @@ colorscheme jellybeans_custom
 
 " Use % to jump to matching begin/end of blocks as well as brackets/parens
 runtime macros/matchit.vim
+
+" open current file/line on GitHub
+command! GitHubOpen execute "silent !git github-url % ".line('.')."| xargs open" | redraw!
