@@ -5,4 +5,9 @@ if [[ -n "$@" ]]; then
   exit 1
 fi
 
-git config --get remote.origin.url | sed -E 's/.+:(.+)\.git$/https:\/\/github\.com\/\1/g'
+if [[ "$(git config --get remote.origin.url)" = *github* ]]; then
+  git config --get remote.origin.url | sed -E 's/.+:(.+)\.git$/https:\/\/github\.com\/\1/g'
+else
+  echo "not a GitHub remote"
+  exit 1
+fi
