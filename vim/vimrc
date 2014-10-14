@@ -4,7 +4,6 @@ set linebreak                               " ...but when I do, I wrap whole wor
 set t_Co=256                                " Support for xterm with 256 colors
 set number                                  " Show line numbers
 set ruler                                   " Show ruler
-set listchars=trail:.,tab:>-,eol:¬          " Change the invisible characters
 set noswapfile                              " Don't create annoying *.swp files
 set scrolloff=5                             " Start scrolling the file 5 lines before the end of the window
 set spelllang=en_au                         " Set default spelling language to English (Australia)
@@ -18,6 +17,9 @@ set history=1000
 set autoread
 set cursorline
 set backspace=indent,eol,start              " Make backspace behave rationally
+
+" Change the invisible characters
+set listchars=trail:.,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
 " Searching
 set hlsearch                                " Highlight searches
