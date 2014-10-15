@@ -15,6 +15,9 @@ function! WhatTheSize()
 endfunction
 autocmd BufEnter *.jpg,*.png call WhatTheSize()
 
+" :help last-position-jump
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
 " Set colorcolumn to the current textwidth or fallback to the specified column.
 function! ColorColumnAtTextWidth(column)
   if &textwidth > 0
