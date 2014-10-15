@@ -16,6 +16,19 @@ zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm -w -w"
 
+# generate descriptions with magic.
+zstyle ':completion:*' auto-description 'specify: %d'
+
+# don't prompt for a huge list use a page or menu
+zstyle ':completion:*:default' list-prompt '%S%M matches%s'
+zstyle ':completion:*:default' menu 'select=0'
+
+# have the newer files last
+zstyle ':completion:*' file-sort modification reverse
+
+# separate man page sections
+zstyle ':completion:*:manuals' separate-sections true
+
 # disable named-directories autocompletion
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
