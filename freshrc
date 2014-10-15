@@ -76,6 +76,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/functions.vim
   fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim --filter=filter_vundle_lines
   fresh jasoncodes/dotfiles vim/plugins/markdown.vim --filter=filter_vundle_lines
+  fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter=filter_vundle_lines
   # Ruby autocommands
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter='sed -n 11,13p' --ref=da7d4a8
   fresh hackling/dotfiles vim/plugins/surround.vim --filter=filter_vundle_lines
