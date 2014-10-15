@@ -55,6 +55,3 @@ runtime macros/matchit.vim
 
 " http://tim.theenchanter.com/2008/07/crontab-temp-file-must-be-edited-in.html
 set backupskip=/tmp/*,/private/tmp/*"
-
-" open current file/line on GitHub
-command! GitHubOpen execute "silent !git github-url % ".line('.')."| xargs open" | redraw!
