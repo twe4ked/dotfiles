@@ -62,7 +62,6 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh vim/keybindings.vim
   fresh vim/plugin_config/\*
   fresh vim/config/\*
-  fresh vim/auto_commands.vim
   fresh vim/vimrc
   fresh jasoncodes/dotfiles vim/mappings/indent.vim
   fresh jasoncodes/dotfiles vim/mappings/pasteboard.vim
