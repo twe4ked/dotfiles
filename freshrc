@@ -80,6 +80,7 @@ fresh-options --file=~/.vimrc --marker=\"
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter='sed -n 11,13p' --ref=da7d4a8
   fresh hackling/dotfiles vim/plugins/surround.vim --filter=filter_vundle_lines
   fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
+  fresh jasoncodes/dotfiles vim/config/completion.vim
   fresh hackling/dotfiles vim/keybindings/numpad.vim
 fresh-options
 fresh vim/gvimrc --file
