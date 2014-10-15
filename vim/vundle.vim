@@ -32,6 +32,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jasoncodes/ctrlp-modified.vim'
 Bundle 'tacahiroy/ctrlp-funky'
+Bundle 'ivalkeen/vim-ctrlp-tjump'
 Bundle 'mileszs/ack.vim'
 
 " Language
