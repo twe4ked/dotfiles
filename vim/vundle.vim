@@ -47,7 +47,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'kablamo/vim-git-log'
 
 " Colours
-Bundle 'twe4ked/vim-colorscheme-switcher'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bclear'
