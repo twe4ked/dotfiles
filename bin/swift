@@ -1,3 +1,0 @@
-#!/bin/bash -e
-
-DEVELOPER_DIR="/Applications/$(command ls /Applications | grep Xcode | sort -r | head -n 1)/Contents/Developer/" xcrun swift
