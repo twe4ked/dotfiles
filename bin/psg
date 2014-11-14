@@ -21,7 +21,7 @@ done
 
 
 if $_kill; then
-  pkill -fl "$@"
+  pkill -fli "$@"
 else
-  pgrep -fl "$@"
+  pgrep -fli "$@"
 fi
