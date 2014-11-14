@@ -1,5 +1,5 @@
 ping() {
-  HOST="$(echo "$1" | sed "s/http:\/\///" | sed "s/https:\/\///")"
+  HOST="$(echo "$1" | sed -E "s/https{0,1}:\/\///")"
   shift
 
   command ping "$HOST" "$@"
