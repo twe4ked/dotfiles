@@ -136,4 +136,8 @@ fresh_after_build() {
   if which chflags &> /dev/null; then
     chflags hidden ~/bin
   fi
+
+  if [[ ! -L ~/bin/diff-highlight ]]; then
+    ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ~/bin/diff-highlight
+  fi
 }
