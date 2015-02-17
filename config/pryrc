@@ -31,15 +31,14 @@ old_winch = trap 'WINCH' do
 end
 
 # use awesome print for output if available
-original_print = Pry.config.print
-Pry.config.print = proc do |output, value|
-  begin
-    require 'awesome_print'
+begin
+  require 'awesome_print'
+  Pry.config.print = proc do |output, value|
     value = value.to_a if defined?(ActiveRecord) && value.is_a?(ActiveRecord::Relation)
     output.puts value.ai
-  rescue LoadError => err
-    original_print.call(output, value)
   end
+rescue LoadError => err
+  Pry.config.print = Pry::DEFAULT_PRINT
 end
 
 # startup hooks
