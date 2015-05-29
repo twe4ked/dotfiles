@@ -1,4 +1,5 @@
-alias ls="ls -lGFh"
+alias ls="ls -F"
+alias ll="ls -lGFh"
 alias history="fc -l 1"
 alias internet\?="ping 8.8.8.8"
 alias b="bundle check || bundle"
