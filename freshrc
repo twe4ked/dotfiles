@@ -90,7 +90,7 @@ fresh jasoncodes/dotfiles shell/editor.sh
 fresh jasoncodes/dotfiles shell/config/filters.sh
 fresh jasoncodes/dotfiles shell/config/pager.sh
 fresh jasoncodes/dotfiles shell/config/heroku.sh
-fresh jasoncodes/dotfiles shell/config/rbenv.sh --ref=1411943
+fresh jasoncodes/dotfiles shell/config/chruby.sh
 fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 fresh markryall/dotfiles shell/aliases/dvcs.sh
