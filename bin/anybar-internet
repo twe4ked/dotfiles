@@ -1,0 +1,29 @@
+#!/bin/bash -e
+#
+# Put the following in `~/Library/LaunchAgents/com.twe4ked.anybar-internet'.
+#
+#     <?xml version="1.0" encoding="UTF-8"?>
+#     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+#     <plist version="1.0">
+#     <dict>
+#     	<key>Label</key>
+#     	<string>com.twe4ked.anybar-internet</string>
+#     	<key>Program</key>
+#     	<string>/Users/odin/bin/anybar-internet</string>
+#     	<key>KeepAlive</key>
+#     	<true/>
+#     </dict>
+#     </plist>
+
+trap exit SIGINT SIGTERM
+
+ANYBAR="nc -4u -w0 localhost 1738"
+
+while true; do
+  if host -W 1 google.com > /dev/null; then
+    echo -n black | $ANYBAR
+    sleep 5
+  else
+    echo -n red | $ANYBAR
+  fi
+done
