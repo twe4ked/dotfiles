@@ -15,12 +15,17 @@
 #     </dict>
 #     </plist>
 
-trap exit SIGINT SIGTERM
+quit() {
+  echo -n question | $ANYBAR
+  exit
+}
+
+trap quit EXIT
 
 ANYBAR="nc -4u -w0 localhost 1738"
 
 while true; do
-  if host -W 1 google.com > /dev/null; then
+  if ping -c 5 -t 5 -o 8.8.8.8 &> /dev/null; then
     echo -n black | $ANYBAR
     sleep 5
   else
