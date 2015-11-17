@@ -5,3 +5,6 @@ nnoremap <Leader>U :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " Only cache if we're over this number of files
 let g:ctrlp_use_caching = 2000
+
+" JazzCore/ctrlp-cmatcher
+let g:ctrlp_match_func = {'match' : 'matcher#cmatch'}
