@@ -1,5 +1,12 @@
 # vim: set ft=sh:
 
+if [[ $(hostname -s) = "caladan" ]]; then
+  WORK=1
+  echo "----> Including work config."
+else
+  WORK=0
+fi
+
 fresh freshshell/fresh bin/fresh --bin
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 fresh freshshell/fresh-open bin/fresh-open --bin
@@ -28,6 +35,10 @@ fresh-options --file=~/.zshrc --marker
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
   fresh freshshell/fresh contrib/source-build.sh
+
+  if [[ "$WORK" == 1 ]]; then
+    fresh shell/rbenv.sh
+  fi
 
   fresh rupa/z z.sh
   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
