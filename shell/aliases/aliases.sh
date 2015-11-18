@@ -5,7 +5,6 @@ alias internet\?="ping 8.8.8.8"
 alias b="bundle check || bundle"
 alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
-alias serve-ruby="ruby -run -e httpd . -p 5000"
 alias ip='curl curlmyip.com'
 
 # cat with highlight
