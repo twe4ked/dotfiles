@@ -34,6 +34,7 @@ Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'ivalkeen/vim-ctrlp-tjump'
 Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'mileszs/ack.vim'
+Bundle 'ludovicchabant/vim-gutentags'
 
 " Language
 Bundle 'tpope/vim-rails'
