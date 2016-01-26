@@ -36,6 +36,9 @@ _tmux_preexec() {
     rs|rs\ *)
       _tmux_rename_window "$(_tmux_window_dir server)"
       ;;
+    fs|fs\ *)
+      _tmux_rename_window "$(_tmux_window_dir foreman)"
+      ;;
     zs|zs\ *)
       if [[ -n "$TMUX" ]]; then
         tmux send-keys -R
