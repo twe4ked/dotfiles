@@ -65,3 +65,7 @@ nnoremap = v=
 " Q normally enters Ex mode
 " I want to use it to run the q macro
 map Q @q
+
+" Command line history
+cnoremap <c-n> <down>
+cnoremap <c-p> <up>
