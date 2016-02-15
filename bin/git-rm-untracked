@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-git status --porcelain | grep "??" | cut -d" " -f 2 | xargs rm
+git status --porcelain --untracked-files=all | grep "??" | cut -d" " -f 2 | xargs rm
