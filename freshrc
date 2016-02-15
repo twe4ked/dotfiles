@@ -111,6 +111,10 @@ fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
 
+if [[ "$WORK" == 1 ]]; then
+  fresh shell/boxen.sh
+fi
+
 # irb
 fresh-options --file=~/.irbrc
   fresh config/irb/encoding.rb
