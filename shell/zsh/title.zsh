@@ -1,8 +1,3 @@
-if [[ "$TERM" =~ ^xterm ]] then
-  print -Pn "\e]2;%n@%M: %~\a"  # display "user@hostname: dir" in the window title
-  print -Pn "\e]1;%1~\a"        # display "dir" in the terminal tabs
-fi
-
 # appears at the beginning of (and during) of command execution
 termsupport_preexec() {
   emulate -L zsh
