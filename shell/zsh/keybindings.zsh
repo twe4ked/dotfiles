@@ -27,3 +27,6 @@ bindkey -M viins '^e' end-of-line
 
 # clear the current line then bring it back after the next command
 bindkey -M vicmd 'q' push-line
+
+# unbind ^D. for some reason it's bound to `list-choices` by default
+bindkey -r ^d
