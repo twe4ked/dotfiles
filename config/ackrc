@@ -20,6 +20,7 @@
 --ignore-dir=tmp
 --ignore-dir=vendor/bundle
 --ignore-dir=.bundle
+--ignore-dir=results
 --ignore-dir=coverage
 --ignore-dir=_site
 --smart-case
