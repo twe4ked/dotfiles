@@ -75,16 +75,23 @@ vi_mode_prompt_info() {
   echo "${${KEYMAP/vicmd/$VI_MODE_INDICATOR}/(main|viins)/}"
 }
 
+if [[ $(hostname -s) = "caladan" ]]; then
+  local char="λ"
+else
+  local char="»"
+fi
+
 local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
-local char='%(?,%F{cyan}»,%F{red}»)%f '
+local colored_char='%(?,%F{cyan}$char,%F{red}$char)%f '
+
 local git='${vcs_info_msg_0_}$(git_stash) '
 local git_author='$(git author > /dev/null || echo "$(git author) ")'
 local vi_mode='$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info) '
 local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%} '
 
-PROMPT=$cwd$usr$char
+PROMPT=$cwd$usr$colored_char
 RPROMPT=$vi_mode$bg_job$git_author$git
 
-PROMPT2=$char
+PROMPT2=$colored_char
 RPROMPT2='[%_]'
