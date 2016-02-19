@@ -44,6 +44,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
+Bundle 'elixir-lang/vim-elixir'
 
 " Git
 Bundle 'tpope/vim-fugitive'
