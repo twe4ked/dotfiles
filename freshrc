@@ -67,7 +67,7 @@ filter_vundle_lines() {
 }
 
 # Vim
-fresh-options --file=~/.vimrc --marker=\"
+fresh-options --file=~/.vimrc --marker='"'
   fresh vim/leader.vim
   fresh vim/vundle_before.vim
   fresh vim/vundle.vim
