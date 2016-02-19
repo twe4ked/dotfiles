@@ -45,6 +45,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-cucumber'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'slim-template/vim-slim.git'
 
 " Git
 Bundle 'tpope/vim-fugitive'
