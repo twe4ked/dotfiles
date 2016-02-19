@@ -16,8 +16,6 @@
   commit = yellow reverse
 [push]
   default = tracking
-[init]
-  templatedir = ~/.git_template
 [merge]
   log = true
   conflictstyle = diff3
