@@ -56,8 +56,7 @@ _tmux_precmd() {
   unset AUTO_RENAME
 }
 
-[[ -z \$precmd_functions ]] && precmd_functions=()
-precmd_functions=(\$precmd_functions _tmux_precmd)
+autoload -U add-zsh-hook
 
-[[ -z \$preexec_functions ]] && preexec_functions=()
-preexec_functions=(\$preexec_functions _tmux_preexec)
+add-zsh-hook precmd _tmux_precmd
+add-zsh-hook preexec _tmux_preexec
