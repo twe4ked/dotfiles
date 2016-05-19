@@ -10,10 +10,6 @@ nmap <leader>ss :source $HOME/.vimrc<CR>
 " Clear search
 map <silent><Leader>/ :nohls<CR>
 
-" NERDTree
-map <leader>n :NERDTreeToggle<CR>
-map <leader>N :NERDTreeFind<CR>
-
 " Ack
 map <Leader>f :Ack!<Space>
 map <Leader>F :AckFromSearch<CR>
