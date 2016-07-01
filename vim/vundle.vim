@@ -57,3 +57,4 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'bclear'
 Bundle 'noahfrederick/Hemisu'
 Bundle 'AlxHnr/clear_colors'
+Bundle 'sonph/onehalf', {'rtp': 'vim/'}
