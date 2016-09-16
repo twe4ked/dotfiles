@@ -60,6 +60,8 @@ fresh thoughtbot/dotfiles zsh/completion/_ag --file=completion/_ag
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/brackets/brackets-highlighter.zsh --file=vendor/highlighters/brackets/brackets-highlighter.zsh
+fresh zsh-users/zsh-syntax-highlighting .version --file=vendor/.version
+fresh zsh-users/zsh-syntax-highlighting .revision-hash --file=vendor/.revision-hash
 fresh shell/zsh/zsh-syntax-highlighting.zsh --file=~/.zshrc
 
 filter_vundle_lines() {
