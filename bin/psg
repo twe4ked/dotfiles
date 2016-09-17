@@ -3,7 +3,7 @@
 # See what's running or kill it.
 
 if [[ -z "$1" ]]; then
-  echo "usage: $(basename "$0") [pattern] [-k|--kill]" >&2
+  echo "usage: $(basename "$0") [pattern] [-k]" >&2
   exit 1
 fi
 
