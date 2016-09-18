@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Move file .bak or from .bak or copy file
+
+if [[ $1 == "-c" ]]; then
+  CMD=cp
+  shift
+else
+  CMD=mv
+fi
+
+if [[ $# == 0 ]]; then
+  echo "usage: $(basename "$0") [-c] file ..." >&2
+  exit 1
+fi
+
+for FILE in "$@"; do
+  if [[ "$FILE" =~ .bak$ ]]; then
+    "$CMD" "$FILE" "$(echo "$FILE" | sed 's/\.bak$//')"
+  else
+    "$CMD" "$FILE" "$FILE.bak"
+  fi
+done
