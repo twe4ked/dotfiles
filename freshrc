@@ -30,6 +30,7 @@ fresh-options
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
+fresh config/mutt --file=~/.mutt/
 
 # Zsh
 fresh-options --file=~/.zshrc --marker
@@ -162,4 +163,6 @@ fresh_after_build() {
   if [[ ! -L ~/bin/diff-highlight ]]; then
     ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ~/bin/diff-highlight
   fi
+
+  mkdir -p ~/.mutt/tmp
 }
