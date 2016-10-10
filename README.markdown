@@ -14,7 +14,7 @@ My dotfiles are managed by [fresh].
 ## TODO
 
 - https://github.com/sdt/tmux-vim
-- Add supertap, see jasoncodes vim completion file (<c-v> <tab> inserts an actual tab)
+- Add supertap, see jasoncodes vim completion file (`<C-v> <tab>` inserts an actual tab)
 - Replace vim statusline with lightline.vim: https://github.com/itchyny/lightline.vim
 - Look into tmux completion scripts:
   - https://gist.github.com/skanev/1716179
