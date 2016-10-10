@@ -21,6 +21,7 @@ My dotfiles are managed by [fresh].
 - Look into tmux completion scripts:
   - https://gist.github.com/skanev/1716179
   - https://github.com/skanev/dotfiles/commit/36439ab6b9a7c28d5b04354db1c39d4c3e38902a
+- Switch to vim-plug
 
 ## Notes
 
