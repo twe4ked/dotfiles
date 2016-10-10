@@ -10,3 +10,17 @@ chsh -s /bin/zsh
 My dotfiles are managed by [fresh].
 
 [fresh]: https://github.com/freshshell/fresh
+
+## TODO
+
+- Look into fzf: https://github.com/junegunn/fzf.vim
+- Improve ctrlp speed: https://github.com/henrik/dotfiles/commit/36156e5d068f6bbdc81505c80c17cd871d5062bd
+- https://github.com/sdt/tmux-vim
+- Add supertap, see jasoncodes vim completion file (<c-v> <tab> inserts an actual tab)
+- Replace vim statusline with lightline.vim: https://github.com/itchyny/lightline.vim
+
+## Notes
+
+Use an & to in Vim substitutions:
+
+    :%s/foo_bar/&_baz/g
