@@ -38,6 +38,7 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/title.zsh
   fresh shell/zsh/aliases.zsh
   fresh shell/zsh/zshrc
+  fresh shell/zsh/direnv.zsh
   fresh shell/zsh/keybindings.zsh
   fresh shell/zsh/selecta.zsh
 
