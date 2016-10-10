@@ -42,6 +42,9 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/keybindings.zsh
   fresh shell/zsh/selecta.zsh
 
+  fresh junegunn/fzf shell/completion.zsh
+  fresh junegunn/fzf shell/key-bindings.zsh
+
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
   fresh freshshell/fresh contrib/source-build.sh
