@@ -13,8 +13,6 @@ My dotfiles are managed by [fresh].
 
 ## TODO
 
-- Look into fzf: https://github.com/junegunn/fzf.vim
-- Improve ctrlp speed: https://github.com/henrik/dotfiles/commit/36156e5d068f6bbdc81505c80c17cd871d5062bd
 - https://github.com/sdt/tmux-vim
 - Add supertap, see jasoncodes vim completion file (<c-v> <tab> inserts an actual tab)
 - Replace vim statusline with lightline.vim: https://github.com/itchyny/lightline.vim
@@ -22,6 +20,7 @@ My dotfiles are managed by [fresh].
   - https://gist.github.com/skanev/1716179
   - https://github.com/skanev/dotfiles/commit/36439ab6b9a7c28d5b04354db1c39d4c3e38902a
 - Switch to vim-plug
+- Fully replace CtrlP with fzf
 
 ## Notes
 

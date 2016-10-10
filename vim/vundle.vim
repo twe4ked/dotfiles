@@ -29,6 +29,8 @@ Bundle 'bkad/CamelCaseMotion'
 " Navigation
 Bundle 'tpope/vim-vinegar'
 Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
 Bundle 'jasoncodes/ctrlp-modified.vim'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'ivalkeen/vim-ctrlp-tjump'
