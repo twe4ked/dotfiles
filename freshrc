@@ -88,7 +88,6 @@ fresh-options --file=~/.vimrc --marker='"'
   fresh vim/vundle_before.vim
   fresh vim/vundle.vim
   fresh vim/vundle_after.vim
-  fresh jasoncodes/dotfiles vim/plugins/ctrlp.vim --filter=filter_vundle_lines
   fresh vim/plugin_config/\*
   fresh vim/config/\*
   fresh vim/vimrc
