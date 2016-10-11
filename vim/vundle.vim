@@ -11,7 +11,6 @@ Bundle 'Soares/butane.vim'
 Bundle 'bufkill.vim'
 
 " Visual
-Bundle 'dterei/VimBookmarking'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'airblade/vim-gitgutter'
