@@ -38,10 +38,6 @@ set smarttab                                " Use shiftwidth and softtabstop to 
 set cindent                                 " Recommended seting for automatic C-style indentation
 set autoindent                              " Automatic indentation in non-C files
 
-" Prevent Vim from clobbering the scrollback buffer
-" See http://www.shallowsky.com/linux/noaltscreen.html
-set t_ti= t_te=
-
 let g:is_posix = 1                          " Better highlighting of shell files
 
 filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
