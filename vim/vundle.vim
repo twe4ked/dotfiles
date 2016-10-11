@@ -6,7 +6,6 @@ Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-dispatch'
 
 " Buffers
-Bundle 'nathanaelkane/vim-command-w'
 Bundle 'Soares/butane.vim'
 Bundle 'bufkill.vim'
 
