@@ -12,7 +12,6 @@ Bundle 'bufkill.vim'
 
 " Visual
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'airblade/vim-gitgutter'
 
 " Editing
