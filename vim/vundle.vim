@@ -7,7 +7,6 @@ Bundle 'tpope/vim-dispatch'
 
 " Buffers
 Bundle 'Soares/butane.vim'
-Bundle 'bufkill.vim'
 
 " Visual
 Bundle 'airblade/vim-gitgutter'
