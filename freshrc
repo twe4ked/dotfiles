@@ -88,6 +88,7 @@ fresh-options --file=~/.vimrc --marker='"'
   fresh vim/vundle_before.vim
   fresh vim/vundle.vim
   fresh vim/vundle_after.vim
+  fresh vim/plug.vim
   fresh vim/plugin_config/\*
   fresh vim/config/\*
   fresh vim/vimrc
@@ -109,6 +110,7 @@ fresh-options --file=~/.vimrc --marker='"'
 fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
+fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
 
 # Shell
 fresh jasoncodes/dotfiles shell/aliases/\*

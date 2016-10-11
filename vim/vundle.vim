@@ -52,7 +52,6 @@ Bundle 'kablamo/vim-git-log'
 
 " Colours
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'nanotech/jellybeans.vim'
 Bundle 'bclear'
 Bundle 'noahfrederick/Hemisu'
 Bundle 'AlxHnr/clear_colors'
