@@ -35,7 +35,7 @@ set softtabstop=2                           " Number of spaces to skip or insert
 set expandtab                               " Spaces instead of tabs for better cross-editor compatibility
 set autoindent                              " Keep the indent when creating a new line
 set smarttab                                " Use shiftwidth and softtabstop to insert or delete (on <BS>) blanks
-set cindent                                 " Recommended seting for automatic C-style indentation
+set cindent                                 " Recommended setting for automatic C-style indentation
 set autoindent                              " Automatic indentation in non-C files
 
 let g:is_posix = 1                          " Better highlighting of shell files
