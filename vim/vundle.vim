@@ -48,7 +48,6 @@ Bundle 'slim-template/vim-slim.git'
 
 " Git
 Bundle 'tpope/vim-fugitive'
-Bundle 'kablamo/vim-git-log'
 
 " Colours
 Bundle 'altercation/vim-colors-solarized'
