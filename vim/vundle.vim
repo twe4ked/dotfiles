@@ -11,7 +11,6 @@ Bundle 'Soares/butane.vim'
 Bundle 'bufkill.vim'
 
 " Visual
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'airblade/vim-gitgutter'
 
 " Editing
