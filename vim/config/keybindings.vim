@@ -10,10 +10,6 @@ nmap <leader>ss :source $HOME/.vimrc<CR>
 " Clear search
 map <silent><Leader>/ :nohls<CR>
 
-" Ack
-map <Leader>f :Ack!<Space>
-map <Leader>F :AckFromSearch<CR>
-
 " Use ,d (or ,dd or ,dj or 20,dd) to delete a line without yanking
 nmap <silent> <leader>gd "_d
 vmap <silent> <leader>gd "_d
