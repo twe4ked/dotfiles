@@ -26,8 +26,6 @@ Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'jasoncodes/ctrlp-modified.vim'
 Bundle 'junegunn/fzf'
 Bundle 'junegunn/fzf.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'henrik/git-grep-vim'
 Bundle 'ludovicchabant/vim-gutentags'
 
 " Language
