@@ -85,9 +85,6 @@ filter_vundle_lines() {
 # Vim
 fresh-options --file=~/.vimrc --marker='"'
   fresh vim/leader.vim
-  fresh vim/vundle_before.vim
-  fresh vim/vundle.vim
-  fresh vim/vundle_after.vim
   fresh vim/plug.vim
   fresh vim/plugin_config/\*
   fresh vim/config/\*
@@ -99,14 +96,11 @@ fresh-options --file=~/.vimrc --marker='"'
   fresh jasoncodes/dotfiles vim/config/auto_mkdir.vim
   fresh jasoncodes/dotfiles vim/config/search.vim
   fresh jasoncodes/dotfiles vim/config/cursor.vim
-  fresh jasoncodes/dotfiles vim/config/bubbling.vim
+  fresh jasoncodes/dotfiles vim/config/bubbling.vim --filter=filter_vundle_lines
   fresh jasoncodes/dotfiles vim/functions.vim
   fresh jasoncodes/dotfiles vim/plugins/markdown.vim --filter=filter_vundle_lines
   fresh jasoncodes/dotfiles vim/plugins/ruby.vim --filter=filter_vundle_lines
-  fresh hackling/dotfiles vim/plugins/surround.vim --filter=filter_vundle_lines
   fresh hackling/dotfiles vim/keybindings/filename-to-clipboard.vim
-  fresh nathanaelkane/dotfiles vim/plugins/easymotion.vim
-  fresh jasoncodes/dotfiles vim/config/completion.vim
 fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
