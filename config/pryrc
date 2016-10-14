@@ -18,8 +18,8 @@ Pry.config.prompt = [
   proc do |object, nest_level, pry|
     prompt  = colour :bright_black, Pry.view_clip(object)
     prompt += ":#{nest_level}" if nest_level > 0
-    prompt += colour :cyan, ' » '
-  end, proc { |object, nest_level, pry| colour :cyan, '» ' }
+    prompt += colour :cyan, " > "
+  end, proc { |object, nest_level, pry| colour :cyan, "> " }
 ]
 
 # tell Readline when the window resizes
