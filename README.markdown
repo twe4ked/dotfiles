@@ -19,7 +19,6 @@ My dotfiles are managed by [fresh].
 - Look into tmux completion scripts:
   - https://gist.github.com/skanev/1716179
   - https://github.com/skanev/dotfiles/commit/36439ab6b9a7c28d5b04354db1c39d4c3e38902a
-- Fully replace CtrlP with fzf
 - http://brettterpstra.com/2016/09/29/a-better-hyper-key-hack-for-sierra/
 - https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins
 
