@@ -1,7 +1,7 @@
 command! FzfBranch call fzf#run({
 \   'source': 'git diff $(git merge-base origin/HEAD HEAD).. --name-only | sort -u | xargs find 2> /dev/null',
 \   'sink': 'edit',
-\   'options': '-m -x +s --prompt="GitBranch> "',
+\   'options': '-m +s --prompt="GitBranch> "',
 \   'down': '40%'
 \ })
 
