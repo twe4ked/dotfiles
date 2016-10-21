@@ -1,1 +1,6 @@
 .DS_Store
+
+# vim-gutentags
+tags
+tags.temp
+tags.lock
