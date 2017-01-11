@@ -51,10 +51,6 @@ fresh-options --file=~/.zshrc --marker
   # compdef be availiable
   fresh freshshell/fresh contrib/source-build.sh
 
-  if [[ "$WORK" == 1 ]]; then
-    fresh shell/rbenv.sh
-  fi
-
   fresh rupa/z z.sh
   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
