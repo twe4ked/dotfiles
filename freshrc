@@ -109,13 +109,6 @@ fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
 
-# irb
-fresh-options --file=~/.irbrc
-  fresh config/irb/encoding.rb
-  fresh jasoncodes/dotfiles config/irbrc
-  fresh config/irb/prompt.rb
-fresh-options
-
 # bin
 fresh-options --bin
   fresh bin/\*
