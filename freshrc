@@ -13,16 +13,7 @@ fresh freshshell/fresh-open bin/fresh-open --bin
 
 # Config
 fresh-options --file
-  fresh config/ackrc
-  fresh config/ctags
-  if [[ "$WORK" == 0 ]]; then
-    fresh config/gitconfig
-  fi
-  fresh config/gitignore
-  fresh config/hushlogin
-  fresh config/modalmenu.json
-  fresh config/pryrc
-  fresh config/tmux.conf
+  fresh config/\*
   fresh jasoncodes/dotfiles config/inputrc
   fresh jasoncodes/dotfiles config/tmux.conf
   fresh jasoncodes/dotfiles config/psqlrc
