@@ -24,6 +24,17 @@ fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
 fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
 fresh EugeneDae/Force-Paste main.scpt --file=~/Library/Scripts/force-paste.scpt
 
+subsitute_ssh_config_variables() {
+  sed 's/<%= @github_login %>/twe4ked/g' | sed 's/<%= @user %>/twe4ked/'
+}
+
+if [[ "$WORK" == 1 ]]; then
+  fresh-options --file=~/.ssh/config --marker
+    fresh envato/our-boxen modules/envato/templates/ssh_config.erb --filter=subsitute_ssh_config_variables
+    fresh config/envato/ssh/config
+  fresh-options
+fi
+
 # Zsh
 fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/completion.zsh
