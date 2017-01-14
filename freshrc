@@ -19,6 +19,7 @@ fresh-options --file
   fresh jasoncodes/dotfiles config/psqlrc
 fresh-options
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
+fresh config/kwm/kwmrc --file=~/.kwm/kwmrc
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
 fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
