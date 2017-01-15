@@ -119,6 +119,7 @@ blacklists an application from Kwms tiling
     kwmc rule owner="Steam" properties={float="true"}
     kwmc rule owner="Photoshop" properties={float="true"}
 */
+kwmc rule owner="Tweetbot" properties={float="true"}
 
 /*
 The following command creates a rule that
