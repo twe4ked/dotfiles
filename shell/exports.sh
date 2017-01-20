@@ -12,6 +12,7 @@ path_add() {
 
 path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
+path_add "$HOME/.cargo/bin"
 
 if type go >/dev/null 2>&1; then
   export GOPATH="$(realpath `which go` | sed "s/\/libexec\/bin\/go//")"
