@@ -6,6 +6,7 @@ alias b="bundle check || bundle"
 alias dev="cd $HOME/Dev"
 alias serve="python -m SimpleHTTPServer"
 alias ip='curl curlmyip.com'
+alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
 # cat with highlight
 alias cah="pygmentize -g"
