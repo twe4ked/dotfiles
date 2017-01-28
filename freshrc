@@ -142,6 +142,7 @@ fresh-options --bin
   fresh sj26/git-buildkite git-buildkite
 fresh-options
 fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
+fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
 
 fresh_after_build() {
   if which chflags &> /dev/null; then
