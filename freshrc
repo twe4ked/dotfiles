@@ -141,6 +141,9 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/git-pr
   fresh pengwynn/dotfiles bin/mx
   fresh sj26/git-buildkite git-buildkite
+  if type gawk &> /dev/null; then
+    fresh numcommand/num bin/num
+  fi
 fresh-options
 fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
