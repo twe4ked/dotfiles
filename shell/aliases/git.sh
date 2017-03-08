@@ -12,5 +12,12 @@ alias gph='git push heroku'
 alias wip='git commit -m "$(printf "WIP\n\n[ci skip]\n")"'
 alias gl='glg --all'
 alias glr='gl -10'
-alias gg='git grep'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
+
+gg() {
+  if echo "$@" | grep -q '[[:upper:]]'; then
+    git grep $@
+  else
+    git grep -i $@
+  fi
+}
