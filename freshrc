@@ -7,8 +7,7 @@ else
   WORK=0
 fi
 
-fresh freshshell/fresh bin/fresh --bin
-fresh freshshell/fresh bin/fresh.perl --bin --ref=perl
+fresh freshshell/fresh bin/fresh.perl --bin=~/bin/fresh --ref=perl
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 fresh freshshell/fresh-open bin/fresh-open --bin
 
