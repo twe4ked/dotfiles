@@ -1,0 +1,4 @@
+Host *
+  UseKeychain yes
+
+# vim: ft=sshconfig:sw=2:ts=2

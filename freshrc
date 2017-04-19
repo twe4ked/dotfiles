@@ -30,12 +30,13 @@ subsitute_ssh_config_variables() {
   sed 's/<%= @github_login %>/twe4ked/g' | sed 's/<%= @user %>/twe4ked/'
 }
 
-if [[ "$WORK" == 1 ]]; then
-  fresh-options --file=~/.ssh/config --marker
+fresh-options --file=~/.ssh/config --marker
+  if [[ "$WORK" == 1 ]]; then
     fresh envato/our-boxen modules/envato/templates/ssh_config.erb --filter=subsitute_ssh_config_variables
     fresh config/envato/ssh/config
-  fresh-options
-fi
+  fi
+  fresh config/ssh/config
+fresh-options
 
 # Zsh
 fresh-options --file=~/.zshrc --marker
