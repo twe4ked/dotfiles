@@ -1,4 +1,5 @@
 export DOTFILES=~/.dotfiles                 # here
+export PROJECTS=~/Dev                       # projects directory
 export ARCHFLAGS='-arch x86_64'             # archflags
 export GREP_OPTIONS='--color=auto'          # double rainbow!
 export PATH=$HOME/bin:/usr/local/bin:$PATH  # path settings
@@ -19,9 +20,3 @@ if type go >/dev/null 2>&1; then
   export GOPATH="$(realpath `which go` | sed "s/\/libexec\/bin\/go//")"
   path_add "$GOPATH/bin"
 fi
-
-export PROJECTS=~/Dev/git
-
-# used by `dvcs` alias
-export GH_BASE="$PROJECTS"
-export GH_USER="$GH_LOGIN"
