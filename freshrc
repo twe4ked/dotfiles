@@ -90,7 +90,6 @@ filter_vundle_lines() {
 fresh-options --file=~/.vimrc --marker='"'
   fresh vim/leader.vim
   fresh vim/plug.vim
-  fresh vim/plugin_config/\*
   fresh vim/config/\*
   fresh vim/vimrc
   fresh jasoncodes/dotfiles vim/mappings/indent.vim
