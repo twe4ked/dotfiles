@@ -28,10 +28,6 @@ d() {
   fi
 }
 
-p() {
-  cd "$PROJECTS/$(find "$PROJECTS" -type d -maxdepth 3 -name .git | sed 's#/\.git$##' | sed "s#^$PROJECTS/##" | selecta)"
-}
-
 # source dotfiles
 reload() {
   source $HOME/.zshrc &&
