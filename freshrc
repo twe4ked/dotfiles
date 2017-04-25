@@ -36,6 +36,7 @@ fresh-options --file=~/.ssh/config --marker
     fresh config/envato/ssh/config
   fi
   fresh config/ssh/config
+  fresh config/ssh/config.local --ignore-missing
 fresh-options
 
 # Zsh
