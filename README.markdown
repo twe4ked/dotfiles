@@ -20,6 +20,7 @@ My dotfiles are managed by [fresh].
 - https://github.com/junegunn/vim-plug#on-demand-loading-of-plugins
 - https://github.com/benvan/sandboxd
 - https://kev.inburke.com/kevin/profiling-zsh-startup-time/
+- https://github.com/bjeanes/dot-files/commit/cfda3f3e982ef51463b4aaf3625849a62478d8a6
 
 ## Notes
 
