@@ -1,0 +1,7 @@
+#!/bin/bash -e
+#
+# Git commit Vim usage:
+#
+#     :read !git-last-commit-message
+
+git log -1 --pretty=format:%s
