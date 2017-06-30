@@ -2,7 +2,6 @@
 
 if [[ $CURRENT = 2 ]]; then
   _values 'repositories' $(
-    cd "$GH_BASE"
-    find * -mindepth 1 -maxdepth 1 -type d
+    find "$PROJECTS/github" -mindepth 1 -maxdepth 2 -type d | sed "s#$PROJECTS/github/##"
   )
 fi
