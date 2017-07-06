@@ -4,11 +4,13 @@
 # environment variables. Some entries may override variables
 # set by alacritty it self.
 env:
-  # TERM env customization. Default is xterm-256color
-  # Note: the default TERM value `xterm-256color` does not
-  # specify all features alacritty supports. This does pose
-  # a few issues with programs relying on terminfo and the
-  # `tput` command
+  # TERM env customization.
+  #
+  # If this property is not set, alacritty will set it to xterm-256color.
+  #
+  # Note that some xterm terminfo databases don't declare support for italics.
+  # You can verify this by checking for the presence of `smso` and `sitm` in
+  # `infocmp xterm-256color`.
   TERM: xterm-256color
 
 # Window dimensions in character columns and lines
@@ -16,6 +18,13 @@ env:
 dimensions:
   columns: 80
   lines: 24
+
+# Adds this many blank pixels of padding around the window
+# Units are physical pixels; this is not DPI aware.
+# (change requires restart)
+padding:
+  x: 2
+  y: 2
 
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
@@ -51,9 +60,17 @@ font:
 
   # Point size of the font
   size: 12.0
+
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
+    x: 0.0
+    y: 0.0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increase the x offset to move the glyph to
+  # the right, increase the y offset to move the glyph upward.
+  glyph_offset:
     x: 0.0
     y: 0.0
 
@@ -90,7 +107,7 @@ colors:
     blue:    '0x7aa6da'
     magenta: '0xc397d8'
     cyan:    '0x70c0ba'
-    white:   '0x424242'
+    white:   '0xffffff'
 
   # Bright colors
   bright:
@@ -101,7 +118,19 @@ colors:
     blue:    '0x7aa6da'
     magenta: '0xb77ee0'
     cyan:    '0x54ced6'
-    white:   '0x2a2a2a'
+    white:   '0xffffff'
+
+  # Dim colors (Optional)
+  dim:
+￼   black:   '0x333333'
+￼   red:     '0xf2777a'
+￼   green:   '0x99cc99'
+￼   yellow:  '0xffcc66'
+￼   blue:    '0x6699cc'
+￼   magenta: '0xcc99cc'
+￼   cyan:    '0x66cccc'
+￼   white:   '0xdddddd'
+
 
 # Visual Bell
 #
@@ -166,7 +195,11 @@ key_bindings:
   - { key: Home,                    chars: "\x1b[1~",  mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }
   - { key: End,                     chars: "\x1b[4~",  mode: ~AppCursor  }
+  - { key: PageUp,   mods: Shift,   chars: "\x1b[5;2~"                   }
+  - { key: PageUp,   mods: Control, chars: "\x1b[5;5~"                   }
   - { key: PageUp,                  chars: "\x1b[5~"                     }
+  - { key: PageDown, mods: Shift,   chars: "\x1b[6;2~"                   }
+  - { key: PageDown, mods: Control, chars: "\x1b[6;5~"                   }
   - { key: PageDown,                chars: "\x1b[6~"                     }
   - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
   - { key: Left,     mods: Control, chars: "\x1b[1;5D"                   }
@@ -204,8 +237,7 @@ key_bindings:
   - { key: Back,                    chars: "\x7f"                        }
   - { key: Back,     mods: Alt,     chars: "\x1b\x7f"                    }
   - { key: Insert,                  chars: "\x1b[2~"                     }
-  - { key: Delete,                  chars: "\x1b[3~",  mode: AppKeypad   }
-  - { key: Delete,                  chars: "\x1b[P",   mode: ~AppKeypad  }
+  - { key: Delete,                  chars: "\x1b[3~"                     }
 
 # Mouse bindings
 #
