@@ -32,6 +32,7 @@ Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
+Plug 'rhysd/vim-crystal'
 
 " colorschemes
 Plug 'AlxHnr/clear_colors'
