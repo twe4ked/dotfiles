@@ -7,17 +7,17 @@ autoload vcs_info
 # only show user and hostname when connected as root user or via ssh
 user_hostname() {
   if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
-    echo " %n@%m"
+    echo "%n@%m "
   fi
 }
 
 prompt_bg_job() {
-  jobs | grep '+' | awk '{print $4}'
+  jobs | grep '+' | awk '{print $4 " "}'
 }
 
 # show number of stashed items
 git_stash() {
-  git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\ \+\1/g" | sed -e "s/ +0//"
+  git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\+\1 /g" | sed -e "s/+0 //"
 }
 
 function prompt_pwd() {
@@ -51,7 +51,7 @@ function prompt_pwd() {
   if [ "$parts[1]" != "~" ]; then
     prompt_path="/$prompt_path"
   fi
-  echo "$prompt_path"
+  echo "$prompt_path "
 }
 
 local git_formats="%{${fg_bold[yellow]}%}± %b%c%u:%.7i%{${reset_color}%}"
@@ -67,31 +67,36 @@ precmd() {
   vcs_info
 }
 
+git_prompt_info() {
+  local info="${vcs_info_msg_0_}"
+  if [[ -n "$info" ]]; then
+    echo "$info "
+  fi
+}
+
 zle-keymap-select() { zle reset-prompt; }
 zle -N zle-keymap-select
 
-VI_MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
+VI_MODE_INDICATOR="%{$fg_bold[red]%}>>> %{$reset_color%}"
 vi_mode_prompt_info() {
   echo "${${KEYMAP/vicmd/$VI_MODE_INDICATOR}/(main|viins)/}"
 }
 
 if [[ $(hostname -s) = "caladan" ]]; then
-  local char="λ"
+  local char="λ "
 else
-  local char="»"
+  local char="» "
 fi
 
 local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
-local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%} '
-local colored_char='%(?,%F{cyan}$char,%F{red}$char)%f '
+local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%}'
+local colored_char='%(?,%F{cyan}$char,%F{red}$char)%f'
+local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%}'
+local git='$(git_prompt_info)'
+local git_stashes='$(git_stash)'
+local vi_mode='$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info)'
+local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%}'
 
-local git='${vcs_info_msg_0_}$(git_stash) '
-local git_author='$(git author > /dev/null || echo "$(git author) ")'
-local vi_mode='$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info) '
-local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%} '
-
-PROMPT=$cwd$usr$colored_char
-RPROMPT=$vi_mode$bg_job$git_author$git
-
+PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$vi_mode$colored_char"
 PROMPT2=$colored_char
 RPROMPT2='[%_]'
