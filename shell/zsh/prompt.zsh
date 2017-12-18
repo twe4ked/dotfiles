@@ -1,22 +1,19 @@
-# allows variable substitution in the prompt
 setopt prompt_subst
 
 autoload colors; colors;
 autoload vcs_info
 
-# only show user and hostname when connected as root user or via ssh
-user_hostname() {
+function user_hostname() {
   if [[ "$USER" = "root" || -n "$SSH_TTY" ]]; then
     echo "%n@%m "
   fi
 }
 
-prompt_bg_job() {
+function prompt_bg_job() {
   jobs | grep '+' | awk '{print $4 " "}'
 }
 
-# show number of stashed items
-git_stash() {
+function git_stash() {
   git stash list 2> /dev/null | wc -l | sed -e "s/ *\([0-9]*\)/\+\1 /g" | sed -e "s/+0 //"
 }
 
@@ -32,14 +29,9 @@ function prompt_pwd() {
   while (( i++ < ${#parts} )); do
     part="$parts[i]"
     if [[ $i == ${repopartslen} ]]; then
-      # if this part of the path represents the repo,
-      # underline it, and skip truncating the component
       parts[i]="%U$part%u"
     elif [[ $i != ${#parts} ]]; then
-      # shorten the path as long as it isn't the last piece
       if [[ $part[1,1] == "." ]]; then
-        # if this part of the path starts with a dot, then keep
-        # the 2nd letter aswell
         parts[i]="$part[1,2]"
       else
         parts[i]="$part[1,1]"
@@ -54,7 +46,8 @@ function prompt_pwd() {
   echo "$prompt_path "
 }
 
-local git_formats="%{${fg_bold[yellow]}%}± %b%c%u:%.7i%{${reset_color}%}"
+local git_formats="± %b%c%u:%.7i"
+
 zstyle ':vcs_info:git*' enable git
 zstyle ':vcs_info:git*' check-for-changes true
 zstyle ':vcs_info:git*' get-revision true
@@ -63,23 +56,24 @@ zstyle ':vcs_info:git*' unstagedstr "*"
 zstyle ':vcs_info:git*' formats "$git_formats"
 zstyle ':vcs_info:git*' actionformats "%a $git_formats"
 
-precmd() {
+function precmd() {
   vcs_info
 }
 
-git_prompt_info() {
+function git_prompt_info() {
   local info="${vcs_info_msg_0_}"
   if [[ -n "$info" ]]; then
     echo "$info "
   fi
 }
 
-zle-keymap-select() { zle reset-prompt; }
+function zle-keymap-select() {
+  zle reset-prompt
+}
 zle -N zle-keymap-select
 
-VI_MODE_INDICATOR="%{$fg_bold[red]%}>>> %{$reset_color%}"
 vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/$VI_MODE_INDICATOR}/(main|viins)/}"
+  echo "${${KEYMAP/vicmd/>>> }/(main|viins)/}"
 }
 
 if [[ $(hostname -s) = "caladan" ]]; then
@@ -92,9 +86,9 @@ local cwd='%{${fg_bold[green]}%}$(prompt_pwd)%{${reset_color}%}'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%}'
 local colored_char='%(?,%F{cyan}$char,%F{red}$char)%f'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%}'
-local git='$(git_prompt_info)'
+local git='%{${fg_bold[yellow]}%}$(git_prompt_info)%{${reset_color}%}'
 local git_stashes='$(git_stash)'
-local vi_mode='$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info)'
+local vi_mode='%{$fg_bold[red]%}$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info)%{$reset_color%}'
 local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%}'
 
 PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$vi_mode$colored_char"
