@@ -146,6 +146,7 @@ fresh-options --bin
 fresh-options
 fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
+fresh dokku/dokku contrib/dokku_client.sh --bin=~/bin/dokku
 
 fresh_after_build() {
   if which chflags &> /dev/null; then
