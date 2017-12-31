@@ -72,10 +72,6 @@ function zle-keymap-select() {
 }
 zle -N zle-keymap-select
 
-vi_mode_prompt_info() {
-  echo "${${KEYMAP/vicmd/>>> }/(main|viins)/}"
-}
-
 if [[ $(hostname -s) = "caladan" ]]; then
   local char="λ "
 else
@@ -88,9 +84,8 @@ local colored_char='%(?,%F{cyan}$char,%F{red}$char)%f'
 local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%}'
 local git='%{${fg_bold[yellow]}%}$(git_prompt_info)%{${reset_color}%}'
 local git_stashes='$(git_stash)'
-local vi_mode='%{$fg_bold[red]%}$(which vi_mode_prompt_info &> /dev/null && vi_mode_prompt_info)%{$reset_color%}'
 local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%}'
 
-PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$vi_mode$colored_char"
+PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$colored_char"
 PROMPT2=$colored_char
 RPROMPT2='[%_]'
