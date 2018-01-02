@@ -3,6 +3,10 @@ bindkey -e
 
 bindkey '^R' history-incremental-search-backward
 
+# option + right/left
+bindkey '\e\e[C' vi-forward-word
+bindkey '\e\e[D' vi-backward-word
+
 # search history using up/down arrows
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
