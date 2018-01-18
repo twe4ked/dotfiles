@@ -15,7 +15,7 @@ fresh freshshell/fresh-open bin/fresh-open --bin
 fresh-options --file
   fresh config/\*
   fresh jasoncodes/dotfiles config/inputrc
-  fresh jasoncodes/dotfiles config/tmux.conf
+  fresh jasoncodes/dotfiles config/tmux.conf --marker
   fresh jasoncodes/dotfiles config/psqlrc
 fresh-options
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
