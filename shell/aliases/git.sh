@@ -10,7 +10,7 @@ alias gri='git rebase --interactive'
 alias ga='git add'
 alias gph='git push heroku'
 alias wip='git commit -m "$(printf "WIP\n\n[ci skip]\n")"'
-alias gl='glg --all'
+alias gl='glg --exclude=refs/stash --all'
 alias glr='gl -10'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
 
