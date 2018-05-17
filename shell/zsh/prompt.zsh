@@ -67,6 +67,10 @@ function git_prompt_info() {
   fi
 }
 
+function aws_vault() {
+  [[ -n "$AWS_VAULT" ]] && echo "$AWS_VAULT "
+}
+
 function zle-keymap-select() {
   zle reset-prompt
 }
@@ -85,7 +89,8 @@ local usr='%{${fg[yellow]}%}$(user_hostname)%{${reset_color}%}'
 local git='%{${fg_bold[yellow]}%}$(git_prompt_info)%{${reset_color}%}'
 local git_stashes='$(git_stash)'
 local bg_job='%{${fg_bold[black]}%}$(prompt_bg_job)%{${reset_color}%}'
+local aws='%{${fg_bold[black]}%}$(aws_vault)%{${reset_color}%}'
 
-PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$colored_char"
+PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$aws$colored_char"
 PROMPT2=$colored_char
 RPROMPT2='[%_]'
