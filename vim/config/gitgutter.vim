@@ -1,3 +1,5 @@
+let g:gitgutter_map_keys = 0
+
 nmap ]d <Plug>GitGutterNextHunk
 nmap [d <Plug>GitGutterPrevHunk
 
