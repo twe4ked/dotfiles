@@ -58,6 +58,7 @@ fresh-options --file=~/.zshrc --marker
   fresh freshshell/fresh contrib/source-build.sh
 
   fresh rupa/z z.sh
+  fresh shell/functions/z.sh
   fresh robbyrussell/oh-my-zsh lib/edit-command-line.zsh --ref=a38774c
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
   fresh bjeanes/dot-files shells/zsh/lib/completion-waiting-dots.zsh
