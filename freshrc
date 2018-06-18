@@ -15,7 +15,8 @@ fresh freshshell/fresh-open bin/fresh-open --bin
 fresh-options --file
   fresh config/\*
   fresh jasoncodes/dotfiles config/inputrc
-  fresh jasoncodes/dotfiles config/tmux.conf --marker
+  # NOTE: --file should not be needed here, this seems to be a fresh (Perl) bug.
+  fresh jasoncodes/dotfiles config/tmux.conf --marker --file
   fresh jasoncodes/dotfiles config/psqlrc
 fresh-options
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
@@ -139,7 +140,12 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/git-pr
   fresh pengwynn/dotfiles bin/mx
   fresh sj26/git-buildkite git-buildkite
-  fresh benhoskings/dot-files files/bin/gbrt --bin
+  # NOTE: The Bash version of fresh does not allow more than two modes even if
+  # they're the same mode.
+  #
+  #     Error: Cannot have more than one mode.
+  #     ~/.freshrc:144:   fresh benhoskings/dot-files files/bin/gbrt --bin
+  fresh benhoskings/dot-files files/bin/gbrt
   fresh gnachman/iTerm2 tests/imgcat
   if type gawk &> /dev/null; then
     fresh numcommand/num bin/num
