@@ -1,0 +1,52 @@
+#!/usr/bin/env ruby
+#
+# Lazy sources:
+#
+# - https://stackoverflow.com/a/6018744
+# - https://stackoverflow.com/a/4179491
+
+require 'time'
+
+def ranges_overlap?(a, b)
+  a.include?(b.begin) || b.include?(a.begin)
+end
+
+def merge_ranges(a, b)
+  [a.begin, b.begin].min..[a.end, b.end].max
+end
+
+def merge_overlapping_ranges(overlapping_ranges)
+  overlapping_ranges.sort_by(&:begin).inject([]) do |ranges, range|
+    if !ranges.empty? && ranges_overlap?(ranges.last, range)
+      ranges[0...-1] + [merge_ranges(ranges.last, range)]
+    else
+      ranges + [range]
+    end
+  end
+end
+
+def format_duration(range)
+  (Time.mktime(0) + (range.end - range.begin)).strftime("%H:%M:%S")
+end
+
+# Find all timestamps in the git log
+lines = `git log --format='format:%ai'`.split("\n")
+
+# Pad them out to 30 minute ranges.
+#
+# This means that our calculations will assume you worked for 15 minutes before
+# your first commit and 15 minutes after your last commit in a given session.
+#
+# A session is defined where the ranges overlap, so minimum of 30 minutes
+# between a commit.
+ranges_padded_to_30_mins = lines.map { |line| t = Time.parse(line); (t - 60 * 15)..(t + 60 * 15) }
+
+# Merge into sessions and print out the duration of each session.
+merge_overlapping_ranges(ranges_padded_to_30_mins).each_with_index do |range, i|
+  puts 'Session %04i (%s - %s): %s' % [
+    i + 1,
+    range.begin.to_date.to_s,
+    range.end.to_date.to_s,
+    format_duration(range),
+  ]
+end
