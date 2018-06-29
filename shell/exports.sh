@@ -16,6 +16,7 @@ path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
 path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
+path_add "/usr/local/opt/postgresql@9.6/bin"
 
 if type go >/dev/null 2>&1; then
   export GOPATH="$(realpath `which go` | sed "s/\/libexec\/bin\/go//")"
