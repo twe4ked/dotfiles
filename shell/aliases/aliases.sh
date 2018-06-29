@@ -34,3 +34,7 @@ reload() {
   source $HOME/.zshrc &&
   echo "Your dot files are now \033[1;32msourced\033[0m."
 }
+
+format_uuid() {
+  echo "$1" | sed -E 's/(.{8})(.{4})(.{4})(.{4})(.{12})/\1-\2-\3-\4-\5/' | tr '[:upper:]' '[:lower:]'
+}
