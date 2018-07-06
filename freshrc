@@ -1,12 +1,5 @@
 # vim: set ft=sh:
 
-if [[ $(hostname -s) = "caladan" ]]; then
-  WORK=1
-  echo "----> Including work config."
-else
-  WORK=0
-fi
-
 fresh freshshell/fresh bin/fresh.perl --bin=~/bin/fresh --ref=perl
 fresh freshshell/fresh contrib/completion/fresh-completion.zsh --file=completion/_fresh
 fresh freshshell/fresh-open bin/fresh-open --bin
@@ -26,15 +19,7 @@ fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
 fresh EugeneDae/Force-Paste main.scpt --file=~/Library/Scripts/force-paste.scpt
 
-subsitute_ssh_config_variables() {
-  sed 's/<%= @github_login %>/twe4ked/g' | sed 's/<%= @user %>/twe4ked/'
-}
-
 fresh-options --file=~/.ssh/config --marker
-  if [[ "$WORK" == 1 ]]; then
-    fresh envato/our-boxen modules/envato/templates/ssh_config.erb --filter=subsitute_ssh_config_variables
-    fresh config/envato/ssh/config
-  fi
   fresh config/ssh/config
   fresh config/ssh/config.local --ignore-missing
 fresh-options

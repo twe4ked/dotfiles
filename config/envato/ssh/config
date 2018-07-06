@@ -1,5 +1,0 @@
-Host *
-  ServerAliveInterval 60
-  User twe4ked
-
-# vim: ft=sshconfig:sw=2:ts=2
