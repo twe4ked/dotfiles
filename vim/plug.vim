@@ -39,7 +39,7 @@ Plug 'rust-lang/rust.vim'
 " colorschemes
 Plug 'AlxHnr/clear_colors'
 Plug 'altercation/vim-colors-solarized'
-Plug 'bclear'
+Plug 'vim-scripts/bclear'
 Plug 'nanotech/jellybeans.vim'
 Plug 'noahfrederick/Hemisu'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
