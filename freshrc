@@ -135,7 +135,7 @@ fresh-options --bin
     fresh numcommand/num bin/num
   fi
 fresh-options
-fresh sivel/speedtest-cli speedtest_cli.py --bin=~/bin/speedtest
+fresh sivel/speedtest-cli speedtest.py --bin=~/bin/speedtest
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
 fresh dokku/dokku contrib/dokku_client.sh --bin=~/bin/dokku
 
