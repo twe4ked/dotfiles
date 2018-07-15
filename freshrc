@@ -15,7 +15,6 @@ fresh-options
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh config/kwm/kwmrc --file=~/.kwm/kwmrc
 fresh config/alacritty/alacritty.yml --file=~/.config/alacritty/alacritty.yml
-fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
 fresh EugeneDae/Force-Paste main.scpt --file=~/Library/Scripts/force-paste.scpt
 
