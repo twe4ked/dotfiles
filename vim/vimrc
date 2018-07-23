@@ -18,6 +18,7 @@ set autoread
 set cursorline
 set backspace=indent,eol,start              " Make backspace behave rationally
 set lazyredraw
+set updatetime=100
 
 " Change the invisible characters
 set listchars=trail:.,tab:▸\ ,eol:¬,extends:❯,precedes:❮
