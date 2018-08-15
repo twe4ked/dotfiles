@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+git_root="$(git rev-parse --show-toplevel)"
+wd=$PWD
+
+(
+  cd $git_root &&
+  for file in $(git diff $(git merge-base origin/HEAD HEAD).. --name-only | sort -u | xargs find 2> /dev/null); do
+    absolute_path="$git_root/$file"
+    echo "${absolute_path#$wd/}"
+  done
+)
