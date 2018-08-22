@@ -9,7 +9,6 @@ alias garm='git ls-files -dz | xargs -0 git rm'
 alias gri='git rebase --interactive'
 alias ga='git add'
 alias gph='git push heroku'
-alias wip='git commit -m "$(printf "WIP\n\n[ci skip]\n")"'
 alias gl='glg --exclude=refs/stash --all'
 alias glr='gl -10'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
@@ -20,6 +19,16 @@ gg() {
   else
     git grep -i $@
   fi
+}
+
+wip() {
+  if [[ $# > 0 ]]; then
+    message="WIP: $*"
+  else
+    message="WIP"
+  fi
+
+  git commit -m "$(printf "$message\n\n[ci skip]\n")"
 }
 
 git-list-files-ordered-by-date() {
