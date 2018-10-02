@@ -14,11 +14,14 @@ def format_commit_info timestamp, time_desc, ref, short_ref, message, ref_name
 end
 
 def render_commit_info timestamp, time_desc, ref, short_ref, message, ref_name, merged
+  background = "\e[48;5;#{ref_name[/^master\s*$/i] ? 235 : 0}m"
+
   [
+    background,
     timestamp,
     time_desc,
-    "\e[32m#{ref_name}\e[0m",
-    (merged ? "  #{short_ref}" : "+ \e[33m#{short_ref}\e[0m"),
+    "#{background}\e[32m#{ref_name}\e[0m#{background}",
+    (merged ? "  #{short_ref}" : "+ \e[33m#{short_ref}\e[0m#{background}"),
     "\e[#{message[/^temp|^wip/i] ? 31 : 90}m#{message.strip}\e[0m"
   ].join(' ')
 end
