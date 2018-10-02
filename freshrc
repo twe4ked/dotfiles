@@ -124,12 +124,6 @@ fresh-options --bin
   fresh pengwynn/dotfiles bin/git-pr
   fresh pengwynn/dotfiles bin/mx
   fresh sj26/git-buildkite git-buildkite
-  # NOTE: The Bash version of fresh does not allow more than two modes even if
-  # they're the same mode.
-  #
-  #     Error: Cannot have more than one mode.
-  #     ~/.freshrc:144:   fresh benhoskings/dot-files files/bin/gbrt --bin
-  fresh benhoskings/dot-files files/bin/gbrt
   fresh gnachman/iTerm2 tests/imgcat
   if type gawk &> /dev/null; then
     fresh numcommand/num bin/num
