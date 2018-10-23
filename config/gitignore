@@ -5,4 +5,8 @@ tags
 tags.temp
 tags.lock
 tags.temp.tmp
+
+# projectionist.vim
+.projections.json
+
 .rspec-local

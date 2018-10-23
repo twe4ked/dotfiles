@@ -22,6 +22,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-dirvish'
 Plug 'twe4ked/vim-diff-toggle'
+Plug 'tpope/vim-projectionist'
 
 " language
 Plug 'cakebaker/scss-syntax.vim'
