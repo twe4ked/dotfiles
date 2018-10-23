@@ -28,3 +28,5 @@
   diff = diff-highlight | $PAGER
 [diff]
   colorMoved = zebra
+[credential]
+  helper = osxkeychain
