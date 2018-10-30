@@ -1,1 +1,12 @@
 --exclude=.bundle
+--exclude=*.min.js
+--exclude=*.min.css
+--exclude=build
+--exclude=vendor
+--exclude=.git
+--exclude=public
+--exclude=elm-stuff
+--exclude=tmp
+--exclude=*.json
+--exclude=node_modules
+--exclude=.yarn-cache
