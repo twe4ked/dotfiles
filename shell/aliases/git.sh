@@ -21,6 +21,10 @@ gg() {
   fi
 }
 
+ggw() {
+  gg "\b$@\b"
+}
+
 wip() {
   if [[ $# > 0 ]]; then
     message="WIP: $*"
@@ -35,4 +39,19 @@ git-list-files-ordered-by-date() {
   git ls-tree -r --name-only HEAD "$@" | while read filename; do
     echo "$(git log -1 --format="%ai" -- $filename) $filename"
   done | sort
+}
+
+git-branch-deleted-merged() {
+  git branch --merged | grep -vw master
+
+  echo -n "Delete branches [Y/n]? "
+  read answer
+  case $answer in
+    [Yy]*|"")
+      git branch --merged | grep -vw master | xargs git branch -d
+      ;;
+    *)
+      return
+      ;;
+  esac
 }
