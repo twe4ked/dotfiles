@@ -105,6 +105,7 @@ fresh jasoncodes/dotfiles shell/config/chruby.sh
 fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 
+fresh shell/nodenv.sh
 fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
