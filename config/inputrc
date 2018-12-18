@@ -1,0 +1,4 @@
+# https://superuser.com/a/301409/99854
+set bind-tty-special-chars off
+"\C-u": kill-whole-line
+"\C-w": backward-kill-word
