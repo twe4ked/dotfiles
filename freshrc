@@ -12,6 +12,7 @@ fresh-options --file
   fresh jasoncodes/dotfiles config/tmux.conf --marker --file
   fresh jasoncodes/dotfiles config/psqlrc
 fresh-options
+
 fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh config/kwm/kwmrc --file=~/.kwm/kwmrc
 fresh config/alacritty/alacritty.yml --file=~/.config/alacritty/alacritty.yml
