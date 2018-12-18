@@ -34,7 +34,6 @@ Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-haml'
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-rails'
 Plug 'rhysd/vim-crystal'
 Plug 'rust-lang/rust.vim'
 
