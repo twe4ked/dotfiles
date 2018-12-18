@@ -19,6 +19,7 @@ set cursorline
 set backspace=indent,eol,start              " Make backspace behave rationally
 set lazyredraw
 set updatetime=100
+set complete=.,w,b,u,i                      " Same as the default but without tag completion
 
 " Change the invisible characters
 set listchars=trail:.,tab:▸\ ,eol:¬,extends:❯,precedes:❮
