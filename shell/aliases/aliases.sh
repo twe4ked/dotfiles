@@ -38,3 +38,8 @@ reload() {
 format_uuid() {
   echo "$1" | sed -E 's/(.{8})(.{4})(.{4})(.{4})(.{12})/\1-\2-\3-\4-\5/' | tr '[:upper:]' '[:lower:]'
 }
+
+find_port_in_use() {
+  # https://stackoverflow.com/a/4421674/826820
+  lsof -nP "-i4TCP:$1" | grep LISTEN
+}
