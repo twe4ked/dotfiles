@@ -1,4 +1,4 @@
-map <Leader>r :checktime<CR>:wall<CR>:redraw!<CR>
+map <silent><Leader>r :checktime<CR>:silent! wall<CR>:up<CR>:redraw!<CR>:GitGutterAll<CR>
 
 " Buffer navigation
 map <Leader>, <C-^>
