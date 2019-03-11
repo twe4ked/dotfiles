@@ -22,6 +22,8 @@ alias scrub='pbpaste | pbcopy'
 # copy with a progress bar.
 alias cpv="rsync -poghb --backup-dir=/tmp/rsync -e /dev/null --progress --"
 
+alias inflate='ruby -r zlib -e "STDOUT.write Zlib::Inflate.inflate(STDIN.read)"'
+
 d() {
   if [[ -n "$1" ]]; then
     cd "+$1"
