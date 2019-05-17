@@ -1,0 +1,32 @@
+#!/bin/sh
+#
+# Copy file to: .git/hooks/prepare-commit-msg
+
+COMMIT_MSG_FILE=$1
+COMMIT_SOURCE=$2
+SHA1=$3
+
+list_recent_commits() {
+  LOG=$(git --no-pager log --pretty='#\t%Creset%s' --no-merges -10)
+  echo "\n# Recent Commits:\n#\n$LOG\n#`cat $COMMIT_MSG_FILE`" > "$COMMIT_MSG_FILE"
+}
+
+# You might need to consider squashes
+case "$COMMIT_SOURCE,$SHA1" in
+  # Commits that already have a message
+  commit,?*)
+  ;;
+
+  # Messages are one line messages you decide how to handle
+  message,)
+  ;;
+
+  # Merge commits
+  merge,)
+  ;;
+
+  # Non-merges with no prior messages
+  *)
+    list_recent_commits
+  ;;
+esac
