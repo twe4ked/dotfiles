@@ -24,6 +24,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'justinmk/vim-dirvish'
 Plug 'twe4ked/vim-diff-toggle'
 Plug 'tpope/vim-projectionist'
+Plug 'simeji/winresizer'
 
 " language
 Plug 'cakebaker/scss-syntax.vim'
