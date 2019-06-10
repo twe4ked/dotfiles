@@ -105,7 +105,9 @@ fresh jasoncodes/dotfiles shell/config/chruby.sh
 fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 
-fresh shell/nodenv.sh
+if type nodenv &> /dev/null; then
+  fresh shell/nodenv.sh
+fi
 fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
