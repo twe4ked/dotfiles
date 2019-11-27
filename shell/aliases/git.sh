@@ -55,3 +55,10 @@ git-branch-deleted-merged() {
       ;;
   esac
 }
+
+# TODO: Add color after column output
+gbrt() {
+  git for-each-ref --sort=-committerdate refs/heads/ --color \
+    --format='%(HEAD) %(refname:short) | %(if)%(upstream:track)%(then)-%(else)%(upstream:trackshort)%(end) | %(committerdate:relative) | %(subject)' |
+    column -s '|' -t
+}
