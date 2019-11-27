@@ -9,6 +9,7 @@ alias ip='curl curlmyip.com'
 alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 alias spotify='open -a Spotify'
 alias path='echo "$PATH" | tr ":" "\n"'
+alias hex="ruby -e 'puts Integer(ARGV[0]).to_s(16)'"
 
 # cat with highlight
 alias cah="pygmentize -g"
