@@ -131,6 +131,7 @@ fresh-options --bin
   if type gawk &> /dev/null; then
     fresh numcommand/num bin/num
   fi
+  fresh fidian/ansi ansi
 fresh-options
 fresh sivel/speedtest-cli speedtest.py --bin=~/bin/speedtest
 fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
