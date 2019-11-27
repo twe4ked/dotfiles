@@ -6,6 +6,7 @@
 # - https://stackoverflow.com/a/4179491
 
 require 'time'
+require 'open3'
 
 def ranges_overlap?(a, b)
   a.include?(b.begin) || b.include?(a.begin)
@@ -30,7 +31,7 @@ def format_duration(range)
 end
 
 # Find all timestamps in the git log
-lines = `git log --format='format:%ai'`.split("\n")
+_stdin, stdout, _stderr = Open3.popen3("git", "log", "--format='format:%ai'", *ARGV)
 
 # Pad them out to 30 minute ranges.
 #
@@ -39,7 +40,7 @@ lines = `git log --format='format:%ai'`.split("\n")
 #
 # A session is defined where the ranges overlap, so minimum of 30 minutes
 # between a commit.
-ranges_padded_to_30_mins = lines.map { |line| t = Time.parse(line); (t - 60 * 15)..(t + 60 * 15) }
+ranges_padded_to_30_mins = stdout.each_line.map { |line| t = Time.parse(line); (t - 60 * 15)..(t + 60 * 15) }
 
 # Merge into sessions and print out the duration of each session.
 merge_overlapping_ranges(ranges_padded_to_30_mins).each_with_index do |range, i|
