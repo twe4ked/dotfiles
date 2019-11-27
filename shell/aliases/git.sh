@@ -12,6 +12,7 @@ alias gph='git push heroku'
 alias gl='glg --exclude=refs/stash --all'
 alias glr='gl -10'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
+alias gss='git stash show -p'
 
 gg() {
   if echo "$@" | grep -q '[[:upper:]]'; then
