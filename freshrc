@@ -55,7 +55,6 @@ fresh-options --file=~/.zshrc --marker
   fresh rimraf/k k.sh
 fresh-options
 
-fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
 fresh zsh-users/zsh-completions src/_heroku --file=completion/_heroku --ref=779b602
 fresh robbyrussell/oh-my-zsh plugins/brew/_brew --file=completion/_brew --ref=55f09f8
 fresh shell/zsh/completions/_gh --file=completion/_gh
