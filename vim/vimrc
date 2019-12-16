@@ -21,6 +21,12 @@ set lazyredraw
 set updatetime=100
 set complete=.,w,b,u,i                      " Same as the default but without tag completion
 
+" Never insert multiple spaces when joining lines with <Shift-j>.
+"
+"   > If the 'joinspaces' option is on, these commands insert two spaces after a
+"   > '.', '!' or '?'.
+set nojoinspaces
+
 " Change the invisible characters
 set listchars=trail:.,tab:▸\ ,eol:¬,extends:❯,precedes:❮
 
