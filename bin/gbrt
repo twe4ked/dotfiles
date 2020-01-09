@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+format = "%(HEAD) | %(refname:short) | %(objectname:short) | %(upstream:trackshort) | %(committerdate:relative) | %(subject)"
+output = `git for-each-ref --sort=-committerdate refs/heads/ --format='#{format}'`
+
+merged_branches = `git branch --merged master --format='%(refname:short)'`.split("\n") - %w[master]
+
+output.split("\n").map { |l|
+  l.split(" | ")
+}.transpose.map {|column|
+  max_col_length = column.sort_by {|i| i.length }.last.length
+  column.map {|i| i.ljust(max_col_length) }
+}.transpose.each { |current, branch_name, sha, status, timestamp, commit_message|
+  background = "\e[48;5;#{branch_name[/^master\s*$/i] ? 235 : 0}m"
+  merged = merged_branches.include?(branch_name)
+
+  puts [
+    background,
+    timestamp,
+    current,
+    "\e[32m#{branch_name}\e[0m#{background}",
+    (merged ? "  #{sha}" : "#{status} \e[33m#{sha}\e[0m#{background}"),
+    "\e[#{commit_message[/^temp|^wip/i] ? 31 : 90}m#{commit_message.strip}\e[0m",
+  ].join(" ")
+}
