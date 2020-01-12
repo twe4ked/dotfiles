@@ -1,17 +1,5 @@
 setopt prompt_subst
 
-if [ -x "$(command -v prompt)" ]; then
-
-eval "$(prompt init "\
-{green}{cwd style=short}\
-{yellow} ± {git_branch}:{git_commit}{reset}\
-{dark_grey} {git_stash}{reset}\
-{dark_grey} {jobs}{reset}\
-{cyan} $ {reset}")"
-
-# If no prompt command
-else
-
 autoload colors; colors;
 autoload vcs_info
 
@@ -106,5 +94,3 @@ local aws='%{${fg_bold[black]}%}$(aws_vault)%{${reset_color}%}'
 PROMPT="$cwd$usr$bg_job$git_author$git$git_stashes$aws$colored_char"
 PROMPT2=$colored_char
 RPROMPT2='[%_]'
-
-fi # if [ -x "$(command -v prompt)" ]

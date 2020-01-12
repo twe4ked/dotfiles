@@ -27,7 +27,11 @@ fresh-options
 # Zsh
 fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/completion.zsh
-  fresh shell/zsh/prompt.zsh
+  if [ -x "$(command -v prompt)" ]; then
+    fresh shell/zsh/rust_prompt.zsh
+  else
+    fresh shell/zsh/prompt.zsh
+  fi
   fresh shell/zsh/title.zsh
   fresh shell/zsh/aliases.zsh
   fresh shell/zsh/zshrc
