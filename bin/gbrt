@@ -19,7 +19,7 @@ output.split("\n").map { |l|
     timestamp,
     current,
     "\e[32m#{branch_name}\e[0m#{background}",
-    (merged ? "  #{sha}" : "#{status} \e[33m#{sha}\e[0m#{background}"),
+    (merged ? "#{status} #{sha}" : "#{status} \e[33m#{sha}\e[0m#{background}"),
     "\e[#{commit_message[/^temp|^wip/i] ? 31 : 90}m#{commit_message.strip}\e[0m",
   ].join(" ")
 }
