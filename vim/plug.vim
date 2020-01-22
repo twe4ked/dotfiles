@@ -37,6 +37,7 @@ Plug 'tpope/vim-haml'
 Plug 'tpope/vim-markdown'
 Plug 'rhysd/vim-crystal'
 Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
 
 " colorschemes
 Plug 'AlxHnr/clear_colors'
