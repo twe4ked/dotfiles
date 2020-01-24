@@ -12,7 +12,7 @@ output.split("\n").map { |l|
   column.map {|i| i.ljust(max_col_length) }
 }.transpose.each { |current, branch_name, sha, status, timestamp, commit_message|
   background = "\e[48;5;#{branch_name[/^master\s*$/i] ? 235 : 0}m"
-  merged = merged_branches.include?(branch_name)
+  merged = merged_branches.include?(branch_name.strip)
 
   puts [
     background,
