@@ -6,6 +6,11 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH  # path settings
 export GH_LOGIN=twe4ked                     # used by git-go
 export HOMEBREW_AUTO_UPDATE_SECS=604800     # 1 week in seconds
 
+if type rg >/dev/null 2>&1; then
+  # ripgrep respects .gitignore
+  export FZF_DEFAULT_COMMAND="rg --files"
+fi
+
 path_add() {
   if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
     export PATH="${PATH:+"$PATH:"}$1"
