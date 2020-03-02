@@ -1,6 +1,6 @@
-gh() {
+ghr() {
   if [[ $# -ne 1 ]]; then
-    echo "Usage gh [github url] [github user/repo]" 1>&2
+    echo "Usage ghr [github url] [github user/repo]" 1>&2
     return 1
   fi
 
