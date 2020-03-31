@@ -44,6 +44,9 @@ set autoindent                              " Automatic indentation in non-C fil
 set ignorecase
 " Override 'ignorecase' option if the search contains upper case characters.
 set smartcase
+" https://vi.stackexchange.com/a/11413
+au InsertEnter * set noignorecase
+au InsertLeave * set ignorecase
 
 let g:is_posix = 1                          " Better highlighting of shell files
 
