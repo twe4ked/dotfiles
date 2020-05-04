@@ -3,4 +3,6 @@ eval "$(aurora_prompt init zsh "\
 {yellow} ± {git_branch}:{git_commit}\
 {dark_grey} {git_stash}\
 {dark_grey} {jobs}\
-{cyan} $ {reset}")"
+{if last_command_status}{cyan} $ \
+{else}{red} $ \
+{end}{reset}")"
