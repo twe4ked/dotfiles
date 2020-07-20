@@ -1,12 +1,12 @@
 .DS_Store
 
 # vim-gutentags
-tags
-tags.temp
-tags.lock
-tags.temp.tmp
+/tags
+/tags.temp
+/tags.lock
+/tags.temp.tmp
 
 # projectionist.vim
-.projections.json
+/.projections.json
 
-.rspec-local
+/.rspec-local
