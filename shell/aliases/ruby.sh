@@ -15,3 +15,9 @@ fs() {
     foreman start -m "$PROCS"
   fi
 }
+
+standardrb_branch() {
+  git diff $(git merge-base origin/HEAD HEAD).. --name-only --diff-filter=d |
+    xargs bundle exec standardrb --only-recognized-file-types --format=progress --fix
+}
+alias standardrb-branch=standardrb_branch
