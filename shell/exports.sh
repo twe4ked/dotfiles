@@ -4,7 +4,8 @@ export ARCHFLAGS='-arch x86_64'             # archflags
 export GREP_OPTIONS='--color=auto'          # double rainbow!
 export PATH=$HOME/bin:/usr/local/bin:$PATH  # path settings
 export GH_LOGIN=twe4ked                     # used by git-go
-export HOMEBREW_AUTO_UPDATE_SECS=604800     # 1 week in seconds
+export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1
 
 if type rg >/dev/null 2>&1; then
   # ripgrep respects .gitignore
