@@ -97,6 +97,7 @@ fresh-options
 fresh vim/gvimrc --file
 fresh vim/colors --file=~/.vim/colors/
 fresh junegunn/vim-plug plug.vim --file=~/.vim/autoload/plug.vim
+fresh vim/coc-settings.json --file=~/.vim/coc-settings.json
 
 # Shell
 fresh jasoncodes/dotfiles shell/aliases/\*
