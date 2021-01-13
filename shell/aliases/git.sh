@@ -49,7 +49,7 @@ git-list-files-ordered-by-date() {
   done | sort
 }
 
-git-branch-deleted-merged() {
+git-branch-delete-merged() {
   git branch --merged | grep -vwE 'main|master'
 
   echo -n "Delete branches [Y/n]? "
