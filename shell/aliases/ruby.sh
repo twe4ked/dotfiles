@@ -1,6 +1,7 @@
 alias open_saved_page="find tmp/capybara | tail -1 | xargs open"
 alias serve-ruby="ruby -run -e httpd . -p 5000"
 alias rspec-run-individual="find spec -name '*_spec.rb' -exec bundle exec rspec '{}' \;"
+alias rc="bundle exec pry -r ./config/environment"
 
 fs() {
   INPUT="${@:-all}"
