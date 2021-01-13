@@ -1,7 +1,6 @@
 alias gb='git branch'
 alias gba='git branch -a'
 alias gcod='gco develop'
-alias gcom='gco master'
 alias gf='git fetch'
 alias gsw='git show --format=fuller --stat --patch'
 alias prune='git remote prune origin'
@@ -13,6 +12,14 @@ alias gl='glg --exclude=refs/stash --all'
 alias glr='gl -10'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
 alias gss='git stash show -p'
+
+gcom() {
+  if git show-ref --verify --quiet refs/heads/main; then
+    git checkout main
+  else
+    git checkout master
+  fi
+}
 
 gg() {
   if echo "$@" | grep -q '[[:upper:]]'; then
