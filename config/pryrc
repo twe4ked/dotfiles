@@ -2,7 +2,6 @@
 
 Pry.config.pager = true
 Pry.config.color = true
-Pry.config.history.should_save = true
 
 # wrap ANSI codes so Readline knows where the prompt ends
 def colour(name, text)
@@ -13,32 +12,12 @@ def colour(name, text)
   end
 end
 
-# pretty prompt
-Pry.config.prompt = [
-  proc do |object, nest_level, pry|
-    prompt  = colour :bright_black, Pry.view_clip(object)
-    prompt += ":#{nest_level}" if nest_level > 0
-    prompt += colour :cyan, " > "
-  end, proc { |object, nest_level, pry| colour :cyan, "> " }
-]
-
 # tell Readline when the window resizes
 old_winch = trap 'WINCH' do
   if `stty size` =~ /\A(\d+) (\d+)\n\z/
     Readline.set_screen_size $1.to_i, $2.to_i
   end
   old_winch.call unless old_winch.nil? || old_winch == 'SYSTEM_DEFAULT'
-end
-
-# use awesome print for output if available
-begin
-  require 'awesome_print'
-  Pry.config.print = proc do |output, value|
-    value = value.to_a if defined?(ActiveRecord) && value.is_a?(ActiveRecord::Relation)
-    output.puts value.ai
-  end
-rescue LoadError => err
-  Pry.config.print = Pry::DEFAULT_PRINT
 end
 
 # startup hooks
