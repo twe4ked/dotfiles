@@ -1,10 +1,5 @@
 {
   "languageserver": {
-    "rust": {
-      "command": "ra_lsp_server",
-      "filetypes": ["rust"],
-      "rootPatterns": ["Cargo.toml"]
-    },
     "go": {
       "command": "gopls",
       "rootPatterns": ["go.mod"],
