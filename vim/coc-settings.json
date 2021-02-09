@@ -1,4 +1,5 @@
 {
+  "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
   "languageserver": {
     "go": {
       "command": "gopls",
