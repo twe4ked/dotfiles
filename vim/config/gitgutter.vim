@@ -1,7 +1,7 @@
 let g:gitgutter_map_keys = 0
 
-nmap ]d <Plug>GitGutterNextHunk
-nmap [d <Plug>GitGutterPrevHunk
+nmap ]d <Plug>(GitGutterNextHunk)
+nmap [d <Plug>(GitGutterPrevHunk)
 
 " always display the sign column
 autocmd BufEnter * sign define dummy
