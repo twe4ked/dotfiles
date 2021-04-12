@@ -35,7 +35,6 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/title.zsh
   fresh shell/zsh/aliases.zsh
   fresh shell/zsh/zshrc
-  fresh shell/zsh/direnv.zsh
   fresh shell/zsh/keybindings.zsh
   fresh shell/zsh/selecta.zsh
   fresh shell/zsh/tmux-words.zsh
@@ -46,6 +45,9 @@ fresh-options --file=~/.zshrc --marker
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
   fresh freshshell/fresh contrib/source-build.sh
+
+  # Needs to be below contrib/source-build.sh for $PATH to be set up
+  fresh shell/zsh/direnv.zsh
 
   fresh rupa/z z.sh
   fresh shell/functions/z.sh
