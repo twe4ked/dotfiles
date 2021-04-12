@@ -150,6 +150,10 @@ fresh_after_build() {
   fi
 
   if [[ ! -L ~/bin/diff-highlight ]]; then
-    ln -s /usr/local/share/git-core/contrib/diff-highlight/diff-highlight ~/bin/diff-highlight
+    if [[ -x /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight ]]; then
+      ln -s /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight ~/bin/diff-highlight
+    else
+      echo "WARNING: Cannot find diff-highlight executable from homebrew git installation."
+    fi
   fi
 }
