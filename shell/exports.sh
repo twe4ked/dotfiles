@@ -18,6 +18,7 @@ path_add() {
   fi
 }
 
+path_add "/opt/homebrew/bin"
 path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
 path_add "$HOME/.cargo/bin"
