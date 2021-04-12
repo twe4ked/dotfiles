@@ -4,12 +4,24 @@
 
 ``` sh
 FRESH_LOCAL_SOURCE=twe4ked/dotfiles bash -c "`curl -sL get.freshshell.com`"
-chsh -s /bin/zsh
+chsh -s /bin/zsh # Default on MacOS
 ```
 
 My dotfiles are managed by [fresh].
 
 [fresh]: https://github.com/freshshell/fresh
+
+## Extras
+
+```
+# Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle
+
+# Git config
+git config -f ~/.gitconfig.local user.name "Odin Dutton"
+git config -f ~/.gitconfig.local user.email "odindutton@gmail.com"
+```
 
 ## TODO
 
