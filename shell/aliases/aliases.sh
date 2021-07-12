@@ -47,3 +47,10 @@ find_port_in_use() {
   # https://stackoverflow.com/a/4421674/826820
   lsof -nP "-i4TCP:$1" | grep LISTEN
 }
+
+# Ripgrep word-boundary
+rgwb() {
+  rg "\b$1\b"
+}
+
+alias rgh="rg --hidden"
