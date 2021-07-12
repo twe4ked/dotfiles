@@ -38,9 +38,10 @@ Plug 'tpope/vim-markdown'
 Plug 'rhysd/vim-crystal'
 Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
+Plug 'fatih/vim-go'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'fannheyward/coc-rust-analyzer'
-Plug 'fatih/vim-go'
 
 " colorschemes
 Plug 'AlxHnr/clear_colors'
