@@ -22,9 +22,6 @@ path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
 path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
-path_add "/usr/local/opt/postgresql@9.6/bin"
-path_add "/usr/local/opt/mongodb-community@3.4/bin"
-path_add "/usr/local/opt/postgresql@10/bin"
 
 local brew_command="$(brew --prefix)/bin/brew"
 eval $($brew_command shellenv);
