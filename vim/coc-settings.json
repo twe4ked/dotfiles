@@ -1,5 +1,4 @@
 {
-  "rust-analyzer.diagnostics.disabled": ["unresolved-proc-macro"],
   "languageserver": {
     "go": {
       "command": "gopls",
@@ -7,5 +6,7 @@
       "trace.server": "verbose",
       "filetypes": ["go"]
     }
-  }
+  },
+  "eslint.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": ["*"]
 }
