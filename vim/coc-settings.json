@@ -8,5 +8,6 @@
     }
   },
   "eslint.autoFixOnSave": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"]
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "prettier.requireConfig": true
 }
