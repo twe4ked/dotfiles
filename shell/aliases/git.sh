@@ -11,7 +11,10 @@ alias gph='git push heroku'
 alias gl='glg --exclude=refs/stash --all'
 alias glr='gl -10'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
-alias gss='git stash show -p'
+
+gss() {
+  git stash show --patch "stash@{${1:-0}}"
+}
 
 gcom() {
   if git show-ref --verify --quiet refs/heads/main; then
