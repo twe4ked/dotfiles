@@ -9,5 +9,6 @@
   },
   "eslint.autoFixOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "prettier.requireConfig": true
+  "prettier.requireConfig": true,
+  "suggest.noselect": true
 }
