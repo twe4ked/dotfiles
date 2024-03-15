@@ -23,8 +23,10 @@ path_add "/usr/local/share/npm/bin"
 path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
 
-local brew_command="$(brew --prefix)/bin/brew"
-eval $($brew_command shellenv);
+if [[ -x brew ]]; then
+  local brew_command="$(brew --prefix)/bin/brew"
+  eval $($brew_command shellenv);
+fi
 
 if type go >/dev/null 2>&1; then
   export GOPATH="$(realpath `which go` | sed "s/\/libexec\/bin\/go//")"
