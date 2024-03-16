@@ -1,3 +1,6 @@
+# De-duplicate PATH
+typeset -U PATH
+
 export DOTFILES=~/.dotfiles                 # here
 export PROJECTS=~/Dev                       # projects directory
 export ARCHFLAGS='-arch x86_64'             # archflags
