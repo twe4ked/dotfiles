@@ -13,6 +13,9 @@
   },
   "eslint.autoFixOnSave": true,
   "coc.preferences.formatOnSave": true,
+  "rust-analyzer.diagnostics.disabled": [
+    "unresolved-proc-macro"
+  ],
   "prettier.requireConfig": true,
   "suggest.noselect": true
 }
