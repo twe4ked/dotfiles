@@ -41,7 +41,12 @@ set autoindent                              " Automatic indentation in non-C fil
 " See http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
 
+" Insert only one space when joining lines that contain sentence-terminating
+" punctuation like `.`.
+set nojoinspaces
+
 let g:is_posix = 1                          " Better highlighting of shell files
+let ruby_no_expensive=1
 
 filetype plugin indent on                   " Enable automatic filetype detection, filetype-specific plugins/indentation
 

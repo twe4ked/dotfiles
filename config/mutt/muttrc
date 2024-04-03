@@ -1,0 +1,63 @@
+set mbox_type = Maildir
+
+# paths
+set folder = ~/.mail
+set tmpdir = ~/.mutt/tmp
+set spoolfile = "+odindutton-gmail.com/INBOX"
+set mbox      = "+odindutton-gmail.com/archive"
+set postponed = "+odindutton-gmail.com/drafts"
+mailboxes +odindutton-gmail.com/INBOX \
+          +odindutton-gmail.com/archive \
+          +odindutton-gmail.com/sent \
+          +odindutton-gmail.com/drafts \
+
+# # sidebar (patch)
+# # ------------------------------------------------------------------------------
+# set sidebar_delim   = '  │'
+# set sidebar_visible = yes
+# set sidebar_width   = 24
+
+# index view options
+set date_format = "%F %T"
+set index_format = "[%Z]  %D  %-20.20F  %s"
+set pager_index_lines = 10 # number of index lines to show
+
+# sort like gmail
+set sort = threads
+set sort_aux = reverse-last-date-received
+
+# statusbar
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"
+
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+alternative_order text/plain text/enriched text/html
+
+# open an HTML attachment in Chrome
+macro pager H <view-attachments>/html<enter><view-mailcap><exit>
+
+# only move read emails when they're actually looked at, not simply because we
+# saw them in the list
+set mark_old = no
+
+# headers
+ignore *
+unignore from: to: cc: date: subject:
+unhdr_order *
+hdr_order from: to: cc: date: subject:
+
+# keybindings
+# ------------------------------------------------------------------------------
+bind index gg first-entry
+bind index G last-entry
+
+# pager
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+bind pager R  group-reply
+
+# view attachments properly
+bind attach <return> view-mailcap

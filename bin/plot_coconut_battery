@@ -3,11 +3,11 @@
 FILE="$HOME/Documents/coconutBattery"
 MAX_LOADCYCLES="$(tail -n 1 "${FILE}.csv" | cut -d',' -f 3)"
 
-gnuplot <<EOF > "${FILE}.png"
+gnuplot <<EOF
   reset
   set datafile separator ","
 
-  set terminal png medium
+  set terminal dumb
   set title "coconutBattery"
   set xlabel "Loadcycles"
   set ylabel "Capacity (mAh)"
@@ -17,7 +17,5 @@ gnuplot <<EOF > "${FILE}.png"
   design_capacity = 6330
   set arrow from 0,design_capacity to $MAX_LOADCYCLES,design_capacity nohead linetype 1
 
-  plot "${FILE}.csv" using 3:2 with lines linetype 20
+  plot "${FILE}.csv" using 3:2 with lines
 EOF
-
-echo "${FILE}.png"

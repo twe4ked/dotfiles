@@ -15,6 +15,9 @@ fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh henrik/dotfiles rubyrc --file=~/.pryrc --filter='cat; echo include RubyRC'
 fresh nathanaelkane/dotfiles config/tmux/ctrlg.conf --file=~/.tmux.conf
 
+# mutt
+fresh config/mutt --file=~/.mutt/
+
 # Zsh
 fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/completion.zsh
@@ -24,6 +27,7 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/zshrc
   fresh shell/zsh/keybindings.zsh
   fresh shell/zsh/selecta.zsh
+  # fresh shell/zsh/autosuggestions.zsh
 
   # this loads the shell files and needs to be at the bottom of the zshrc for
   # compdef be availiable
@@ -34,15 +38,28 @@ fresh-options --file=~/.zshrc --marker
   fresh robbyrussell/oh-my-zsh plugins/git-flow/git-flow.plugin.zsh --ref=df30eae
   fresh bjeanes/dot-files shells/zsh/lib/completion-waiting-dots.zsh
 
+  # fresh hchbaw/en.zsh en.zsh
+  # fresh hchbaw/opp.zsh ?
+  # fresh hchbaw/auto-fu.zsh auto-fu.zsh
+  # fresh shell/zsh/auto-fu.zsh
+
+  fresh shell/zsh/deer
+  fresh Vifon/deer deer
+
   # de-duplicate PATH
   fresh akatov/dotfiles zshrc/dedup-path --ref=55e80fe
 fresh-options
+
+# fresh tarruda/zsh-autosuggestions . --file=~/.zsh-autosuggestions/
 
 fresh zsh-users/zsh-completions src/_ack --file=completion/_ack
 fresh zsh-users/zsh-completions src/_heroku --file=completion/_heroku
 fresh robbyrussell/oh-my-zsh plugins/brew/_brew --file=completion/_brew --ref=55f09f8
 fresh shell/zsh/completions/_gh --file=completion/_gh
 fresh thoughtbot/dotfiles zsh/completion/_ag --file=completion/_ag
+
+# fresh https://gist.github.com/1716179.git autocomplete_from_tmux.sh --file=completion/_tmux_pane_words
+# fresh skanev/dotfiles zsh/init/S01-tmux-completion --ref=36439ab --file=completion/_tmux_pane_words
 
 fresh zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh --file=vendor/zsh-syntax-highlighting.zsh
 fresh zsh-users/zsh-syntax-highlighting highlighters/main/main-highlighter.zsh --file=vendor/highlighters/main/main-highlighter.zsh
@@ -122,6 +139,9 @@ fresh-options --bin
   fresh garybernhardt/selecta selecta
   fresh garybernhardt/dotfiles bin/field
   fresh garybernhardt/dotfiles bin/run-command-on-git-revisions
+  fresh git/git contrib/diff-highlight/diff-highlight
+  fresh benhoskings/dot-files files/bin/gbrt
+  fresh holman/dotfiles bin/git-wtf
   fresh pengwynn/dotfiles bin/git-pr
   fresh pengwynn/dotfiles bin/mx
 fresh-options
@@ -135,5 +155,8 @@ ln -sf ~/bin/_git-pre-commit-hook ~/.git_template/hooks/pre-commit
 fresh_after_build() {
   if which chflags &> /dev/null; then
     chflags hidden ~/bin
+    chflags hidden ~/src
   fi
+
+  mkdir -p ~/.mutt/tmp
 }

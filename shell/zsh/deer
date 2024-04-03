@@ -1,0 +1,2 @@
+zle -N deer-launch
+bindkey '\ek' deer-launch

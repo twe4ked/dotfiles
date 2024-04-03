@@ -1,0 +1,7 @@
+#!/bin/bash -e
+#
+# Is the Internet working?
+#
+# Options
+#   -n    number of failed pings before network is considered down
+#   -a    address

@@ -3,6 +3,10 @@
     "path": "/Applications/iTerm.app",
     "shortcut": "t"
   },
+  "Chrome": {
+    "path": "Google Chrome",
+    "shortcut": "c",
+  },
   "Chrome Incognito": {
     "path": "~/bin/incognito",
     "shortcut": "i"
@@ -15,8 +19,28 @@
     "path": "Xcode",
     "shortcut": "x"
   },
+  "Movies": {
+    "path": "~/Movies/Films",
+    "shortcut": "m"
+  },
+  "Music": {
+    "path": "~/Documents/music.txt",
+    "shortcut": "k"
+  },
+  "Finder": {
+    "path": "Finder",
+    "shortcut": "f"
+  },
   "Bounce Wi-Fi": {
     "path": "~/bin/airport-bounce",
     "shortcut": "b"
+  },
+  "GitHub": {
+    "path": "https:\/\/github.com",
+    "shortcut": "g"
+  },
+  "Applications (Finder)": {
+    "path": "/Applications",
+    "shortcut": "a"
   },
 }

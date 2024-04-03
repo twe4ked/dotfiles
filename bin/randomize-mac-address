@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+# get a random MAC address
+ADDRESS="$(ruby -e 'puts ("%03x"%((rand 64)*4|2))+(0..4).inject(""){|s,x|s+":%02x"%(rand 256)}')"
+
+# user choose a device
+networksetup -listallhardwareports
