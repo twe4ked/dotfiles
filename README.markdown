@@ -41,3 +41,5 @@ git config -f ~/.gitconfig.local user.email "odindutton@gmail.com"
 Use an & to in Vim substitutions:
 
     :%s/foo_bar/&_baz/g
+
+defaults write .GlobalPreferences com.apple.sound.beep.sound /Users/odin/Music/silent.aiff
