@@ -29,9 +29,8 @@ path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
 path_add "$BUN_INSTALL/bin"
 
-if [[ -x brew ]]; then
-  local brew_command="$(brew --prefix)/bin/brew"
-  eval $($brew_command shellenv);
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if type go >/dev/null 2>&1; then
