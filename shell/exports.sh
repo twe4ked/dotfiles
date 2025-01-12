@@ -11,6 +11,7 @@ export BUN_INSTALL="$HOME/.bun"
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_ANALYTICS=1
 
 if type rg >/dev/null 2>&1; then
   # ripgrep respects .gitignore
