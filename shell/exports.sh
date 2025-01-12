@@ -7,6 +7,8 @@ export ARCHFLAGS='-arch x86_64'             # archflags
 export GREP_OPTIONS='--color=auto'          # double rainbow!
 export PATH=$HOME/bin:/usr/local/bin:$PATH  # path settings
 export GH_LOGIN=twe4ked                     # used by git-go
+export BUN_INSTALL="$HOME/.bun"
+
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 
@@ -25,6 +27,7 @@ path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
 path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
+path_add "$BUN_INSTALL/bin"
 
 if [[ -x brew ]]; then
   local brew_command="$(brew --prefix)/bin/brew"
