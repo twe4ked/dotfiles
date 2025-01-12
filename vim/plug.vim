@@ -41,6 +41,8 @@ Plug 'cespare/vim-toml'
 Plug 'fatih/vim-go'
 Plug 'DingDean/wgsl.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'fannheyward/coc-biome'
+Plug 'ron-rs/ron.vim'
 
 " colorschemes
 Plug 'AlxHnr/clear_colors'
