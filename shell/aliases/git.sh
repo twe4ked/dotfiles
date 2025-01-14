@@ -13,7 +13,7 @@ alias glr='gl -10'
 alias gup='git fetch --prune && git rebase --autostash FETCH_HEAD'
 
 gss() {
-  git stash show --patch "stash@{${1:-0}}"
+  git stash show --patch --include-untracked "stash@{${1:-0}}"
 }
 
 gcom() {
