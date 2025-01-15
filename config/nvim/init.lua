@@ -192,6 +192,19 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "H", "^")
 vim.keymap.set("n", "L", "$")
 
+-- Read/write all
+vim.keymap.set("n", "<Leader>r", "", {
+	desc = "Read/write all buffers",
+	noremap = true,
+	silent = true,
+	callback = function()
+		vim.cmd("checktime")
+		vim.cmd("silent! wall")
+		vim.cmd("up")
+		vim.cmd("redraw!")
+	end,
+})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -321,7 +334,7 @@ require("lazy").setup(
 				spec = {
 					{ "<leader>c", group = "[C]ode", mode = { "n", "x" } },
 					{ "<leader>d", group = "[D]ocument" },
-					{ "<leader>r", group = "[R]ename" },
+					-- { "<leader>r", group = "[R]ename" },
 					{ "<leader>s", group = "[S]earch" },
 					{ "<leader>w", group = "[W]orkspace" },
 					{ "<leader>t", group = "[T]oggle" },
@@ -606,7 +619,8 @@ require("lazy").setup(
 
 						-- Rename the variable under your cursor.
 						--  Most Language Servers support renaming across files, etc.
-						map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
+						-- TODO: Conflicts with `<leader>r`
+						-- map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
 
 						-- Execute a code action, usually your cursor needs to be on top of an error
 						-- or a suggestion from your LSP for this to activate.
