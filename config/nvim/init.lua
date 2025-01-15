@@ -360,6 +360,9 @@ require("lazy").setup(
 
 				-- Useful for getting pretty icons, but requires a Nerd Font.
 				{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+
+				-- Create custom pickers easily
+				{ "axkirillov/easypick.nvim" },
 			},
 			config = function()
 				-- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -408,23 +411,30 @@ require("lazy").setup(
 				local builtin = require("telescope.builtin")
 				vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 				vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
-				vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Search [F]iles" })
 				vim.keymap.set("n", "<leader>ss", builtin.builtin, { desc = "[S]earch [S]elect Telescope" })
 				vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 				vim.keymap.set("n", "<leader>sg", builtin.live_grep, { desc = "[S]earch by [G]rep" })
 				vim.keymap.set("n", "<leader>sd", builtin.diagnostics, { desc = "[S]earch [D]iagnostics" })
 				vim.keymap.set("n", "<leader>sr", builtin.resume, { desc = "[S]earch [R]esume" })
 				vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
+
+				vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Search [F]iles" })
 				vim.keymap.set("n", "<leader>l", builtin.buffers, { desc = "[l] Find existing buffers" })
+				vim.keymap.set("n", "<leader>m", builtin.git_status, { desc = "Modifed in Git" })
+				vim.keymap.set("n", "<leader>M", ":Easypick changed_files<Enter>", { desc = "Modifed in Git branch" })
+
+				vim.keymap.set("n", ",d", function()
+					builtin.find_files({ cwd = require("telescope.utils").buffer_dir() })
+				end, { desc = "List files in the directory relative to the current buffer" })
 
 				-- Slightly advanced example of overriding default behavior and theme
-				-- vim.keymap.set("n", "<leader>/", function()
-				-- 	-- You can pass additional configuration to Telescope to change the theme, layout, etc.
-				-- 	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
-				-- 		winblend = 10,
-				-- 		previewer = false,
-				-- 	}))
-				-- end, { desc = "[/] Fuzzily search in current buffer" })
+				vim.keymap.set("n", "<leader>sb/", function()
+					-- You can pass additional configuration to Telescope to change the theme, layout, etc.
+					builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+						winblend = 10,
+						previewer = false,
+					}))
+				end, { desc = "[/] Fuzzily search in current buffer" })
 
 				-- It's also possible to pass additional configuration options.
 				--  See `:help telescope.builtin.live_grep()` for information about particular keys
@@ -434,6 +444,59 @@ require("lazy").setup(
 						prompt_title = "Live Grep in Open Files",
 					})
 				end, { desc = "[S]earch [/] in Open Files" })
+
+				-- Easypick
+				local easypick = require("easypick")
+
+				local get_default_branch = "git remote show origin | grep 'HEAD branch' | cut -d' ' -f5"
+				local base_branch = vim.fn.system(get_default_branch) or "main"
+
+				local command_palette_list = [[
+          << EOF
+:Mason        " LSP package manager
+:Git blame    " Git blame
+          EOF
+        ]]
+
+				easypick.setup({
+					pickers = {
+						-- add your custom pickers here
+						-- below you can find some examples of what those can look like
+
+						-- list files inside current folder with default previewer
+						{
+							-- name for your custom picker, that can be invoked using :Easypick <name> (supports tab completion)
+							name = "ls",
+							-- the command to execute, output has to be a list of plain text entries
+							command = "ls",
+							-- specify your custom previwer, or use one of the easypick.previewers
+							previewer = easypick.previewers.default(),
+						},
+
+						-- diff current branch with base_branch and show files that changed with respective diffs in preview
+						{
+							name = "changed_files",
+							command = "git diff --name-only $(git merge-base HEAD " .. base_branch .. " )",
+							previewer = easypick.previewers.branch_diff({ base_branch = base_branch }),
+						},
+
+						-- list files that have conflicts with diffs in preview
+						{
+							name = "conflicts",
+							command = "git diff --name-only --diff-filter=U --relative",
+							previewer = easypick.previewers.file_diff(),
+						},
+
+						{
+							name = "command_palette",
+							command = "cat " .. command_palette_list,
+							-- pass a pre-configured action that runs the command
+							action = easypick.actions.nvim_command(),
+							-- you can specify any theme you want, but the dropdown looks good for this example =)
+							opts = require("telescope.themes").get_dropdown({}),
+						},
+					},
+				})
 			end,
 		},
 
