@@ -1,11 +1,11 @@
 --[[
 
 TODO:
-- Bubble lines
+- Bubble lines up/down
+- Bubble arguments left/right
 - Copy to system clipboard (<leader>y)
 - Paste from system clipboard (<leader>p)
 - Copy current path, copy current relative path
-- Remember file cursor position
 
 Kickstart Guide:
 
@@ -186,6 +186,21 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
 	callback = function()
 		vim.highlight.on_yank()
+	end,
+})
+
+-- Enable shada (session) for remembering cursor position and other state
+vim.opt.shada = "'1000" -- Save the last 1000 entries
+vim.opt.shadafile = vim.fn.stdpath("config") .. "/shada" -- Store the shada file in your config directory
+
+-- Restore cursor position when opening a file
+vim.api.nvim_create_autocmd("BufReadPost", {
+	pattern = "*",
+	callback = function()
+		-- Check if the cursor position is valid and restore it
+		if vim.fn.line("'\"") > 0 and vim.fn.line("'\"") <= vim.fn.line("$") then
+			vim.cmd('normal! g`"') -- Restore the cursor to the last position
+		end
 	end,
 })
 
