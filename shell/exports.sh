@@ -8,6 +8,7 @@ export GREP_OPTIONS='--color=auto'          # double rainbow!
 export PATH=$HOME/bin:/usr/local/bin:$PATH  # path settings
 export GH_LOGIN=twe4ked                     # used by git-go
 export BUN_INSTALL="$HOME/.bun"
+export EDITOR=nvim
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_CLEANUP=1
