@@ -175,6 +175,9 @@ vim.keymap.set("n", "<Leader>r", "", {
 	end,
 })
 
+-- Alternate buffer
+vim.api.nvim_set_keymap("n", "<Leader>,", "<C-^>", { noremap = true, silent = true })
+
 vim.api.nvim_set_keymap(
 	"n",
 	"<leader>cf",
