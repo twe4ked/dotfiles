@@ -5,7 +5,7 @@ TODO:
 - Bubble arguments left/right
 - Copy to system clipboard (<leader>y)
 - Paste from system clipboard (<leader>p)
-- Copy current path, copy current relative path
+- Copy absolute path of current file
 
 Kickstart Guide:
 
@@ -174,6 +174,19 @@ vim.keymap.set("n", "<Leader>r", "", {
 		vim.cmd("redraw!")
 	end,
 })
+
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cf",
+	[[:lua vim.fn.setreg('*', vim.fn.expand('%'))<CR>]],
+	{ noremap = true, silent = true, desc = "Copy relative path to the system clipboard" }
+)
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>cl",
+	[[:lua vim.fn.setreg('*', vim.fn.expand('%') .. ':' .. vim.fn.line('.'))<CR>]],
+	{ noremap = true, silent = true, desc = "Copy relative path and line number to the system clipboard" }
+)
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
