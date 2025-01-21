@@ -1057,6 +1057,9 @@ require("lazy").setup(
 		-- Or use telescope!
 		-- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
 		-- you can continue same window with `<space>sr` which resumes last telescope search
+
+		-- Directory viewer for Vim
+		"justinmk/vim-dirvish",
 	},
 
 	---@diagnostic disable-next-line: missing-fields
