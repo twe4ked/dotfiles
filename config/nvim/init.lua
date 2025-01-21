@@ -294,7 +294,7 @@ require("lazy").setup(
 			opts = {
 				-- delay between pressing a key and opening which-key (milliseconds)
 				-- this setting is independent of vim.opt.timeoutlen
-				delay = 0,
+				delay = 200,
 				icons = {
 					-- disable all mapping icons
 					mappings = false,
