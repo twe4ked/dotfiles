@@ -60,9 +60,6 @@ If you experience any errors while trying to install kickstart, run `:checkhealt
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
-
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
@@ -295,11 +292,10 @@ require("lazy").setup(
 				-- this setting is independent of vim.opt.timeoutlen
 				delay = 0,
 				icons = {
-					-- set icon mappings to true if you have a Nerd Font
-					mappings = vim.g.have_nerd_font,
-					-- If you are using a Nerd Font: set icons.keys to an empty table which will use the
-					-- default which-key.nvim defined Nerd Font icons, otherwise define a string table
-					keys = vim.g.have_nerd_font and {} or {
+					-- disable all mapping icons
+					mappings = false,
+					-- We're not using a Nerd Font so we need to override the defaults
+					keys = {
 						Up = "<Up> ",
 						Down = "<Down> ",
 						Left = "<Left> ",
@@ -371,9 +367,6 @@ require("lazy").setup(
 					end,
 				},
 				{ "nvim-telescope/telescope-ui-select.nvim" },
-
-				-- Useful for getting pretty icons, but requires a Nerd Font.
-				{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 
 				-- Create custom pickers easily
 				{ "axkirillov/easypick.nvim" },
@@ -677,16 +670,6 @@ require("lazy").setup(
 						end
 					end,
 				})
-
-				-- Change diagnostic symbols in the sign column (gutter)
-				-- if vim.g.have_nerd_font then
-				--   local signs = { ERROR = '', WARN = '', INFO = '', HINT = '' }
-				--   local diagnostic_signs = {}
-				--   for type, icon in pairs(signs) do
-				--     diagnostic_signs[vim.diagnostic.severity[type]] = icon
-				--   end
-				--   vim.diagnostic.config { signs = { text = diagnostic_signs } }
-				-- end
 
 				-- LSP servers and clients are able to communicate to each other what features they support.
 				--  By default, Neovim doesn't support everything that is in the LSP specification.
@@ -1053,9 +1036,8 @@ require("lazy").setup(
 	---@diagnostic disable-next-line: missing-fields
 	{
 		ui = {
-			-- If you are using a Nerd Font: set icons to an empty table which will use the
-			-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-			icons = vim.g.have_nerd_font and {} or {
+			-- We're not using a Nerd Font so we need to override the defaults
+			icons = {
 				cmd = "⌘",
 				config = "🛠",
 				event = "📅",
