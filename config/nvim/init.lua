@@ -172,6 +172,10 @@ vim.keymap.set("n", "<Leader>r", "", {
 	end,
 })
 
+-- Reselect visual block after indent
+vim.keymap.set("v", "<", "<gv", { noremap = true })
+vim.keymap.set("v", ">", ">gv", { noremap = true })
+
 -- Alternate buffer
 vim.api.nvim_set_keymap("n", "<Leader>,", "<C-^>", { noremap = true, silent = true })
 
