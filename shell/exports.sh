@@ -29,11 +29,17 @@ path_add "/usr/local/sbin"
 path_add "/usr/local/share/npm/bin"
 path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
+path_add "$HOME/.gem/ruby/3.3.0/bin"
+path_add "$HOME/.asdf/shims"
 path_add "$BUN_INSTALL/bin"
 
 if [[ -x /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+path_add "/opt/homebrew/opt/postgresql@16/bin"
+# export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
+# export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
 
 if type go >/dev/null 2>&1; then
   export GOPATH="$(realpath `which go` | sed "s/\/libexec\/bin\/go//")"
