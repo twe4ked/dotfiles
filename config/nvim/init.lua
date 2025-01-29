@@ -1035,6 +1035,9 @@ require("lazy").setup(
 
 		-- A light and configurable statusline/tabline plugin for Vim
 		"itchyny/lightline.vim",
+
+		-- Helpers for UNIX (:Move, :Unlink, etc.)
+		"tpope/vim-eunuch",
 	},
 
 	---@diagnostic disable-next-line: missing-fields
