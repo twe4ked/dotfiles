@@ -430,10 +430,11 @@ require("lazy").setup(
 				vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 
 				vim.keymap.set("n", "<leader>f", builtin.find_files, { desc = "Search [F]iles" })
-				vim.keymap.set("n", "<leader>l", builtin.buffers, { desc = "[l] Find existing buffers" })
+				vim.keymap.set("n", "<leader>l", function()
+					builtin.buffers({ sort_mru = true })
+				end, { desc = "[l] Find existing buffers" })
 				vim.keymap.set("n", "<leader>m", builtin.git_status, { desc = "Modifed in Git" })
 				vim.keymap.set("n", "<leader>M", ":Easypick changed_files<Enter>", { desc = "Modifed in Git branch" })
-
 				vim.keymap.set("n", ",d", function()
 					builtin.find_files({ cwd = require("telescope.utils").buffer_dir() })
 				end, { desc = "List files in the directory relative to the current buffer" })
