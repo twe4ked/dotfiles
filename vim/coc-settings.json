@@ -20,6 +20,8 @@
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.closureReturnTypeHints": false,
+  "rust-analyzer.lens.enable": false,
+  "inlayHint.enable": false,
   "prettier.requireConfig": true,
   "suggest.noselect": true
 }
