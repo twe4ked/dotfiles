@@ -33,6 +33,7 @@ path_add "$HOME/.cargo/bin"
 path_add "$HOME/Library/Python/2.7/bin"
 path_add "$HOME/.gem/ruby/3.3.0/bin"
 path_add "$HOME/.asdf/shims"
+path_add "$HOME/.wasmtime/bin"
 path_add "$BUN_INSTALL/bin"
 
 if [[ -x /opt/homebrew/bin/brew ]]; then
