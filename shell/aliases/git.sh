@@ -16,6 +16,18 @@ gss() {
   git stash show --patch --include-untracked "stash@{${1:-0}}"
 }
 
+unalias gco # from jasoncodes/dotfiles via fresh
+gco() {
+  if [[ -z "$@" ]]; then
+    local branches branch
+    branches=$(git --no-pager branch -vv) &&
+    branch=$(echo "$branches" | fzf +m) &&
+    git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
+  else
+    git checkout "$@"
+  fi
+}
+
 gcom() {
   if git show-ref --verify --quiet refs/heads/main; then
     git checkout main
