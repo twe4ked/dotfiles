@@ -460,8 +460,8 @@ require("lazy").setup(
 				-- Easypick
 				local easypick = require("easypick")
 
-				local get_default_branch = "git remote show origin | grep 'HEAD branch' | cut -d' ' -f5"
-				local base_branch = vim.fn.system(get_default_branch) or "main"
+				-- TODO: Find base branch
+				local base_branch = "main"
 
 				local command_palette_list = [[
           << EOF
