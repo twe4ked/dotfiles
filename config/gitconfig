@@ -16,6 +16,7 @@
   commit = yellow reverse
 [push]
   default = tracking
+  autoSetupRemote = true
 [merge]
   log = true
   conflictstyle = diff3
