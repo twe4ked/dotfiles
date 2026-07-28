@@ -65,13 +65,37 @@ git-list-files-ordered-by-date() {
 }
 
 git-branch-delete-merged() {
-  git branch --merged | grep -vwE 'main|master'
+  local base branches checked_out answer
+
+  if git show-ref --verify --quiet refs/heads/main; then
+    base=main
+  else
+    base=master
+  fi
+
+  # Branches checked out in a worktree (including this one) can't be deleted.
+  checked_out=$(git worktree list --porcelain |
+    sed -n 's|^branch refs/heads/||p')
+
+  branches=$(git branch --merged "$base" --format='%(refname:short)' |
+    grep -vxF -e main -e master)
+
+  if [ -n "$checked_out" ]; then
+    branches=$(printf '%s\n' "$branches" | grep -vxF "$checked_out")
+  fi
+
+  if [ -z "$branches" ]; then
+    echo "No merged branches to delete."
+    return
+  fi
+
+  printf '%s\n' "$branches"
 
   echo -n "Delete branches [Y/n]? "
   read answer
   case $answer in
     [Yy]*|"")
-      git branch --merged | grep -vwE 'main|master' | xargs git branch -d
+      printf '%s\n' "$branches" | xargs git branch -d
       ;;
     *)
       return
