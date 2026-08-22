@@ -41,6 +41,7 @@ fresh-options --file=~/.zshrc --marker
   fresh shell/zsh/keybindings.zsh
   fresh shell/zsh/selecta.zsh
   fresh shell/zsh/tmux-words.zsh
+  fresh shell/zsh/wt.zsh
 
   fresh junegunn/fzf shell/completion.zsh
   fresh junegunn/fzf shell/key-bindings.zsh
