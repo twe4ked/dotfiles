@@ -14,7 +14,8 @@
   "eslint.autoFixOnSave": true,
   "coc.preferences.formatOnSave": true,
   "rust-analyzer.diagnostics.disabled": [
-    "unresolved-proc-macro"
+    "unresolved-proc-macro",
+    "inactive-code"
   ],
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
