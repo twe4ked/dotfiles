@@ -36,6 +36,7 @@ path_add "$HOME/.gem/ruby/3.3.0/bin"
 path_add "$HOME/.asdf/shims"
 path_add "$HOME/.wasmtime/bin"
 path_add "$HOME/.local/share/ponyup/bin"
+path_add "$HOME/.devcontainers/bin"
 path_add "$BUN_INSTALL/bin"
 
 if [[ -x /opt/homebrew/bin/brew ]]; then
