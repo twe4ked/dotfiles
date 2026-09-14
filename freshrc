@@ -13,10 +13,7 @@ fresh-options --file
   fresh jasoncodes/dotfiles config/psqlrc
 fresh-options
 
-fresh config/ranger/rc.conf --file=~/.config/ranger/rc.conf
 fresh config/kwm/kwmrc --file=~/.kwm/kwmrc
-fresh config/alacritty/alacritty.yml --file=~/.config/alacritty/alacritty.yml
-fresh jasoncodes/dotfiles hammerspoon/\*.lua --file=~/.hammerspoon/init.lua
 fresh EugeneDae/Force-Paste main.scpt --file=~/Library/Scripts/force-paste.scpt
 
 fresh config/nvim/init.lua --file=~/.config/nvim/init.lua
@@ -112,7 +109,6 @@ fresh jasoncodes/dotfiles shell/editor.sh
 fresh jasoncodes/dotfiles shell/config/filters.sh
 fresh jasoncodes/dotfiles shell/config/pager.sh
 fresh jasoncodes/dotfiles shell/config/heroku.sh
-fresh jasoncodes/dotfiles shell/config/chruby.sh
 fresh jasoncodes/dotfiles shell/config/tmux.sh
 fresh jasoncodes/dotfiles shell/functions/realpath.sh
 
@@ -127,28 +123,18 @@ fresh shell/asdf.sh
 # bin
 fresh-options --bin
   fresh bin/\*
-  fresh twe4ked/catacomb bin/catacomb
-  fresh twe4ked/twitter-whois bin/twitter-whois
   fresh jasoncodes/dotfiles bin/\*
-  fresh jasoncodes/dotfiles bin/wemux/\*
-  fresh pengwynn/dotfiles bin/git-go
-  fresh defunkt/repl bin/repl
   fresh garybernhardt/selecta selecta
   fresh garybernhardt/dotfiles bin/field
   fresh garybernhardt/dotfiles bin/run-command-on-git-revisions
   fresh pengwynn/dotfiles bin/git-pr
   fresh pengwynn/dotfiles bin/mx
-  fresh sj26/git-buildkite git-buildkite
-  fresh gnachman/iTerm2 tests/imgcat
   if type gawk &> /dev/null; then
     fresh numcommand/num bin/num
   fi
   fresh fidian/ansi ansi
 fresh-options
 fresh sivel/speedtest-cli speedtest.py --bin=~/bin/speedtest
-fresh rauchg/wifi-password wifi-password.sh --bin=~/bin/wifi-password
-fresh dokku/dokku contrib/dokku_client.sh --bin=~/bin/dokku
-fresh chendo/airchat airchat.rb --bin=~/bin/airchat
 
 fresh_after_build() {
   if which chflags &> /dev/null; then
