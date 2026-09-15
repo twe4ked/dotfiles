@@ -10,6 +10,7 @@ alias lockscreen='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/
 alias spotify='open -a Spotify'
 alias path='echo "$PATH" | tr ":" "\n"'
 alias hex="ruby -e 'puts Integer(ARGV[0]).to_s(16)'"
+alias moon="pnpm exec moon"
 
 # cat with highlight
 alias cah="pygmentize -g"
