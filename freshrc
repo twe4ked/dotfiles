@@ -119,6 +119,7 @@ fresh shell/exports.sh
 fresh shell/aliases/\*
 fresh shell/functions/\*
 fresh shell/asdf.sh
+fresh shell/mise.sh
 
 # bin
 fresh-options --bin

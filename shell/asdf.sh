@@ -3,5 +3,3 @@ if command -v brew &> /dev/null; then
 else
   echo "WARN: Failed to load asdf via brew"
 fi
-
-eval "$(/Users/odin/.local/bin/mise activate zsh)"
