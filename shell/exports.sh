@@ -45,6 +45,7 @@ if [[ -x /opt/homebrew/bin/brew ]]; then
 fi
 
 path_add "/opt/homebrew/opt/postgresql@16/bin"
+path_add "/opt/homebrew/opt/postgresql@17/bin"
 # export LDFLAGS="-L/opt/homebrew/opt/postgresql@16/lib"
 # export CPPFLAGS="-I/opt/homebrew/opt/postgresql@16/include"
 
