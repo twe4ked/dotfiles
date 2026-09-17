@@ -10,3 +10,6 @@
 /.projections.json
 
 /.rspec-local
+
+# Pi
+.papercuts.jsonl
